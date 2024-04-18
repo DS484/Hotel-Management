@@ -17,12 +17,12 @@ namespace Hotel_Management
     public partial class FHistory : Form
     {
         private int usedId;
-        private string username;
+        private string ?username;
 
         CustomerDAO customerDAO = new CustomerDAO();
         FeedBackDAO feedBackDAO = new FeedBackDAO();
         BookingDAO bookingDAO = new BookingDAO();
-        private UC_History uC_History;
+        private UC_History ?uC_History;
 
 
         public FHistory(int userId)
@@ -92,7 +92,7 @@ namespace Hotel_Management
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            FHome fHome = new FHome(username);
+            FHome fHome = new FHome(username!);
             fHome.ShowDialog();
             this.Visible = true;
         }

@@ -26,7 +26,7 @@ namespace Hotel_Management
 
         private List<int> hotelList = new List<int>();
         private int userId;
-        private string city;
+        private string ?city;
         private int adult;
         private int child;
         private int quantityRoom;
@@ -163,7 +163,7 @@ namespace Hotel_Management
                 uC_AvtRoom.lblNameHotel.Text = row[0].ToString();
                 uC_AvtRoom.lblAddrHotel.Text = ("     " + row[1].ToString() + ", " + row[2].ToString()).ToString();
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
                 string imagePath = projectDirectory + @"\" + row[3].ToString();
 
                 if (!string.IsNullOrEmpty(imagePath))
@@ -184,7 +184,7 @@ namespace Hotel_Management
                 {
                     uC_AvtRoom.lblDetail.Click += (sender, e) =>
                     {
-                        Detail_Click(sender, e, int.Parse(row[7].ToString()), hotelId);
+                        Detail_Click(sender!, e, int.Parse(row[7].ToString()!), hotelId);
                     };
 
                     check = true;
@@ -196,7 +196,7 @@ namespace Hotel_Management
 
             uC_AvtRoom.btnbookRoom.Click += (sender, e) =>
             {
-                BookRoom_Click(sender, e, hotelId, roomList);
+                BookRoom_Click(sender!, e, hotelId, roomList);
             };
 
         }
@@ -264,8 +264,8 @@ namespace Hotel_Management
             trackBarMax.Maximum = 10000000;
             trackBarMax.Value = 500000;
 
-            trackBarMin.Scroll += TrackBarMin_Scroll;
-            trackBarMax.Scroll += TrackBarMax_Scroll;
+            trackBarMin.Scroll += TrackBarMin_Scroll!;
+            trackBarMax.Scroll += TrackBarMax_Scroll!;
 
             UpdateLabelValues();
         }

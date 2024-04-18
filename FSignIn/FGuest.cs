@@ -78,55 +78,15 @@ namespace Hotel_Management
             Application.Exit();
         }
 
-        private void btnSetRoom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click_2(object sender, EventArgs e)
         {
 
             this.Close();
         }
 
-        private void guna2ShadowPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FGuest_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddRoom_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExitt_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnExit_Click_3(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAddRoom_Click_1(object sender, EventArgs e)

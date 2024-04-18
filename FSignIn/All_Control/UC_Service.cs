@@ -15,7 +15,7 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_Service : UserControl
     {
-        private string username;
+        private string ?username;
         private Image serviceIcon = Properties.Resources.customer_service;
         private Image editIcon = Properties.Resources.edit;
         private Image deleteIcon = Properties.Resources.remove;
@@ -38,7 +38,7 @@ namespace Hotel_Management.All_Control
         {
             dgvService.DataSource = null;
             dgvService.Rows.Clear();
-            DataTable dtService = managerDAO.ManageService(username);
+            DataTable dtService = managerDAO.ManageService(username!);
             FillServiceData(dtService);
         }
 
@@ -55,6 +55,16 @@ namespace Hotel_Management.All_Control
             }
 
             dgvService.Columns[6].Visible = false;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadService();
+            foreach (DataGridViewRow row in dgvService.Rows)
+            {
+                if (row.Cells[1].Value.ToString() != txtSearchService.Text)
+                    row.Visible = false;
+            }
         }
 
         private void dgvService_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -88,16 +98,6 @@ namespace Hotel_Management.All_Control
                         LoadService();
                     }
                 }
-            }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            LoadService();
-            foreach (DataGridViewRow row in dgvService.Rows)
-            {
-                if (row.Cells[1].Value.ToString() != txtSearchService.Text)
-                    row.Visible = false;
             }
         }
     }

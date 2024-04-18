@@ -9,11 +9,11 @@ namespace Hotel_Management.DTO
     public class Room
     {
         private int id;
-        private string roomNumber;
-        private string roomPicture;
+        private string ?roomNumber;
+        private string ?roomPicture;
         private int preCost;
         private int currCost;
-        private string roomDescription;
+        private string ?roomDescription;
         private int hotelId;
 
         public Room(int roomNumber)
@@ -50,15 +50,14 @@ namespace Hotel_Management.DTO
             this.preCost = preCost;
             this.currCost = currCost;
             this.roomDescription = roomDescription;
-            this.hotelId = hotelId;
         }
 
         public int Id { get => id; set => id = value; }
-        public string RoomNumber { get => roomNumber; set => roomNumber = value; }
-        public string RoomPicture { get => roomPicture; set => roomPicture = value; }
+        public string RoomNumber { get => roomNumber!; set => roomNumber = value; }
+        public string RoomPicture { get => roomPicture!; set => roomPicture = value; }
         public int PreCost { get => preCost; set => preCost = value; }
         public int CurrCost { get => currCost; set => currCost = value; }
-        public string RoomDescription { get => roomDescription; set => roomDescription = value; }
+        public string RoomDescription { get => roomDescription!; set => roomDescription = value; }
         public int HotelId { get => hotelId; set => hotelId = value; }
     }
 }

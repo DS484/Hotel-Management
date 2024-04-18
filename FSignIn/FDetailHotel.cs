@@ -42,7 +42,7 @@ namespace Hotel_Management
                 DataRow row = dt.Rows[i];
 
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
                 string image1 = projectDirectory + @"\" + row[1].ToString();
                 string image2 = projectDirectory + @"\" + row[2].ToString();
                 string image3 = projectDirectory + @"\" + row[3].ToString();
@@ -76,17 +76,18 @@ namespace Hotel_Management
                 lblNoReviews.Anchor = AnchorStyles.None;
                 flpReview.Controls.Add(lblNoReviews);
             }
-            for (int i = 0; i < dtReview.Rows.Count; i++)
+            else
             {
-                UC_Review uC_Review = new UC_Review();
-                flpReview.Controls.Add(uC_Review);
+                for (int i = 0; i < dtReview.Rows.Count; i++)
+                {
+                    UC_Review uC_Review = new UC_Review();
+                    flpReview.Controls.Add(uC_Review);
 
-                DataRow row = dtReview.Rows[i];
-                uC_Review.lblUserName.Text = row[0].ToString();
-                uC_Review.lblStar.Text = row[1].ToString();
-                uC_Review.lblComment.Text = row[2].ToString();
-
-                //lblHotel.Text = "Đánh giá của khách sạn " + row[3].ToString();
+                    DataRow row = dtReview.Rows[i];
+                    uC_Review.lblUserName.Text = row[0].ToString();
+                    uC_Review.lblStar.Text = row[1].ToString();
+                    uC_Review.lblComment.Text = row[2].ToString();
+                }
             }
         }
 

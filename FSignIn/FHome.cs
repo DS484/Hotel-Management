@@ -17,7 +17,7 @@ namespace Hotel_Management
         CustomerDAO customerDAO = new CustomerDAO();
         private int userId = 0;
         private bool isMenuVisible = true;
-        private FMenu menuForm;
+        private FMenu ?menuForm;
 
         public FHome()
         {
@@ -218,7 +218,7 @@ namespace Hotel_Management
                 }
                 else
                 {
-                    menuForm.Close();
+                    menuForm!.Close();
                     isMenuVisible = true;
                 }
             }

@@ -14,15 +14,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace Hotel_Management.All_Control
 {
     public partial class UC_Room : UserControl
     {
-        private string username;
+        private string ?username;
         private Image roomIcon = Properties.Resources.room;
         private Image editIcon = Properties.Resources.edit;
         private Image deleteIcon = Properties.Resources.remove;
 
+        GenericCode genericCode = new GenericCode();
         ManagerDAO managerDAO = new ManagerDAO();
         RoomDAO roomDAO = new RoomDAO();
 
@@ -42,7 +44,7 @@ namespace Hotel_Management.All_Control
         {
             dgvRoom.DataSource = null;
             dgvRoom.Rows.Clear();
-            DataTable dtRoom = managerDAO.ManageRoom(username);
+            DataTable dtRoom = managerDAO.ManageRoom(username!);
             FillRoomData(dtRoom);
         }
 
@@ -78,12 +80,13 @@ namespace Hotel_Management.All_Control
             }
         }
 
-        private void txtSearchRoom_TextChanged(object sender, EventArgs e)
+        private void btnExportFile_Click(object sender, EventArgs e)
         {
-
+            //genericCode.ExportExcel(dgvRoom);
+            MessageBox.Show("Valid");
         }
 
-        private void dgvRoom_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvRoom_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int x = e.ColumnIndex, y = e.RowIndex;
             if (y >= 0)
@@ -131,11 +134,6 @@ namespace Hotel_Management.All_Control
                     }
                 }
             }
-        }
-
-        private void btnExportFile_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

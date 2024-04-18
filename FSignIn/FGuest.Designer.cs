@@ -598,7 +598,6 @@
             Name = "FGuest";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FGuest";
-            Load += FGuest_Load;
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel2.ResumeLayout(false);
             guna2ShadowPanel2.PerformLayout();

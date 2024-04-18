@@ -17,19 +17,19 @@ namespace Hotel_Management.Add_Item
     {
         private int hotelId;
         private int roomId;
-        private string roomNumber;
+        private string ?roomNumber;
         private int adult;
         private int child;
-        private string prePrice;
-        private string currPrice;
-        private string description;
+        private string ?prePrice;
+        private string ?currPrice;
+        private string ?description;
         private DateTime startDay;
         private DateTime endDay;
-        private string img1;
-        private string img2;
-        private string img3;
-        private string img4;
-        private string img5;
+        private string ?img1;
+        private string ?img2;
+        private string ?img3;
+        private string ?img4;
+        private string ?img5;
 
         RoomDAO roomDAO = new RoomDAO();
         RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
@@ -162,7 +162,7 @@ namespace Hotel_Management.Add_Item
 
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
-            Room room = new Room(roomId, txtRoomNumber.Texts, img1, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
+            Room room = new Room(roomId, txtRoomNumber.Texts, img1!, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
             RoomDetail roomDetail = new RoomDetail(roomId, txtImg1.PlaceholderText, txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText, txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem), dtpStart_Date.Value, dtpEnd_Date.Value);
             bool editedRoom = roomDAO.EditRoom(room);
             bool editedRoomDetail = roomDetailDAO.EditRoomDetail(roomDetail);

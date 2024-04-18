@@ -19,10 +19,10 @@ namespace Hotel_Management
 {
     public partial class FSignUp : Form
     {
-        private string firstName;
-        private string lastName;
+        private string ?firstName;
+        private string ?lastName;
         private int gender;
-        private string image;
+        private string ?image;
         private int managerId;
         private int hotelId;
 
@@ -175,7 +175,7 @@ namespace Hotel_Management
         {
             if (!CheckNullOrEmpty())
                 return;
-            Manager c = new Manager(firstName, lastName,
+            Manager c = new Manager(firstName!, lastName!,
             gender, txtUserName.Texts, txtIdentifyCard.Texts,
             txtPhoneNumber.Texts, (int)Role.MANAGER, txtPassword.Texts);
 
@@ -284,7 +284,7 @@ namespace Hotel_Management
                 fieldsUpdate.Add("city");
             }
 
-            Manager manager = new Manager(managerId, firstName, lastName,
+            Manager manager = new Manager(managerId, firstName!, lastName!,
             gender, txtUserName.Texts, txtIdentifyCard.Texts,
             txtPhoneNumber.Texts, (int)Role.MANAGER, txtPassword.Texts);
 

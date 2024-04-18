@@ -22,18 +22,18 @@ namespace Hotel_Management.All_Control
             InitializeComponent();
 
             // Ấn vào bất cứ đâu sẽ ra Form chọn phòng
-            picHotel.Click += Even;
-            lblNameHotel.Click += Even;
-            lblAddrHotel.Click += Even;
-            lblStatus.Click += Even;
-            lblVoucher.Click += Even;
-            panelBookRoom.Click += Even;
-            lblSale.Click += Even;
-            lblRealPrice.Click += Even;
-            lblSalePrice.Click += Even;
-            lblInfo.Click += Even;
-            btnbookRoom.Click += Even;
-            pnlHotel.Click += Even;
+            picHotel.Click += Even!;
+            lblNameHotel.Click += Even!;
+            lblAddrHotel.Click += Even!;
+            lblStatus.Click += Even!;
+            lblVoucher.Click += Even!;
+            panelBookRoom.Click += Even!;
+            lblSale.Click += Even!;
+            lblRealPrice.Click += Even!;
+            lblSalePrice.Click += Even!;
+            lblInfo.Click += Even!;
+            btnbookRoom.Click += Even!;
+            pnlHotel.Click += Even!;
         }
 
         public void FormatRealPrice(string text, float fontSize, FontStyle fontStyle)

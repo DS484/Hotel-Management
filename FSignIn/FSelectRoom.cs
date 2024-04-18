@@ -16,7 +16,7 @@ namespace Hotel_Management
 {
     public partial class FSelectRoom : Form
     {
-        private List<int> roomList;
+        private List<int> ?roomList;
         private int userId;
         private DateTime checkInDate;
         private DateTime checkOutDate;
@@ -57,7 +57,7 @@ namespace Hotel_Management
             {
                 DataRow row = dt.Rows[i];
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
                 string imagePath = projectDirectory + @"\" + row[2].ToString();
                 if (!string.IsNullOrEmpty(imagePath))
                 {
@@ -72,7 +72,7 @@ namespace Hotel_Management
                 uC_SelectRoom.FormatSalePrice(row[4].ToString() + " VND", 18f, FontStyle.Bold, Color.FromArgb(255, 128, 0));
                 uC_SelectRoom.btnbookRoom.Click += (sender, e) =>
                 {
-                    BookRoom_Click(sender, e, userId, Convert.ToInt32(row[0]), uC_SelectRoom.txtVoucher.Texts.Trim(), hotelId);
+                    BookRoom_Click(sender!, e, userId, Convert.ToInt32(row[0]), uC_SelectRoom.txtVoucher.Texts.Trim(), hotelId);
                 };
             }
             uC_SelectRoom.flpService.WrapContents = false;

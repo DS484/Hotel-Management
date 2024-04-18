@@ -63,24 +63,24 @@
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnSearch = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            dgvRoom = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewImageColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column11 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewImageColumn();
-            Column10 = new DataGridViewImageColumn();
-            c11 = new DataGridViewTextBoxColumn();
-            c12 = new DataGridViewTextBoxColumn();
-            c13 = new DataGridViewTextBoxColumn();
-            c14 = new DataGridViewTextBoxColumn();
-            c15 = new DataGridViewTextBoxColumn();
-            col14 = new DataGridViewTextBoxColumn();
+            dgvRoom = new DataGridView();
+            Column12 = new DataGridViewImageColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            Column14 = new DataGridViewTextBoxColumn();
+            Column15 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
+            Column17 = new DataGridViewTextBoxColumn();
+            Column18 = new DataGridViewTextBoxColumn();
+            Column19 = new DataGridViewTextBoxColumn();
+            Column20 = new DataGridViewTextBoxColumn();
+            Column21 = new DataGridViewImageColumn();
+            Column22 = new DataGridViewImageColumn();
+            Column26 = new DataGridViewTextBoxColumn();
+            Column25 = new DataGridViewTextBoxColumn();
+            Column28 = new DataGridViewTextBoxColumn();
+            Column23 = new DataGridViewTextBoxColumn();
+            Column24 = new DataGridViewTextBoxColumn();
+            Column27 = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRoom).BeginInit();
             SuspendLayout();
@@ -207,6 +207,7 @@
             // 
             // txtSearchRoom
             // 
+            txtSearchRoom.BorderColor = Color.Gray;
             txtSearchRoom.BorderRadius = 18;
             txtSearchRoom.Cursor = Cursors.Hand;
             txtSearchRoom.CustomizableEdges = customizableEdges7;
@@ -215,8 +216,10 @@
             txtSearchRoom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtSearchRoom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtSearchRoom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchRoom.FillColor = Color.FromArgb(207, 236, 236);
             txtSearchRoom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchRoom.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearchRoom.ForeColor = Color.DimGray;
             txtSearchRoom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchRoom.IconLeft = (Image)resources.GetObject("txtSearchRoom.IconLeft");
             txtSearchRoom.IconLeftSize = new Size(30, 30);
@@ -225,16 +228,16 @@
             txtSearchRoom.Name = "txtSearchRoom";
             txtSearchRoom.Padding = new Padding(12, 0, 0, 0);
             txtSearchRoom.PasswordChar = '\0';
+            txtSearchRoom.PlaceholderForeColor = Color.DimGray;
             txtSearchRoom.PlaceholderText = "|Nhập mã phòng cần tìm...";
             txtSearchRoom.SelectedText = "";
             txtSearchRoom.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtSearchRoom.Size = new Size(370, 54);
             txtSearchRoom.TabIndex = 4;
-            txtSearchRoom.TextChanged += txtSearchRoom_TextChanged;
             // 
             // btnExportFile
             // 
-            btnExportFile.BackColor = Color.WhiteSmoke;
+            btnExportFile.BackColor = Color.FromArgb(207, 236, 236);
             btnExportFile.BorderRadius = 18;
             btnExportFile.Cursor = Cursors.Hand;
             btnExportFile.CustomizableEdges = customizableEdges5;
@@ -256,7 +259,7 @@
             // 
             // btnAddRoom
             // 
-            btnAddRoom.BackColor = Color.WhiteSmoke;
+            btnAddRoom.BackColor = Color.FromArgb(207, 236, 236);
             btnAddRoom.BorderRadius = 18;
             btnAddRoom.Cursor = Cursors.Hand;
             btnAddRoom.CustomizableEdges = customizableEdges3;
@@ -281,7 +284,7 @@
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.WhiteSmoke;
+            btnSearch.BackColor = Color.FromArgb(207, 236, 236);
             btnSearch.BorderRadius = 18;
             btnSearch.CustomizableEdges = customizableEdges1;
             btnSearch.DisabledState.BorderColor = Color.DarkGray;
@@ -320,201 +323,195 @@
             dgvRoom.AllowUserToDeleteRows = false;
             dgvRoom.AllowUserToResizeColumns = false;
             dgvRoom.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(201, 231, 203);
-            dgvRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvRoom.BackgroundColor = Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(76, 175, 80);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dgvRoom.Anchor = AnchorStyles.None;
+            dgvRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRoom.BackgroundColor = Color.FromArgb(222, 241, 241);
+            dgvRoom.BorderStyle = BorderStyle.None;
+            dgvRoom.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvRoom.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvRoom.ColumnHeadersHeight = 50;
-            dgvRoom.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column5, Column6, Column7, Column8, Column3, Column11, Column9, Column10, c11, c12, c13, c14, c15, col14 });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(219, 239, 220);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(135, 201, 138);
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvRoom.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvRoom.GridColor = Color.FromArgb(199, 231, 201);
-            dgvRoom.Location = new Point(-12, -2);
-            dgvRoom.Margin = new Padding(2);
+            dgvRoom.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvRoom.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column16, Column17, Column18, Column19, Column20, Column21, Column22, Column26, Column25, Column28, Column23, Column24, Column27 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(222, 241, 241);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(187, 228, 228);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvRoom.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvRoom.EnableHeadersVisualStyles = false;
+            dgvRoom.GridColor = SystemColors.ControlDark;
+            dgvRoom.Location = new Point(3, 3);
             dgvRoom.MultiSelect = false;
             dgvRoom.Name = "dgvRoom";
             dgvRoom.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvRoom.RowHeadersVisible = false;
-            dgvRoom.RowHeadersWidth = 40;
+            dgvRoom.RowHeadersWidth = 62;
             dgvRoom.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dgvRoom.RowTemplate.Height = 33;
-            dgvRoom.Size = new Size(1514, 944);
-            dgvRoom.TabIndex = 34;
-            dgvRoom.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green;
-            dgvRoom.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(201, 231, 203);
-            dgvRoom.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvRoom.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvRoom.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvRoom.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvRoom.ThemeStyle.BackColor = Color.MediumSeaGreen;
-            dgvRoom.ThemeStyle.GridColor = Color.FromArgb(199, 231, 201);
-            dgvRoom.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(76, 175, 80);
-            dgvRoom.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvRoom.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvRoom.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvRoom.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvRoom.ThemeStyle.HeaderStyle.Height = 50;
-            dgvRoom.ThemeStyle.ReadOnly = true;
-            dgvRoom.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(219, 239, 220);
-            dgvRoom.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvRoom.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvRoom.ThemeStyle.RowsStyle.ForeColor = Color.Black;
-            dgvRoom.ThemeStyle.RowsStyle.Height = 33;
-            dgvRoom.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(135, 201, 138);
-            dgvRoom.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            dgvRoom.CellClick += dgvRoom_CellClick;
+            dgvRoom.RowTemplate.ReadOnly = true;
+            dgvRoom.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRoom.Size = new Size(1498, 932);
+            dgvRoom.TabIndex = 35;
+            dgvRoom.CellClick += dgvRoom_CellClick_1;
             // 
-            // Column1
+            // Column12
             // 
-            Column1.FillWeight = 10F;
-            Column1.HeaderText = "";
-            Column1.MinimumWidth = 70;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            Column12.FillWeight = 79.85747F;
+            Column12.HeaderText = "";
+            Column12.MinimumWidth = 8;
+            Column12.Name = "Column12";
+            Column12.ReadOnly = true;
             // 
-            // Column2
+            // Column13
             // 
-            Column2.FillWeight = 1F;
-            Column2.HeaderText = "Phòng";
-            Column2.MinimumWidth = 100;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            Column13.HeaderText = "Phòng";
+            Column13.MinimumWidth = 100;
+            Column13.Name = "Column13";
+            Column13.ReadOnly = true;
             // 
-            // Column4
+            // Column14
             // 
-            Column4.FillWeight = 1F;
-            Column4.HeaderText = "Người lớn";
-            Column4.MinimumWidth = 100;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            Column14.FillWeight = 79.85747F;
+            Column14.HeaderText = "Người lớn";
+            Column14.MinimumWidth = 100;
+            Column14.Name = "Column14";
+            Column14.ReadOnly = true;
             // 
-            // Column5
+            // Column15
             // 
-            Column5.FillWeight = 1F;
-            Column5.HeaderText = "Trẻ em";
-            Column5.MinimumWidth = 100;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
+            Column15.FillWeight = 79.85747F;
+            Column15.HeaderText = "Trẻ em";
+            Column15.MinimumWidth = 100;
+            Column15.Name = "Column15";
+            Column15.ReadOnly = true;
             // 
-            // Column6
+            // Column16
             // 
-            Column6.FillWeight = 50F;
-            Column6.HeaderText = "Giá cũ";
-            Column6.MinimumWidth = 150;
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
+            Column16.FillWeight = 79.85747F;
+            Column16.HeaderText = "Giá cũ";
+            Column16.MinimumWidth = 125;
+            Column16.Name = "Column16";
+            Column16.ReadOnly = true;
             // 
-            // Column7
+            // Column17
             // 
-            Column7.FillWeight = 1F;
-            Column7.HeaderText = "Giá mới";
-            Column7.MinimumWidth = 150;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
+            Column17.FillWeight = 79.85747F;
+            Column17.HeaderText = "Giá mới ";
+            Column17.MinimumWidth = 125;
+            Column17.Name = "Column17";
+            Column17.ReadOnly = true;
             // 
-            // Column8
+            // Column18
             // 
-            Column8.HeaderText = "Mô tả";
-            Column8.MinimumWidth = 150;
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
+            Column18.FillWeight = 79.85747F;
+            Column18.HeaderText = "Mô tả";
+            Column18.MinimumWidth = 200;
+            Column18.Name = "Column18";
+            Column18.ReadOnly = true;
             // 
-            // Column3
+            // Column19
             // 
-            Column3.HeaderText = "Ngày mở phòng";
-            Column3.MinimumWidth = 8;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            Column19.FillWeight = 79.85747F;
+            Column19.HeaderText = "Ngày mở phòng";
+            Column19.MinimumWidth = 200;
+            Column19.Name = "Column19";
+            Column19.ReadOnly = true;
             // 
-            // Column11
+            // Column20
             // 
-            Column11.HeaderText = "Ngày đóng phòng";
-            Column11.MinimumWidth = 8;
-            Column11.Name = "Column11";
-            Column11.ReadOnly = true;
+            Column20.FillWeight = 79.85747F;
+            Column20.HeaderText = "Ngày đóng phòng";
+            Column20.MinimumWidth = 200;
+            Column20.Name = "Column20";
+            Column20.ReadOnly = true;
             // 
-            // Column9
+            // Column21
             // 
-            Column9.FillWeight = 1F;
-            Column9.HeaderText = "Sửa";
-            Column9.MinimumWidth = 70;
-            Column9.Name = "Column9";
-            Column9.ReadOnly = true;
+            Column21.FillWeight = 79.85747F;
+            Column21.HeaderText = "Sửa";
+            Column21.MinimumWidth = 75;
+            Column21.Name = "Column21";
+            Column21.ReadOnly = true;
             // 
-            // Column10
+            // Column22
             // 
-            Column10.FillWeight = 1F;
-            Column10.HeaderText = "Xóa";
-            Column10.MinimumWidth = 70;
-            Column10.Name = "Column10";
-            Column10.ReadOnly = true;
+            Column22.FillWeight = 79.85747F;
+            Column22.HeaderText = "Xóa";
+            Column22.MinimumWidth = 75;
+            Column22.Name = "Column22";
+            Column22.ReadOnly = true;
             // 
-            // c11
+            // Column26
             // 
-            c11.FillWeight = 1F;
-            c11.HeaderText = "";
-            c11.MinimumWidth = 8;
-            c11.Name = "c11";
-            c11.ReadOnly = true;
+            Column26.FillWeight = 76.97106F;
+            Column26.HeaderText = "";
+            Column26.MinimumWidth = 10;
+            Column26.Name = "Column26";
+            Column26.ReadOnly = true;
             // 
-            // c12
+            // Column25
             // 
-            c12.FillWeight = 1F;
-            c12.HeaderText = "";
-            c12.MinimumWidth = 8;
-            c12.Name = "c12";
-            c12.ReadOnly = true;
+            Column25.FillWeight = 79.85747F;
+            Column25.HeaderText = "";
+            Column25.MinimumWidth = 8;
+            Column25.Name = "Column25";
+            Column25.ReadOnly = true;
             // 
-            // c13
+            // Column28
             // 
-            c13.FillWeight = 1F;
-            c13.HeaderText = "";
-            c13.MinimumWidth = 8;
-            c13.Name = "c13";
-            c13.ReadOnly = true;
+            Column28.FillWeight = 79.85747F;
+            Column28.HeaderText = "";
+            Column28.MinimumWidth = 8;
+            Column28.Name = "Column28";
+            Column28.ReadOnly = true;
             // 
-            // c14
+            // Column23
             // 
-            c14.FillWeight = 1F;
-            c14.HeaderText = "";
-            c14.MinimumWidth = 8;
-            c14.Name = "c14";
-            c14.ReadOnly = true;
+            Column23.FillWeight = 79.85747F;
+            Column23.HeaderText = "";
+            Column23.MinimumWidth = 8;
+            Column23.Name = "Column23";
+            Column23.ReadOnly = true;
             // 
-            // c15
+            // Column24
             // 
-            c15.FillWeight = 1F;
-            c15.HeaderText = "";
-            c15.MinimumWidth = 8;
-            c15.Name = "c15";
-            c15.ReadOnly = true;
+            Column24.FillWeight = 60.7063255F;
+            Column24.HeaderText = "";
+            Column24.MinimumWidth = 8;
+            Column24.Name = "Column24";
+            Column24.ReadOnly = true;
             // 
-            // col14
+            // Column27
             // 
-            col14.FillWeight = 1F;
-            col14.HeaderText = "";
-            col14.MinimumWidth = 8;
-            col14.Name = "col14";
-            col14.ReadOnly = true;
+            Column27.FillWeight = 79.85747F;
+            Column27.HeaderText = "";
+            Column27.MinimumWidth = 8;
+            Column27.Name = "Column27";
+            Column27.ReadOnly = true;
             // 
             // UC_Room
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnSearch);
             Controls.Add(btnAddRoom);
@@ -541,28 +538,25 @@
         public Guna.UI2.WinForms.Guna2Button btnExportFile;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         public DataGridView dgvInformation;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        public DataGridView dgvRoom;
+        private DataGridViewImageColumn Column12;
         private DataGridViewTextBoxColumn Column13;
         private DataGridViewTextBoxColumn Column14;
         private DataGridViewTextBoxColumn Column15;
-        private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        public Guna.UI2.WinForms.Guna2DataGridView dgvRoom;
-        private DataGridViewImageColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column11;
-        private DataGridViewImageColumn Column9;
-        private DataGridViewImageColumn Column10;
-        private DataGridViewTextBoxColumn c11;
-        private DataGridViewTextBoxColumn c12;
-        private DataGridViewTextBoxColumn c13;
-        private DataGridViewTextBoxColumn c14;
-        private DataGridViewTextBoxColumn c15;
-        private DataGridViewTextBoxColumn col14;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column17;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
+        private DataGridViewTextBoxColumn Column20;
+        private DataGridViewImageColumn Column21;
+        private DataGridViewImageColumn Column22;
+        private DataGridViewTextBoxColumn Column26;
+        private DataGridViewTextBoxColumn Column25;
+        private DataGridViewTextBoxColumn Column28;
+        private DataGridViewTextBoxColumn Column23;
+        private DataGridViewTextBoxColumn Column24;
+        private DataGridViewTextBoxColumn Column27;
     }
 }

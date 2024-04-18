@@ -36,10 +36,10 @@ namespace Hotel_Management
             GetInfoHotel();
             lblShowPersonLogin.Text = manager.LastName + " " + manager.FirstName;
             LoadHotelImageHome();
-            uC_Room1.btnAddRoom.Click += AddRoom;
-            uC_Feedback1.btnAddEmployee.Click += AddEmployee;
-            uC_Service1.btnAddService.Click += AddService;
-            uC_Customers1.btnAddCus.Click += AddCustomer;
+            uC_Room1.btnAddRoom.Click += AddRoom!;
+            uC_Feedback1.btnAddEmployee.Click += AddEmployee!;
+            uC_Service1.btnAddService.Click += AddService!;
+            uC_Customers1.btnAddCus.Click += AddCustomer!;
             LoadData();
         }
 
@@ -77,7 +77,7 @@ namespace Hotel_Management
         {
             string picture = managerDAO.GetImageHotelHome(manager.UserName);
             string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
             pictureHome.ImageLocation = projectDirectory + @"\" + picture;
         }
 

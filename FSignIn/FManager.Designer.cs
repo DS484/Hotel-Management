@@ -104,7 +104,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.BackColor = Color.WhiteSmoke;
+            splitContainer1.Panel1.BackColor = Color.White;
             splitContainer1.Panel1.Controls.Add(btnLogOut);
             splitContainer1.Panel1.Controls.Add(panel6);
             splitContainer1.Panel1.Controls.Add(guna2ShadowPanel1);
@@ -119,7 +119,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.BackColor = Color.WhiteSmoke;
+            splitContainer1.Panel2.BackColor = Color.FromArgb(207, 236, 236);
             splitContainer1.Panel2.Controls.Add(label1);
             splitContainer1.Panel2.Controls.Add(lblReset);
             splitContainer1.Panel2.Controls.Add(pictureHome);
@@ -145,7 +145,7 @@
             btnLogOut.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogOut.FillColor = SystemColors.Control;
+            btnLogOut.FillColor = Color.White;
             btnLogOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogOut.ForeColor = Color.Black;
             btnLogOut.Image = (Image)resources.GetObject("btnLogOut.Image");
@@ -163,7 +163,7 @@
             // 
             // panel6
             // 
-            panel6.BackColor = Color.WhiteSmoke;
+            panel6.BackColor = Color.White;
             panel6.Controls.Add(label2);
             panel6.Controls.Add(PicFlashingLogo);
             panel6.Controls.Add(label3);
@@ -185,7 +185,7 @@
             // 
             // PicFlashingLogo
             // 
-            PicFlashingLogo.BackColor = Color.WhiteSmoke;
+            PicFlashingLogo.BackColor = Color.White;
             PicFlashingLogo.Image = (Image)resources.GetObject("PicFlashingLogo.Image");
             PicFlashingLogo.Location = new Point(-1, 0);
             PicFlashingLogo.Margin = new Padding(4);
@@ -197,7 +197,7 @@
             // 
             // label3
             // 
-            label3.BackColor = Color.WhiteSmoke;
+            label3.BackColor = Color.White;
             label3.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(3, 122, 139);
             label3.Location = new Point(16, 0);
@@ -214,7 +214,7 @@
             guna2ShadowPanel1.Controls.Add(lblEditInfo);
             guna2ShadowPanel1.Controls.Add(pictureBox1);
             guna2ShadowPanel1.Controls.Add(lblShowPersonLogin);
-            guna2ShadowPanel1.FillColor = Color.LightSlateGray;
+            guna2ShadowPanel1.FillColor = Color.LightGray;
             guna2ShadowPanel1.Location = new Point(4, 15);
             guna2ShadowPanel1.Margin = new Padding(4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
@@ -228,7 +228,7 @@
             // 
             lblEditInfo.BackColor = Color.Transparent;
             lblEditInfo.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            lblEditInfo.ForeColor = Color.White;
+            lblEditInfo.ForeColor = Color.Black;
             lblEditInfo.Location = new Point(92, 276);
             lblEditInfo.Margin = new Padding(2);
             lblEditInfo.Name = "lblEditInfo";
@@ -239,7 +239,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.LightSlateGray;
+            pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(61, 30);
             pictureBox1.Margin = new Padding(4);
@@ -251,9 +251,9 @@
             // 
             // lblShowPersonLogin
             // 
-            lblShowPersonLogin.BackColor = Color.LightSlateGray;
+            lblShowPersonLogin.BackColor = Color.LightGray;
             lblShowPersonLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lblShowPersonLogin.ForeColor = Color.White;
+            lblShowPersonLogin.ForeColor = Color.Black;
             lblShowPersonLogin.Location = new Point(33, 220);
             lblShowPersonLogin.Margin = new Padding(4, 0, 4, 0);
             lblShowPersonLogin.Name = "lblShowPersonLogin";
@@ -264,7 +264,7 @@
             // 
             // panelMoving
             // 
-            panelMoving.BackColor = Color.Gray;
+            panelMoving.BackColor = Color.FromArgb(64, 64, 64);
             panelMoving.Location = new Point(311, 380);
             panelMoving.Margin = new Padding(4);
             panelMoving.Name = "panelMoving";
@@ -282,7 +282,7 @@
             btnFeedBack.DisabledState.CustomBorderColor = Color.DarkGray;
             btnFeedBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnFeedBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnFeedBack.FillColor = Color.WhiteSmoke;
+            btnFeedBack.FillColor = Color.White;
             btnFeedBack.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnFeedBack.ForeColor = Color.Black;
             btnFeedBack.Image = (Image)resources.GetObject("btnFeedBack.Image");
@@ -309,7 +309,7 @@
             btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCustomer.FillColor = Color.WhiteSmoke;
+            btnCustomer.FillColor = Color.White;
             btnCustomer.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnCustomer.ForeColor = Color.Black;
             btnCustomer.Image = (Image)resources.GetObject("btnCustomer.Image");
@@ -336,7 +336,7 @@
             btnBill.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBill.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBill.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBill.FillColor = Color.WhiteSmoke;
+            btnBill.FillColor = Color.White;
             btnBill.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnBill.ForeColor = Color.Black;
             btnBill.Image = (Image)resources.GetObject("btnBill.Image");
@@ -354,7 +354,7 @@
             // 
             // guna2Separator1
             // 
-            guna2Separator1.BackColor = Color.WhiteSmoke;
+            guna2Separator1.BackColor = Color.White;
             guna2Separator1.FillColor = Color.Black;
             guna2Separator1.FillThickness = 3;
             guna2Separator1.Location = new Point(9, 358);
@@ -374,7 +374,7 @@
             btnServiceManager.DisabledState.CustomBorderColor = Color.DarkGray;
             btnServiceManager.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnServiceManager.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnServiceManager.FillColor = Color.WhiteSmoke;
+            btnServiceManager.FillColor = Color.White;
             btnServiceManager.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnServiceManager.ForeColor = Color.Black;
             btnServiceManager.Image = (Image)resources.GetObject("btnServiceManager.Image");
@@ -392,8 +392,8 @@
             // 
             // btnHome
             // 
-            btnHome.BackColor = Color.WhiteSmoke;
-            btnHome.BorderColor = Color.DarkGray;
+            btnHome.BackColor = Color.FromArgb(224, 224, 224);
+            btnHome.BorderColor = Color.Empty;
             btnHome.BorderRadius = 10;
             btnHome.BorderThickness = 1;
             btnHome.CheckedState.FillColor = Color.Khaki;
@@ -404,7 +404,7 @@
             btnHome.DisabledState.CustomBorderColor = Color.DarkGray;
             btnHome.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnHome.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnHome.FillColor = Color.LightGray;
+            btnHome.FillColor = Color.FromArgb(224, 224, 224);
             btnHome.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnHome.ForeColor = Color.Black;
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
@@ -423,6 +423,7 @@
             // 
             // btnRoomManager
             // 
+            btnRoomManager.BackColor = Color.White;
             btnRoomManager.BorderColor = Color.DarkGray;
             btnRoomManager.BorderRadius = 10;
             btnRoomManager.BorderThickness = 1;
@@ -433,7 +434,7 @@
             btnRoomManager.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRoomManager.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRoomManager.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnRoomManager.FillColor = Color.WhiteSmoke;
+            btnRoomManager.FillColor = Color.White;
             btnRoomManager.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnRoomManager.ForeColor = Color.Black;
             btnRoomManager.Image = (Image)resources.GetObject("btnRoomManager.Image");
@@ -442,6 +443,7 @@
             btnRoomManager.Location = new Point(4, 466);
             btnRoomManager.Margin = new Padding(4);
             btnRoomManager.Name = "btnRoomManager";
+            btnRoomManager.PressedColor = Color.FromArgb(72, 145, 153);
             btnRoomManager.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnRoomManager.Size = new Size(328, 74);
             btnRoomManager.TabIndex = 0;
@@ -477,57 +479,57 @@
             // pictureHome
             // 
             pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
-            pictureHome.Location = new Point(6, 51);
+            pictureHome.Location = new Point(0, 52);
             pictureHome.Margin = new Padding(4);
             pictureHome.Name = "pictureHome";
-            pictureHome.Size = new Size(1528, 1072);
+            pictureHome.Size = new Size(1530, 1037);
             pictureHome.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureHome.TabIndex = 35;
             pictureHome.TabStop = false;
             // 
             // uC_Customers1
             // 
-            uC_Customers1.BackColor = Color.WhiteSmoke;
-            uC_Customers1.Location = new Point(0, 42);
+            uC_Customers1.BackColor = Color.FromArgb(207, 236, 236);
+            uC_Customers1.Location = new Point(9, 52);
             uC_Customers1.Margin = new Padding(5);
             uC_Customers1.Name = "uC_Customers1";
-            uC_Customers1.Size = new Size(1531, 1081);
+            uC_Customers1.Size = new Size(1521, 1118);
             uC_Customers1.TabIndex = 34;
             // 
             // uC_Bill1
             // 
-            uC_Bill1.BackColor = Color.WhiteSmoke;
-            uC_Bill1.Location = new Point(0, 42);
+            uC_Bill1.BackColor = Color.FromArgb(207, 236, 236);
+            uC_Bill1.Location = new Point(1, 52);
             uC_Bill1.Margin = new Padding(5);
             uC_Bill1.Name = "uC_Bill1";
-            uC_Bill1.Size = new Size(1531, 1081);
+            uC_Bill1.Size = new Size(1530, 1071);
             uC_Bill1.TabIndex = 33;
             // 
             // uC_Service1
             // 
-            uC_Service1.BackColor = Color.WhiteSmoke;
-            uC_Service1.Location = new Point(0, 42);
+            uC_Service1.BackColor = Color.FromArgb(207, 236, 236);
+            uC_Service1.Location = new Point(1, 52);
             uC_Service1.Margin = new Padding(5);
             uC_Service1.Name = "uC_Service1";
-            uC_Service1.Size = new Size(1531, 1081);
+            uC_Service1.Size = new Size(1530, 1071);
             uC_Service1.TabIndex = 32;
             // 
             // uC_Feedback1
             // 
-            uC_Feedback1.BackColor = Color.WhiteSmoke;
-            uC_Feedback1.Location = new Point(0, 42);
+            uC_Feedback1.BackColor = Color.FromArgb(207, 236, 236);
+            uC_Feedback1.Location = new Point(1, 52);
             uC_Feedback1.Margin = new Padding(5);
             uC_Feedback1.Name = "uC_Feedback1";
-            uC_Feedback1.Size = new Size(1531, 1081);
+            uC_Feedback1.Size = new Size(1530, 1071);
             uC_Feedback1.TabIndex = 31;
             // 
             // uC_Room1
             // 
-            uC_Room1.BackColor = Color.WhiteSmoke;
-            uC_Room1.Location = new Point(0, 42);
+            uC_Room1.BackColor = Color.FromArgb(207, 236, 236);
+            uC_Room1.Location = new Point(1, 52);
             uC_Room1.Margin = new Padding(5);
             uC_Room1.Name = "uC_Room1";
-            uC_Room1.Size = new Size(1531, 1081);
+            uC_Room1.Size = new Size(1530, 1071);
             uC_Room1.TabIndex = 30;
             // 
             // guna2Elipse1
@@ -616,10 +618,8 @@
         #endregion
 
         private SplitContainer splitContainer1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btnRoomManager;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button btnServiceManager;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;

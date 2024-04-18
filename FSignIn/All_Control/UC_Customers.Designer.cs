@@ -33,28 +33,19 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnAddCus = new Guna.UI2.WinForms.Guna2Button();
             btnExportFile = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
-            dgvInfoCustomer = new Guna.UI2.WinForms.Guna2DataGridView();
-            Column1 = new DataGridViewImageColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -63,6 +54,15 @@
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSearchCustomer = new Guna.UI2.WinForms.Guna2Button();
+            dgvInfoCustomer = new DataGridView();
+            Column12 = new DataGridViewImageColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            Column14 = new DataGridViewTextBoxColumn();
+            Column15 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
+            Column17 = new DataGridViewTextBoxColumn();
+            Column18 = new DataGridViewTextBoxColumn();
+            Column19 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInfoCustomer).BeginInit();
             SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             // btnAddCus
             // 
-            btnAddCus.BackColor = Color.WhiteSmoke;
+            btnAddCus.BackColor = Color.FromArgb(222, 241, 241);
             btnAddCus.BorderRadius = 18;
             btnAddCus.CustomizableEdges = customizableEdges1;
             btnAddCus.DisabledState.BorderColor = Color.DarkGray;
@@ -93,7 +93,7 @@
             // 
             // btnExportFile
             // 
-            btnExportFile.BackColor = Color.WhiteSmoke;
+            btnExportFile.BackColor = Color.FromArgb(222, 241, 241);
             btnExportFile.BorderRadius = 18;
             btnExportFile.CustomizableEdges = customizableEdges3;
             btnExportFile.DisabledState.BorderColor = Color.DarkGray;
@@ -120,133 +120,6 @@
             panel1.Size = new Size(1628, 942);
             panel1.TabIndex = 19;
             // 
-            // dgvInfoCustomer
-            // 
-            dgvInfoCustomer.AllowUserToAddRows = false;
-            dgvInfoCustomer.AllowUserToDeleteRows = false;
-            dgvInfoCustomer.AllowUserToResizeColumns = false;
-            dgvInfoCustomer.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(201, 231, 203);
-            dgvInfoCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvInfoCustomer.Anchor = AnchorStyles.None;
-            dgvInfoCustomer.BackgroundColor = Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(76, 175, 80);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvInfoCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvInfoCustomer.ColumnHeadersHeight = 50;
-            dgvInfoCustomer.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(219, 239, 220);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(135, 201, 138);
-            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvInfoCustomer.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvInfoCustomer.GridColor = Color.FromArgb(199, 231, 201);
-            dgvInfoCustomer.Location = new Point(0, 0);
-            dgvInfoCustomer.MultiSelect = false;
-            dgvInfoCustomer.Name = "dgvInfoCustomer";
-            dgvInfoCustomer.ReadOnly = true;
-            dgvInfoCustomer.RowHeadersVisible = false;
-            dgvInfoCustomer.RowHeadersWidth = 40;
-            dgvInfoCustomer.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dgvInfoCustomer.RowTemplate.Height = 33;
-            dgvInfoCustomer.Size = new Size(1527, 936);
-            dgvInfoCustomer.TabIndex = 31;
-            dgvInfoCustomer.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Green;
-            dgvInfoCustomer.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(201, 231, 203);
-            dgvInfoCustomer.ThemeStyle.AlternatingRowsStyle.Font = null;
-            dgvInfoCustomer.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            dgvInfoCustomer.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            dgvInfoCustomer.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            dgvInfoCustomer.ThemeStyle.BackColor = Color.MediumSeaGreen;
-            dgvInfoCustomer.ThemeStyle.GridColor = Color.FromArgb(199, 231, 201);
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(76, 175, 80);
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvInfoCustomer.ThemeStyle.HeaderStyle.Height = 50;
-            dgvInfoCustomer.ThemeStyle.ReadOnly = true;
-            dgvInfoCustomer.ThemeStyle.RowsStyle.BackColor = Color.FromArgb(219, 239, 220);
-            dgvInfoCustomer.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvInfoCustomer.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dgvInfoCustomer.ThemeStyle.RowsStyle.ForeColor = Color.Black;
-            dgvInfoCustomer.ThemeStyle.RowsStyle.Height = 33;
-            dgvInfoCustomer.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(135, 201, 138);
-            dgvInfoCustomer.ThemeStyle.RowsStyle.SelectionForeColor = Color.Black;
-            dgvInfoCustomer.CellFormatting += dgvInfoCustomer_CellFormatting;
-            // 
-            // Column1
-            // 
-            Column1.FillWeight = 10F;
-            Column1.HeaderText = "";
-            Column1.MinimumWidth = 70;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.FillWeight = 50F;
-            Column2.HeaderText = "Tài khoản";
-            Column2.MinimumWidth = 150;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.FillWeight = 50F;
-            Column3.HeaderText = "Tên khách hàng";
-            Column3.MinimumWidth = 200;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.FillWeight = 50F;
-            Column4.HeaderText = "Số phòng";
-            Column4.MinimumWidth = 150;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.FillWeight = 50F;
-            Column5.HeaderText = "SDT";
-            Column5.MinimumWidth = 200;
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.FillWeight = 50F;
-            Column6.HeaderText = "CCCD";
-            Column6.MinimumWidth = 150;
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            Column7.FillWeight = 50F;
-            Column7.HeaderText = "Ngày nhận phòng";
-            Column7.MinimumWidth = 200;
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            Column8.FillWeight = 50F;
-            Column8.HeaderText = "Ngày trả phòng";
-            Column8.MinimumWidth = 200;
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
-            // 
             // guna2Elipse2
             // 
             guna2Elipse2.BorderRadius = 10;
@@ -258,14 +131,14 @@
             // 
             // dtpCheckIn
             // 
-            dtpCheckIn.BackColor = Color.WhiteSmoke;
+            dtpCheckIn.BackColor = Color.FromArgb(222, 241, 241);
             dtpCheckIn.BorderRadius = 18;
             dtpCheckIn.BorderThickness = 2;
             dtpCheckIn.Checked = true;
             dtpCheckIn.Cursor = Cursors.Hand;
             dtpCheckIn.CustomFormat = "dd/MM/yyyy";
             dtpCheckIn.CustomizableEdges = customizableEdges9;
-            dtpCheckIn.FillColor = Color.WhiteSmoke;
+            dtpCheckIn.FillColor = Color.FromArgb(155, 215, 215);
             dtpCheckIn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckIn.Format = DateTimePickerFormat.Custom;
             dtpCheckIn.Location = new Point(20, 38);
@@ -282,14 +155,14 @@
             // 
             // dtpCheckOut
             // 
-            dtpCheckOut.BackColor = Color.WhiteSmoke;
+            dtpCheckOut.BackColor = Color.FromArgb(222, 241, 241);
             dtpCheckOut.BorderRadius = 18;
             dtpCheckOut.BorderThickness = 2;
             dtpCheckOut.Checked = true;
             dtpCheckOut.Cursor = Cursors.Hand;
             dtpCheckOut.CustomFormat = "dd/MM/yyyy";
             dtpCheckOut.CustomizableEdges = customizableEdges7;
-            dtpCheckOut.FillColor = Color.WhiteSmoke;
+            dtpCheckOut.FillColor = Color.FromArgb(155, 215, 215);
             dtpCheckOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckOut.Format = DateTimePickerFormat.Custom;
             dtpCheckOut.Location = new Point(265, 38);
@@ -337,7 +210,7 @@
             // 
             // btnSearchCustomer
             // 
-            btnSearchCustomer.BackColor = Color.WhiteSmoke;
+            btnSearchCustomer.BackColor = Color.FromArgb(222, 241, 241);
             btnSearchCustomer.BorderRadius = 18;
             btnSearchCustomer.CustomizableEdges = customizableEdges5;
             btnSearchCustomer.DisabledState.BorderColor = Color.DarkGray;
@@ -355,11 +228,128 @@
             btnSearchCustomer.Text = "Tìm kiếm";
             btnSearchCustomer.Click += btnSearchCustomer_Click;
             // 
+            // dgvInfoCustomer
+            // 
+            dgvInfoCustomer.AllowUserToAddRows = false;
+            dgvInfoCustomer.AllowUserToDeleteRows = false;
+            dgvInfoCustomer.AllowUserToResizeColumns = false;
+            dgvInfoCustomer.AllowUserToResizeRows = false;
+            dgvInfoCustomer.Anchor = AnchorStyles.None;
+            dgvInfoCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvInfoCustomer.BackgroundColor = Color.FromArgb(222, 241, 241);
+            dgvInfoCustomer.BorderStyle = BorderStyle.None;
+            dgvInfoCustomer.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvInfoCustomer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvInfoCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvInfoCustomer.ColumnHeadersHeight = 50;
+            dgvInfoCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvInfoCustomer.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column16, Column17, Column18, Column19 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(222, 241, 241);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(187, 228, 228);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvInfoCustomer.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvInfoCustomer.EnableHeadersVisualStyles = false;
+            dgvInfoCustomer.GridColor = SystemColors.ControlDark;
+            dgvInfoCustomer.Location = new Point(3, 3);
+            dgvInfoCustomer.MultiSelect = false;
+            dgvInfoCustomer.Name = "dgvInfoCustomer";
+            dgvInfoCustomer.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvInfoCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvInfoCustomer.RowHeadersVisible = false;
+            dgvInfoCustomer.RowHeadersWidth = 62;
+            dgvInfoCustomer.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dgvInfoCustomer.RowTemplate.Height = 33;
+            dgvInfoCustomer.RowTemplate.ReadOnly = true;
+            dgvInfoCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvInfoCustomer.Size = new Size(1498, 932);
+            dgvInfoCustomer.TabIndex = 36;
+            // 
+            // Column12
+            // 
+            Column12.FillWeight = 10F;
+            Column12.HeaderText = "";
+            Column12.MinimumWidth = 80;
+            Column12.Name = "Column12";
+            Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            Column13.HeaderText = "Tài khoản";
+            Column13.MinimumWidth = 100;
+            Column13.Name = "Column13";
+            Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            Column14.FillWeight = 79.85747F;
+            Column14.HeaderText = "Tên khách hàng";
+            Column14.MinimumWidth = 100;
+            Column14.Name = "Column14";
+            Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            Column15.FillWeight = 79.85747F;
+            Column15.HeaderText = "Số phòng";
+            Column15.MinimumWidth = 100;
+            Column15.Name = "Column15";
+            Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            Column16.FillWeight = 79.85747F;
+            Column16.HeaderText = "SDT";
+            Column16.MinimumWidth = 125;
+            Column16.Name = "Column16";
+            Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            Column17.FillWeight = 79.85747F;
+            Column17.HeaderText = "CCCD";
+            Column17.MinimumWidth = 125;
+            Column17.Name = "Column17";
+            Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            Column18.FillWeight = 79.85747F;
+            Column18.HeaderText = "Ngày nhận phòng";
+            Column18.MinimumWidth = 200;
+            Column18.Name = "Column18";
+            Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            Column19.FillWeight = 79.85747F;
+            Column19.HeaderText = "Ngày trả phòng";
+            Column19.MinimumWidth = 200;
+            Column19.Name = "Column19";
+            Column19.ReadOnly = true;
+            // 
             // UC_Customers
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(222, 241, 241);
             Controls.Add(btnSearchCustomer);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
@@ -388,20 +378,20 @@
         public Guna.UI2.WinForms.Guna2Button btnAddCus;
         public Guna.UI2.WinForms.Guna2Button btnExportFile;
         public Panel panel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvInfoCustomer;
-        private DataGridViewImageColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOut;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button btnSearchCustomer;
+        public DataGridView dgvInfoCustomer;
+        private DataGridViewImageColumn Column12;
+        private DataGridViewTextBoxColumn Column13;
+        private DataGridViewTextBoxColumn Column14;
+        private DataGridViewTextBoxColumn Column15;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column17;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
     }
 }

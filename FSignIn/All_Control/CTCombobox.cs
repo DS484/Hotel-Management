@@ -44,8 +44,8 @@ namespace Hotel_Management.All_Control
             cmbList.Font = new Font(this.Font.Name, 10F);
             cmbList.Size = new Size(100, 50);
             cmbList.ForeColor = listTextColor;
-            cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);//Default event
-            cmbList.TextChanged += new EventHandler(ComboBox_TextChanged);//Refresh text
+            cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged!);//Default event
+            cmbList.TextChanged += new EventHandler(ComboBox_TextChanged!);//Refresh text
             cmbList.DropDownHeight = 100;
 
             //Button: Icon
@@ -55,8 +55,8 @@ namespace Hotel_Management.All_Control
             btnIcon.BackColor = backColor;
             btnIcon.Size = new Size(30, 30);
             btnIcon.Cursor = Cursors.Hand;
-            btnIcon.Click += new EventHandler(Icon_Click);//Open dropdown list
-            btnIcon.Paint += new PaintEventHandler(Icon_Paint);//Draw icon
+            btnIcon.Click += new EventHandler(Icon_Click!);//Open dropdown list
+            btnIcon.Paint += new PaintEventHandler(Icon_Paint!);//Draw icon
 
             //Label: Text
             lblText.Dock = DockStyle.Fill;
@@ -66,9 +66,9 @@ namespace Hotel_Management.All_Control
             lblText.Padding = new Padding(0, 0, 0, 0);
             lblText.Font = new Font(this.Font.Name, 10F);
             //->Attach label events to user control event
-            lblText.Click += new EventHandler(Surface_Click);//Select combo box
-            lblText.MouseEnter += new EventHandler(Surface_MouseEnter);
-            lblText.MouseLeave += new EventHandler(Surface_MouseLeave);
+            lblText.Click += new EventHandler(Surface_Click!);//Select combo box
+            lblText.MouseEnter += new EventHandler(Surface_MouseEnter!);
+            lblText.MouseLeave += new EventHandler(Surface_MouseLeave!);
 
             //User Control
             this.Controls.Add(lblText);//2
