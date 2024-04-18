@@ -12,6 +12,14 @@ namespace Hotel_Management.DAO
     {
         DBConnection db = new DBConnection();
 
+        public bool DeleteBooking(int bookingId)
+        {
+            string query = $"DELETE FROM Booking WHERE id = '{bookingId}'";
+            int deleted = db.ExecuteNoneQuery(query);
+            if (deleted > 0) return true;
+            return false;
+        }
+
         public bool CreateBooking(DateTime checkInDate, DateTime checkOutDate,
             int roomId, int userId, int voucher)
         {

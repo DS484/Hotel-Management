@@ -69,7 +69,7 @@ namespace Hotel_Management
             txtReview.Texts = review;
 
             string workingDirectory = Environment.CurrentDirectory;
-            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
             image = projectDirectory + @"\" + hotelImg.ToString();
             picboxHotel.ImageLocation = image;
         }
@@ -187,11 +187,12 @@ namespace Hotel_Management
             if (inserted)
             {
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
                 string[] lstDir = picboxHotel.ImageLocation.ToString().Split(@"\");
                 string fileName = @"Image\" + lstDir[lstDir.Length - 1];
-
-                Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts, 0);
+                //
+                
+                Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts,Convert.ToInt32(cbbStar.Texts));
                 bool addHotel = hotelDAO.Insert(hotel);
                 if (addHotel)
                 {
@@ -201,7 +202,6 @@ namespace Hotel_Management
                     this.Hide();
                     FSignIn fSignIn = new FSignIn();
                     fSignIn.ShowDialog();
-                    //fSignIn.Visible = true;
                 }
                 else
                 {
@@ -270,9 +270,10 @@ namespace Hotel_Management
             }
 
             Hotel oldHotel = hotelDAO.GetHotel(hotelId);
-            if(dic.CheckDuplicateField("hotels", "hotel_name", oldHotel.HotelName, txtHotel.Texts)
+            if (dic.CheckDuplicateField("hotels", "hotel_name", oldHotel.HotelName, txtHotel.Texts)
                 && dic.CheckDuplicateField("hotels", "address", oldHotel.Address, txtAddress.Texts)
-                && dic.CheckDuplicateField("hotels", "city", oldHotel.City, cbbCity.Texts)){
+                && dic.CheckDuplicateField("hotels", "city", oldHotel.City, cbbCity.Texts))
+            {
                 MessageBox.Show("Đã tồn tại thông tin khách sạn này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -282,17 +283,17 @@ namespace Hotel_Management
                 fieldsUpdate.Add("address");
                 fieldsUpdate.Add("city");
             }
-               
+
             Manager manager = new Manager(managerId, firstName, lastName,
             gender, txtUserName.Texts, txtIdentifyCard.Texts,
             txtPhoneNumber.Texts, (int)Role.MANAGER, txtPassword.Texts);
 
             string[] lst = picboxHotel.ImageLocation.ToString().Split(@"\");
             string hotelImg = "Image" + @"\" + lst[lst.Length - 1];
-            Hotel hotel = new Hotel(hotelId ,txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, hotelImg, txtVoucher.Texts, txtReview.Texts);
+            Hotel hotel = new Hotel(hotelId, txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, hotelImg, txtVoucher.Texts, txtReview.Texts,Convert.ToInt32(cbbStar.SelectedItem));
             bool editedManager = managerDAO.Update(manager);
             bool editedHotel = hotelDAO.Update(hotel);
-            if(editedHotel && editedManager) 
+            if (editedHotel && editedManager)
             {
                 this.Close();
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -300,7 +301,7 @@ namespace Hotel_Management
             else
                 MessageBox.Show("Có lỗi xảy ra!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            
+
         }
 
         private void txtReview__TextChanged(object sender, EventArgs e)

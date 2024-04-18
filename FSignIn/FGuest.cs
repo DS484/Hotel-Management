@@ -131,8 +131,6 @@ namespace Hotel_Management
 
         private void btnAddRoom_Click_1(object sender, EventArgs e)
         {
-            //roomDAO.BookRoomSuccess(roomId);
-
             bookingDAO.CreateBooking(checkInDate, checkOutDate, roomId, userId, voucher);
             string username = customerDAO.GetUserName(userId);
 

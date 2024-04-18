@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblHotel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblRoomName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblCheckInDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblCheckOutDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnEvaluate = new Guna.UI2.WinForms.Guna2Button();
+            btnCheckOut = new Guna.UI2.WinForms.Guna2Button();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -107,27 +107,27 @@
             lblCheckOutDate.Text = "...";
             lblCheckOutDate.Click += lblCheckOutDate_Click;
             // 
-            // btnEvaluate
+            // btnCheckOut
             // 
-            btnEvaluate.BorderColor = Color.White;
-            btnEvaluate.BorderRadius = 10;
-            btnEvaluate.BorderThickness = 2;
-            btnEvaluate.CustomizableEdges = customizableEdges1;
-            btnEvaluate.DisabledState.BorderColor = Color.DarkGray;
-            btnEvaluate.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEvaluate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEvaluate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEvaluate.FillColor = Color.FromArgb(255, 128, 0);
-            btnEvaluate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEvaluate.ForeColor = Color.White;
-            btnEvaluate.Location = new Point(837, 104);
-            btnEvaluate.Margin = new Padding(2);
-            btnEvaluate.Name = "btnEvaluate";
-            btnEvaluate.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnEvaluate.Size = new Size(214, 62);
-            btnEvaluate.TabIndex = 5;
-            btnEvaluate.Text = "Đánh giá";
-            btnEvaluate.Click += btnEvaluate_Click;
+            btnCheckOut.BorderColor = Color.White;
+            btnCheckOut.BorderRadius = 10;
+            btnCheckOut.BorderThickness = 2;
+            btnCheckOut.CustomizableEdges = customizableEdges9;
+            btnCheckOut.DisabledState.BorderColor = Color.DarkGray;
+            btnCheckOut.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCheckOut.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCheckOut.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCheckOut.FillColor = Color.FromArgb(255, 128, 0);
+            btnCheckOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCheckOut.ForeColor = Color.White;
+            btnCheckOut.Location = new Point(837, 104);
+            btnCheckOut.Margin = new Padding(2);
+            btnCheckOut.Name = "btnCheckOut";
+            btnCheckOut.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnCheckOut.Size = new Size(214, 62);
+            btnCheckOut.TabIndex = 5;
+            btnCheckOut.Text = "Trả phòng";
+            btnCheckOut.Click += btnEvaluate_Click;
             // 
             // guna2Elipse1
             // 
@@ -192,11 +192,11 @@
             guna2Panel5.BorderRadius = 10;
             guna2Panel5.BorderThickness = 2;
             guna2Panel5.Controls.Add(pbHotel);
-            guna2Panel5.CustomizableEdges = customizableEdges7;
+            guna2Panel5.CustomizableEdges = customizableEdges13;
             guna2Panel5.Location = new Point(25, 4);
             guna2Panel5.Margin = new Padding(4);
             guna2Panel5.Name = "guna2Panel5";
-            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna2Panel5.Size = new Size(283, 260);
             guna2Panel5.TabIndex = 97;
             // 
@@ -204,11 +204,11 @@
             // 
             pbHotel.BackColor = Color.FromArgb(255, 128, 0);
             pbHotel.BorderRadius = 20;
-            pbHotel.CustomizableEdges = customizableEdges5;
+            pbHotel.CustomizableEdges = customizableEdges11;
             pbHotel.ImageRotate = 0F;
             pbHotel.Location = new Point(3, 3);
             pbHotel.Name = "pbHotel";
-            pbHotel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pbHotel.ShadowDecoration.CustomizableEdges = customizableEdges12;
             pbHotel.Size = new Size(277, 254);
             pbHotel.SizeMode = PictureBoxSizeMode.StretchImage;
             pbHotel.TabIndex = 0;
@@ -216,12 +216,12 @@
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.CustomizableEdges = customizableEdges3;
+            guna2PictureBox1.CustomizableEdges = customizableEdges15;
             guna2PictureBox1.Image = Properties.Resources.good_feedback;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(912, 28);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2PictureBox1.Size = new Size(66, 71);
             guna2PictureBox1.TabIndex = 98;
             guna2PictureBox1.TabStop = false;
@@ -237,7 +237,7 @@
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
-            Controls.Add(btnEvaluate);
+            Controls.Add(btnCheckOut);
             Controls.Add(lblCheckOutDate);
             Controls.Add(lblCheckInDate);
             Controls.Add(lblRoomName);
@@ -258,7 +258,7 @@
         public Guna.UI2.WinForms.Guna2HtmlLabel lblRoomName;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblCheckInDate;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblCheckOutDate;
-        public Guna.UI2.WinForms.Guna2Button btnEvaluate;
+        public Guna.UI2.WinForms.Guna2Button btnCheckOut;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;

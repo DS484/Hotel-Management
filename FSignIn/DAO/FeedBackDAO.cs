@@ -20,15 +20,5 @@ namespace Hotel_Management.DAO
             if (inserted > 0) return true;
             return false;
         }
-
-        public DataTable checkFeedBack(int userId, int hotelId)
-        {
-            string query = "SELECT * FROM Feedback WHERE user_id = @userId AND hotel_id = @hotelId";
-            object[] parameter = { userId, hotelId };
-
-            DataTable dt = db.ExecuteQuery(query, parameter);
-            return dt;
-        }
-
     }
 }

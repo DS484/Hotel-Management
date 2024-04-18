@@ -96,6 +96,12 @@ namespace Hotel_Management.Properties
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
             GetInfoService();
+            DataTable dtRoom = roomDAO.CheckRoomExist(txtRoomNumber.Texts, hotelId);
+            if (dtRoom != null && dtRoom.Rows.Count > 0)
+            {
+                MessageBox.Show($"Dịch vụ của phòng '{txtRoomNumber.Texts}' đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             bool inserted = managerDAO.AddService(roomId, serviceId);
             if (inserted)
             {

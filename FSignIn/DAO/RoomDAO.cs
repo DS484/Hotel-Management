@@ -65,7 +65,7 @@ namespace Hotel_Management.DAO
             Room room = (Room)obj;
             string sql = $"INSERT INTO Rooms(room_number, room_picture, pre_price, curr_price, description, hotel_id)" +
                 $"VALUES ('{room.RoomNumber}', N'{room.RoomPicture}', '{room.PreCost}', '{room.CurrCost}'," +
-                $", N'{room.RoomDescription}', '{room.HotelId}')";
+                $"N'{room.RoomDescription}', '{room.HotelId}')";
             int inserted = db.ExecuteNoneQuery(sql);
             if (inserted > 0) return true;
             return false;
@@ -87,6 +87,16 @@ namespace Hotel_Management.DAO
             int deleted = db.ExecuteNoneQuery(query);
             if (deleted > 0) return true;
             return false;
+        }
+
+        public DataTable CheckRoomExist(string roomNumber, int hotelId)
+        {
+            string query = "SELECT * FROM Rooms WHERE room_number = @roomNumber AND hotel_id = @hotelId";
+            object[] parameter = { roomNumber, hotelId };
+
+            DataTable dt = db.ExecuteQuery(query, parameter);
+
+            return dt;
         }
     }
 }

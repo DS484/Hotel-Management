@@ -30,7 +30,7 @@ namespace Hotel_Management.DTO
             this.City = city;
         }
 
-        public Hotel(int id, string hotelName, string address, string city, string picture, string voucher, string review)
+        public Hotel(int id, string hotelName, string address, string city, string picture, string voucher, string review, int starAvg)
         {
             this.id = id;
             this.HotelName = hotelName;
@@ -39,6 +39,7 @@ namespace Hotel_Management.DTO
             this.Picture = picture;
             this.Voucher = voucher;
             this.Review = review;
+            this.StarAvg = starAvg;
         }
 
         public Hotel(string hotelName, string address, string city, string picture, string voucher, string review, int starAvg)

@@ -114,10 +114,11 @@ namespace Hotel_Management
                     //1 la checkin, 2 la checkout
                     for (int i = 0; i < dtBooking.Rows.Count; i++)
                     {
+                        DataRow rowBehind;
                         DataRow rowCurr = dtBooking.Rows[i];
-                        DataRow rowBehind = dtBooking.Rows[i + 1];
                         if (i != dtBooking.Rows.Count - 1)
                         {
+                            rowBehind = dtBooking.Rows[i + 1];
                             if (dtpCheckInDate.Value > Convert.ToDateTime(rowCurr[2]) && dtpCheckOutDate.Value < Convert.ToDateTime(rowBehind[1]))
                                 middle = true;
                         }

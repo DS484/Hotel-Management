@@ -30,9 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSignUp));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
             btnEditInfo = new Button();
@@ -84,6 +84,10 @@
             lblTopic = new Label();
             label1 = new Label();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
+            cbbStar = new All_Control.CTCombobox();
+            pictureBox6 = new PictureBox();
+            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picboxHotel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbConfirmPassWord).BeginInit();
@@ -99,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // guna2Elipse1
@@ -109,6 +114,7 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(guna2vSeparator1);
             panel1.Controls.Add(btnEditInfo);
             panel1.Controls.Add(guna2HtmlLabel13);
             panel1.Controls.Add(label24);
@@ -120,6 +126,7 @@
             panel1.Controls.Add(guna2HtmlLabel3);
             panel1.Controls.Add(guna2HtmlLabel2);
             panel1.Controls.Add(guna2HtmlLabel12);
+            panel1.Controls.Add(guna2HtmlLabel7);
             panel1.Controls.Add(guna2HtmlLabel6);
             panel1.Controls.Add(guna2HtmlLabel11);
             panel1.Controls.Add(guna2HtmlLabel10);
@@ -128,6 +135,7 @@
             panel1.Controls.Add(guna2HtmlLabel1);
             panel1.Controls.Add(btnChooseImage);
             panel1.Controls.Add(picboxHotel);
+            panel1.Controls.Add(cbbStar);
             panel1.Controls.Add(cbbCity);
             panel1.Controls.Add(txtReview);
             panel1.Controls.Add(txtAddress);
@@ -146,6 +154,7 @@
             panel1.Controls.Add(txtPhoneNumber);
             panel1.Controls.Add(txtIdentifyCard);
             panel1.Controls.Add(pictureBox12);
+            panel1.Controls.Add(pictureBox6);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox11);
             panel1.Controls.Add(pictureBox10);
@@ -168,7 +177,7 @@
             btnEditInfo.BackColor = SystemColors.MenuHighlight;
             btnEditInfo.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditInfo.ForeColor = Color.Black;
-            btnEditInfo.Location = new Point(523, 919);
+            btnEditInfo.Location = new Point(307, 884);
             btnEditInfo.Margin = new Padding(4);
             btnEditInfo.Name = "btnEditInfo";
             btnEditInfo.Size = new Size(218, 65);
@@ -181,7 +190,7 @@
             // 
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel13.Location = new Point(894, 206);
+            guna2HtmlLabel13.Location = new Point(867, 172);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             guna2HtmlLabel13.Size = new Size(233, 34);
             guna2HtmlLabel13.TabIndex = 51;
@@ -213,7 +222,7 @@
             btnBack.Location = new Point(16, 20);
             btnBack.Margin = new Padding(4);
             btnBack.Name = "btnBack";
-            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnBack.Size = new Size(38, 38);
             btnBack.TabIndex = 49;
@@ -223,7 +232,7 @@
             // 
             lblConfirmPassWord.BackColor = Color.Transparent;
             lblConfirmPassWord.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblConfirmPassWord.Location = new Point(86, 824);
+            lblConfirmPassWord.Location = new Point(86, 804);
             lblConfirmPassWord.Name = "lblConfirmPassWord";
             lblConfirmPassWord.Size = new Size(83, 30);
             lblConfirmPassWord.TabIndex = 42;
@@ -233,7 +242,7 @@
             // 
             lblPassWord.BackColor = Color.Transparent;
             lblPassWord.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lblPassWord.Location = new Point(87, 730);
+            lblPassWord.Location = new Point(87, 710);
             lblPassWord.Name = "lblPassWord";
             lblPassWord.Size = new Size(94, 30);
             lblPassWord.TabIndex = 42;
@@ -243,7 +252,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel5.Location = new Point(82, 636);
+            guna2HtmlLabel5.Location = new Point(82, 616);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(146, 30);
             guna2HtmlLabel5.TabIndex = 42;
@@ -253,7 +262,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel4.Location = new Point(82, 532);
+            guna2HtmlLabel4.Location = new Point(82, 512);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(86, 30);
             guna2HtmlLabel4.TabIndex = 42;
@@ -263,7 +272,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel3.Location = new Point(82, 453);
+            guna2HtmlLabel3.Location = new Point(82, 433);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(102, 30);
             guna2HtmlLabel3.TabIndex = 42;
@@ -273,7 +282,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel2.Location = new Point(82, 352);
+            guna2HtmlLabel2.Location = new Point(82, 332);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(58, 30);
             guna2HtmlLabel2.TabIndex = 41;
@@ -283,7 +292,7 @@
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel12.Location = new Point(690, 730);
+            guna2HtmlLabel12.Location = new Point(705, 804);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             guna2HtmlLabel12.Size = new Size(92, 30);
             guna2HtmlLabel12.TabIndex = 40;
@@ -293,7 +302,7 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel6.Location = new Point(690, 637);
+            guna2HtmlLabel6.Location = new Point(690, 617);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(61, 30);
             guna2HtmlLabel6.TabIndex = 40;
@@ -303,7 +312,7 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel11.Location = new Point(690, 532);
+            guna2HtmlLabel11.Location = new Point(690, 512);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(107, 30);
             guna2HtmlLabel11.TabIndex = 40;
@@ -313,7 +322,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel10.Location = new Point(690, 447);
+            guna2HtmlLabel10.Location = new Point(690, 427);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(51, 30);
             guna2HtmlLabel10.TabIndex = 40;
@@ -323,7 +332,7 @@
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel9.Location = new Point(690, 352);
+            guna2HtmlLabel9.Location = new Point(690, 332);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(100, 30);
             guna2HtmlLabel9.TabIndex = 40;
@@ -333,7 +342,7 @@
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel8.Location = new Point(690, 260);
+            guna2HtmlLabel8.Location = new Point(690, 240);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             guna2HtmlLabel8.Size = new Size(84, 30);
             guna2HtmlLabel8.TabIndex = 40;
@@ -343,7 +352,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel1.Location = new Point(82, 260);
+            guna2HtmlLabel1.Location = new Point(82, 240);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(75, 30);
             guna2HtmlLabel1.TabIndex = 40;
@@ -351,7 +360,7 @@
             // 
             // btnChooseImage
             // 
-            btnChooseImage.Location = new Point(894, 894);
+            btnChooseImage.Location = new Point(955, 930);
             btnChooseImage.Name = "btnChooseImage";
             btnChooseImage.Size = new Size(145, 47);
             btnChooseImage.TabIndex = 39;
@@ -362,13 +371,13 @@
             // picboxHotel
             // 
             picboxHotel.BackColor = Color.RosyBrown;
-            picboxHotel.CustomizableEdges = customizableEdges2;
+            picboxHotel.CustomizableEdges = customizableEdges5;
             picboxHotel.FillColor = Color.LightGray;
             picboxHotel.ImageRotate = 0F;
-            picboxHotel.Location = new Point(797, 673);
+            picboxHotel.Location = new Point(867, 761);
             picboxHotel.Name = "picboxHotel";
-            picboxHotel.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            picboxHotel.Size = new Size(372, 206);
+            picboxHotel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            picboxHotel.Size = new Size(273, 153);
             picboxHotel.SizeMode = PictureBoxSizeMode.StretchImage;
             picboxHotel.TabIndex = 38;
             picboxHotel.TabStop = false;
@@ -386,7 +395,7 @@
             cbbCity.Items.AddRange(new object[] { "Hà Nội", "TP Hồ Chí Minh", "Đà Nẵng" });
             cbbCity.ListBackColor = Color.FromArgb(230, 228, 245);
             cbbCity.ListTextColor = Color.DimGray;
-            cbbCity.Location = new Point(798, 522);
+            cbbCity.Location = new Point(798, 502);
             cbbCity.Margin = new Padding(4);
             cbbCity.Name = "cbbCity";
             cbbCity.Padding = new Padding(1);
@@ -405,7 +414,7 @@
             txtReview.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtReview.ForeColor = Color.Black;
             txtReview.IsFocused = false;
-            txtReview.Location = new Point(798, 615);
+            txtReview.Location = new Point(798, 595);
             txtReview.Margin = new Padding(4);
             txtReview.Multiline = false;
             txtReview.Name = "txtReview";
@@ -431,7 +440,7 @@
             txtAddress.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtAddress.ForeColor = Color.Black;
             txtAddress.IsFocused = false;
-            txtAddress.Location = new Point(797, 426);
+            txtAddress.Location = new Point(797, 406);
             txtAddress.Margin = new Padding(4);
             txtAddress.Multiline = false;
             txtAddress.Name = "txtAddress";
@@ -456,7 +465,7 @@
             txtHotel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtHotel.ForeColor = Color.Black;
             txtHotel.IsFocused = false;
-            txtHotel.Location = new Point(797, 332);
+            txtHotel.Location = new Point(797, 312);
             txtHotel.Margin = new Padding(4);
             txtHotel.Multiline = false;
             txtHotel.Name = "txtHotel";
@@ -481,7 +490,7 @@
             txtVoucher.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtVoucher.ForeColor = Color.Black;
             txtVoucher.IsFocused = false;
-            txtVoucher.Location = new Point(798, 239);
+            txtVoucher.Location = new Point(798, 219);
             txtVoucher.Margin = new Padding(4);
             txtVoucher.Multiline = false;
             txtVoucher.Name = "txtVoucher";
@@ -498,7 +507,7 @@
             // pbConfirmPassWord
             // 
             pbConfirmPassWord.Image = (Image)resources.GetObject("pbConfirmPassWord.Image");
-            pbConfirmPassWord.Location = new Point(25, 804);
+            pbConfirmPassWord.Location = new Point(25, 784);
             pbConfirmPassWord.Margin = new Padding(4);
             pbConfirmPassWord.Name = "pbConfirmPassWord";
             pbConfirmPassWord.Size = new Size(50, 50);
@@ -517,7 +526,7 @@
             txtConfirmPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtConfirmPassword.ForeColor = Color.Black;
             txtConfirmPassword.IsFocused = false;
-            txtConfirmPassword.Location = new Point(235, 803);
+            txtConfirmPassword.Location = new Point(235, 783);
             txtConfirmPassword.Margin = new Padding(4);
             txtConfirmPassword.Multiline = false;
             txtConfirmPassword.Name = "txtConfirmPassword";
@@ -534,7 +543,7 @@
             // pbPassWord
             // 
             pbPassWord.Image = (Image)resources.GetObject("pbPassWord.Image");
-            pbPassWord.Location = new Point(25, 710);
+            pbPassWord.Location = new Point(25, 690);
             pbPassWord.Margin = new Padding(4);
             pbPassWord.Name = "pbPassWord";
             pbPassWord.Size = new Size(50, 50);
@@ -553,7 +562,7 @@
             txtPassword.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtPassword.ForeColor = Color.Black;
             txtPassword.IsFocused = false;
-            txtPassword.Location = new Point(235, 709);
+            txtPassword.Location = new Point(235, 689);
             txtPassword.Margin = new Padding(4);
             txtPassword.Multiline = false;
             txtPassword.Name = "txtPassword";
@@ -570,7 +579,7 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(25, 616);
+            pictureBox3.Location = new Point(25, 596);
             pictureBox3.Margin = new Padding(4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(50, 50);
@@ -589,7 +598,7 @@
             txtUserName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtUserName.ForeColor = Color.Black;
             txtUserName.IsFocused = false;
-            txtUserName.Location = new Point(235, 616);
+            txtUserName.Location = new Point(235, 596);
             txtUserName.Margin = new Padding(4);
             txtUserName.Multiline = false;
             txtUserName.Name = "txtUserName";
@@ -606,7 +615,7 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(25, 512);
+            pictureBox5.Location = new Point(25, 492);
             pictureBox5.Margin = new Padding(4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(50, 50);
@@ -627,7 +636,7 @@
             cbbGender.Items.AddRange(new object[] { "Nam", "Nữ" });
             cbbGender.ListBackColor = Color.FromArgb(230, 228, 245);
             cbbGender.ListTextColor = Color.DimGray;
-            cbbGender.Location = new Point(235, 522);
+            cbbGender.Location = new Point(235, 502);
             cbbGender.Margin = new Padding(4);
             cbbGender.Name = "cbbGender";
             cbbGender.Padding = new Padding(1);
@@ -638,7 +647,7 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(25, 432);
+            pictureBox4.Location = new Point(25, 412);
             pictureBox4.Margin = new Padding(4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(50, 50);
@@ -649,7 +658,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(25, 331);
+            pictureBox8.Location = new Point(25, 311);
             pictureBox8.Margin = new Padding(4);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(50, 51);
@@ -668,7 +677,7 @@
             txtPhoneNumber.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtPhoneNumber.ForeColor = Color.Black;
             txtPhoneNumber.IsFocused = false;
-            txtPhoneNumber.Location = new Point(235, 426);
+            txtPhoneNumber.Location = new Point(235, 406);
             txtPhoneNumber.Margin = new Padding(4);
             txtPhoneNumber.Multiline = false;
             txtPhoneNumber.Name = "txtPhoneNumber";
@@ -693,7 +702,7 @@
             txtIdentifyCard.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtIdentifyCard.ForeColor = Color.Black;
             txtIdentifyCard.IsFocused = false;
-            txtIdentifyCard.Location = new Point(235, 331);
+            txtIdentifyCard.Location = new Point(235, 311);
             txtIdentifyCard.Margin = new Padding(4);
             txtIdentifyCard.Multiline = false;
             txtIdentifyCard.Name = "txtIdentifyCard";
@@ -710,7 +719,7 @@
             // pictureBox12
             // 
             pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(633, 720);
+            pictureBox12.Location = new Point(633, 784);
             pictureBox12.Margin = new Padding(4);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new Size(50, 50);
@@ -721,7 +730,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(633, 617);
+            pictureBox2.Location = new Point(633, 597);
             pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(50, 50);
@@ -732,7 +741,7 @@
             // pictureBox11
             // 
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(633, 522);
+            pictureBox11.Location = new Point(633, 502);
             pictureBox11.Margin = new Padding(4);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(50, 50);
@@ -743,7 +752,7 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(633, 427);
+            pictureBox10.Location = new Point(633, 407);
             pictureBox10.Margin = new Padding(4);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(50, 50);
@@ -754,7 +763,7 @@
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(633, 332);
+            pictureBox9.Location = new Point(633, 312);
             pictureBox9.Margin = new Padding(4);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(50, 50);
@@ -765,7 +774,7 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(633, 241);
+            pictureBox7.Location = new Point(633, 221);
             pictureBox7.Margin = new Padding(4);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
@@ -776,7 +785,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(25, 241);
+            pictureBox1.Location = new Point(25, 221);
             pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(50, 50);
@@ -795,7 +804,7 @@
             txtFullName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtFullName.ForeColor = Color.Black;
             txtFullName.IsFocused = false;
-            txtFullName.Location = new Point(235, 240);
+            txtFullName.Location = new Point(235, 220);
             txtFullName.Margin = new Padding(4);
             txtFullName.Multiline = false;
             txtFullName.Name = "txtFullName";
@@ -815,7 +824,7 @@
             btnComplete.Cursor = Cursors.Hand;
             btnComplete.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnComplete.ForeColor = Color.Black;
-            btnComplete.Location = new Point(269, 919);
+            btnComplete.Location = new Point(50, 884);
             btnComplete.Margin = new Padding(4);
             btnComplete.Name = "btnComplete";
             btnComplete.Size = new Size(218, 65);
@@ -829,7 +838,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(-2, 203);
+            label3.Location = new Point(-84, 162);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(768, 44);
@@ -839,10 +848,10 @@
             // 
             // lblTopic
             // 
-            lblTopic.BackColor = Color.LightGray;
-            lblTopic.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lblTopic.ForeColor = Color.Green;
-            lblTopic.Location = new Point(247, 89);
+            lblTopic.BackColor = Color.White;
+            lblTopic.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTopic.ForeColor = Color.Black;
+            lblTopic.Location = new Point(259, 89);
             lblTopic.Margin = new Padding(4, 0, 4, 0);
             lblTopic.Name = "lblTopic";
             lblTopic.Size = new Size(768, 90);
@@ -854,7 +863,7 @@
             // 
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.Red;
+            label1.ForeColor = Color.FromArgb(255, 128, 0);
             label1.Location = new Point(0, 0);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
@@ -867,6 +876,57 @@
             // 
             guna2Elipse2.BorderRadius = 30;
             guna2Elipse2.TargetControl = panel1;
+            // 
+            // guna2vSeparator1
+            // 
+            guna2vSeparator1.BackColor = Color.Transparent;
+            guna2vSeparator1.FillColor = Color.Black;
+            guna2vSeparator1.Location = new Point(610, 220);
+            guna2vSeparator1.Name = "guna2vSeparator1";
+            guna2vSeparator1.Size = new Size(16, 614);
+            guna2vSeparator1.TabIndex = 52;
+            // 
+            // cbbStar
+            // 
+            cbbStar.BackColor = Color.White;
+            cbbStar.BorderColor = Color.MediumSlateBlue;
+            cbbStar.BorderSize = 1;
+            cbbStar.Cursor = Cursors.Hand;
+            cbbStar.DropDownStyle = ComboBoxStyle.DropDown;
+            cbbStar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cbbStar.ForeColor = Color.Black;
+            cbbStar.IconColor = Color.MediumSlateBlue;
+            cbbStar.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            cbbStar.ListBackColor = Color.FromArgb(230, 228, 245);
+            cbbStar.ListTextColor = Color.DimGray;
+            cbbStar.Location = new Point(797, 690);
+            cbbStar.Margin = new Padding(4);
+            cbbStar.Name = "cbbStar";
+            cbbStar.Padding = new Padding(1);
+            cbbStar.Size = new Size(447, 50);
+            cbbStar.TabIndex = 37;
+            cbbStar.Texts = "5";
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(634, 690);
+            pictureBox6.Margin = new Padding(4);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(50, 50);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 19;
+            pictureBox6.TabStop = false;
+            // 
+            // guna2HtmlLabel7
+            // 
+            guna2HtmlLabel7.BackColor = Color.Transparent;
+            guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel7.Location = new Point(691, 710);
+            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            guna2HtmlLabel7.Size = new Size(68, 30);
+            guna2HtmlLabel7.TabIndex = 40;
+            guna2HtmlLabel7.Text = "Số sao:";
             // 
             // FSignUp
             // 
@@ -896,6 +956,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
         }
 
@@ -953,5 +1014,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         public PictureBox pictureBox2;
         public All_Control.CTTextbox txtReview;
+        private Guna.UI2.WinForms.Guna2VSeparator guna2vSeparator1;
+        public All_Control.CTCombobox cbbStar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        public PictureBox pictureBox6;
     }
 }

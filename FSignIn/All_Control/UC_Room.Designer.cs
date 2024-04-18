@@ -252,6 +252,7 @@
             btnExportFile.Size = new Size(234, 54);
             btnExportFile.TabIndex = 5;
             btnExportFile.Text = "Xuất file Excel";
+            btnExportFile.Click += btnExportFile_Click;
             // 
             // btnAddRoom
             // 

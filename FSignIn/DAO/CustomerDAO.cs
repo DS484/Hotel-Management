@@ -75,7 +75,7 @@ namespace Hotel_Management.DAO
 
         public DataTable CheckHistory(int userId)
         {
-            string query = "SELECT u.id, h.id, room_number, checkin, checkout, h.hotel_name, u.first_name, u.last_name, u.username, h.picture FROM Users u JOIN Booking b ON u.id = b.user_id JOIN Rooms r ON r.id = b.room_id JOIN Hotels h ON h.id = r.hotel_id WHERE u.id = @userId";
+            string query = "SELECT u.id, h.id, room_number, checkin, checkout, h.hotel_name, u.first_name, u.last_name, u.username, h.picture, b.id FROM Users u JOIN Booking b ON u.id = b.user_id JOIN Rooms r ON r.id = b.room_id JOIN Hotels h ON h.id = r.hotel_id WHERE u.id = @userId";
             object[] parameter = { userId };
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;

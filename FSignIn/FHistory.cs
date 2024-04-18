@@ -1,6 +1,7 @@
 ﻿using Hotel_Management.All_Control;
 using Hotel_Management.DAO;
 using Hotel_Management.DTO;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ namespace Hotel_Management
 
         CustomerDAO customerDAO = new CustomerDAO();
         FeedBackDAO feedBackDAO = new FeedBackDAO();
+        BookingDAO bookingDAO = new BookingDAO();
         private UC_History uC_History;
 
 
@@ -48,31 +50,38 @@ namespace Hotel_Management
                 lblUserName.Text = "Xin chào, " + row[7].ToString() + " " + row[6].ToString();
 
                 string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
                 string hotelImage = projectDirectory + @"\" + row[9].ToString();
                 uC_History.pbHotel.ImageLocation = hotelImage;
 
-                uC_History.btnEvaluate.Click += (sender, e) =>
+                int bookingId = Convert.ToInt32(row[10].ToString());
+                uC_History.btnCheckOut.Click += (sender, e) =>
                 {
-                    Evaluate_Click(sender, e, usedId, Convert.ToInt32(row[1]));
+                    CheckOut_Click(sender!, e, bookingId, usedId, Convert.ToInt32(row[1]));
                 };
             }
         }
 
-        private void Evaluate_Click(object sender, EventArgs e, int userId, int hotelId)
+        private void CheckOut_Click(object sender, EventArgs e, int bookingId, int userId, int hotelId)
         {
-            DataTable dt = feedBackDAO.checkFeedBack(userId, hotelId);
-            if (dt != null && dt.Rows.Count > 0)
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn trả phòng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(dr == DialogResult.Yes)
             {
-                MessageBox.Show("Bạn đã đánh giá khách sạn này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool deleted = bookingDAO.DeleteBooking(bookingId);
+                if(deleted)
+                {
+                    MessageBox.Show("Trả phòng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    FFeedBack fFeedBack = new FFeedBack(userId, hotelId);
+                    fFeedBack.ShowDialog();
+                    this.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Trả phòng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                this.Hide();
-                FFeedBack fFeedBack = new FFeedBack(userId, hotelId);
-                fFeedBack.ShowDialog();
-                this.Visible = true;
-            }
+            
         }
 
         private void FHistory_Load(object sender, EventArgs e)

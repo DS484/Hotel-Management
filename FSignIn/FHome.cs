@@ -117,8 +117,8 @@ namespace Hotel_Management
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(guna2NumericUpDown1.Value),
-                Convert.ToInt32(guna2NumericUpDown2.Value), Convert.ToInt32(guna2NumericUpDown3.Value),
+            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value),
+                Convert.ToInt32(nudChildren.Value), Convert.ToInt32(nudRoom.Value),
                 Convert.ToDateTime(dtpCheckInDate.Value), Convert.ToDateTime(dtpCheckOutDate.Value));
 
             List<int> listHotel = new List<int>();
@@ -130,7 +130,7 @@ namespace Hotel_Management
             {
                 this.Hide();
                 FFindRoom fFindRoom = new FFindRoom(listHotel, userId, txtCity.Text,
-                    Convert.ToInt32(guna2NumericUpDown1.Value), Convert.ToInt32(guna2NumericUpDown2.Value), Convert.ToInt32(guna2NumericUpDown3.Value), Convert.ToDateTime(dtpCheckInDate.Value),
+                    Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChildren.Value), Convert.ToInt32(nudRoom.Value), Convert.ToDateTime(dtpCheckInDate.Value),
                     Convert.ToDateTime(dtpCheckOutDate.Value));
                 fFindRoom.ShowDialog();
                 this.Visible = true;
@@ -158,9 +158,9 @@ namespace Hotel_Management
 
         private void UpdateTextBox()
         {
-            int adults = (int)guna2NumericUpDown1.Value;
-            int children = (int)guna2NumericUpDown2.Value;
-            int rooms = (int)guna2NumericUpDown3.Value;
+            int adults = (int)nudAdult.Value;
+            int children = (int)nudChildren.Value;
+            int rooms = (int)nudRoom.Value;
 
             txtItem.Text = string.Format("{0} người lớn, {1} trẻ em, {2} phòng", adults, children, rooms);
         }
@@ -245,6 +245,13 @@ namespace Hotel_Management
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRegisterHotel_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FSignUp fSignUp = new FSignUp();
+            fSignUp.ShowDialog();
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Hotel_Management.DAO
         {
             Hotel hotel = (Hotel)obj;
             string query = $"UPDATE Hotels SET hotel_name = N'{hotel.HotelName}', address = N'{hotel.Address}', " +
-                $"city = N'{hotel.City}', picture = N'{hotel.Picture}', Review = N'{hotel.Review}', Voucher = N'{hotel.Voucher}' WHERE id = '{hotel.Id}'";
+                $"city = N'{hotel.City}', picture = N'{hotel.Picture}', Review = N'{hotel.Review}', Voucher = N'{hotel.Voucher}', star_avg = '{hotel.StarAvg}'  WHERE id = '{hotel.Id}'";
             int edited = db.ExecuteNoneQuery(query);
             if (edited > 0) return true;
             return false;
@@ -83,8 +83,6 @@ namespace Hotel_Management.DAO
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;
         }
-
-        
 
         public void InsertHotelManager()
         {

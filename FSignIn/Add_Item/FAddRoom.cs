@@ -78,27 +78,33 @@ namespace Hotel_Management.Add_Item
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
             Room room = new Room(txtRoomNumber.Texts, txtImg2.PlaceholderText,
-                Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts),
-                txtDescription.Texts, hotelId);
-
+            Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts),
+            txtDescription.Texts, hotelId);
 
             RoomDetail roomDetail = new RoomDetail(txtImg1.PlaceholderText,
-                txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText,
-                txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem),
-                Convert.ToDateTime(dtpStart_Date.Value), Convert.ToDateTime(dtpEnd_Date.Value));
+            txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText,
+            txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem),
+            Convert.ToDateTime(dtpStart_Date.Value), Convert.ToDateTime(dtpEnd_Date.Value));
+
             try
             {
+                DataTable dtRoom = roomDAO.CheckRoomExist(txtRoomNumber.Texts, hotelId);
+                if (dtRoom != null && dtRoom.Rows.Count > 0)
+                {
+                    MessageBox.Show($"Phòng '{txtRoomNumber.Texts}' đã tồn tại trong khách sạn này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 roomDAO.InsertRoom(room);
                 roomDetailDAO.InsertRoomDetail(roomDetail);
                 room.Id = roomDAO.FindRoomByRoomNumber(txtRoomNumber.Texts, hotelId);
-                MessageBox.Show(room.Id.ToString());
                 serviceDAO.AddService(room.Id, 17);
                 MessageBox.Show("Thêm phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Thêm phòng thất bại!!!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                MessageBox.Show("Thêm phòng thất bại!!!" + ex.Message, "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -156,11 +162,6 @@ namespace Hotel_Management.Add_Item
 
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
-            int statusRoom = 0;
-            if (cbbRoomStatus.SelectedIndex == 0)
-            {
-                statusRoom = 1;
-            }
             Room room = new Room(roomId, txtRoomNumber.Texts, img1, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
             RoomDetail roomDetail = new RoomDetail(roomId, txtImg1.PlaceholderText, txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText, txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem), dtpStart_Date.Value, dtpEnd_Date.Value);
             bool editedRoom = roomDAO.EditRoom(room);

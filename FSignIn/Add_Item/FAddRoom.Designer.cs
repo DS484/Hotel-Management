@@ -74,10 +74,8 @@
             dtpStart_Date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             cbbChild = new All_Control.CTCombobox();
             cbbAdult = new All_Control.CTCombobox();
-            cbbRoomStatus = new All_Control.CTCombobox();
             pictureBox5 = new PictureBox();
             pictureBox1 = new PictureBox();
-            pictureBox14 = new PictureBox();
             pictureBox13 = new PictureBox();
             pictureBox12 = new PictureBox();
             pictureBox11 = new PictureBox();
@@ -88,14 +86,15 @@
             pictureBox6 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            lbStartDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblEndDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
@@ -200,6 +199,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(217, 217, 217);
+            panel2.Controls.Add(lblEndDate);
+            panel2.Controls.Add(lbStartDate);
             panel2.Controls.Add(txtDescription);
             panel2.Controls.Add(txtNewPrice);
             panel2.Controls.Add(txtOldPrice);
@@ -218,10 +219,9 @@
             panel2.Controls.Add(dtpStart_Date);
             panel2.Controls.Add(cbbChild);
             panel2.Controls.Add(cbbAdult);
-            panel2.Controls.Add(cbbRoomStatus);
             panel2.Controls.Add(pictureBox5);
             panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(pictureBox14);
+            panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox13);
             panel2.Controls.Add(pictureBox12);
             panel2.Controls.Add(pictureBox11);
@@ -232,7 +232,6 @@
             panel2.Controls.Add(pictureBox6);
             panel2.Controls.Add(pictureBox4);
             panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(pictureBox3);
             panel2.Location = new Point(72, 79);
             panel2.Margin = new Padding(4);
             panel2.Name = "panel2";
@@ -249,7 +248,7 @@
             txtDescription.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtDescription.ForeColor = Color.DimGray;
             txtDescription.IsFocused = false;
-            txtDescription.Location = new Point(132, 774);
+            txtDescription.Location = new Point(132, 631);
             txtDescription.Multiline = false;
             txtDescription.Name = "txtDescription";
             txtDescription.Padding = new Padding(7);
@@ -272,7 +271,7 @@
             txtNewPrice.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtNewPrice.ForeColor = Color.DimGray;
             txtNewPrice.IsFocused = false;
-            txtNewPrice.Location = new Point(132, 656);
+            txtNewPrice.Location = new Point(132, 540);
             txtNewPrice.Multiline = false;
             txtNewPrice.Name = "txtNewPrice";
             txtNewPrice.Padding = new Padding(7);
@@ -295,7 +294,7 @@
             txtOldPrice.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtOldPrice.ForeColor = Color.DimGray;
             txtOldPrice.IsFocused = false;
-            txtOldPrice.Location = new Point(132, 535);
+            txtOldPrice.Location = new Point(132, 419);
             txtOldPrice.Multiline = false;
             txtOldPrice.Name = "txtOldPrice";
             txtOldPrice.Padding = new Padding(7);
@@ -571,7 +570,7 @@
             dtpStart_Date.FillColor = Color.FromArgb(217, 217, 217);
             dtpStart_Date.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtpStart_Date.Format = DateTimePickerFormat.Custom;
-            dtpStart_Date.Location = new Point(564, 653);
+            dtpStart_Date.Location = new Point(132, 768);
             dtpStart_Date.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpStart_Date.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpStart_Date.Name = "dtpStart_Date";
@@ -592,7 +591,7 @@
             cbbChild.Items.AddRange(new object[] { "1", "2", "3", "4" });
             cbbChild.ListBackColor = Color.FromArgb(230, 228, 245);
             cbbChild.ListTextColor = Color.DimGray;
-            cbbChild.Location = new Point(132, 417);
+            cbbChild.Location = new Point(132, 295);
             cbbChild.Margin = new Padding(4);
             cbbChild.Name = "cbbChild";
             cbbChild.Padding = new Padding(1);
@@ -612,7 +611,7 @@
             cbbAdult.Items.AddRange(new object[] { "1", "2", "3", "4" });
             cbbAdult.ListBackColor = Color.FromArgb(230, 228, 245);
             cbbAdult.ListTextColor = Color.DimGray;
-            cbbAdult.Location = new Point(132, 294);
+            cbbAdult.Location = new Point(132, 167);
             cbbAdult.Margin = new Padding(4);
             cbbAdult.Name = "cbbAdult";
             cbbAdult.Padding = new Padding(1);
@@ -620,31 +619,11 @@
             cbbAdult.TabIndex = 12;
             cbbAdult.Texts = "Số lượng người lớn";
             // 
-            // cbbRoomStatus
-            // 
-            cbbRoomStatus.BackColor = Color.FromArgb(217, 217, 217);
-            cbbRoomStatus.BorderColor = Color.MediumSlateBlue;
-            cbbRoomStatus.BorderSize = 1;
-            cbbRoomStatus.DropDownStyle = ComboBoxStyle.DropDown;
-            cbbRoomStatus.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbbRoomStatus.ForeColor = Color.DimGray;
-            cbbRoomStatus.IconColor = Color.MediumSlateBlue;
-            cbbRoomStatus.Items.AddRange(new object[] { "Trống", "Đã đặt" });
-            cbbRoomStatus.ListBackColor = Color.FromArgb(230, 228, 245);
-            cbbRoomStatus.ListTextColor = Color.DimGray;
-            cbbRoomStatus.Location = new Point(132, 167);
-            cbbRoomStatus.Margin = new Padding(4);
-            cbbRoomStatus.Name = "cbbRoomStatus";
-            cbbRoomStatus.Padding = new Padding(1);
-            cbbRoomStatus.Size = new Size(302, 50);
-            cbbRoomStatus.TabIndex = 12;
-            cbbRoomStatus.Texts = "Tình trạng phòng";
-            // 
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(61, 771);
+            pictureBox5.Location = new Point(61, 628);
             pictureBox5.Margin = new Padding(4);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(50, 50);
@@ -664,24 +643,11 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox14
-            // 
-            pictureBox14.BackColor = Color.FromArgb(217, 217, 217);
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(492, 773);
-            pictureBox14.Margin = new Padding(4);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(50, 50);
-            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox14.TabIndex = 8;
-            pictureBox14.TabStop = false;
-            pictureBox14.Click += pictureBox4_Click;
-            // 
             // pictureBox13
             // 
             pictureBox13.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(492, 653);
+            pictureBox13.Location = new Point(60, 768);
             pictureBox13.Margin = new Padding(4);
             pictureBox13.Name = "pictureBox13";
             pictureBox13.Size = new Size(50, 50);
@@ -759,7 +725,7 @@
             // 
             pictureBox7.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(61, 652);
+            pictureBox7.Location = new Point(61, 536);
             pictureBox7.Margin = new Padding(4);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(50, 50);
@@ -772,7 +738,7 @@
             // 
             pictureBox6.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(61, 535);
+            pictureBox6.Location = new Point(61, 419);
             pictureBox6.Margin = new Padding(4);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(50, 50);
@@ -785,7 +751,7 @@
             // 
             pictureBox4.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(61, 417);
+            pictureBox4.Location = new Point(61, 295);
             pictureBox4.Margin = new Padding(4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(50, 50);
@@ -798,25 +764,13 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(61, 294);
+            pictureBox2.Location = new Point(61, 168);
             pictureBox2.Margin = new Padding(4);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(50, 50);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.Size = new Size(50, 49);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.FromArgb(217, 217, 217);
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(61, 167);
-            pictureBox3.Margin = new Padding(4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(50, 50);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 8;
-            pictureBox3.TabStop = false;
             // 
             // guna2Elipse1
             // 
@@ -827,6 +781,41 @@
             // 
             guna2Elipse2.BorderRadius = 30;
             guna2Elipse2.TargetControl = panel2;
+            // 
+            // lbStartDate
+            // 
+            lbStartDate.BackColor = Color.Transparent;
+            lbStartDate.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbStartDate.ForeColor = Color.DimGray;
+            lbStartDate.Location = new Point(141, 719);
+            lbStartDate.Name = "lbStartDate";
+            lbStartDate.Size = new Size(180, 34);
+            lbStartDate.TabIndex = 19;
+            lbStartDate.Text = "Ngày mở phòng";
+            // 
+            // lblEndDate
+            // 
+            lblEndDate.BackColor = Color.Transparent;
+            lblEndDate.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblEndDate.ForeColor = Color.DimGray;
+            lblEndDate.Location = new Point(575, 719);
+            lblEndDate.Name = "lblEndDate";
+            lblEndDate.Size = new Size(201, 34);
+            lblEndDate.TabIndex = 19;
+            lblEndDate.Text = "Ngày đóng phòng";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.FromArgb(217, 217, 217);
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(492, 768);
+            pictureBox3.Margin = new Padding(4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(50, 50);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 8;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox4_Click;
             // 
             // FAddRoom
             // 
@@ -841,9 +830,9 @@
             Text = "Add_Room";
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
@@ -869,10 +858,8 @@
         // private ComboBox comboBox1;
         private ComboBox cbbStatusRoom;
         private PictureBox pictureBox1;
-        private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private All_Control.CTCombobox cbbRoomStatus;
         private PictureBox pictureBox4;
         private PictureBox pictureBox2;
         private PictureBox pictureBox5;
@@ -880,7 +867,6 @@
         private PictureBox pictureBox6;
         private All_Control.CTCombobox cbbChild;
         private All_Control.CTCombobox cbbAdult;
-        private PictureBox pictureBox14;
         private PictureBox pictureBox13;
         private PictureBox pictureBox12;
         private PictureBox pictureBox11;
@@ -906,5 +892,8 @@
         private All_Control.CTTextbox txtImg2;
         private All_Control.CTTextbox txtImg1;
         private Guna.UI2.WinForms.Guna2Button btnEditRoom;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblEndDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbStartDate;
+        private PictureBox pictureBox3;
     }
 }
