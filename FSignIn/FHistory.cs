@@ -15,10 +15,13 @@ namespace Hotel_Management
 {
     public partial class FHistory : Form
     {
+        private int usedId;
+        private string username;
+
         CustomerDAO customerDAO = new CustomerDAO();
         FeedBackDAO feedBackDAO = new FeedBackDAO();
         private UC_History uC_History;
-        private int usedId;
+
 
         public FHistory(int userId)
         {
@@ -37,11 +40,18 @@ namespace Hotel_Management
                 flpHistory.Controls.Add(uC_History);
 
                 DataRow row = dt.Rows[i];
+                username = row[8].ToString()!;
                 uC_History.lblHotel.Text = row[5].ToString();
-                uC_History.lblRoomName.Text = "Phòng: " + row[2].ToString();
-                uC_History.dtpCheckInDaten.Value = Convert.ToDateTime(row[3]);
-                uC_History.dtpCheckOutDaten.Value = Convert.ToDateTime(row[4]);
+                uC_History.lblRoomName.Text = row[2].ToString();
+                uC_History.lblCheckInDate.Text = Convert.ToDateTime(row[3]).ToString("dd/MM/yyyy");
+                uC_History.lblCheckOutDate.Text = Convert.ToDateTime(row[4]).ToString("dd/MM/yyyy");
                 lblUserName.Text = "Xin chào, " + row[7].ToString() + " " + row[6].ToString();
+
+                string workingDirectory = Environment.CurrentDirectory;
+                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+                string hotelImage = projectDirectory + @"\" + row[9].ToString();
+                uC_History.pbHotel.ImageLocation = hotelImage;
+
                 uC_History.btnEvaluate.Click += (sender, e) =>
                 {
                     Evaluate_Click(sender, e, usedId, Convert.ToInt32(row[1]));
@@ -73,8 +83,9 @@ namespace Hotel_Management
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            FHome f = new FHome();
-            f.Show();
+            FHome fHome = new FHome(username);
+            fHome.ShowDialog();
+            this.Visible = true;
         }
     }
 }

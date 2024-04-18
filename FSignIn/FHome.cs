@@ -112,10 +112,7 @@ namespace Hotel_Management
 
         private void btnLogged_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-            FHome f = new FHome();
-            f.Show();
-            MessageBox.Show("Đã đăng xuất", "Comfirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -239,6 +236,15 @@ namespace Hotel_Management
         private void slidePic_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtpCheckInDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
+            {
+                dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
+                MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

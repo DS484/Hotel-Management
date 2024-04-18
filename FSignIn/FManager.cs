@@ -126,8 +126,8 @@ namespace Hotel_Management
                     hotel.City = row[3].ToString()!;
                     hotel.StarAvg = Convert.ToInt32(row[4]);
                     hotel.Picture = row[5].ToString()!;
-                    hotel.Review = row[6].ToString();
-                    hotel.Voucher = row[7].ToString();
+                    hotel.Review = row[6].ToString()!;
+                    hotel.Voucher = row[7].ToString()!;
                 }
             }
         }

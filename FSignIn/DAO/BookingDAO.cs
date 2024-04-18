@@ -1,6 +1,7 @@
 ﻿using Hotel_Management.Constants;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,16 @@ namespace Hotel_Management.DAO
             int inserted = db.ExecuteNoneQuery(query);
             if (inserted > 0) return true;
             return false;
+        }
+
+        public DataTable CheckBooking(int roomId)
+        {
+            string query = "SELECT * FROM Booking WHERE room_id = @roomId ORDER BY checkin";
+
+            object[] parameter = { roomId };
+
+            DataTable dt = db.ExecuteQuery(query, parameter);
+            return dt;
         }
     }
 }

@@ -19,9 +19,7 @@ namespace Hotel_Management
         private int voucher;
 
         CustomerDAO customerDAO = new CustomerDAO();
-        RoomDAO roomDAO = new RoomDAO();
         BookingDAO bookingDAO = new BookingDAO();
-        RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
 
         private int roomId;
 
@@ -51,8 +49,8 @@ namespace Hotel_Management
             {
                 DataRow row = dtUser.Rows[0];
                 txtFullName.PlaceholderText = row[3].ToString() + " " + row[2].ToString();
-                txtIdentifyCard.PlaceholderText = row[6].ToString();
-                txtPhoneNumber.PlaceholderText = row[7].ToString();
+                txtIdentifyCard.PlaceholderText = row[6].ToString()!;
+                txtPhoneNumber.PlaceholderText = row[7].ToString()!;
                 cbbGender.Texts = (Convert.ToUInt32(row[4]) == 0) ? "Nam" : "Nữ";
             }
 
@@ -62,10 +60,10 @@ namespace Hotel_Management
             if (dtRoom != null)
             {
                 DataRow row = dtRoom.Rows[0];
-                int ta = int.Parse(row[4].ToString());
+                int ta = int.Parse(row[4].ToString()!);
                 lblRoomDescription.Text = row[6].ToString();
                 if (voucher == 1)
-                    ta = int.Parse(row[4].ToString()) - 99999;
+                    ta = int.Parse(row[4].ToString()!) - 99999;
 
                 lblRoomPrice.Text = "Tổng số tiền phải thanh toán: " + (ta * numberOfDays).ToString();
             }
@@ -133,9 +131,9 @@ namespace Hotel_Management
 
         private void btnAddRoom_Click_1(object sender, EventArgs e)
         {
-            roomDAO.BookRoomSuccess(roomId);
+            //roomDAO.BookRoomSuccess(roomId);
+
             bookingDAO.CreateBooking(checkInDate, checkOutDate, roomId, userId, voucher);
-            roomDetailDAO.BookRoomSuccess(checkInDate, checkOutDate, roomId);
             string username = customerDAO.GetUserName(userId);
 
             MessageBox.Show("Đặt phòng thành công.");

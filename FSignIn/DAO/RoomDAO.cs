@@ -32,7 +32,7 @@ namespace Hotel_Management.DAO
 
         public DataTable FindRoom(int roomId, int hotelId)
         {
-            string query = "SELECT * FROM Rooms r JOIN Hotels h ON r.hotel_id = h.id WHERE room_status = 1 AND r.id = @roomId AND h.id = @hotelId";
+            string query = "SELECT * FROM Rooms r JOIN Hotels h ON r.hotel_id = h.id WHERE r.id = @roomId AND h.id = @hotelId";
 
             object[] parameter = { roomId, hotelId };
 
@@ -43,7 +43,7 @@ namespace Hotel_Management.DAO
         
         public DataTable GetRoom(int hotelId)
         {
-            string query = "SELECT r.id FROM Rooms r JOIN Hotels h ON r.hotel_id = h.id WHERE room_status = 1 AND h.id = @hotelId";
+            string query = "SELECT r.id FROM Rooms r JOIN Hotels h ON r.hotel_id = h.id WHERE h.id = @hotelId";
 
             object[] parameter = { hotelId };
 
@@ -63,9 +63,9 @@ namespace Hotel_Management.DAO
         public bool InsertRoom(object obj)
         {
             Room room = (Room)obj;
-            string sql = $"INSERT INTO Rooms(room_number, room_picture, pre_price, curr_price, room_status, description, hotel_id)" +
+            string sql = $"INSERT INTO Rooms(room_number, room_picture, pre_price, curr_price, description, hotel_id)" +
                 $"VALUES ('{room.RoomNumber}', N'{room.RoomPicture}', '{room.PreCost}', '{room.CurrCost}'," +
-                $"'{room.RoomStatus}', N'{room.RoomDescription}', '{room.HotelId}')";
+                $", N'{room.RoomDescription}', '{room.HotelId}')";
             int inserted = db.ExecuteNoneQuery(sql);
             if (inserted > 0) return true;
             return false;
@@ -75,7 +75,7 @@ namespace Hotel_Management.DAO
         {
             Room room = (Room)obj;
             string query = $"UPDATE Rooms SET room_number = N'{room.RoomNumber}', pre_price = '{room.PreCost}'," +
-                $"curr_price = '{room.CurrCost}', room_status = '{room.RoomStatus}', description = N'{room.RoomDescription}' WHERE id = '{room.Id}'";
+                $"curr_price = '{room.CurrCost}', description = N'{room.RoomDescription}' WHERE id = '{room.Id}'";
             int edited = db.ExecuteNoneQuery(query);
             if (edited > 0) return true;
             return false;

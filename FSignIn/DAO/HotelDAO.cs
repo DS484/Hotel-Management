@@ -34,7 +34,7 @@ namespace Hotel_Management.DAO
 
         public DataTable FindHotel(int id)
         {
-            string query = "SELECT h.hotel_name, h.address, h.city, h.picture, r.room_number, r.pre_price, r.curr_price, r.id, h.star_avg FROM Hotels h JOIN Rooms r ON h.id = r.hotel_id WHERE h.id = @hotelId AND room_status = 1";
+            string query = "SELECT h.hotel_name, h.address, h.city, h.picture, r.room_number, r.pre_price, r.curr_price, r.id, h.star_avg FROM Hotels h JOIN Rooms r ON h.id = r.hotel_id WHERE h.id = @hotelId";
 
             object[] parameter = { id };
 

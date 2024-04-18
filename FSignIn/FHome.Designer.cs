@@ -150,18 +150,20 @@
             panel1.Controls.Add(lblPanel);
             panel1.Controls.Add(guna2Panel2);
             panel1.Controls.Add(guna2Panel1);
-            panel1.Location = new Point(-19, 160);
+            panel1.Location = new Point(-24, 200);
+            panel1.Margin = new Padding(4, 4, 4, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1543, 255);
+            panel1.Size = new Size(1929, 319);
             panel1.TabIndex = 16;
             // 
             // label5
             // 
             label5.BackColor = Color.WhiteSmoke;
             label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(208, 203);
+            label5.Location = new Point(260, 254);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(132, 27);
+            label5.Size = new Size(165, 34);
             label5.TabIndex = 35;
             // 
             // lblPanel
@@ -169,9 +171,10 @@
             lblPanel.BackColor = Color.WhiteSmoke;
             lblPanel.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             lblPanel.ForeColor = Color.Black;
-            lblPanel.Location = new Point(31, 12);
+            lblPanel.Location = new Point(39, 15);
+            lblPanel.Margin = new Padding(4, 0, 4, 0);
             lblPanel.Name = "lblPanel";
-            lblPanel.Size = new Size(486, 230);
+            lblPanel.Size = new Size(608, 288);
             lblPanel.TabIndex = 7;
             lblPanel.Text = "Tìm và đặt phòng khách sạn giá rẻ chỉ với vài bước đơn giản!\r\nKhám phá ngay những ưu đãi tốt nhất dành cho bạn tại travelstrip! ";
             lblPanel.TextAlign = ContentAlignment.MiddleCenter;
@@ -184,10 +187,11 @@
             guna2Panel2.Controls.Add(slidePic);
             guna2Panel2.CustomizableEdges = customizableEdges25;
             guna2Panel2.FillColor = Color.DarkGray;
-            guna2Panel2.Location = new Point(1023, 12);
+            guna2Panel2.Location = new Point(1279, 15);
+            guna2Panel2.Margin = new Padding(4, 4, 4, 4);
             guna2Panel2.Name = "guna2Panel2";
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            guna2Panel2.Size = new Size(488, 230);
+            guna2Panel2.Size = new Size(610, 288);
             guna2Panel2.TabIndex = 5;
             // 
             // slidePic
@@ -197,8 +201,9 @@
             slidePic.Dock = DockStyle.Fill;
             slidePic.Image = (Image)resources.GetObject("slidePic.Image");
             slidePic.Location = new Point(0, 0);
+            slidePic.Margin = new Padding(4, 4, 4, 4);
             slidePic.Name = "slidePic";
-            slidePic.Size = new Size(488, 230);
+            slidePic.Size = new Size(610, 288);
             slidePic.SizeMode = PictureBoxSizeMode.StretchImage;
             slidePic.TabIndex = 4;
             slidePic.TabStop = false;
@@ -212,10 +217,11 @@
             guna2Panel1.Controls.Add(pictureBox3);
             guna2Panel1.CustomizableEdges = customizableEdges27;
             guna2Panel1.FillColor = Color.DarkGray;
-            guna2Panel1.Location = new Point(527, 12);
+            guna2Panel1.Location = new Point(659, 15);
+            guna2Panel1.Margin = new Padding(4, 4, 4, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2Panel1.Size = new Size(488, 230);
+            guna2Panel1.Size = new Size(610, 288);
             guna2Panel1.TabIndex = 4;
             // 
             // pictureBox3
@@ -225,8 +231,9 @@
             pictureBox3.Dock = DockStyle.Fill;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Margin = new Padding(4, 4, 4, 4);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(488, 230);
+            pictureBox3.Size = new Size(610, 288);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
@@ -286,11 +293,12 @@
             btnMenu.ForeColor = Color.White;
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
             btnMenu.ImageSize = new Size(55, 55);
-            btnMenu.Location = new Point(1432, 46);
+            btnMenu.Location = new Point(1790, 58);
+            btnMenu.Margin = new Padding(4, 4, 4, 4);
             btnMenu.Name = "btnMenu";
             btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnMenu.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnMenu.Size = new Size(53, 49);
+            btnMenu.Size = new Size(66, 61);
             btnMenu.TabIndex = 32;
             btnMenu.Click += btnMenu_Click;
             // 
@@ -298,9 +306,10 @@
             // 
             label1.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Olive;
-            label1.Location = new Point(186, 104);
+            label1.Location = new Point(232, 130);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1126, 53);
+            label1.Size = new Size(1408, 66);
             label1.TabIndex = 31;
             label1.Text = "RONG CHƠI BỐN PHƯƠNG, GIÁ VẪN \"YÊU THƯƠNG\"";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -320,10 +329,11 @@
             btnLogin.FillColor = Color.WhiteSmoke;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.DimGray;
-            btnLogin.Location = new Point(1234, 48);
+            btnLogin.Location = new Point(1542, 60);
+            btnLogin.Margin = new Padding(4, 4, 4, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnLogin.Size = new Size(177, 44);
+            btnLogin.Size = new Size(221, 55);
             btnLogin.TabIndex = 28;
             btnLogin.Text = "Đăng nhập";
             btnLogin.Click += btnLogin_Click_1;
@@ -345,10 +355,11 @@
             btnLogged.Image = (Image)resources.GetObject("btnLogged.Image");
             btnLogged.ImageAlign = HorizontalAlignment.Left;
             btnLogged.ImageSize = new Size(25, 25);
-            btnLogged.Location = new Point(1234, 48);
+            btnLogged.Location = new Point(1542, 60);
+            btnLogged.Margin = new Padding(4, 4, 4, 4);
             btnLogged.Name = "btnLogged";
             btnLogged.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            btnLogged.Size = new Size(177, 44);
+            btnLogged.Size = new Size(221, 55);
             btnLogged.TabIndex = 29;
             btnLogged.Click += btnLogged_Click_1;
             // 
@@ -358,18 +369,20 @@
             panel6.Controls.Add(label2);
             panel6.Controls.Add(PicFlashingLogo);
             panel6.Controls.Add(label3);
-            panel6.Location = new Point(43, 48);
+            panel6.Location = new Point(54, 60);
+            panel6.Margin = new Padding(4, 4, 4, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(161, 63);
+            panel6.Size = new Size(201, 79);
             panel6.TabIndex = 30;
             // 
             // label2
             // 
             label2.BackColor = Color.WhiteSmoke;
             label2.Image = (Image)resources.GetObject("label2.Image");
-            label2.Location = new Point(57, 46);
+            label2.Location = new Point(71, 58);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(62, 10);
+            label2.Size = new Size(78, 12);
             label2.TabIndex = 26;
             // 
             // PicFlashingLogo
@@ -377,8 +390,9 @@
             PicFlashingLogo.BackColor = Color.WhiteSmoke;
             PicFlashingLogo.Image = (Image)resources.GetObject("PicFlashingLogo.Image");
             PicFlashingLogo.Location = new Point(-1, 0);
+            PicFlashingLogo.Margin = new Padding(4, 4, 4, 4);
             PicFlashingLogo.Name = "PicFlashingLogo";
-            PicFlashingLogo.Size = new Size(35, 20);
+            PicFlashingLogo.Size = new Size(44, 25);
             PicFlashingLogo.SizeMode = PictureBoxSizeMode.Zoom;
             PicFlashingLogo.TabIndex = 25;
             PicFlashingLogo.TabStop = false;
@@ -388,9 +402,10 @@
             label3.BackColor = Color.WhiteSmoke;
             label3.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(3, 122, 139);
-            label3.Location = new Point(13, 0);
+            label3.Location = new Point(16, 0);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(150, 64);
+            label3.Size = new Size(188, 80);
             label3.TabIndex = 24;
             label3.Text = "travelstrip";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -405,9 +420,10 @@
             // 
             guna2Separator1.FillColor = Color.Black;
             guna2Separator1.FillThickness = 2;
-            guna2Separator1.Location = new Point(-9, 36);
+            guna2Separator1.Location = new Point(-11, 45);
+            guna2Separator1.Margin = new Padding(4, 4, 4, 4);
             guna2Separator1.Name = "guna2Separator1";
-            guna2Separator1.Size = new Size(1513, 10);
+            guna2Separator1.Size = new Size(1891, 12);
             guna2Separator1.TabIndex = 33;
             // 
             // guna2HtmlLabel2
@@ -476,10 +492,11 @@
             btnSearch.Image = (Image)resources.GetObject("btnSearch.Image");
             btnSearch.ImageAlign = HorizontalAlignment.Left;
             btnSearch.ImageSize = new Size(40, 40);
-            btnSearch.Location = new Point(482, 275);
+            btnSearch.Location = new Point(602, 344);
+            btnSearch.Margin = new Padding(4, 4, 4, 4);
             btnSearch.Name = "btnSearch";
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            btnSearch.Size = new Size(243, 66);
+            btnSearch.Size = new Size(304, 82);
             btnSearch.TabIndex = 15;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.Click += btnSearch_Click;
@@ -504,15 +521,15 @@
             txtCity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCity.IconLeft = (Image)resources.GetObject("txtCity.IconLeft");
             txtCity.IconLeftSize = new Size(35, 35);
-            txtCity.Location = new Point(93, 61);
-            txtCity.Margin = new Padding(10, 15, 10, 15);
+            txtCity.Location = new Point(116, 76);
+            txtCity.Margin = new Padding(12, 19, 12, 19);
             txtCity.Name = "txtCity";
             txtCity.PasswordChar = '\0';
             txtCity.PlaceholderForeColor = Color.DimGray;
             txtCity.PlaceholderText = "";
             txtCity.SelectedText = "";
             txtCity.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            txtCity.Size = new Size(1021, 52);
+            txtCity.Size = new Size(1276, 65);
             txtCity.TabIndex = 82;
             // 
             // dtpCheckInDate
@@ -528,23 +545,26 @@
             dtpCheckInDate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckInDate.ForeColor = Color.DimGray;
             dtpCheckInDate.Format = DateTimePickerFormat.Custom;
-            dtpCheckInDate.Location = new Point(93, 160);
+            dtpCheckInDate.Location = new Point(116, 200);
+            dtpCheckInDate.Margin = new Padding(4, 4, 4, 4);
             dtpCheckInDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpCheckInDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpCheckInDate.Name = "dtpCheckInDate";
             dtpCheckInDate.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            dtpCheckInDate.Size = new Size(243, 52);
+            dtpCheckInDate.Size = new Size(304, 65);
             dtpCheckInDate.TabIndex = 83;
             dtpCheckInDate.TextAlign = HorizontalAlignment.Center;
             dtpCheckInDate.Value = new DateTime(2024, 3, 1, 0, 0, 0, 0);
+            dtpCheckInDate.ValueChanged += dtpCheckInDate_ValueChanged;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(103, 170);
+            pictureBox1.Location = new Point(129, 212);
+            pictureBox1.Margin = new Padding(4, 4, 4, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(40, 32);
+            pictureBox1.Size = new Size(50, 40);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 84;
             pictureBox1.TabStop = false;
@@ -562,12 +582,13 @@
             dtpCheckOutDate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckOutDate.ForeColor = Color.DimGray;
             dtpCheckOutDate.Format = DateTimePickerFormat.Custom;
-            dtpCheckOutDate.Location = new Point(366, 160);
+            dtpCheckOutDate.Location = new Point(458, 200);
+            dtpCheckOutDate.Margin = new Padding(4, 4, 4, 4);
             dtpCheckOutDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtpCheckOutDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtpCheckOutDate.Name = "dtpCheckOutDate";
             dtpCheckOutDate.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            dtpCheckOutDate.Size = new Size(243, 52);
+            dtpCheckOutDate.Size = new Size(304, 65);
             dtpCheckOutDate.TabIndex = 87;
             dtpCheckOutDate.TextAlign = HorizontalAlignment.Center;
             dtpCheckOutDate.Value = new DateTime(2024, 3, 31, 0, 0, 0, 0);
@@ -576,9 +597,10 @@
             // 
             pictureBox4.BackColor = Color.FromArgb(217, 217, 217);
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(375, 170);
+            pictureBox4.Location = new Point(469, 212);
+            pictureBox4.Margin = new Padding(4, 4, 4, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(40, 32);
+            pictureBox4.Size = new Size(50, 40);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 88;
             pictureBox4.TabStop = false;
@@ -590,20 +612,22 @@
             cbbDropDownContainer.Controls.Add(panelOld);
             cbbDropDownContainer.Controls.Add(panelChild);
             cbbDropDownContainer.Controls.Add(panelRoom);
-            cbbDropDownContainer.Location = new Point(632, 160);
-            cbbDropDownContainer.MaximumSize = new Size(481, 235);
-            cbbDropDownContainer.MinimumSize = new Size(481, 62);
+            cbbDropDownContainer.Location = new Point(790, 200);
+            cbbDropDownContainer.Margin = new Padding(4, 4, 4, 4);
+            cbbDropDownContainer.MaximumSize = new Size(601, 294);
+            cbbDropDownContainer.MinimumSize = new Size(601, 78);
             cbbDropDownContainer.Name = "cbbDropDownContainer";
-            cbbDropDownContainer.Size = new Size(481, 62);
+            cbbDropDownContainer.Size = new Size(601, 78);
             cbbDropDownContainer.TabIndex = 90;
             // 
             // panel5
             // 
             panel5.BackColor = Color.Transparent;
             panel5.Controls.Add(txtItem);
-            panel5.Location = new Point(3, 3);
+            panel5.Location = new Point(4, 4);
+            panel5.Margin = new Padding(4, 4, 4, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(478, 55);
+            panel5.Size = new Size(598, 69);
             panel5.TabIndex = 74;
             // 
             // txtItem
@@ -629,15 +653,15 @@
             txtItem.IconRight = (Image)resources.GetObject("txtItem.IconRight");
             txtItem.IconRightSize = new Size(35, 35);
             txtItem.Location = new Point(0, 2);
-            txtItem.Margin = new Padding(14, 21, 14, 21);
+            txtItem.Margin = new Padding(18, 26, 18, 26);
             txtItem.Name = "txtItem";
-            txtItem.Padding = new Padding(38, 0, 38, 0);
+            txtItem.Padding = new Padding(48, 0, 48, 0);
             txtItem.PasswordChar = '\0';
             txtItem.PlaceholderForeColor = Color.DimGray;
             txtItem.PlaceholderText = "2 người lớn, 1 trẻ em, 1 phòng";
             txtItem.SelectedText = "";
             txtItem.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            txtItem.Size = new Size(475, 52);
+            txtItem.Size = new Size(594, 65);
             txtItem.TabIndex = 88;
             txtItem.Click += txtItem_Click;
             // 
@@ -646,9 +670,10 @@
             panelOld.BackColor = Color.Transparent;
             panelOld.Controls.Add(guna2NumericUpDown1);
             panelOld.Controls.Add(label6);
-            panelOld.Location = new Point(3, 64);
+            panelOld.Location = new Point(4, 81);
+            panelOld.Margin = new Padding(4, 4, 4, 4);
             panelOld.Name = "panelOld";
-            panelOld.Size = new Size(478, 50);
+            panelOld.Size = new Size(598, 62);
             panelOld.TabIndex = 1;
             // 
             // guna2NumericUpDown1
@@ -662,11 +687,11 @@
             guna2NumericUpDown1.Dock = DockStyle.Right;
             guna2NumericUpDown1.FillColor = Color.WhiteSmoke;
             guna2NumericUpDown1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2NumericUpDown1.Location = new Point(293, 0);
-            guna2NumericUpDown1.Margin = new Padding(3, 4, 3, 4);
+            guna2NumericUpDown1.Location = new Point(367, 0);
+            guna2NumericUpDown1.Margin = new Padding(4, 5, 4, 5);
             guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             guna2NumericUpDown1.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna2NumericUpDown1.Size = new Size(185, 50);
+            guna2NumericUpDown1.Size = new Size(231, 62);
             guna2NumericUpDown1.TabIndex = 89;
             guna2NumericUpDown1.UpDownButtonBorderVisible = false;
             guna2NumericUpDown1.UpDownButtonFillColor = Color.DimGray;
@@ -682,9 +707,10 @@
             label6.Image = (Image)resources.GetObject("label6.Image");
             label6.ImageAlign = ContentAlignment.MiddleLeft;
             label6.Location = new Point(0, 0);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Padding = new Padding(10, 0, 0, 0);
-            label6.Size = new Size(232, 50);
+            label6.Padding = new Padding(12, 0, 0, 0);
+            label6.Size = new Size(290, 62);
             label6.TabIndex = 6;
             label6.Text = "       Người lớn";
             label6.TextAlign = ContentAlignment.MiddleLeft;
@@ -694,9 +720,10 @@
             panelChild.BackColor = Color.Transparent;
             panelChild.Controls.Add(guna2NumericUpDown2);
             panelChild.Controls.Add(label4);
-            panelChild.Location = new Point(3, 120);
+            panelChild.Location = new Point(4, 151);
+            panelChild.Margin = new Padding(4, 4, 4, 4);
             panelChild.Name = "panelChild";
-            panelChild.Size = new Size(478, 50);
+            panelChild.Size = new Size(598, 62);
             panelChild.TabIndex = 2;
             // 
             // guna2NumericUpDown2
@@ -710,11 +737,11 @@
             guna2NumericUpDown2.Dock = DockStyle.Right;
             guna2NumericUpDown2.FillColor = Color.WhiteSmoke;
             guna2NumericUpDown2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2NumericUpDown2.Location = new Point(293, 0);
-            guna2NumericUpDown2.Margin = new Padding(3, 4, 3, 4);
+            guna2NumericUpDown2.Location = new Point(367, 0);
+            guna2NumericUpDown2.Margin = new Padding(4, 5, 4, 5);
             guna2NumericUpDown2.Name = "guna2NumericUpDown2";
             guna2NumericUpDown2.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2NumericUpDown2.Size = new Size(185, 50);
+            guna2NumericUpDown2.Size = new Size(231, 62);
             guna2NumericUpDown2.TabIndex = 90;
             guna2NumericUpDown2.UpDownButtonBorderVisible = false;
             guna2NumericUpDown2.UpDownButtonFillColor = Color.DimGray;
@@ -730,9 +757,10 @@
             label4.Image = (Image)resources.GetObject("label4.Image");
             label4.ImageAlign = ContentAlignment.MiddleLeft;
             label4.Location = new Point(0, 0);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Padding = new Padding(10, 0, 0, 0);
-            label4.Size = new Size(222, 50);
+            label4.Padding = new Padding(12, 0, 0, 0);
+            label4.Size = new Size(278, 62);
             label4.TabIndex = 6;
             label4.Text = "       Trẻ em";
             label4.TextAlign = ContentAlignment.MiddleLeft;
@@ -742,9 +770,10 @@
             panelRoom.BackColor = Color.Transparent;
             panelRoom.Controls.Add(guna2NumericUpDown3);
             panelRoom.Controls.Add(label8);
-            panelRoom.Location = new Point(3, 176);
+            panelRoom.Location = new Point(4, 221);
+            panelRoom.Margin = new Padding(4, 4, 4, 4);
             panelRoom.Name = "panelRoom";
-            panelRoom.Size = new Size(478, 50);
+            panelRoom.Size = new Size(598, 62);
             panelRoom.TabIndex = 3;
             // 
             // guna2NumericUpDown3
@@ -758,11 +787,11 @@
             guna2NumericUpDown3.Dock = DockStyle.Right;
             guna2NumericUpDown3.FillColor = Color.WhiteSmoke;
             guna2NumericUpDown3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2NumericUpDown3.Location = new Point(293, 0);
-            guna2NumericUpDown3.Margin = new Padding(3, 4, 3, 4);
+            guna2NumericUpDown3.Location = new Point(367, 0);
+            guna2NumericUpDown3.Margin = new Padding(4, 5, 4, 5);
             guna2NumericUpDown3.Name = "guna2NumericUpDown3";
             guna2NumericUpDown3.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2NumericUpDown3.Size = new Size(185, 50);
+            guna2NumericUpDown3.Size = new Size(231, 62);
             guna2NumericUpDown3.TabIndex = 90;
             guna2NumericUpDown3.UpDownButtonBorderVisible = false;
             guna2NumericUpDown3.UpDownButtonFillColor = Color.DimGray;
@@ -778,9 +807,10 @@
             label8.Image = (Image)resources.GetObject("label8.Image");
             label8.ImageAlign = ContentAlignment.MiddleLeft;
             label8.Location = new Point(0, 0);
+            label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
-            label8.Padding = new Padding(10, 0, 0, 0);
-            label8.Size = new Size(222, 50);
+            label8.Padding = new Padding(12, 0, 0, 0);
+            label8.Size = new Size(278, 62);
             label8.TabIndex = 6;
             label8.Text = "       Phòng";
             label8.TextAlign = ContentAlignment.MiddleLeft;
@@ -800,47 +830,52 @@
             guna2ShadowPanel1.Controls.Add(label10);
             guna2ShadowPanel1.Controls.Add(label11);
             guna2ShadowPanel1.FillColor = Color.LightGray;
-            guna2ShadowPanel1.Location = new Point(147, 453);
+            guna2ShadowPanel1.Location = new Point(184, 566);
+            guna2ShadowPanel1.Margin = new Padding(4, 4, 4, 4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 10;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowShift = 15;
-            guna2ShadowPanel1.Size = new Size(1205, 394);
+            guna2ShadowPanel1.Size = new Size(1506, 492);
             guna2ShadowPanel1.TabIndex = 34;
             // 
             // label7
             // 
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(93, 29);
+            label7.Location = new Point(116, 36);
+            label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
-            label7.Size = new Size(419, 31);
+            label7.Size = new Size(524, 39);
             label7.TabIndex = 91;
             label7.Text = "Thành phố hoặc khách sạn bạn muốn đến";
             // 
             // label9
             // 
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(93, 129);
+            label9.Location = new Point(116, 161);
+            label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(243, 38);
+            label9.Size = new Size(304, 48);
             label9.TabIndex = 92;
             label9.Text = "Ngày nhận phòng";
             // 
             // label10
             // 
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(366, 129);
+            label10.Location = new Point(458, 161);
+            label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
-            label10.Size = new Size(243, 38);
+            label10.Size = new Size(304, 48);
             label10.TabIndex = 93;
             label10.Text = "Ngày trả phòng";
             // 
             // label11
             // 
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(633, 129);
+            label11.Location = new Point(791, 161);
+            label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new Size(481, 38);
+            label11.Size = new Size(601, 48);
             label11.TabIndex = 94;
             label11.Text = "Số lượng người và phòng";
             // 
@@ -849,9 +884,10 @@
             panel2.Controls.Add(btnHide);
             panel2.Controls.Add(guna2CircleButton3);
             panel2.Controls.Add(btnExit);
-            panel2.Location = new Point(1395, 6);
+            panel2.Location = new Point(1744, 8);
+            panel2.Margin = new Padding(4, 4, 4, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(97, 30);
+            panel2.Size = new Size(121, 38);
             panel2.TabIndex = 38;
             // 
             // btnHide
@@ -865,11 +901,12 @@
             btnHide.ForeColor = Color.White;
             btnHide.Image = (Image)resources.GetObject("btnHide.Image");
             btnHide.ImageSize = new Size(22, 22);
-            btnHide.Location = new Point(6, 2);
+            btnHide.Location = new Point(8, 2);
+            btnHide.Margin = new Padding(4, 4, 4, 4);
             btnHide.Name = "btnHide";
             btnHide.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnHide.Size = new Size(25, 25);
+            btnHide.Size = new Size(31, 31);
             btnHide.TabIndex = 39;
             btnHide.Click += btnHide_Click;
             // 
@@ -884,11 +921,12 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.ImageSize = new Size(25, 25);
-            guna2CircleButton3.Location = new Point(37, 2);
+            guna2CircleButton3.Location = new Point(46, 2);
+            guna2CircleButton3.Margin = new Padding(4, 4, 4, 4);
             guna2CircleButton3.Name = "guna2CircleButton3";
             guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(25, 25);
+            guna2CircleButton3.Size = new Size(31, 31);
             guna2CircleButton3.TabIndex = 39;
             // 
             // btnExit
@@ -902,20 +940,21 @@
             btnExit.ForeColor = Color.White;
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageSize = new Size(22, 22);
-            btnExit.Location = new Point(68, 2);
+            btnExit.Location = new Point(85, 2);
+            btnExit.Margin = new Padding(4, 4, 4, 4);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnExit.Size = new Size(25, 25);
+            btnExit.Size = new Size(31, 31);
             btnExit.TabIndex = 38;
             btnExit.Click += btnExit_Click_1;
             // 
             // FHome
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(1500, 882);
+            ClientSize = new Size(1875, 1102);
             Controls.Add(panel2);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(guna2Separator1);
@@ -927,6 +966,7 @@
             Controls.Add(panel1);
             ForeColor = Color.Green;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FHome";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FHome";

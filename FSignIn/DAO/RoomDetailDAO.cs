@@ -59,12 +59,6 @@ namespace Hotel_Management.DAO
             return false;
         }
 
-        public bool BookRoomSuccess(DateTime checkinDate, DateTime checkoutDate, int roomId)
-        {
-            string sql = $"UPDATE Rooms_Detail SET start_day = '{checkinDate}', end_day = '{checkoutDate}' WHERE room_id = '{roomId}'";
-            int inserted = db.ExecuteNoneQuery(sql);
-            if (inserted > 0) return true;
-            return false;
-        }
+        
     }
 }

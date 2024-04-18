@@ -31,22 +31,28 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblHotel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblRoomName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            dtpCheckInDaten = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            dtpCheckOutDaten = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            n = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            m = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblCheckInDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblCheckOutDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnEvaluate = new Guna.UI2.WinForms.Guna2Button();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            pbHotel = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbHotel).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblHotel
@@ -54,10 +60,10 @@
             lblHotel.AutoSize = false;
             lblHotel.BackColor = Color.Transparent;
             lblHotel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblHotel.Location = new Point(195, 19);
+            lblHotel.Location = new Point(505, 22);
             lblHotel.Margin = new Padding(2);
             lblHotel.Name = "lblHotel";
-            lblHotel.Size = new Size(159, 30);
+            lblHotel.Size = new Size(199, 38);
             lblHotel.TabIndex = 0;
             lblHotel.Text = "...";
             lblHotel.Click += lblHotel_Click;
@@ -67,92 +73,58 @@
             lblRoomName.AutoSize = false;
             lblRoomName.BackColor = Color.Transparent;
             lblRoomName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblRoomName.Location = new Point(156, 66);
+            lblRoomName.Location = new Point(456, 81);
             lblRoomName.Margin = new Padding(2);
             lblRoomName.Name = "lblRoomName";
-            lblRoomName.Size = new Size(120, 30);
+            lblRoomName.Size = new Size(150, 38);
             lblRoomName.TabIndex = 1;
             lblRoomName.Text = "...";
             lblRoomName.Click += lblRoomName_Click;
             // 
-            // dtpCheckInDaten
+            // lblCheckInDate
             // 
-            dtpCheckInDaten.Checked = true;
-            dtpCheckInDaten.CustomizableEdges = customizableEdges1;
-            dtpCheckInDaten.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpCheckInDaten.Format = DateTimePickerFormat.Short;
-            dtpCheckInDaten.Location = new Point(410, 114);
-            dtpCheckInDaten.Margin = new Padding(2);
-            dtpCheckInDaten.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtpCheckInDaten.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtpCheckInDaten.Name = "dtpCheckInDaten";
-            dtpCheckInDaten.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            dtpCheckInDaten.Size = new Size(213, 35);
-            dtpCheckInDaten.TabIndex = 2;
-            dtpCheckInDaten.Value = new DateTime(2024, 3, 27, 0, 0, 0, 0);
-            dtpCheckInDaten.ValueChanged += dtpCheckInDate_ValueChanged;
+            lblCheckInDate.AutoSize = false;
+            lblCheckInDate.BackColor = Color.Transparent;
+            lblCheckInDate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCheckInDate.Location = new Point(535, 146);
+            lblCheckInDate.Margin = new Padding(2);
+            lblCheckInDate.Name = "lblCheckInDate";
+            lblCheckInDate.Size = new Size(229, 38);
+            lblCheckInDate.TabIndex = 3;
+            lblCheckInDate.Text = "...";
+            lblCheckInDate.Click += lblCheckInDate_Click;
             // 
-            // dtpCheckOutDaten
+            // lblCheckOutDate
             // 
-            dtpCheckOutDaten.Checked = true;
-            dtpCheckOutDaten.CustomizableEdges = customizableEdges3;
-            dtpCheckOutDaten.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpCheckOutDaten.Format = DateTimePickerFormat.Short;
-            dtpCheckOutDaten.Location = new Point(410, 173);
-            dtpCheckOutDaten.Margin = new Padding(2);
-            dtpCheckOutDaten.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtpCheckOutDaten.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtpCheckOutDaten.Name = "dtpCheckOutDaten";
-            dtpCheckOutDaten.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            dtpCheckOutDaten.Size = new Size(213, 35);
-            dtpCheckOutDaten.TabIndex = 2;
-            dtpCheckOutDaten.Value = new DateTime(2024, 3, 27, 0, 0, 0, 0);
-            dtpCheckOutDaten.ValueChanged += dtpCheckOutDate_ValueChanged;
-            // 
-            // n
-            // 
-            n.AutoSize = false;
-            n.BackColor = Color.Transparent;
-            n.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            n.Location = new Point(219, 119);
-            n.Margin = new Padding(2);
-            n.Name = "n";
-            n.Size = new Size(183, 30);
-            n.TabIndex = 3;
-            n.Text = "...";
-            n.Click += lblCheckInDate_Click;
-            // 
-            // m
-            // 
-            m.AutoSize = false;
-            m.BackColor = Color.Transparent;
-            m.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            m.Location = new Point(214, 173);
-            m.Margin = new Padding(2);
-            m.Name = "m";
-            m.Size = new Size(178, 30);
-            m.TabIndex = 4;
-            m.Text = "...";
-            m.Click += lblCheckOutDate_Click;
+            lblCheckOutDate.AutoSize = false;
+            lblCheckOutDate.BackColor = Color.Transparent;
+            lblCheckOutDate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCheckOutDate.Location = new Point(535, 213);
+            lblCheckOutDate.Margin = new Padding(2);
+            lblCheckOutDate.Name = "lblCheckOutDate";
+            lblCheckOutDate.Size = new Size(222, 38);
+            lblCheckOutDate.TabIndex = 4;
+            lblCheckOutDate.Text = "...";
+            lblCheckOutDate.Click += lblCheckOutDate_Click;
             // 
             // btnEvaluate
             // 
             btnEvaluate.BorderColor = Color.White;
             btnEvaluate.BorderRadius = 10;
             btnEvaluate.BorderThickness = 2;
-            btnEvaluate.CustomizableEdges = customizableEdges5;
+            btnEvaluate.CustomizableEdges = customizableEdges1;
             btnEvaluate.DisabledState.BorderColor = Color.DarkGray;
             btnEvaluate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEvaluate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEvaluate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEvaluate.FillColor = Color.ForestGreen;
+            btnEvaluate.FillColor = Color.FromArgb(255, 128, 0);
             btnEvaluate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEvaluate.ForeColor = Color.White;
-            btnEvaluate.Location = new Point(659, 153);
+            btnEvaluate.Location = new Point(837, 104);
             btnEvaluate.Margin = new Padding(2);
             btnEvaluate.Name = "btnEvaluate";
-            btnEvaluate.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnEvaluate.Size = new Size(171, 50);
+            btnEvaluate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnEvaluate.Size = new Size(214, 62);
             btnEvaluate.TabIndex = 5;
             btnEvaluate.Text = "Đánh giá";
             btnEvaluate.Click += btnEvaluate_Click;
@@ -167,73 +139,116 @@
             guna2HtmlLabel1.AutoSize = false;
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel1.Location = new Point(32, 19);
+            guna2HtmlLabel1.Location = new Point(304, 21);
             guna2HtmlLabel1.Margin = new Padding(2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(159, 30);
+            guna2HtmlLabel1.Size = new Size(199, 38);
             guna2HtmlLabel1.TabIndex = 6;
             guna2HtmlLabel1.Text = "Tên khách sạn:";
-            guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleLeft;
+            guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.AutoSize = false;
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel2.Location = new Point(32, 66);
+            guna2HtmlLabel2.Location = new Point(307, 79);
             guna2HtmlLabel2.Margin = new Padding(2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(120, 30);
+            guna2HtmlLabel2.Size = new Size(150, 38);
             guna2HtmlLabel2.TabIndex = 7;
             guna2HtmlLabel2.Text = "Mã phòng:";
-            guna2HtmlLabel2.TextAlignment = ContentAlignment.MiddleLeft;
+            guna2HtmlLabel2.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.AutoSize = false;
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel3.Location = new Point(32, 119);
+            guna2HtmlLabel3.Location = new Point(301, 146);
             guna2HtmlLabel3.Margin = new Padding(2);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(183, 30);
+            guna2HtmlLabel3.Size = new Size(229, 38);
             guna2HtmlLabel3.TabIndex = 8;
             guna2HtmlLabel3.Text = "Ngày đặt phòng:";
-            guna2HtmlLabel3.TextAlignment = ContentAlignment.MiddleLeft;
+            guna2HtmlLabel3.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.AutoSize = false;
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel4.Location = new Point(32, 173);
+            guna2HtmlLabel4.Location = new Point(302, 213);
             guna2HtmlLabel4.Margin = new Padding(2);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(178, 30);
+            guna2HtmlLabel4.Size = new Size(222, 38);
             guna2HtmlLabel4.TabIndex = 9;
             guna2HtmlLabel4.Text = "Ngày trả phòng:";
-            guna2HtmlLabel4.TextAlignment = ContentAlignment.MiddleLeft;
+            guna2HtmlLabel4.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel5
+            // 
+            guna2Panel5.BorderColor = Color.FromArgb(255, 128, 0);
+            guna2Panel5.BorderRadius = 10;
+            guna2Panel5.BorderThickness = 2;
+            guna2Panel5.Controls.Add(pbHotel);
+            guna2Panel5.CustomizableEdges = customizableEdges7;
+            guna2Panel5.Location = new Point(25, 4);
+            guna2Panel5.Margin = new Padding(4);
+            guna2Panel5.Name = "guna2Panel5";
+            guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Panel5.Size = new Size(283, 260);
+            guna2Panel5.TabIndex = 97;
+            // 
+            // pbHotel
+            // 
+            pbHotel.BackColor = Color.FromArgb(255, 128, 0);
+            pbHotel.BorderRadius = 20;
+            pbHotel.CustomizableEdges = customizableEdges5;
+            pbHotel.ImageRotate = 0F;
+            pbHotel.Location = new Point(3, 3);
+            pbHotel.Name = "pbHotel";
+            pbHotel.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pbHotel.Size = new Size(277, 254);
+            pbHotel.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbHotel.TabIndex = 0;
+            pbHotel.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.CustomizableEdges = customizableEdges3;
+            guna2PictureBox1.Image = Properties.Resources.good_feedback;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(912, 28);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2PictureBox1.Size = new Size(66, 71);
+            guna2PictureBox1.TabIndex = 98;
+            guna2PictureBox1.TabStop = false;
             // 
             // UC_History
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(guna2PictureBox1);
+            Controls.Add(guna2Panel5);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(btnEvaluate);
-            Controls.Add(m);
-            Controls.Add(n);
-            Controls.Add(dtpCheckOutDaten);
-            Controls.Add(dtpCheckInDaten);
+            Controls.Add(lblCheckOutDate);
+            Controls.Add(lblCheckInDate);
             Controls.Add(lblRoomName);
             Controls.Add(lblHotel);
             Margin = new Padding(2);
             Name = "UC_History";
-            Size = new Size(860, 221);
+            Size = new Size(1120, 276);
             Load += UC_History_Load;
+            guna2Panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbHotel).EndInit();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -241,15 +256,16 @@
 
         public Guna.UI2.WinForms.Guna2HtmlLabel lblHotel;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblRoomName;
-        public Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckInDaten;
-        public Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOutDaten;
-        public Guna.UI2.WinForms.Guna2HtmlLabel n;
-        public Guna.UI2.WinForms.Guna2HtmlLabel m;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblCheckInDate;
+        public Guna.UI2.WinForms.Guna2HtmlLabel lblCheckOutDate;
         public Guna.UI2.WinForms.Guna2Button btnEvaluate;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         public Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        public Guna.UI2.WinForms.Guna2PictureBox pbHotel;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

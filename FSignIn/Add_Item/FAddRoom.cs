@@ -18,7 +18,6 @@ namespace Hotel_Management.Add_Item
         private int hotelId;
         private int roomId;
         private string roomNumber;
-        private string status;
         private int adult;
         private int child;
         private string prePrice;
@@ -42,7 +41,7 @@ namespace Hotel_Management.Add_Item
             this.hotelId = hotelId;
         }
 
-        public FAddRoom(int roomId, string roomNumber, string status, int adult, int child, string prePrice,
+        public FAddRoom(int roomId, string roomNumber, int adult, int child, string prePrice,
             string currPrice, string description, DateTime startDay, DateTime endDay, string img1,
             string img2, string img3, string img4, string img5)
         {
@@ -50,8 +49,6 @@ namespace Hotel_Management.Add_Item
             this.roomId = roomId;
             this.roomNumber = txtRoomNumber.Texts = roomNumber;
             txtRoomNumber.ReadOnly = true;
-            this.status = status;
-            cbbRoomStatus.SelectedItem = status;
             this.adult = adult;
             cbbAdult.SelectedItem = adult.ToString();
             this.child = child;
@@ -80,11 +77,9 @@ namespace Hotel_Management.Add_Item
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            int room_status = 1;
-
             Room room = new Room(txtRoomNumber.Texts, txtImg2.PlaceholderText,
                 Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts),
-                room_status, txtDescription.Texts, hotelId);
+                txtDescription.Texts, hotelId);
 
 
             RoomDetail roomDetail = new RoomDetail(txtImg1.PlaceholderText,
@@ -166,7 +161,7 @@ namespace Hotel_Management.Add_Item
             {
                 statusRoom = 1;
             }
-            Room room = new Room(roomId, txtRoomNumber.Texts, img1, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), statusRoom, txtDescription.Texts);
+            Room room = new Room(roomId, txtRoomNumber.Texts, img1, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
             RoomDetail roomDetail = new RoomDetail(roomId, txtImg1.PlaceholderText, txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText, txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem), dtpStart_Date.Value, dtpEnd_Date.Value);
             bool editedRoom = roomDAO.EditRoom(room);
             bool editedRoomDetail = roomDetailDAO.EditRoomDetail(roomDetail);

@@ -38,18 +38,6 @@ namespace Hotel_Management
             {
                 DataRow row = dtHotel.Rows[i];
                 lblHotel.Text = row[1].ToString();
-                string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
-                string imagePath = projectDirectory + @"\" + row[5].ToString();
-
-                if (!string.IsNullOrEmpty(imagePath))
-                {
-                    pcHotel.ImageLocation = imagePath;
-                }
-                else
-                {
-                    pcHotel.Image = null;
-                }
             }
 
             for (int i = 0; i < dtCustomer.Rows.Count; i++)

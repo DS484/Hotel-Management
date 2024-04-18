@@ -79,7 +79,7 @@ namespace Hotel_Management.DAO
 
         public DataTable ManageRoom(string username)
         {
-            string query = "SELECT r.room_number, r.room_status, rd.adult, rd.children, r.pre_price, r.curr_price, r.description, rd.start_day, rd.end_day, rd.picture_1, rd.picture_2, rd.picture_3, rd.picture_4, rd.picture_5, r.id FROM Users u JOIN hotel_managers hm ON u.id = hm.user_id JOIN Hotels h ON hm.hotel_id = h.id JOIN Rooms r ON r.hotel_id = h.id JOIN Rooms_Detail rd ON rd.room_id = r.id WHERE u.username LIKE @username";
+            string query = "SELECT r.room_number, rd.adult, rd.children, r.pre_price, r.curr_price, r.description, rd.start_day, rd.end_day, rd.picture_1, rd.picture_2, rd.picture_3, rd.picture_4, rd.picture_5, r.id FROM Users u JOIN hotel_managers hm ON u.id = hm.user_id JOIN Hotels h ON hm.hotel_id = h.id JOIN Rooms r ON r.hotel_id = h.id JOIN Rooms_Detail rd ON rd.room_id = r.id WHERE u.username LIKE @username";
             object[] parameter = { username };
 
             return db.ExecuteQuery(query, parameter);

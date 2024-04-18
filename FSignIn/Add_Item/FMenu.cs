@@ -54,9 +54,9 @@ namespace Hotel_Management.Add_Item
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Close();
+            MessageBox.Show("Đã đăng xuất", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
             FHome f = new FHome();
-            f.Show();
-            MessageBox.Show("Đã đăng xuất", "Comfirm", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            f.ShowDialog();
         }
     }
 }

@@ -66,14 +66,13 @@
             dgvRoom = new Guna.UI2.WinForms.Guna2DataGridView();
             Column1 = new DataGridViewImageColumn();
             Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             Column11 = new DataGridViewTextBoxColumn();
-            Column12 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewImageColumn();
             Column10 = new DataGridViewImageColumn();
             c11 = new DataGridViewTextBoxColumn();
@@ -332,7 +331,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvRoom.ColumnHeadersHeight = 50;
-            dgvRoom.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column11, Column12, Column9, Column10, c11, c12, c13, c14, c15, col14 });
+            dgvRoom.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column5, Column6, Column7, Column8, Column3, Column11, Column9, Column10, c11, c12, c13, c14, c15, col14 });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.FromArgb(219, 239, 220);
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -393,14 +392,6 @@
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             // 
-            // Column3
-            // 
-            Column3.FillWeight = 1F;
-            Column3.HeaderText = "Tình trạng";
-            Column3.MinimumWidth = 100;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
             // Column4
             // 
             Column4.FillWeight = 1F;
@@ -440,19 +431,19 @@
             Column8.Name = "Column8";
             Column8.ReadOnly = true;
             // 
+            // Column3
+            // 
+            Column3.HeaderText = "Ngày mở phòng";
+            Column3.MinimumWidth = 8;
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
             // Column11
             // 
-            Column11.HeaderText = "Ngày bắt đầu trống";
-            Column11.MinimumWidth = 200;
+            Column11.HeaderText = "Ngày đóng phòng";
+            Column11.MinimumWidth = 8;
             Column11.Name = "Column11";
             Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            Column12.HeaderText = "Ngày kết thúc";
-            Column12.MinimumWidth = 150;
-            Column12.Name = "Column12";
-            Column12.ReadOnly = true;
             // 
             // Column9
             // 
@@ -557,14 +548,13 @@
         public Guna.UI2.WinForms.Guna2DataGridView dgvRoom;
         private DataGridViewImageColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column11;
-        private DataGridViewTextBoxColumn Column12;
         private DataGridViewImageColumn Column9;
         private DataGridViewImageColumn Column10;
         private DataGridViewTextBoxColumn c11;

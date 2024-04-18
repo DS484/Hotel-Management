@@ -22,6 +22,7 @@ namespace Hotel_Management
         HotelDAO hotelDAO = new HotelDAO();
         CustomerDAO customerDAO = new CustomerDAO();
         RoomDAO roomDAO = new RoomDAO();
+        BookingDAO bookingDAO = new BookingDAO();
 
         private List<int> hotelList = new List<int>();
         private int userId;
@@ -93,8 +94,62 @@ namespace Hotel_Management
             }
         }
 
+        public bool CheckRoom(int roomId)
+        {
+            bool middle = false;
+            bool added = false;
+            DataTable dtBooking = bookingDAO.CheckBooking(roomId);
+
+            if (dtBooking != null && dtBooking.Rows.Count > 0)
+            {
+                if (dtBooking.Rows.Count == 1)
+                {
+                    if (dtpCheckOutDate.Value < Convert.ToDateTime(dtBooking.Rows[0][1]))
+                        added = true;
+                    if (dtpCheckInDate.Value > Convert.ToDateTime(dtBooking.Rows[0][2]))
+                        added = true;
+                }
+                else
+                {
+                    //1 la checkin, 2 la checkout
+                    for (int i = 0; i < dtBooking.Rows.Count; i++)
+                    {
+                        DataRow rowCurr = dtBooking.Rows[i];
+                        DataRow rowBehind = dtBooking.Rows[i + 1];
+                        if (i != dtBooking.Rows.Count - 1)
+                        {
+                            if (dtpCheckInDate.Value > Convert.ToDateTime(rowCurr[2]) && dtpCheckOutDate.Value < Convert.ToDateTime(rowBehind[1]))
+                                middle = true;
+                        }
+                        if (dtpCheckInDate.Value > Convert.ToDateTime(dtBooking.Rows[dtBooking.Rows.Count - 1][2]))
+                            added = true;
+                        if (dtpCheckOutDate.Value < Convert.ToDateTime(dtBooking.Rows[0][1]))
+                            added = true;
+                    }
+
+                }
+            }
+            else
+                added = true;
+
+            if (middle || added)
+                return true;
+            return false;
+        }
+
         public void LoadInfo(DataTable dtDetailHotel, int hotelId, List<int> roomList)
         {
+            //Nhap
+            List<int> tmpRoomList = new List<int>(roomList);
+            for (int i = 0; i < tmpRoomList.Count; i++)
+            {
+                bool checkRoom = CheckRoom(tmpRoomList[i]);
+                if (!checkRoom)
+                    roomList.Remove(tmpRoomList[i]);
+            }
+            if (roomList.Count == 0)
+                return;
+            //Het nhap
             int prePrice = int.MaxValue;
             int currPrice = int.MaxValue;
             UC_AvtRoom uC_AvtRoom = new UC_AvtRoom();
@@ -324,6 +379,15 @@ namespace Hotel_Management
             {
                 dtpCheckOutDate.Value = dtpCheckInDate.Value.AddDays(1);
                 MessageBox.Show(this, "Ngày trả phòng phải lớn hơn ngày nhận phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dtpCheckInDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
+            {
+                dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
+                MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
