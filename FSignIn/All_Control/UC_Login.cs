@@ -20,7 +20,7 @@ namespace Hotel_Management.All_Control
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

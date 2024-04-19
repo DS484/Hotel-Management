@@ -39,7 +39,6 @@ namespace Hotel_Management
             uC_Room1.btnAddRoom.Click += AddRoom!;
             uC_Feedback1.btnAddEmployee.Click += AddEmployee!;
             uC_Service1.btnAddService.Click += AddService!;
-            uC_Customers1.btnAddCus.Click += AddCustomer!;
             LoadData();
         }
 
@@ -208,12 +207,7 @@ namespace Hotel_Management
             FAddService f = new FAddService(hotelId);
             f.Show();
         }
-        private void AddCustomer(object sender, EventArgs e)
-        {
-            FAddCustomer f = new FAddCustomer();
-            f.Show();
-        }
-
+        
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();

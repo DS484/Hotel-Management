@@ -61,7 +61,7 @@ namespace Hotel_Management
             {
                 DataRow row = dtRoom.Rows[0];
                 int ta = int.Parse(row[4].ToString()!);
-                lblRoomDescription.Text = row[6].ToString();
+                lblRoomDescription.Text = row[5].ToString();
                 if (voucher == 1)
                     ta = int.Parse(row[4].ToString()!) - 99999;
 

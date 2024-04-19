@@ -68,10 +68,11 @@
             guna2Panel1.Controls.Add(btnForgetPass);
             guna2Panel1.Controls.Add(txtPassword);
             guna2Panel1.CustomizableEdges = customizableEdges11;
-            guna2Panel1.Location = new Point(3, 3);
+            guna2Panel1.Location = new Point(4, 4);
+            guna2Panel1.Margin = new Padding(4, 4, 4, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Panel1.Size = new Size(423, 412);
+            guna2Panel1.Size = new Size(529, 515);
             guna2Panel1.TabIndex = 0;
             // 
             // label5
@@ -79,9 +80,10 @@
             label5.AutoEllipsis = true;
             label5.Font = new Font("Tahoma", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.Green;
-            label5.Location = new Point(16, 8);
+            label5.Location = new Point(20, 10);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(394, 73);
+            label5.Size = new Size(492, 91);
             label5.TabIndex = 18;
             label5.Text = "Đăng nhập";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -89,9 +91,10 @@
             // label6
             // 
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(187, 93);
+            label6.Location = new Point(274, 117);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(124, 25);
+            label6.Size = new Size(150, 31);
             label6.TabIndex = 22;
             label6.Text = "Tạo tài khoản?";
             // 
@@ -103,12 +106,13 @@
             btnSignUp.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSignUp.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnSignUp.FillColor = Color.White;
-            btnSignUp.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSignUp.Font = new Font("Segoe UI", 10F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnSignUp.ForeColor = Color.Green;
-            btnSignUp.Location = new Point(308, 89);
+            btnSignUp.Location = new Point(411, 114);
+            btnSignUp.Margin = new Padding(4, 4, 4, 4);
             btnSignUp.Name = "btnSignUp";
             btnSignUp.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSignUp.Size = new Size(99, 29);
+            btnSignUp.Size = new Size(114, 36);
             btnSignUp.TabIndex = 23;
             btnSignUp.Text = "Đăng ký";
             btnSignUp.TextAlign = HorizontalAlignment.Left;
@@ -117,9 +121,10 @@
             // 
             lblError.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(39, 358);
+            lblError.Location = new Point(49, 448);
+            lblError.Margin = new Padding(4, 0, 4, 0);
             lblError.Name = "lblError";
-            lblError.Size = new Size(365, 25);
+            lblError.Size = new Size(456, 31);
             lblError.TabIndex = 25;
             lblError.Text = "Tên đăng nhập hoặc mật khẩu không đúng";
             // 
@@ -135,10 +140,11 @@
             btnLogin.FillColor = Color.Green;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(126, 270);
+            btnLogin.Location = new Point(158, 338);
+            btnLogin.Margin = new Padding(4, 4, 4, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogin.Size = new Size(161, 48);
+            btnLogin.Size = new Size(201, 60);
             btnLogin.TabIndex = 21;
             btnLogin.Text = "Đăng nhập";
             btnLogin.Click += btnLogin_Click;
@@ -159,14 +165,14 @@
             txtUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUsername.IconLeft = (Image)resources.GetObject("txtUsername.IconLeft");
             txtUsername.IconLeftSize = new Size(30, 30);
-            txtUsername.Location = new Point(16, 126);
-            txtUsername.Margin = new Padding(7, 11, 7, 11);
+            txtUsername.Location = new Point(20, 158);
+            txtUsername.Margin = new Padding(9, 14, 9, 14);
             txtUsername.Name = "txtUsername";
             txtUsername.PasswordChar = '\0';
             txtUsername.PlaceholderText = "Tên đăng nhập...";
             txtUsername.SelectedText = "";
             txtUsername.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtUsername.Size = new Size(394, 50);
+            txtUsername.Size = new Size(492, 62);
             txtUsername.TabIndex = 19;
             // 
             // btnForgetPass
@@ -179,10 +185,11 @@
             btnForgetPass.FillColor = Color.White;
             btnForgetPass.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             btnForgetPass.ForeColor = Color.Black;
-            btnForgetPass.Location = new Point(230, 324);
+            btnForgetPass.Location = new Point(288, 405);
+            btnForgetPass.Margin = new Padding(4, 4, 4, 4);
             btnForgetPass.Name = "btnForgetPass";
             btnForgetPass.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnForgetPass.Size = new Size(174, 31);
+            btnForgetPass.Size = new Size(218, 39);
             btnForgetPass.TabIndex = 24;
             btnForgetPass.Text = "Quên mật khẩu?";
             btnForgetPass.TextAlign = HorizontalAlignment.Right;
@@ -203,25 +210,26 @@
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPassword.IconLeft = (Image)resources.GetObject("txtPassword.IconLeft");
             txtPassword.IconLeftSize = new Size(30, 30);
-            txtPassword.Location = new Point(16, 198);
-            txtPassword.Margin = new Padding(7, 11, 7, 11);
+            txtPassword.Location = new Point(20, 248);
+            txtPassword.Margin = new Padding(9, 14, 9, 14);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Mật khẩu...";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtPassword.Size = new Size(394, 50);
+            txtPassword.Size = new Size(492, 62);
             txtPassword.TabIndex = 20;
             // 
             // UC_Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(guna2Panel1);
             Cursor = Cursors.Hand;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "UC_Login";
-            Size = new Size(429, 452);
+            Size = new Size(536, 565);
             guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

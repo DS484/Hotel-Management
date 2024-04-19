@@ -61,10 +61,11 @@
             guna2Panel1.Controls.Add(guna2TextBox1);
             guna2Panel1.Controls.Add(guna2TextBox2);
             guna2Panel1.CustomizableEdges = customizableEdges9;
-            guna2Panel1.Location = new Point(3, 3);
+            guna2Panel1.Location = new Point(4, 4);
+            guna2Panel1.Margin = new Padding(4, 4, 4, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Panel1.Size = new Size(423, 412);
+            guna2Panel1.Size = new Size(529, 515);
             guna2Panel1.TabIndex = 0;
             // 
             // btnExitForget
@@ -79,10 +80,11 @@
             btnExitForget.FillColor = Color.Red;
             btnExitForget.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExitForget.ForeColor = Color.Black;
-            btnExitForget.Location = new Point(220, 317);
+            btnExitForget.Location = new Point(275, 396);
+            btnExitForget.Margin = new Padding(4, 4, 4, 4);
             btnExitForget.Name = "btnExitForget";
             btnExitForget.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnExitForget.Size = new Size(161, 48);
+            btnExitForget.Size = new Size(201, 60);
             btnExitForget.TabIndex = 41;
             btnExitForget.Text = "Thoát";
             // 
@@ -99,21 +101,23 @@
             btnLoginBack.FillColor = Color.Green;
             btnLoginBack.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLoginBack.ForeColor = Color.White;
-            btnLoginBack.Location = new Point(39, 317);
+            btnLoginBack.Location = new Point(49, 396);
+            btnLoginBack.Margin = new Padding(4, 4, 4, 4);
             btnLoginBack.Name = "btnLoginBack";
             btnLoginBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLoginBack.Size = new Size(161, 48);
+            btnLoginBack.Size = new Size(201, 60);
             btnLoginBack.TabIndex = 40;
-            btnLoginBack.Text = "Đăng nhập";
+            btnLoginBack.Text = "Gửi mã OTP";
             // 
             // label2
             // 
             label2.AutoEllipsis = true;
             label2.Font = new Font("Tahoma", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Green;
-            label2.Location = new Point(17, 16);
+            label2.Location = new Point(21, 40);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(388, 73);
+            label2.Size = new Size(485, 91);
             label2.TabIndex = 37;
             label2.Text = "Quên mật khẩu";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -135,14 +139,14 @@
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.IconLeft = (Image)resources.GetObject("guna2TextBox1.IconLeft");
             guna2TextBox1.IconLeftSize = new Size(30, 30);
-            guna2TextBox1.Location = new Point(17, 138);
-            guna2TextBox1.Margin = new Padding(5, 8, 5, 8);
+            guna2TextBox1.Location = new Point(21, 172);
+            guna2TextBox1.Margin = new Padding(6, 10, 6, 10);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "Tên tài khoản";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2TextBox1.Size = new Size(388, 52);
+            guna2TextBox1.Size = new Size(485, 65);
             guna2TextBox1.TabIndex = 38;
             // 
             // guna2TextBox2
@@ -162,24 +166,25 @@
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.IconLeft = (Image)resources.GetObject("guna2TextBox2.IconLeft");
             guna2TextBox2.IconLeftSize = new Size(30, 30);
-            guna2TextBox2.Location = new Point(17, 218);
-            guna2TextBox2.Margin = new Padding(5, 8, 5, 8);
+            guna2TextBox2.Location = new Point(21, 272);
+            guna2TextBox2.Margin = new Padding(6, 10, 6, 10);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '*';
-            guna2TextBox2.PlaceholderText = "Số điện thoại";
+            guna2TextBox2.PlaceholderText = "Email";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2TextBox2.Size = new Size(388, 52);
+            guna2TextBox2.Size = new Size(485, 65);
             guna2TextBox2.TabIndex = 39;
             // 
             // UC_FogetPasswork
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             Controls.Add(guna2Panel1);
+            Margin = new Padding(4, 4, 4, 4);
             Name = "UC_FogetPasswork";
-            Size = new Size(430, 454);
+            Size = new Size(538, 568);
             Load += UC_FogetPasswork_Load;
             guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
