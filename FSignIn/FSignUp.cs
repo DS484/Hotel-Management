@@ -19,10 +19,10 @@ namespace Hotel_Management
 {
     public partial class FSignUp : Form
     {
-        private string ?firstName;
-        private string ?lastName;
+        private string? firstName;
+        private string? lastName;
         private int gender;
-        private string ?image;
+        private string? image;
         private int managerId;
         private int hotelId;
 
@@ -191,8 +191,8 @@ namespace Hotel_Management
                 string[] lstDir = picboxHotel.ImageLocation.ToString().Split(@"\");
                 string fileName = @"Image\" + lstDir[lstDir.Length - 1];
                 //
-                
-                Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts,Convert.ToInt32(cbbStar.Texts));
+
+                Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts, Convert.ToInt32(cbbStar.Texts));
                 bool addHotel = hotelDAO.Insert(hotel);
                 if (addHotel)
                 {
@@ -290,7 +290,7 @@ namespace Hotel_Management
 
             string[] lst = picboxHotel.ImageLocation.ToString().Split(@"\");
             string hotelImg = "Image" + @"\" + lst[lst.Length - 1];
-            Hotel hotel = new Hotel(hotelId, txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, hotelImg, txtVoucher.Texts, txtReview.Texts,Convert.ToInt32(cbbStar.SelectedItem));
+            Hotel hotel = new Hotel(hotelId, txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, hotelImg, txtVoucher.Texts, txtReview.Texts, Convert.ToInt32(cbbStar.SelectedItem));
             bool editedManager = managerDAO.Update(manager);
             bool editedHotel = hotelDAO.Update(hotel);
             if (editedHotel && editedManager)

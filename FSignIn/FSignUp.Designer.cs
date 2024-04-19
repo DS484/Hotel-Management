@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FSignUp));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
+            guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             btnEditInfo = new Button();
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label24 = new Label();
@@ -46,6 +47,7 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,6 +56,7 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnChooseImage = new Button();
             picboxHotel = new Guna.UI2.WinForms.Guna2PictureBox();
+            cbbStar = new All_Control.CTCombobox();
             cbbCity = new All_Control.CTCombobox();
             txtReview = new All_Control.CTTextbox();
             txtAddress = new All_Control.CTTextbox();
@@ -72,6 +75,7 @@
             txtPhoneNumber = new All_Control.CTTextbox();
             txtIdentifyCard = new All_Control.CTTextbox();
             pictureBox12 = new PictureBox();
+            pictureBox6 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox11 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -84,10 +88,9 @@
             lblTopic = new Label();
             label1 = new Label();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2vSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
-            cbbStar = new All_Control.CTCombobox();
-            pictureBox6 = new PictureBox();
-            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            label2 = new Label();
+            label4 = new Label();
+            PicFlashingLogo = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picboxHotel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbConfirmPassWord).BeginInit();
@@ -97,13 +100,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).BeginInit();
             SuspendLayout();
             // 
             // guna2Elipse1
@@ -114,6 +118,9 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(PicFlashingLogo);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(guna2vSeparator1);
             panel1.Controls.Add(btnEditInfo);
             panel1.Controls.Add(guna2HtmlLabel13);
@@ -169,15 +176,24 @@
             panel1.Location = new Point(15, 9);
             panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1268, 1001);
+            panel1.Size = new Size(1268, 1030);
             panel1.TabIndex = 0;
+            // 
+            // guna2vSeparator1
+            // 
+            guna2vSeparator1.BackColor = Color.Transparent;
+            guna2vSeparator1.FillColor = Color.Black;
+            guna2vSeparator1.Location = new Point(610, 220);
+            guna2vSeparator1.Name = "guna2vSeparator1";
+            guna2vSeparator1.Size = new Size(16, 614);
+            guna2vSeparator1.TabIndex = 52;
             // 
             // btnEditInfo
             // 
             btnEditInfo.BackColor = SystemColors.MenuHighlight;
             btnEditInfo.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditInfo.ForeColor = Color.Black;
-            btnEditInfo.Location = new Point(307, 884);
+            btnEditInfo.Location = new Point(579, 943);
             btnEditInfo.Margin = new Padding(4);
             btnEditInfo.Name = "btnEditInfo";
             btnEditInfo.Size = new Size(218, 65);
@@ -222,7 +238,7 @@
             btnBack.Location = new Point(16, 20);
             btnBack.Margin = new Padding(4);
             btnBack.Name = "btnBack";
-            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnBack.Size = new Size(38, 38);
             btnBack.TabIndex = 49;
@@ -298,6 +314,16 @@
             guna2HtmlLabel12.TabIndex = 40;
             guna2HtmlLabel12.Text = "Hình ảnh:";
             // 
+            // guna2HtmlLabel7
+            // 
+            guna2HtmlLabel7.BackColor = Color.Transparent;
+            guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel7.Location = new Point(691, 710);
+            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            guna2HtmlLabel7.Size = new Size(68, 30);
+            guna2HtmlLabel7.TabIndex = 40;
+            guna2HtmlLabel7.Text = "Số sao:";
+            // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
@@ -360,7 +386,7 @@
             // 
             // btnChooseImage
             // 
-            btnChooseImage.Location = new Point(955, 930);
+            btnChooseImage.Location = new Point(955, 961);
             btnChooseImage.Name = "btnChooseImage";
             btnChooseImage.Size = new Size(145, 47);
             btnChooseImage.TabIndex = 39;
@@ -371,16 +397,37 @@
             // picboxHotel
             // 
             picboxHotel.BackColor = Color.RosyBrown;
-            picboxHotel.CustomizableEdges = customizableEdges5;
+            picboxHotel.CustomizableEdges = customizableEdges2;
             picboxHotel.FillColor = Color.LightGray;
             picboxHotel.ImageRotate = 0F;
-            picboxHotel.Location = new Point(867, 761);
+            picboxHotel.Location = new Point(854, 761);
             picboxHotel.Name = "picboxHotel";
-            picboxHotel.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            picboxHotel.Size = new Size(273, 153);
+            picboxHotel.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            picboxHotel.Size = new Size(320, 188);
             picboxHotel.SizeMode = PictureBoxSizeMode.StretchImage;
             picboxHotel.TabIndex = 38;
             picboxHotel.TabStop = false;
+            // 
+            // cbbStar
+            // 
+            cbbStar.BackColor = Color.White;
+            cbbStar.BorderColor = Color.MediumSlateBlue;
+            cbbStar.BorderSize = 1;
+            cbbStar.Cursor = Cursors.Hand;
+            cbbStar.DropDownStyle = ComboBoxStyle.DropDown;
+            cbbStar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cbbStar.ForeColor = Color.Black;
+            cbbStar.IconColor = Color.MediumSlateBlue;
+            cbbStar.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            cbbStar.ListBackColor = Color.FromArgb(230, 228, 245);
+            cbbStar.ListTextColor = Color.DimGray;
+            cbbStar.Location = new Point(797, 690);
+            cbbStar.Margin = new Padding(4);
+            cbbStar.Name = "cbbStar";
+            cbbStar.Padding = new Padding(1);
+            cbbStar.Size = new Size(447, 50);
+            cbbStar.TabIndex = 37;
+            cbbStar.Texts = "5";
             // 
             // cbbCity
             // 
@@ -727,6 +774,17 @@
             pictureBox12.TabIndex = 19;
             pictureBox12.TabStop = false;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(634, 690);
+            pictureBox6.Margin = new Padding(4);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(50, 50);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 19;
+            pictureBox6.TabStop = false;
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -824,7 +882,7 @@
             btnComplete.Cursor = Cursors.Hand;
             btnComplete.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             btnComplete.ForeColor = Color.Black;
-            btnComplete.Location = new Point(50, 884);
+            btnComplete.Location = new Point(275, 943);
             btnComplete.Margin = new Padding(4);
             btnComplete.Name = "btnComplete";
             btnComplete.Size = new Size(218, 65);
@@ -877,63 +935,47 @@
             guna2Elipse2.BorderRadius = 30;
             guna2Elipse2.TargetControl = panel1;
             // 
-            // guna2vSeparator1
+            // label2
             // 
-            guna2vSeparator1.BackColor = Color.Transparent;
-            guna2vSeparator1.FillColor = Color.Black;
-            guna2vSeparator1.Location = new Point(610, 220);
-            guna2vSeparator1.Name = "guna2vSeparator1";
-            guna2vSeparator1.Size = new Size(16, 614);
-            guna2vSeparator1.TabIndex = 52;
+            label2.BackColor = Color.White;
+            label2.Font = new Font("Trebuchet MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(3, 122, 139);
+            label2.Location = new Point(1044, 30);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(200, 40);
+            label2.TabIndex = 54;
+            label2.Text = "travelstrip";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // cbbStar
+            // label4
             // 
-            cbbStar.BackColor = Color.White;
-            cbbStar.BorderColor = Color.MediumSlateBlue;
-            cbbStar.BorderSize = 1;
-            cbbStar.Cursor = Cursors.Hand;
-            cbbStar.DropDownStyle = ComboBoxStyle.DropDown;
-            cbbStar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbbStar.ForeColor = Color.Black;
-            cbbStar.IconColor = Color.MediumSlateBlue;
-            cbbStar.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            cbbStar.ListBackColor = Color.FromArgb(230, 228, 245);
-            cbbStar.ListTextColor = Color.DimGray;
-            cbbStar.Location = new Point(797, 690);
-            cbbStar.Margin = new Padding(4);
-            cbbStar.Name = "cbbStar";
-            cbbStar.Padding = new Padding(1);
-            cbbStar.Size = new Size(447, 50);
-            cbbStar.TabIndex = 37;
-            cbbStar.Texts = "5";
+            label4.BackColor = Color.White;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(1113, 62);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(61, 19);
+            label4.TabIndex = 56;
             // 
-            // pictureBox6
+            // PicFlashingLogo
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(634, 690);
-            pictureBox6.Margin = new Padding(4);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(50, 50);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 19;
-            pictureBox6.TabStop = false;
-            // 
-            // guna2HtmlLabel7
-            // 
-            guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel7.Location = new Point(691, 710);
-            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(68, 30);
-            guna2HtmlLabel7.TabIndex = 40;
-            guna2HtmlLabel7.Text = "Số sao:";
+            PicFlashingLogo.BackColor = Color.White;
+            PicFlashingLogo.Image = (Image)resources.GetObject("PicFlashingLogo.Image");
+            PicFlashingLogo.Location = new Point(1044, 20);
+            PicFlashingLogo.Margin = new Padding(4);
+            PicFlashingLogo.Name = "PicFlashingLogo";
+            PicFlashingLogo.Size = new Size(29, 27);
+            PicFlashingLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            PicFlashingLogo.TabIndex = 57;
+            PicFlashingLogo.TabStop = false;
             // 
             // FSignUp
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(1296, 1031);
+            ClientSize = new Size(1296, 1046);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
@@ -950,13 +992,14 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -1018,5 +1061,8 @@
         public All_Control.CTCombobox cbbStar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         public PictureBox pictureBox6;
+        private Label label2;
+        private Label label4;
+        private PictureBox PicFlashingLogo;
     }
 }

@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Hotel_Management
@@ -26,7 +27,7 @@ namespace Hotel_Management
 
         private List<int> hotelList = new List<int>();
         private int userId;
-        private string ?city;
+        private string? city;
         private int adult;
         private int child;
         private int quantityRoom;
@@ -262,7 +263,7 @@ namespace Hotel_Management
             trackBarMin.Value = 0;
             trackBarMax.Minimum = 1;
             trackBarMax.Maximum = 10000000;
-            trackBarMax.Value = 500000;
+            trackBarMax.Value = 3000000;
 
             trackBarMin.Scroll += TrackBarMin_Scroll!;
             trackBarMax.Scroll += TrackBarMax_Scroll!;
@@ -278,7 +279,7 @@ namespace Hotel_Management
 
         private string FormatCurrency(int value)
         {
-            return (value / 100).ToString("N0") + ".000 VND";
+            return (value).ToString("N0") + " VND";
         }
         private void TrackBarMin_Scroll(object sender, ScrollEventArgs e)
         {
@@ -390,6 +391,71 @@ namespace Hotel_Management
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void rsStart_ValueChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void rsStar_Click(object sender, EventArgs e)
+        {
+            btnSearch_Click(sender, e);
+            List<UC_AvtRoom> controlsToRemove = new List<UC_AvtRoom>();
+            int star = (int)rsStar.Value;
+
+            foreach (Control control in flpLoadingHotel.Controls)
+            {
+                if (control is UC_AvtRoom avtRoomControl)
+                {
+                    if (Convert.ToInt32(avtRoomControl.lblStar.Text) != star)
+                    {
+                        controlsToRemove.Add(avtRoomControl);
+                    }
+                }
+            }
+
+            foreach (UC_AvtRoom controlToRemove in controlsToRemove)
+            {
+                flpLoadingHotel.Controls.Remove(controlToRemove);
+                controlToRemove.Dispose();
+            }
+        }
+
+        private void SearchWithPrice(object sender, ScrollEventArgs e)
+        {
+            int minValue = trackBarMin.Value;
+            int maxValue = trackBarMax.Value;
+            btnSearch_Click(sender, e);
+            List<UC_AvtRoom> controlsToRemove = new List<UC_AvtRoom>();
+            foreach (Control control in flpLoadingHotel.Controls)
+            {
+                if (control is UC_AvtRoom avtRoomControl)
+                {
+                    if (Convert.ToInt32(avtRoomControl.lblSalePrice.Text.Replace(" VND", "")) < minValue ||
+                        Convert.ToInt32(avtRoomControl.lblSalePrice.Text.Replace(" VND", "")) > maxValue)
+                    {
+                        controlsToRemove.Add(avtRoomControl);
+                    }
+                }
+            }
+
+            foreach (UC_AvtRoom controlToRemove in controlsToRemove)
+            {
+                flpLoadingHotel.Controls.Remove(controlToRemove);
+                controlToRemove.Dispose();
+            }
+        }
+
+        private void trackBarMax_Scroll_1(object sender, ScrollEventArgs e)
+        {
+            SearchWithPrice(sender, e);
+        }
+
+        private void trackBarMin_Scroll_1(object sender, ScrollEventArgs e)
+        {
+            SearchWithPrice(sender, e);
         }
     }
 }
