@@ -32,7 +32,7 @@ namespace Hotel_Management.All_Control
         {
             foreach (DataRow row in dtService.Rows)
             {
-                dgvVIPCustomer.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+                dgvVIPCustomer.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5]);
             }
 
             foreach (DataGridViewRow row in dgvVIPCustomer.Rows)

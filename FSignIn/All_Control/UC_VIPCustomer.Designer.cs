@@ -229,7 +229,7 @@
             // 
             // Column13
             // 
-            Column13.HeaderText = "Phòng";
+            Column13.HeaderText = "Tên tài khoản";
             Column13.MinimumWidth = 100;
             Column13.Name = "Column13";
             Column13.ReadOnly = true;
@@ -237,7 +237,7 @@
             // Column14
             // 
             Column14.FillWeight = 79.85747F;
-            Column14.HeaderText = "Người lớn";
+            Column14.HeaderText = "Tên";
             Column14.MinimumWidth = 100;
             Column14.Name = "Column14";
             Column14.ReadOnly = true;
@@ -245,7 +245,7 @@
             // Column15
             // 
             Column15.FillWeight = 79.85747F;
-            Column15.HeaderText = "Trẻ em";
+            Column15.HeaderText = "Họ";
             Column15.MinimumWidth = 100;
             Column15.Name = "Column15";
             Column15.ReadOnly = true;
@@ -253,7 +253,7 @@
             // Column16
             // 
             Column16.FillWeight = 79.85747F;
-            Column16.HeaderText = "Giá cũ";
+            Column16.HeaderText = "SDT";
             Column16.MinimumWidth = 125;
             Column16.Name = "Column16";
             Column16.ReadOnly = true;
@@ -261,7 +261,7 @@
             // Column17
             // 
             Column17.FillWeight = 79.85747F;
-            Column17.HeaderText = "Giá mới ";
+            Column17.HeaderText = "Giới tính";
             Column17.MinimumWidth = 125;
             Column17.Name = "Column17";
             Column17.ReadOnly = true;
@@ -269,7 +269,7 @@
             // Column18
             // 
             Column18.FillWeight = 79.85747F;
-            Column18.HeaderText = "Mô tả";
+            Column18.HeaderText = "ID";
             Column18.MinimumWidth = 200;
             Column18.Name = "Column18";
             Column18.ReadOnly = true;
