@@ -16,5 +16,10 @@ namespace Hotel_Management
         {
             InitializeComponent();
         }
+
+        public void LoadHotHotel()
+        {
+
+        }
     }
 }

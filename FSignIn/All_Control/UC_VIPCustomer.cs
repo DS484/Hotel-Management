@@ -16,5 +16,10 @@ namespace Hotel_Management.All_Control
         {
             InitializeComponent();
         }
+
+        public void LoadVIPCustomer()
+        {
+
+        }
     }
 }

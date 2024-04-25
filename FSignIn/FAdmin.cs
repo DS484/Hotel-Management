@@ -16,7 +16,50 @@ namespace Hotel_Management
         public FAdmin()
         {
             InitializeComponent();
+            LoadData();
         }
+
+        private void LoadData()
+        {
+            LoadFamousLocation();
+            LoadHotHotel();
+            LoadTopCustomer();
+            LoadVIPCustomer();
+            LoadHotelManyReview();
+            LoadHotelRevenue();
+        }
+
+        private void LoadFamousLocation() 
+        {
+            uC_FamousLocation1.LoadFamousLocation();
+        }
+
+        private void LoadHotHotel()
+        {
+            uC_HotHotel1.LoadHotHotel();
+        }
+
+        private void LoadTopCustomer()
+        {
+            uC_TopCustomer1.LoadTopCustomer();
+        }
+
+        private void LoadVIPCustomer()
+        {
+            uC_vipCustomer1.LoadVIPCustomer();
+        }
+
+        private void LoadHotelManyReview()
+        {
+            uC_HotelManyReview1.LoadHotelManyReview();
+        }
+        
+        private void LoadHotelRevenue()
+        {
+            uC_HotelRevenue1.LoadHotelRevenue();
+        }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {
