@@ -29,5 +29,15 @@ namespace Hotel_Management.DAO
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;
         }
+
+        public DataTable HotelRevenue()
+        {
+            string query = "select h.id, h.hotel_name, h.address, h.city, count(*) as Soluongdanhgia from hotels h left join Feedback f on h.id = f.hotel_id where f.id is not null group by h.id, h.hotel_name, h.address, h.city order by count(*) desc";
+
+            object[] parameter = { };
+
+            DataTable dt = db.ExecuteQuery(query, parameter);
+            return dt;
+        }
     }
 }
