@@ -59,6 +59,22 @@ namespace Hotel_Management
                 {
                     CheckOut_Click(sender!, e, bookingId, usedId, Convert.ToInt32(row[1]));
                 };
+
+                uC_History.btnCancelRoom.Click += (sender, e) =>
+                {
+                    CancelRoom_Click(sender!, e, bookingId);
+                };
+            }
+        }
+
+        private void CancelRoom_Click(object sender, EventArgs e, int bookingId)
+        {
+            DialogResult dr = MessageBox.Show("Bạn có chắc muốn hủy phòng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if(dr == DialogResult.Yes)
+            {
+                this.Hide();
+                FReason fReason = new FReason(bookingId, username);
+                fReason.ShowDialog();
             }
         }
 
