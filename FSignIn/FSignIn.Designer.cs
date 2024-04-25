@@ -74,10 +74,9 @@
             panel1.Controls.Add(uC_FogetPasswork1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(uC_Shape1);
-            panel1.Location = new Point(15, 15);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1390, 821);
+            panel1.Size = new Size(1112, 657);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -86,10 +85,9 @@
             panel2.Controls.Add(btnHide);
             panel2.Controls.Add(guna2CircleButton3);
             panel2.Controls.Add(btnExit);
-            panel2.Location = new Point(1255, 4);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(1004, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(121, 38);
+            panel2.Size = new Size(97, 30);
             panel2.TabIndex = 39;
             // 
             // btnHide
@@ -103,12 +101,11 @@
             btnHide.ForeColor = Color.White;
             btnHide.Image = (Image)resources.GetObject("btnHide.Image");
             btnHide.ImageSize = new Size(22, 22);
-            btnHide.Location = new Point(8, 2);
-            btnHide.Margin = new Padding(4);
+            btnHide.Location = new Point(6, 2);
             btnHide.Name = "btnHide";
             btnHide.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnHide.Size = new Size(31, 31);
+            btnHide.Size = new Size(25, 25);
             btnHide.TabIndex = 39;
             // 
             // guna2CircleButton3
@@ -122,12 +119,11 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.ImageSize = new Size(25, 25);
-            guna2CircleButton3.Location = new Point(46, 2);
-            guna2CircleButton3.Margin = new Padding(4);
+            guna2CircleButton3.Location = new Point(37, 2);
             guna2CircleButton3.Name = "guna2CircleButton3";
             guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(31, 31);
+            guna2CircleButton3.Size = new Size(25, 25);
             guna2CircleButton3.TabIndex = 39;
             // 
             // btnExit
@@ -141,41 +137,40 @@
             btnExit.ForeColor = Color.White;
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageSize = new Size(22, 22);
-            btnExit.Location = new Point(85, 2);
-            btnExit.Margin = new Padding(4);
+            btnExit.Location = new Point(68, 2);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnExit.Size = new Size(31, 31);
+            btnExit.Size = new Size(25, 25);
             btnExit.TabIndex = 38;
             btnExit.Click += btnExit_Click_2;
             // 
             // uC_SignUp1
             // 
             uC_SignUp1.BackColor = Color.White;
-            uC_SignUp1.Location = new Point(804, 38);
-            uC_SignUp1.Margin = new Padding(5);
+            uC_SignUp1.Location = new Point(643, 30);
+            uC_SignUp1.Margin = new Padding(4, 4, 4, 4);
             uC_SignUp1.Name = "uC_SignUp1";
-            uC_SignUp1.Size = new Size(572, 772);
+            uC_SignUp1.Size = new Size(458, 618);
             uC_SignUp1.TabIndex = 27;
             uC_SignUp1.Load += uC_SignUp1_Load;
             // 
             // uC_Login1
             // 
             uC_Login1.BackColor = Color.White;
-            uC_Login1.Location = new Point(804, 288);
-            uC_Login1.Margin = new Padding(5);
+            uC_Login1.Location = new Point(643, 230);
+            uC_Login1.Margin = new Padding(4, 4, 4, 4);
             uC_Login1.Name = "uC_Login1";
-            uC_Login1.Size = new Size(532, 534);
+            uC_Login1.Size = new Size(426, 427);
             uC_Login1.TabIndex = 25;
             // 
             // uC_FogetPasswork1
             // 
             uC_FogetPasswork1.BackColor = Color.White;
-            uC_FogetPasswork1.Location = new Point(804, 288);
-            uC_FogetPasswork1.Margin = new Padding(5);
+            uC_FogetPasswork1.Location = new Point(643, 230);
+            uC_FogetPasswork1.Margin = new Padding(4, 4, 4, 4);
             uC_FogetPasswork1.Name = "uC_FogetPasswork1";
-            uC_FogetPasswork1.Size = new Size(532, 530);
+            uC_FogetPasswork1.Size = new Size(426, 424);
             uC_FogetPasswork1.TabIndex = 26;
             // 
             // pictureBox1
@@ -183,10 +178,9 @@
             pictureBox1.BackColor = Color.White;
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-176, 91);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(-141, 73);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1035, 719);
+            pictureBox1.Size = new Size(828, 575);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 13;
             pictureBox1.TabStop = false;
@@ -195,10 +189,10 @@
             // uC_Shape1
             // 
             uC_Shape1.BackColor = Color.White;
-            uC_Shape1.Location = new Point(804, 38);
-            uC_Shape1.Margin = new Padding(5);
+            uC_Shape1.Location = new Point(643, 30);
+            uC_Shape1.Margin = new Padding(4, 4, 4, 4);
             uC_Shape1.Name = "uC_Shape1";
-            uC_Shape1.Size = new Size(532, 245);
+            uC_Shape1.Size = new Size(426, 196);
             uC_Shape1.TabIndex = 28;
             // 
             // guna2Elipse3
@@ -215,14 +209,13 @@
             // 
             // FSignIn
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Silver;
-            ClientSize = new Size(1420, 884);
+            ClientSize = new Size(1136, 707);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Location = new Point(216, 148);
-            Margin = new Padding(4);
             Name = "FSignIn";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
