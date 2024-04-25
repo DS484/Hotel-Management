@@ -12,6 +12,8 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_TopCustomer : UserControl
     {
+
+
         public UC_TopCustomer()
         {
             InitializeComponent();
