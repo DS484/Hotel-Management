@@ -57,14 +57,14 @@ namespace Hotel_Management.DAO
         }
 
         // Update, Insert, Remove 
-        public int ExecuteNoneQuery(string query, object[] parameter = null)
+        public int ExecuteNoneQuery(string query, object[]? parameter = null)
         {
             int data = 0;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                AddParameter(query, parameter, command);
+                AddParameter(query, parameter!, command);
                 data = command.ExecuteNonQuery();
                 connection.Close();
             }
@@ -72,7 +72,7 @@ namespace Hotel_Management.DAO
         }
 
         // Hàng đầu tiên trong bảng 
-        public object ExecuteScalar(string query, object[] parameter = null)
+        public object ExecuteScalar(string query, object[]? parameter = null)
         {
             object data = new object();
 
@@ -80,7 +80,7 @@ namespace Hotel_Management.DAO
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                AddParameter(query, parameter, command);
+                AddParameter(query, parameter!, command);
                 data = command.ExecuteScalar();
                 connection.Close();
             }

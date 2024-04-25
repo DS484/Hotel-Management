@@ -11,17 +11,17 @@ namespace Hotel_Management.DTO
     internal class User
     {
         private int id;
-        private string firstName;
-        private string lastName;
+        private string? firstName;
+        private string? lastName;
         private int gender;
-        private string userName;
-        private string identifyCard;
-        private string phoneNumber;
+        private string? userName;
+        private string? identifyCard;
+        private string? phoneNumber;
         private int role;
         private DateTime createdAt;
         private DateTime modifiedAt;
         private bool isAdmin;
-        private string password;
+        private string? password;
 
         public User() { }
 
@@ -57,15 +57,15 @@ namespace Hotel_Management.DTO
         }
 
         public int Id { get => id; set => id = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
-        public string UserName { get => userName; set => userName = value; }
-        public string IdentifyCard { get => identifyCard; set => identifyCard = value; }
-        public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
+        public string FirstName { get => firstName!; set => firstName = value; }
+        public string LastName { get => lastName!; set => lastName = value; }
+        public string UserName { get => userName!; set => userName = value; }
+        public string IdentifyCard { get => identifyCard!; set => identifyCard = value; }
+        public string PhoneNumber { get => phoneNumber!; set => phoneNumber = value; }
         public DateTime CreatedAt { get => createdAt; set => createdAt = value; }
         public DateTime ModifiedAt { get => modifiedAt; set => modifiedAt = value; }
         public bool IsAdmin { get => isAdmin; set => isAdmin = value; }
-        public string Password { get => password; set => password = SetPassword(value); }
+        public string Password { get => password!; set => password = SetPassword(value); }
         internal int Gender { get => gender; set => gender = value; }
         internal int Role { get => role; set => role = value; }
 

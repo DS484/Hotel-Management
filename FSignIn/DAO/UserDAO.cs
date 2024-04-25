@@ -1,4 +1,5 @@
 ﻿using Hotel_Management.DTO;
+using Hotel_Management.HandleData;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,6 +12,7 @@ namespace Hotel_Management.DAO
     public class UserDAO
     {
         private DBConnection db = new DBConnection();
+        private FormatData formatData = new FormatData();   
 
         public UserDAO() { }
 
@@ -28,6 +30,15 @@ namespace Hotel_Management.DAO
                 "username, identify_card, phone_numner, role FROM users WHERE username != @username";
             object[] objects = { username };
             return db.ExecuteQuery(query, objects);
+        }
+
+        public bool UpdatePassWord(string username, string password)
+        {
+            MessageBox.Show(username);
+            string query = $"UPDATE Users SET password = N'{formatData.SetPassword(password)}' WHERE username = '{username}'";
+            int edited = db.ExecuteNoneQuery(query);
+            if (edited > 0) return true;
+            return false;
         }
     }
 }

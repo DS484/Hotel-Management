@@ -9,7 +9,6 @@ namespace Hotel_Management
 {
     public partial class FSignIn : Form
     {
-        private CustomerDAO customerDAO = new CustomerDAO();
         private UserDAO userDAO = new UserDAO();
         public FSignIn()
         {
@@ -19,11 +18,10 @@ namespace Hotel_Management
             uC_Login1.btnLogin.Click += btnLogin!;
             uC_Login1.btnSignUp.Click += btnSignUp!;
 
-            //uC_SignUp1.btnCompleteAcc.Click += btnCompleteAcc;
             uC_SignUp1.btnExitAcc.Click += btnExitAcc!;
 
             uC_FogetPasswork1.btnExitForget.Click += btnExitForget!;
-            uC_FogetPasswork1.btnLoginBack.Click += btnLoginBack!;
+            //uC_FogetPasswork1.btnSendOTP.Click += btnLoginBack!;
         }
 
         private void BtnLoginBack_Click(object? sender, EventArgs e)
