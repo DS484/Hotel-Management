@@ -63,11 +63,17 @@ namespace Hotel_Management
                     FHome fHome = new FHome(uC_Login1.txtUsername.Text);
                     fHome.ShowDialog();
                 }
-                else
+                else if(role == 2)
                 {
                     this.Hide();
                     FManager fManager = new FManager(uC_Login1.txtUsername.Text);
                     fManager.ShowDialog();
+                }
+                else if(role == 1)
+                {
+                    this.Hide();
+                    FAdmin fAdmin = new FAdmin(uC_Login1.txtUsername.Text);
+                    fAdmin.ShowDialog();
                 }
 
                 this.Visible = true;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_Management.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,15 @@ namespace Hotel_Management
 {
     public partial class UC_HotHotel : UserControl
     {
+        private AdminDAO adminDAO = new AdminDAO();
         public UC_HotHotel()
         {
             InitializeComponent();
         }
 
-        public void LoadHotHotel()
+        public DataTable LoadHotHotel()
         {
-
+            return adminDAO.GetHotHotel();
         }
     }
 }

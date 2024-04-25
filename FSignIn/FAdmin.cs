@@ -13,7 +13,7 @@ namespace Hotel_Management
 {
     public partial class FAdmin : Form
     {
-        public FAdmin()
+        public FAdmin(string usernames)
         {
             InitializeComponent();
             LoadData();
@@ -31,12 +31,14 @@ namespace Hotel_Management
 
         private void LoadFamousLocation() 
         {
-            uC_FamousLocation1.LoadFamousLocation();
+            DataTable dt = uC_FamousLocation1.LoadFamousLocation();
+            uC_FamousLocation1.dgvRoom.DataSource = dt;
         }
 
         private void LoadHotHotel()
         {
-            uC_HotHotel1.LoadHotHotel();
+            DataTable dt = uC_HotHotel1.LoadHotHotel();
+            uC_HotHotel1.dgvRoom.DataSource = dt;
         }
 
         private void LoadTopCustomer()
@@ -56,7 +58,8 @@ namespace Hotel_Management
         
         private void LoadHotelRevenue()
         {
-            uC_HotelRevenue1.LoadHotelRevenue();
+            DataTable hotelRevenue =  uC_HotelRevenue1.LoadHotelRevenue();
+            uC_HotelRevenue1.dgvRoom.DataSource = hotelRevenue;
         }
 
 
