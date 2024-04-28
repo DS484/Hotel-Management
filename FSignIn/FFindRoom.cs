@@ -205,7 +205,7 @@ namespace Hotel_Management
         private void BookRoom_Click(object sender, EventArgs e, int hotelId, List<int> roomList)
         {
             this.Hide();
-            FSelectRoom fSelectRoom = new FSelectRoom(roomList, hotelId, userId, checkInDate, checkOutDate);
+            FSelectRoom fSelectRoom = new FSelectRoom(roomList, hotelId, userId, dtpCheckInDate.Value, dtpCheckOutDate.Value);
             fSelectRoom.ShowDialog();
             this.Visible = true;
         }

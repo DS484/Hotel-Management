@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.Charts.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,17 @@ namespace Hotel_Management
 {
     public partial class FStatistical : Form
     {
-        public FStatistical()
+        private DataGridView dgv;
+
+        public FStatistical(DataGridView dgv)
         {
             InitializeComponent();
+            this.dgv = dgv;
         }
+
+
+
+
+
     }
 }

@@ -45,18 +45,17 @@
             btnExportFile = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             dgvBill = new DataGridView();
-            Column12 = new DataGridViewImageColumn();
-            Column13 = new DataGridViewTextBoxColumn();
-            Column14 = new DataGridViewTextBoxColumn();
-            Column15 = new DataGridViewTextBoxColumn();
-            Column16 = new DataGridViewTextBoxColumn();
-            Column17 = new DataGridViewTextBoxColumn();
-            Column18 = new DataGridViewTextBoxColumn();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             dtpStartDay = new Guna.UI2.WinForms.Guna2DateTimePicker();
             lblCreateDay = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            Column12 = new DataGridViewImageColumn();
+            Column13 = new DataGridViewTextBoxColumn();
+            Column14 = new DataGridViewTextBoxColumn();
+            Column15 = new DataGridViewTextBoxColumn();
+            Column16 = new DataGridViewTextBoxColumn();
+            Column18 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvBill).BeginInit();
             SuspendLayout();
@@ -77,11 +76,11 @@
             bcàAllBill.FillColor = Color.DarkOliveGreen;
             bcàAllBill.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             bcàAllBill.ForeColor = Color.White;
-            bcàAllBill.Location = new Point(1224, 38);
-            bcàAllBill.Margin = new Padding(4);
+            bcàAllBill.Location = new Point(857, 23);
+            bcàAllBill.Margin = new Padding(3, 2, 3, 2);
             bcàAllBill.Name = "bcàAllBill";
             bcàAllBill.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            bcàAllBill.Size = new Size(234, 54);
+            bcàAllBill.Size = new Size(164, 32);
             bcàAllBill.TabIndex = 18;
             bcàAllBill.Text = "Tất cả";
             // 
@@ -98,21 +97,21 @@
             btnExportFile.FillColor = Color.Goldenrod;
             btnExportFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExportFile.ForeColor = Color.White;
-            btnExportFile.Location = new Point(948, 38);
-            btnExportFile.Margin = new Padding(4);
+            btnExportFile.Location = new Point(664, 23);
+            btnExportFile.Margin = new Padding(3, 2, 3, 2);
             btnExportFile.Name = "btnExportFile";
             btnExportFile.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnExportFile.Size = new Size(234, 54);
+            btnExportFile.Size = new Size(164, 32);
             btnExportFile.TabIndex = 17;
             btnExportFile.Text = "Xuất file Excel";
             // 
             // panel1
             // 
             panel1.Controls.Add(dgvBill);
-            panel1.Location = new Point(21, 99);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(15, 59);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1628, 942);
+            panel1.Size = new Size(1140, 565);
             panel1.TabIndex = 19;
             // 
             // dgvBill
@@ -137,7 +136,7 @@
             dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvBill.ColumnHeadersHeight = 50;
             dgvBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvBill.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column16, Column17, Column18 });
+            dgvBill.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column16, Column18 });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(222, 241, 241);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -148,7 +147,8 @@
             dgvBill.DefaultCellStyle = dataGridViewCellStyle2;
             dgvBill.EnableHeadersVisualStyles = false;
             dgvBill.GridColor = SystemColors.ControlDark;
-            dgvBill.Location = new Point(3, 3);
+            dgvBill.Location = new Point(2, 2);
+            dgvBill.Margin = new Padding(2, 2, 2, 2);
             dgvBill.MultiSelect = false;
             dgvBill.Name = "dgvBill";
             dgvBill.ReadOnly = true;
@@ -166,8 +166,73 @@
             dgvBill.RowTemplate.Height = 33;
             dgvBill.RowTemplate.ReadOnly = true;
             dgvBill.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBill.Size = new Size(1498, 932);
+            dgvBill.Size = new Size(1049, 559);
             dgvBill.TabIndex = 36;
+            // 
+            // guna2Elipse2
+            // 
+            guna2Elipse2.BorderRadius = 10;
+            guna2Elipse2.TargetControl = this;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 30;
+            // 
+            // dtpStartDay
+            // 
+            dtpStartDay.BackColor = Color.FromArgb(222, 241, 241);
+            dtpStartDay.BorderRadius = 18;
+            dtpStartDay.BorderThickness = 2;
+            dtpStartDay.Checked = true;
+            dtpStartDay.Cursor = Cursors.Hand;
+            dtpStartDay.CustomFormat = "dd/MM/yyyy";
+            dtpStartDay.CustomizableEdges = customizableEdges7;
+            dtpStartDay.FillColor = Color.FromArgb(155, 215, 215);
+            dtpStartDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dtpStartDay.Format = DateTimePickerFormat.Custom;
+            dtpStartDay.Location = new Point(116, 20);
+            dtpStartDay.Margin = new Padding(3, 2, 3, 2);
+            dtpStartDay.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtpStartDay.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtpStartDay.Name = "dtpStartDay";
+            dtpStartDay.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            dtpStartDay.Size = new Size(148, 35);
+            dtpStartDay.TabIndex = 20;
+            dtpStartDay.Tag = "";
+            dtpStartDay.TextAlign = HorizontalAlignment.Center;
+            dtpStartDay.Value = new DateTime(2024, 3, 3, 14, 9, 45, 140);
+            // 
+            // lblCreateDay
+            // 
+            lblCreateDay.BackColor = Color.Transparent;
+            lblCreateDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCreateDay.Location = new Point(17, 28);
+            lblCreateDay.Margin = new Padding(2, 2, 2, 2);
+            lblCreateDay.Name = "lblCreateDay";
+            lblCreateDay.Size = new Size(89, 23);
+            lblCreateDay.TabIndex = 21;
+            lblCreateDay.Text = "Kể từ ngày:";
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.FromArgb(222, 241, 241);
+            btnSearch.BorderRadius = 18;
+            btnSearch.CustomizableEdges = customizableEdges5;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.SeaGreen;
+            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(285, 23);
+            btnSearch.Margin = new Padding(2, 2, 2, 2);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSearch.Size = new Size(95, 30);
+            btnSearch.TabIndex = 22;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
             // 
             // Column12
             // 
@@ -208,14 +273,6 @@
             Column16.Name = "Column16";
             Column16.ReadOnly = true;
             // 
-            // Column17
-            // 
-            Column17.FillWeight = 79.85747F;
-            Column17.HeaderText = "Tạo ngày";
-            Column17.MinimumWidth = 125;
-            Column17.Name = "Column17";
-            Column17.ReadOnly = true;
-            // 
             // Column18
             // 
             Column18.FillWeight = 79.85747F;
@@ -224,72 +281,9 @@
             Column18.Name = "Column18";
             Column18.ReadOnly = true;
             // 
-            // guna2Elipse2
-            // 
-            guna2Elipse2.BorderRadius = 10;
-            guna2Elipse2.TargetControl = this;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 30;
-            // 
-            // dtpStartDay
-            // 
-            dtpStartDay.BackColor = Color.FromArgb(222, 241, 241);
-            dtpStartDay.BorderRadius = 18;
-            dtpStartDay.BorderThickness = 2;
-            dtpStartDay.Checked = true;
-            dtpStartDay.Cursor = Cursors.Hand;
-            dtpStartDay.CustomFormat = "dd/MM/yyyy";
-            dtpStartDay.CustomizableEdges = customizableEdges7;
-            dtpStartDay.FillColor = Color.FromArgb(155, 215, 215);
-            dtpStartDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dtpStartDay.Format = DateTimePickerFormat.Custom;
-            dtpStartDay.Location = new Point(165, 34);
-            dtpStartDay.Margin = new Padding(4);
-            dtpStartDay.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtpStartDay.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtpStartDay.Name = "dtpStartDay";
-            dtpStartDay.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            dtpStartDay.Size = new Size(212, 58);
-            dtpStartDay.TabIndex = 20;
-            dtpStartDay.Tag = "";
-            dtpStartDay.TextAlign = HorizontalAlignment.Center;
-            dtpStartDay.Value = new DateTime(2024, 3, 3, 14, 9, 45, 140);
-            // 
-            // lblCreateDay
-            // 
-            lblCreateDay.BackColor = Color.Transparent;
-            lblCreateDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCreateDay.Location = new Point(24, 47);
-            lblCreateDay.Name = "lblCreateDay";
-            lblCreateDay.Size = new Size(134, 34);
-            lblCreateDay.TabIndex = 21;
-            lblCreateDay.Text = "Kể từ ngày:";
-            // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.FromArgb(222, 241, 241);
-            btnSearch.BorderRadius = 18;
-            btnSearch.CustomizableEdges = customizableEdges5;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.SeaGreen;
-            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(407, 38);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSearch.Size = new Size(136, 50);
-            btnSearch.TabIndex = 22;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
-            // 
             // UC_Bill
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(222, 241, 241);
             Controls.Add(btnSearch);
@@ -299,9 +293,9 @@
             Controls.Add(btnExportFile);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
-            Margin = new Padding(4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Bill";
-            Size = new Size(1542, 1059);
+            Size = new Size(1079, 635);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvBill).EndInit();
             ResumeLayout(false);
@@ -325,7 +319,6 @@
         private DataGridViewTextBoxColumn Column14;
         private DataGridViewTextBoxColumn Column15;
         private DataGridViewTextBoxColumn Column16;
-        private DataGridViewTextBoxColumn Column17;
         private DataGridViewTextBoxColumn Column18;
     }
 }

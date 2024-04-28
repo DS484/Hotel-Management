@@ -103,7 +103,7 @@ namespace Hotel_Management.DAO
 
         public DataTable MyCustomer(int hotelId)
         {
-            string query = "SELECT u.username, u.first_name, r.room_number, u.identify_card, u.phone_number, b.checkin, b.checkout FROM Users u JOIN Booking b ON u.id = b.user_id JOIN Rooms r ON b.room_id = r.id WHERE hotel_id = @hotelId";
+            string query = "SELECT username, name, room_number, identify_card, phone_number, checkin, checkout FROM Storage WHERE hotel_id = @hotelId";
             object[] parameter = { hotelId };
 
             return db.ExecuteQuery(query, parameter);
@@ -111,7 +111,7 @@ namespace Hotel_Management.DAO
 
         public DataTable ManageFeedBack(int hotelId)
         {
-            string query = "SELECT DISTINCT f.id, u.first_name ,r.room_number, f.comment, f.star FROM Feedback f JOIN Hotels h ON f.hotel_id = h.id JOIN Rooms r ON r.hotel_id = h.id JOIN Booking b ON b.room_id = r.id JOIN Users u ON u.id = b.user_id WHERE h.id = @hotelId";
+            string query = "SELECT id, name, room_number, comment, star FROM Storage WHERE hotel_id = @hotelId";
             object[] parameter = { hotelId };
 
             return db.ExecuteQuery(query, parameter);
@@ -119,7 +119,7 @@ namespace Hotel_Management.DAO
 
         public DataTable HotelBill(int hotelId)
         {
-            string query = "SELECT b.id, u.first_name, r.room_number, r.curr_price, b.created_at, checkin, checkout, b.has_voucher FROM Hotels h JOIN Rooms r ON h.id = r.hotel_id JOIN Booking b ON r.id = b.room_id JOIN Users u ON u.id = b.user_id WHERE hotel_id = @hotelId";
+            string query = "SELECT id, name, room_number, total_bill, checkin, checkout, has_voucher FROM Storage WHERE hotel_id = @hotelId";
             object[] parameter = { hotelId };
 
             return db.ExecuteQuery(query, parameter);

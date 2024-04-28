@@ -19,7 +19,7 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_Room : UserControl
     {
-        private string ?username;
+        private string? username;
         private Image roomIcon = Properties.Resources.room;
         private Image editIcon = Properties.Resources.edit;
         private Image deleteIcon = Properties.Resources.remove;
@@ -82,7 +82,7 @@ namespace Hotel_Management.All_Control
 
         private void btnExportFile_Click(object sender, EventArgs e)
         {
-            //genericCode.ExportExcel(dgvRoom);
+            genericCode.ExportExcel(dgvRoom);
             MessageBox.Show("Valid");
         }
 

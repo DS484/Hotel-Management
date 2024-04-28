@@ -17,7 +17,12 @@ namespace Hotel_Management
         private DateTime checkInDate;
         private DateTime checkOutDate;
         private int voucher;
+        private string? username;
+        private string? room_number;
+        private int? hotelId;
+        private int? totalBill;
 
+        private AdminDAO adminDAO = new AdminDAO();
         CustomerDAO customerDAO = new CustomerDAO();
         BookingDAO bookingDAO = new BookingDAO();
 
@@ -48,6 +53,7 @@ namespace Hotel_Management
             if (dtUser != null)
             {
                 DataRow row = dtUser.Rows[0];
+                username = row[5].ToString();
                 txtFullName.PlaceholderText = row[3].ToString() + " " + row[2].ToString();
                 txtIdentifyCard.PlaceholderText = row[6].ToString()!;
                 txtPhoneNumber.PlaceholderText = row[7].ToString()!;
@@ -60,11 +66,13 @@ namespace Hotel_Management
             if (dtRoom != null)
             {
                 DataRow row = dtRoom.Rows[0];
+                room_number = row[1].ToString();
                 int ta = int.Parse(row[4].ToString()!);
                 lblRoomDescription.Text = row[5].ToString();
                 if (voucher == 1)
                     ta = int.Parse(row[4].ToString()!) - 99999;
-
+                hotelId = Convert.ToInt32(row[6]);
+                totalBill = ta * numberOfDays;
                 lblRoomPrice.Text = "Tổng số tiền phải thanh toán: " + (ta * numberOfDays).ToString();
             }
         }
@@ -80,7 +88,6 @@ namespace Hotel_Management
 
         private void btnExit_Click_2(object sender, EventArgs e)
         {
-
             this.Close();
         }
 
@@ -91,13 +98,15 @@ namespace Hotel_Management
 
         private void btnAddRoom_Click_1(object sender, EventArgs e)
         {
+            object[] objects = { username!, txtFullName.PlaceholderText, txtIdentifyCard.PlaceholderText, txtPhoneNumber.PlaceholderText, cbbGender.Texts,
+            room_number!, checkInDate, checkOutDate, hotelId!, totalBill!, voucher};
             bookingDAO.CreateBooking(checkInDate, checkOutDate, roomId, userId, voucher);
-            string username = customerDAO.GetUserName(userId);
+            adminDAO.Insert(objects);
 
             MessageBox.Show("Đặt phòng thành công.");
 
             this.Hide();
-            FHome fHome = new FHome(username);
+            FHome fHome = new FHome(username!);
             fHome.ShowDialog();
             this.Visible = true;
         }

@@ -1,4 +1,6 @@
-﻿using Hotel_Management.All_Control;
+﻿using Hotel_Management.Add_Item;
+using Hotel_Management.All_Control;
+using Hotel_Management.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,29 +18,32 @@ namespace Hotel_Management
         public FAdmin(string usernames)
         {
             InitializeComponent();
+
             LoadData();
         }
 
         private void LoadData()
         {
+            uC_HotelRevenue1.btnChart.Click += DrawChart!;
             LoadFamousLocation();
-            LoadHotHotel();
             LoadTopCustomer();
             LoadVIPCustomer();
             LoadHotelManyReview();
             LoadHotelRevenue();
         }
 
-        private void LoadFamousLocation() 
+        private void LoadFamousLocation()
         {
             DataTable dt = uC_FamousLocation1.LoadFamousLocation();
             uC_FamousLocation1.dgvRoom.DataSource = dt;
         }
 
-        private void LoadHotHotel()
+        private void DrawChart(object sender, EventArgs e)
         {
-            DataTable dt = uC_HotHotel1.LoadHotHotel();
-            uC_HotHotel1.dgvRoom.DataSource = dt;
+            this.Hide();
+            FStatistical fStatistical = new FStatistical(uC_HotelRevenue1.dgvRoom);
+            fStatistical.ShowDialog();
+            this.Visible = true;
         }
 
         private void LoadTopCustomer()
@@ -55,10 +60,10 @@ namespace Hotel_Management
         {
             uC_HotelManyReview1.LoadHotelManyReview();
         }
-        
+
         private void LoadHotelRevenue()
         {
-            DataTable hotelRevenue =  uC_HotelRevenue1.LoadHotelRevenue();
+            DataTable hotelRevenue = uC_HotelRevenue1.LoadHotelRevenue();
             uC_HotelRevenue1.dgvRoom.DataSource = hotelRevenue;
         }
 
@@ -79,13 +84,6 @@ namespace Hotel_Management
             panelMoving.Top = btnFamouslocation.Top + 1;
             uC_FamousLocation1.Visible = true;
             uC_FamousLocation1.BringToFront();
-        }
-
-        private void btnHotHotel_Click(object sender, EventArgs e)
-        {
-            panelMoving.Top = btnHotHotel.Top + 1;
-            uC_HotHotel1.Visible = true;
-            uC_HotHotel1.BringToFront();
         }
 
         private void btnTopCustomer_Click(object sender, EventArgs e)
@@ -114,6 +112,13 @@ namespace Hotel_Management
             panelMoving.Top = btnHotelRevenue.Top + 1;
             uC_HotelRevenue1.Visible = true;
             uC_HotelRevenue1.BringToFront();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FHome f = new FHome();
+            f.Show();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Hotel_Management
             try
             {
                 bool deleted = bookingDAO.DeleteBooking(bookingId);
-                if(deleted)
+                if (deleted)
                 {
                     if (deleted)
                     {
@@ -43,7 +43,7 @@ namespace Hotel_Management
                     }
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

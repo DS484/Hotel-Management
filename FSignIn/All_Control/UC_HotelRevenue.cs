@@ -23,5 +23,10 @@ namespace Hotel_Management.All_Control
         {
             return adminDAO.GetHotelRevenue();
         }
+
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,21 +40,17 @@ namespace Hotel_Management.All_Control
         public void FillBillData(DataTable dtBill)
         {
             string voucher = "";
-            double price;
             foreach (DataRow row in dtBill.Rows)
             {
-                double totalDays = (Convert.ToDateTime(row[6]) - Convert.ToDateTime(row[5])).TotalDays;
-                if (Convert.ToInt32(row[7]) == 1)
+                if (Convert.ToInt32(row[6]) == 1)
                 {
                     voucher = "Có sử dụng mã giảm giá";
-                    price = (Convert.ToInt32(row[3]) - 99999) * totalDays;
                 }
                 else
                 {
-                    price = Convert.ToInt32(row[3]) * totalDays;
                     voucher = "Không sử dụng mã giảm giá";
                 }
-                dgvBill.Rows.Add(billIcon, row[0], row[1], row[2], price, row[4], voucher);
+                dgvBill.Rows.Add(billIcon, row[0], row[1], row[2], row[3], voucher);
             }
 
             foreach (DataGridViewRow row in dgvBill.Rows)
