@@ -20,20 +20,6 @@ namespace Hotel_Management.All_Control
         public UC_AvtRoom()
         {
             InitializeComponent();
-
-            // Ấn vào bất cứ đâu sẽ ra Form chọn phòng
-            picHotel.Click += Even!;
-            lblNameHotel.Click += Even!;
-            lblAddrHotel.Click += Even!;
-            lblStatus.Click += Even!;
-            lblVoucher.Click += Even!;
-            panelBookRoom.Click += Even!;
-            lblSale.Click += Even!;
-            lblRealPrice.Click += Even!;
-            lblSalePrice.Click += Even!;
-            lblInfo.Click += Even!;
-            btnbookRoom.Click += Even!;
-            pnlHotel.Click += Even!;
         }
 
         public void FormatRealPrice(string text, float fontSize, FontStyle fontStyle)
@@ -52,47 +38,5 @@ namespace Hotel_Management.All_Control
             lblSalePrice.ForeColor = fontColor;
         }
 
-
-
-        private void Even(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDetail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UC_AvtRoom_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void picHotel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlHotel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblNameHotel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnbookRoom_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void lblEvaluate_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

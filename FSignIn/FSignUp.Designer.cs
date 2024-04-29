@@ -474,7 +474,6 @@
             txtReview.TabIndex = 35;
             txtReview.Texts = "";
             txtReview.UnderlineedStyle = true;
-            txtReview._TextChanged += txtReview__TextChanged;
             // 
             // txtAddress
             // 

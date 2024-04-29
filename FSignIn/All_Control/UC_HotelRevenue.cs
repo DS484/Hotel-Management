@@ -1,4 +1,5 @@
 ﻿using Hotel_Management.DAO;
+using Hotel_Management.HandleData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,10 +43,11 @@ namespace Hotel_Management.All_Control
             }
         }
 
+        private DataGridView dgv = new DataGridView();
 
         private void btnChart_Click(object sender, EventArgs e)
         {
-            DataGridView dgv = new DataGridView();
+            dgv = new DataGridView();
             DataGridViewTextBoxColumn column2 = new DataGridViewTextBoxColumn();
             column2.HeaderText = "Name";
             dgv.Columns.Add(column2);
@@ -79,16 +81,16 @@ namespace Hotel_Management.All_Control
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadHotelRevenue();
-            
+
             if (cbbRevenue.SelectedIndex == 0)
             {
                 RevenueFilter(0, 5000000);
             }
-            else if(cbbRevenue.SelectedIndex == 1)
+            else if (cbbRevenue.SelectedIndex == 1)
             {
                 RevenueFilter(5000000, 10000000);
             }
-            else if(cbbRevenue.SelectedIndex == 2)
+            else if (cbbRevenue.SelectedIndex == 2)
             {
                 RevenueFilter(10000000, 50000000);
             }
@@ -101,5 +103,6 @@ namespace Hotel_Management.All_Control
                 RevenueFilter(100000000, Convert.ToInt64(5L * int.MaxValue));
             }
         }
+
     }
 }

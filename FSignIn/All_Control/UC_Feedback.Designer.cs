@@ -238,7 +238,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Feedback";
             Size = new Size(1079, 635);
-            Load += Control_Employee_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvFeedBack).EndInit();
             ResumeLayout(false);

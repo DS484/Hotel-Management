@@ -438,7 +438,6 @@
             cbbGender.Size = new Size(318, 40);
             cbbGender.TabIndex = 44;
             cbbGender.Texts = "Giới tính";
-            cbbGender.OnSelectedIndexChanged += cbbGender_OnSelectedIndexChanged;
             // 
             // pictureBox4
             // 

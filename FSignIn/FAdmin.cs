@@ -53,17 +53,7 @@ namespace Hotel_Management
 
         private void LoadHotelRevenue()
         {
-            //DataTable hotelRevenue = uC_HotelRevenue1.LoadHotelRevenue();
-            //uC_HotelRevenue1.dgvRoom.DataSource = hotelRevenue;
-
             uC_HotelRevenue1.LoadHotelRevenue();
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)

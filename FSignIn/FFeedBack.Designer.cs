@@ -272,7 +272,6 @@
             label1.Name = "label1";
             label1.Size = new Size(51, 10);
             label1.TabIndex = 95;
-            label1.Click += label1_Click;
             // 
             // label4
             // 
@@ -354,7 +353,6 @@
             btnExitt.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnExitt.Size = new Size(31, 31);
             btnExitt.TabIndex = 38;
-            btnExitt.Click += btnExitt_Click;
             // 
             // guna2Separator4
             // 
@@ -450,7 +448,6 @@
             Name = "FFeedBack";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FFeedBack";
-            Load += FFeedBack_Load;
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcHotel).EndInit();

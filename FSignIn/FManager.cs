@@ -143,19 +143,10 @@ namespace Hotel_Management
             uC_Service1.BringToFront();
         }
 
-        private void btnRevenueManager_Click(object sender, EventArgs e)
-        {
-            //panelMoving.Top = btnRevenueManager.Top + 1;
-            /*control_Revenue1.Visible = true;
-            control_Revenue1.BringToFront();*/
-        }
-
-
         private void FManager_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
             uC_Feedback1.Visible = false;
-            //control_Revenue1.Visible = false;
             uC_Service1.Visible = false;
             uC_Room1.Visible = false;
             pictureHome.Visible = false;
@@ -184,11 +175,6 @@ namespace Hotel_Management
             uC_Customers1.BringToFront();
         }
 
-        private void ResetData(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddRoom(object sender, EventArgs e)
         {
             this.Hide();
@@ -196,11 +182,13 @@ namespace Hotel_Management
             fAddRoom.ShowDialog();
             this.Visible = true;
         }
+
         private void AddEmployee(object sender, EventArgs e)
         {
             FAddEmployee f = new FAddEmployee();
             f.Show();
         }
+
         private void AddService(object sender, EventArgs e)
         {
             FAddService f = new FAddService(hotelId);
@@ -210,11 +198,6 @@ namespace Hotel_Management
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnLogOut_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void lblReset_Click(object sender, EventArgs e)

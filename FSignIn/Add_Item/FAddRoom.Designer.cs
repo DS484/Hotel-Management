@@ -854,9 +854,9 @@
         private Guna.UI2.WinForms.Guna2Button btnAddRoom;
         private Label label1;
         private Panel panel2;
-        private ComboBox comboBox2;
+        //private ComboBox comboBox2;
         // private ComboBox comboBox1;
-        private ComboBox cbbStatusRoom;
+        // ComboBox cbbStatusRoom;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
@@ -881,8 +881,8 @@
         private Guna.UI2.WinForms.Guna2Button btnPic2;
         private Guna.UI2.WinForms.Guna2Button btnPic1;
         private All_Control.CTTextbox txtRoomNumber;
-        private All_Control.CTTextbox ctTextbox3;
-        private All_Control.CTTextbox ctTextbox2;
+        //private All_Control.CTTextbox ctTextbox3;
+        //private All_Control.CTTextbox ctTextbox2;
         private All_Control.CTTextbox txtOldPrice;
         private All_Control.CTTextbox txtDescription;
         private All_Control.CTTextbox txtNewPrice;

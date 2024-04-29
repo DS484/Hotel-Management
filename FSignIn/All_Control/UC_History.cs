@@ -16,38 +16,5 @@ namespace Hotel_Management.All_Control
         {
             InitializeComponent();
         }
-
-        private void btnEvaluate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblRoomName_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCheckInDate_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblCheckOutDate_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dtpCheckInDate_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void dtpCheckOutDate_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void UC_History_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void lblHotel_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

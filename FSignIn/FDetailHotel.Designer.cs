@@ -227,7 +227,6 @@
             lblNameHotel.Size = new Size(1554, 70);
             lblNameHotel.TabIndex = 0;
             lblNameHotel.Text = "Hotel Nikko Saigon";
-            lblNameHotel.Click += lblNameHotel_Click;
             // 
             // guna2Panel3
             // 
@@ -594,7 +593,6 @@
             Name = "FDetailHotel";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FDetailRoom";
-            Load += FDetailHotel_Load;
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pb5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pb4).EndInit();

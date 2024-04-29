@@ -245,7 +245,6 @@
             Name = "FHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FHistory";
-            Load += FHistory_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);

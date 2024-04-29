@@ -26,11 +26,6 @@ namespace Hotel_Management.All_Control
             InitializeComponent();
         }
 
-        private void UC_Customers_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public void TransmitHotelID(int hotelId)
         {
             this.hotelId = hotelId;
@@ -57,11 +52,6 @@ namespace Hotel_Management.All_Control
             {
                 row.Height = 50;
             }
-        }
-
-        private void dgvInfoCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
         }
 
         private void btnSearchCustomer_Click(object sender, EventArgs e)

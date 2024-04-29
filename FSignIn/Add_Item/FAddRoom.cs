@@ -1,15 +1,6 @@
 ﻿using Hotel_Management.DAO;
 using Hotel_Management.DTO;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Drawing.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Hotel_Management.Add_Item
 {
@@ -17,19 +8,19 @@ namespace Hotel_Management.Add_Item
     {
         private int hotelId;
         private int roomId;
-        private string ?roomNumber;
+        private string? roomNumber;
         private int adult;
         private int child;
-        private string ?prePrice;
-        private string ?currPrice;
-        private string ?description;
+        private string? prePrice;
+        private string? currPrice;
+        private string? description;
         private DateTime startDay;
         private DateTime endDay;
-        private string ?img1;
-        private string ?img2;
-        private string ?img3;
-        private string ?img4;
-        private string ?img5;
+        private string? img1;
+        private string? img2;
+        private string? img3;
+        private string? img4;
+        private string? img5;
 
         RoomDAO roomDAO = new RoomDAO();
         RoomDetailDAO roomDetailDAO = new RoomDetailDAO();

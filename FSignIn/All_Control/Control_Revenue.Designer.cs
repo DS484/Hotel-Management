@@ -92,7 +92,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private TabControl tabControl1;
+        // private TabControl tabControl1;
        // private TabPage tabPage1;
         private Label label1;
         private Label label2;

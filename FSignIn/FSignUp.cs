@@ -303,10 +303,5 @@ namespace Hotel_Management
 
 
         }
-
-        private void txtReview__TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -110,9 +110,5 @@ namespace Hotel_Management.All_Control
             txtConfirmPassword.Text = "";
         }
 
-        private void cbbGender_OnSelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

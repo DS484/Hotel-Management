@@ -69,7 +69,6 @@
             lblHotel.Size = new Size(199, 38);
             lblHotel.TabIndex = 0;
             lblHotel.Text = "...";
-            lblHotel.Click += lblHotel_Click;
             // 
             // lblRoomName
             // 
@@ -82,7 +81,6 @@
             lblRoomName.Size = new Size(150, 38);
             lblRoomName.TabIndex = 1;
             lblRoomName.Text = "...";
-            lblRoomName.Click += lblRoomName_Click;
             // 
             // lblCheckInDate
             // 
@@ -95,7 +93,6 @@
             lblCheckInDate.Size = new Size(229, 38);
             lblCheckInDate.TabIndex = 3;
             lblCheckInDate.Text = "...";
-            lblCheckInDate.Click += lblCheckInDate_Click;
             // 
             // lblCheckOutDate
             // 
@@ -108,7 +105,6 @@
             lblCheckOutDate.Size = new Size(222, 38);
             lblCheckOutDate.TabIndex = 4;
             lblCheckOutDate.Text = "...";
-            lblCheckOutDate.Click += lblCheckOutDate_Click;
             // 
             // btnCheckOut
             // 
@@ -129,7 +125,6 @@
             btnCheckOut.Size = new Size(214, 62);
             btnCheckOut.TabIndex = 5;
             btnCheckOut.Text = "Trả phòng";
-            btnCheckOut.Click += btnEvaluate_Click;
             // 
             // guna2Elipse1
             // 
@@ -267,7 +262,6 @@
             Margin = new Padding(2);
             Name = "UC_History";
             Size = new Size(1120, 276);
-            Load += UC_History_Load;
             guna2Panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbHotel).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();

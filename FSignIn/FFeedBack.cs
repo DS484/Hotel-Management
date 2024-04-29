@@ -1,14 +1,5 @@
 ﻿using Hotel_Management.DAO;
-using Hotel_Management.DTO;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Hotel_Management
 {
@@ -47,11 +38,6 @@ namespace Hotel_Management
             }
         }
 
-        private void FFeedBack_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnComplete_Click(object sender, EventArgs e)
         {
             bool check = feedBackDAO.InsertFeecBack(Convert.ToInt32(rsStar.Value), txtFeedBack.Text, userId, hotelId);
@@ -63,16 +49,6 @@ namespace Hotel_Management
             {
                 MessageBox.Show("Lỗi, không thể thêm dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnExitt_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

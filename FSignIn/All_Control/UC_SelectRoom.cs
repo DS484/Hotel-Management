@@ -33,18 +33,6 @@ namespace Hotel_Management.All_Control
             lblSalePrice.ForeColor = fontColor;
         }
 
-        private void btnbookRoom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có chắc sẽ dùng mã giảm giá này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);

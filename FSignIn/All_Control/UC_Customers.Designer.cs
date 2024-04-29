@@ -321,7 +321,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Customers";
             Size = new Size(1079, 635);
-            Load += UC_Customers_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvInfoCustomer).EndInit();
             ResumeLayout(false);

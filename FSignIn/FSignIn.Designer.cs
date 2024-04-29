@@ -78,7 +78,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1112, 657);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
@@ -153,7 +152,6 @@
             uC_SignUp1.Name = "uC_SignUp1";
             uC_SignUp1.Size = new Size(458, 618);
             uC_SignUp1.TabIndex = 27;
-            uC_SignUp1.Load += uC_SignUp1_Load;
             // 
             // uC_Login1
             // 

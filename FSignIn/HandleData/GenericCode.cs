@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Guna.Charts.WinForms;
 using Guna.UI2.WinForms;
 
 
@@ -11,31 +12,47 @@ namespace Hotel_Management.HandleData
 {
     public class GenericCode
     {
-        public void ExportExcel(DataGridView dgv)
+        public void ExportExcel(DataGridView grid)
         {
-            if (dgv.Rows.Count > 0)
+            try
             {
-                Microsoft.Office.Interop.Excel.ApplicationClass MExcel = new Microsoft.Office.Interop.Excel.ApplicationClass();
-                MExcel.Application.Workbooks.Add(Type.Missing);
-                for (int i = 1; i < dgv.Columns.Count + 1; i++)
+                if (grid.Rows.Count > 0)
                 {
-                    MExcel.Cells[1, i] = dgv.Columns[i - 1].HeaderText;
-                }
-                for (int i = 0; i < dgv.Rows.Count; i++)
-                {
-                    for (int j = 0; j < dgv.Columns.Count; j++)
+                    Microsoft.Office.Interop.Excel.Application XcelApp = new Microsoft.Office.Interop.Excel.Application();
+                    XcelApp.Application.Workbooks.Add(Type.Missing);
+
+                    int row = grid.Rows.Count;
+                    int col = grid.Columns.Count;
+
+                    // Get Header text of Column
+                    for (int i = 1; i < col - 2 + 1; i++)
                     {
-                        MExcel.Cells[i + 2, j + 1] = dgv.Rows[i].Cells[j].Value.ToString();
+                        if (i == 1) continue;
+                        XcelApp.Cells[1, i - 1] = grid.Columns[i - 1].HeaderText;
                     }
+
+                    // Get data of cells
+                    for (int i = 0; i < row; i++)
+                    {
+                        for (int j = 1; j < col - 2; j++)
+                        {
+                            XcelApp.Cells[i + 2, j] = grid.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+
+                    XcelApp.Columns.AutoFit();
+                    XcelApp.Visible = true;
                 }
-                MExcel.Columns.AutoFit();
-                MExcel.Rows.AutoFit();
-                MExcel.Columns.Font.Size = 12;
-                MExcel.Visible = true;
+                else
+                {
+                    string mess = "Chưa có dữ liệu trong bảng!";
+                    MessageBox.Show(mess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("No records found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

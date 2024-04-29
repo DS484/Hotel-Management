@@ -59,11 +59,6 @@ namespace Hotel_Management.All_Control
             }
         }
 
-        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadBill();

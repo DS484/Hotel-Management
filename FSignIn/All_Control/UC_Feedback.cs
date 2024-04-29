@@ -52,11 +52,6 @@ namespace Hotel_Management.All_Control
             }
         }
 
-        private void Control_Employee_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearchFeedBack_Click(object sender, EventArgs e)
         {
             LoadFeedBack();

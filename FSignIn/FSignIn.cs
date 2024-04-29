@@ -21,7 +21,6 @@ namespace Hotel_Management
             uC_SignUp1.btnExitAcc.Click += btnExitAcc!;
 
             uC_FogetPasswork1.btnExitForget.Click += btnExitForget!;
-            //uC_FogetPasswork1.btnSendOTP.Click += btnLoginBack!;
         }
 
         private void BtnLoginBack_Click(object? sender, EventArgs e)
@@ -132,10 +131,7 @@ namespace Hotel_Management
             uC_Login1.Visible = true;
             uC_Login1.BringToFront();
         }
-        private void btnCompleteAcc(object sender, EventArgs e)
-        {
 
-        }
         private void btnExitAcc(object sender, EventArgs e)
         {
             uC_FogetPasswork1.Visible = false;
@@ -153,16 +149,6 @@ namespace Hotel_Management
             uC_Shape1.BringToFront();
             uC_Login1.Visible = true;
             uC_Login1.BringToFront();
-        }
-
-        private void uC_SignUp1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnExit_Click_2(object sender, EventArgs e)

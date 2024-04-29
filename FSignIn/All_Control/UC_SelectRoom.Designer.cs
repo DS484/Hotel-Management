@@ -82,7 +82,6 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2Panel1.Size = new Size(1084, 525);
             guna2Panel1.TabIndex = 0;
-            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // flpService
             // 
@@ -255,7 +254,6 @@
             btnbookRoom.Size = new Size(172, 44);
             btnbookRoom.TabIndex = 4;
             btnbookRoom.Text = "Đặt phòng";
-            btnbookRoom.Click += btnbookRoom_Click;
             // 
             // lblSalePrice
             // 

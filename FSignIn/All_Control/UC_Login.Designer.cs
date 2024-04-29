@@ -141,7 +141,6 @@
             btnLogin.Size = new Size(161, 48);
             btnLogin.TabIndex = 21;
             btnLogin.Text = "Đăng nhập";
-            btnLogin.Click += btnLogin_Click;
             // 
             // txtUsername
             // 

@@ -18,9 +18,5 @@ namespace Hotel_Management.All_Control
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

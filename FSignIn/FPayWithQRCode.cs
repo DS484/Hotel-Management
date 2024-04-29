@@ -47,7 +47,6 @@ namespace Hotel_Management
         {
             try
             {
-                long accountNumber;
                 var apiRequest = new ApiRequest();
                 apiRequest.acqId = Convert.ToInt32(cbbBanks!.SelectedValue!.ToString());
                 apiRequest.accountNo = long.Parse(txtSTK.Text);

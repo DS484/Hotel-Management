@@ -136,29 +136,9 @@ namespace Hotel_Management
             }
         }
 
-        private void guna2Separator4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void FSelectRoom_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flpLoadingRoom_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)

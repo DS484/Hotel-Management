@@ -181,7 +181,6 @@
             guna2Separator4.Name = "guna2Separator4";
             guna2Separator4.Size = new Size(1891, 12);
             guna2Separator4.TabIndex = 39;
-            guna2Separator4.Click += guna2Separator4_Click;
             // 
             // label24
             // 
@@ -308,7 +307,6 @@
             txtItem.ShadowDecoration.CustomizableEdges = customizableEdges7;
             txtItem.Size = new Size(474, 65);
             txtItem.TabIndex = 88;
-            txtItem.TextChanged += txtItem_TextChanged;
             txtItem.Click += txtItem_Click;
             // 
             // panelOld
@@ -704,7 +702,6 @@
             rsStar.RatingColor = Color.Yellow;
             rsStar.Size = new Size(246, 50);
             rsStar.TabIndex = 49;
-            rsStar.ValueChanged += rsStart_ValueChanged;
             rsStar.Click += rsStar_Click;
             // 
             // guna2ShadowPanel2
@@ -776,7 +773,6 @@
             flpLoadingHotel.Name = "flpLoadingHotel";
             flpLoadingHotel.Size = new Size(1420, 781);
             flpLoadingHotel.TabIndex = 27;
-            flpLoadingHotel.Paint += flpLoadingHotel_Paint;
             // 
             // guna2Elipse12
             // 

@@ -141,7 +141,6 @@ namespace Hotel_Management
 
         public void LoadInfo(DataTable dtDetailHotel, int hotelId, List<int> roomList)
         {
-            //Nhap
             List<int> tmpRoomList = new List<int>(roomList);
             for (int i = 0; i < tmpRoomList.Count; i++)
             {
@@ -151,7 +150,6 @@ namespace Hotel_Management
             }
             if (roomList.Count == 0)
                 return;
-            //Het nhap
             int prePrice = int.MaxValue;
             int currPrice = int.MaxValue;
             UC_AvtRoom uC_AvtRoom = new UC_AvtRoom();
@@ -251,11 +249,6 @@ namespace Hotel_Management
             Application.Exit();
         }
 
-        private void txtItem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void InitializeRangeSlider()
         {
             trackBarMin.Minimum = 0;
@@ -310,11 +303,6 @@ namespace Hotel_Management
             timer1.Start();
         }
 
-        private void guna2Separator4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nudChild_ValueChanged(object sender, EventArgs e)
         {
             UpdateTextBox();
@@ -365,12 +353,6 @@ namespace Hotel_Management
             FillDataHotel(newListHotel.Distinct().ToList());
         }
 
-        private void flpLoadingHotel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -391,12 +373,6 @@ namespace Hotel_Management
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void rsStart_ValueChanged(object sender, EventArgs e)
-        {
-
-
         }
 
         private void rsStar_Click(object sender, EventArgs e)

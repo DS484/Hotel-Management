@@ -90,7 +90,6 @@
             guna2Separator4.Name = "guna2Separator4";
             guna2Separator4.Size = new Size(1224, 10);
             guna2Separator4.TabIndex = 47;
-            guna2Separator4.Click += guna2Separator4_Click;
             // 
             // guna2ShadowPanel1
             // 
@@ -113,7 +112,6 @@
             flpLoadingRoom.Name = "flpLoadingRoom";
             flpLoadingRoom.Size = new Size(1136, 646);
             flpLoadingRoom.TabIndex = 28;
-            flpLoadingRoom.Paint += flpLoadingRoom_Paint;
             // 
             // panel2
             // 
@@ -234,7 +232,6 @@
             Name = "FSelectRoom";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FSelectRoom";
-            Load += FSelectRoom_Load;
             guna2ShadowPanel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).EndInit();

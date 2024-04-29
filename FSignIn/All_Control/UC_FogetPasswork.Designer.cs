@@ -240,7 +240,6 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "UC_FogetPasswork";
             Size = new Size(377, 391);
-            Load += UC_FogetPasswork_Load;
             guna2Panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

@@ -100,15 +100,5 @@ namespace Hotel_Management
         {
             this.Close();
         }
-
-        private void FDetailHotel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNameHotel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
