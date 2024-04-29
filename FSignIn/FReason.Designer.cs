@@ -221,7 +221,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblHi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Label label3;
-        private RichTextBox richTextBox1;
+        //private RichTextBox richTextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private CheckBox checkBox5;
         private CheckBox checkBox4;

@@ -17,19 +17,16 @@ namespace Hotel_Management
         CustomerDAO customerDAO = new CustomerDAO();
         private int userId = 0;
         private bool isMenuVisible = true;
-        private FMenu ?menuForm;
+        private FMenu? menuForm;
 
         public FHome()
         {
             InitializeComponent();
-            //btnHistory.Visible = false;
         }
         public FHome(string nameLogged)
         {
             InitializeComponent();
             btnLogin.Visible = false;
-            //btnHistory.Visible = true;
-            //btnRegisterHotel.Visible = false;
             btnLogged.Text = nameLogged;
             btnLogged.BringToFront();
             userId = customerDAO.FindId(nameLogged);
@@ -110,11 +107,6 @@ namespace Hotel_Management
             isImageVisible = !isImageVisible;
         }
 
-        private void btnLogged_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value),
@@ -141,16 +133,6 @@ namespace Hotel_Management
             }
         }
 
-        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateTextBox();
-        }
-
-        private void guna2NumericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateTextBox();
-        }
-
         private void guna2NumericUpDown3_ValueChanged(object sender, EventArgs e)
         {
             UpdateTextBox();
@@ -165,15 +147,6 @@ namespace Hotel_Management
             txtItem.Text = string.Format("{0} người lớn, {1} trẻ em, {2} phòng", adults, children, rooms);
         }
 
-        private void FHome_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRegisterHotel_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnHistory_Click(object sender, EventArgs e)
         {
             if (btnLogin.Text != "Đăng nhập")
@@ -233,15 +206,11 @@ namespace Hotel_Management
             }
         }
 
-        private void slidePic_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dtpCheckInDate_ValueChanged(object sender, EventArgs e)
         {
             if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
             {
+                MessageBox.Show(dtpCheckOutDate.Value.ToString());
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -252,6 +221,16 @@ namespace Hotel_Management
             this.Hide();
             FSignUp fSignUp = new FSignUp();
             fSignUp.ShowDialog();
+        }
+
+        private void nudAdult_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTextBox();
+        }
+
+        private void nudChildren_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTextBox();
         }
     }
 }
