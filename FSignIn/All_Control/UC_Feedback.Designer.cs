@@ -30,25 +30,17 @@
         {
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Feedback));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnAddEmployee = new Guna.UI2.WinForms.Guna2Button();
-            btnExportFile = new Guna.UI2.WinForms.Guna2Button();
             txtSearchFeedBack = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
-            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnSearchFeedBack = new Guna.UI2.WinForms.Guna2Button();
             dgvFeedBack = new DataGridView();
             Column12 = new DataGridViewImageColumn();
             Column13 = new DataGridViewTextBoxColumn();
@@ -56,6 +48,8 @@
             Column15 = new DataGridViewTextBoxColumn();
             Column16 = new DataGridViewTextBoxColumn();
             Column17 = new DataGridViewTextBoxColumn();
+            guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            btnSearchFeedBack = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFeedBack).BeginInit();
             SuspendLayout();
@@ -69,54 +63,12 @@
             // 
             guna2Elipse2.BorderRadius = 30;
             // 
-            // btnAddEmployee
-            // 
-            btnAddEmployee.BackColor = Color.FromArgb(222, 241, 241);
-            btnAddEmployee.BorderRadius = 18;
-            btnAddEmployee.Cursor = Cursors.Hand;
-            btnAddEmployee.CustomizableEdges = customizableEdges3;
-            btnAddEmployee.DisabledState.BorderColor = Color.DarkGray;
-            btnAddEmployee.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAddEmployee.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAddEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAddEmployee.FillColor = Color.DarkOliveGreen;
-            btnAddEmployee.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAddEmployee.ForeColor = Color.White;
-            btnAddEmployee.Location = new Point(1238, 34);
-            btnAddEmployee.Margin = new Padding(4);
-            btnAddEmployee.Name = "btnAddEmployee";
-            btnAddEmployee.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAddEmployee.Size = new Size(234, 54);
-            btnAddEmployee.TabIndex = 14;
-            btnAddEmployee.Text = "Thêm nhân viên";
-            // 
-            // btnExportFile
-            // 
-            btnExportFile.BackColor = Color.FromArgb(222, 241, 241);
-            btnExportFile.BorderRadius = 18;
-            btnExportFile.Cursor = Cursors.Hand;
-            btnExportFile.CustomizableEdges = customizableEdges5;
-            btnExportFile.DisabledState.BorderColor = Color.DarkGray;
-            btnExportFile.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExportFile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExportFile.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExportFile.FillColor = Color.Goldenrod;
-            btnExportFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportFile.ForeColor = Color.White;
-            btnExportFile.Location = new Point(961, 34);
-            btnExportFile.Margin = new Padding(4);
-            btnExportFile.Name = "btnExportFile";
-            btnExportFile.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnExportFile.Size = new Size(234, 54);
-            btnExportFile.TabIndex = 13;
-            btnExportFile.Text = "Xuất file Excel";
-            // 
             // txtSearchFeedBack
             // 
             txtSearchFeedBack.BorderColor = Color.Gray;
             txtSearchFeedBack.BorderRadius = 18;
             txtSearchFeedBack.Cursor = Cursors.Hand;
-            txtSearchFeedBack.CustomizableEdges = customizableEdges7;
+            txtSearchFeedBack.CustomizableEdges = customizableEdges3;
             txtSearchFeedBack.DefaultText = "";
             txtSearchFeedBack.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchFeedBack.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -128,49 +80,25 @@
             txtSearchFeedBack.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchFeedBack.IconLeft = (Image)resources.GetObject("txtSearchFeedBack.IconLeft");
             txtSearchFeedBack.IconLeftSize = new Size(40, 40);
-            txtSearchFeedBack.Location = new Point(20, 34);
-            txtSearchFeedBack.Margin = new Padding(9, 12, 9, 12);
+            txtSearchFeedBack.Location = new Point(14, 20);
+            txtSearchFeedBack.Margin = new Padding(6, 7, 6, 7);
             txtSearchFeedBack.Name = "txtSearchFeedBack";
             txtSearchFeedBack.PasswordChar = '\0';
             txtSearchFeedBack.PlaceholderForeColor = Color.DimGray;
             txtSearchFeedBack.PlaceholderText = "|Nhập mã đánh giá cần tìm...";
             txtSearchFeedBack.SelectedText = "";
-            txtSearchFeedBack.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtSearchFeedBack.Size = new Size(399, 54);
+            txtSearchFeedBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearchFeedBack.Size = new Size(279, 32);
             txtSearchFeedBack.TabIndex = 12;
             // 
             // panel1
             // 
             panel1.Controls.Add(dgvFeedBack);
-            panel1.Location = new Point(21, 99);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(15, 59);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1628, 942);
+            panel1.Size = new Size(1140, 565);
             panel1.TabIndex = 15;
-            // 
-            // guna2Elipse3
-            // 
-            guna2Elipse3.BorderRadius = 30;
-            // 
-            // btnSearchFeedBack
-            // 
-            btnSearchFeedBack.BackColor = Color.FromArgb(222, 241, 241);
-            btnSearchFeedBack.BorderRadius = 18;
-            btnSearchFeedBack.CustomizableEdges = customizableEdges1;
-            btnSearchFeedBack.DisabledState.BorderColor = Color.DarkGray;
-            btnSearchFeedBack.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearchFeedBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearchFeedBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchFeedBack.FillColor = Color.SeaGreen;
-            btnSearchFeedBack.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearchFeedBack.ForeColor = Color.White;
-            btnSearchFeedBack.Location = new Point(431, 38);
-            btnSearchFeedBack.Name = "btnSearchFeedBack";
-            btnSearchFeedBack.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearchFeedBack.Size = new Size(136, 50);
-            btnSearchFeedBack.TabIndex = 35;
-            btnSearchFeedBack.Text = "Tìm kiếm";
-            btnSearchFeedBack.Click += btnSearchFeedBack_Click;
             // 
             // dgvFeedBack
             // 
@@ -205,7 +133,8 @@
             dgvFeedBack.DefaultCellStyle = dataGridViewCellStyle2;
             dgvFeedBack.EnableHeadersVisualStyles = false;
             dgvFeedBack.GridColor = SystemColors.ControlDark;
-            dgvFeedBack.Location = new Point(3, 4);
+            dgvFeedBack.Location = new Point(2, 2);
+            dgvFeedBack.Margin = new Padding(2, 2, 2, 2);
             dgvFeedBack.MultiSelect = false;
             dgvFeedBack.Name = "dgvFeedBack";
             dgvFeedBack.ReadOnly = true;
@@ -223,7 +152,7 @@
             dgvFeedBack.RowTemplate.Height = 33;
             dgvFeedBack.RowTemplate.ReadOnly = true;
             dgvFeedBack.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvFeedBack.Size = new Size(1515, 935);
+            dgvFeedBack.Size = new Size(1060, 561);
             dgvFeedBack.TabIndex = 37;
             // 
             // Column12
@@ -273,19 +202,42 @@
             Column17.Name = "Column17";
             Column17.ReadOnly = true;
             // 
+            // guna2Elipse3
+            // 
+            guna2Elipse3.BorderRadius = 30;
+            // 
+            // btnSearchFeedBack
+            // 
+            btnSearchFeedBack.BackColor = Color.FromArgb(222, 241, 241);
+            btnSearchFeedBack.BorderRadius = 18;
+            btnSearchFeedBack.CustomizableEdges = customizableEdges1;
+            btnSearchFeedBack.DisabledState.BorderColor = Color.DarkGray;
+            btnSearchFeedBack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearchFeedBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearchFeedBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearchFeedBack.FillColor = Color.SeaGreen;
+            btnSearchFeedBack.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearchFeedBack.ForeColor = Color.White;
+            btnSearchFeedBack.Location = new Point(302, 23);
+            btnSearchFeedBack.Margin = new Padding(2, 2, 2, 2);
+            btnSearchFeedBack.Name = "btnSearchFeedBack";
+            btnSearchFeedBack.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearchFeedBack.Size = new Size(95, 30);
+            btnSearchFeedBack.TabIndex = 35;
+            btnSearchFeedBack.Text = "Tìm kiếm";
+            btnSearchFeedBack.Click += btnSearchFeedBack_Click;
+            // 
             // UC_Feedback
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(222, 241, 241);
             Controls.Add(btnSearchFeedBack);
-            Controls.Add(btnAddEmployee);
-            Controls.Add(btnExportFile);
             Controls.Add(txtSearchFeedBack);
             Controls.Add(panel1);
-            Margin = new Padding(4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Feedback";
-            Size = new Size(1542, 1059);
+            Size = new Size(1079, 635);
             Load += Control_Employee_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvFeedBack).EndInit();
@@ -295,8 +247,6 @@
         #endregion
 
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        public Guna.UI2.WinForms.Guna2Button btnAddEmployee;
-        public Guna.UI2.WinForms.Guna2Button btnExportFile;
         public Guna.UI2.WinForms.Guna2TextBox txtSearchFeedBack;
         public Panel panel1;
         public Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;

@@ -13,6 +13,7 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_HotelManyReview : UserControl
     {
+        private Image hotelIcon = Properties.Resources._5_stars;
         private AdminDAO adminDAO = new AdminDAO();
 
         public UC_HotelManyReview()
@@ -24,15 +25,15 @@ namespace Hotel_Management.All_Control
         {
             dgvHotel.DataSource = null;
             dgvHotel.Rows.Clear();
-            DataTable dtService = adminDAO.HotelRevenue();
-            FillServiceData(dtService);
+            DataTable dtHotelManyReview = adminDAO.HotelRevenue();
+            FillHotelManyReview(dtHotelManyReview);
         }
 
-        public void FillServiceData(DataTable dtService)
+        public void FillHotelManyReview(DataTable dtHotelManyReview)
         {
-            foreach (DataRow row in dtService.Rows)
+            foreach (DataRow row in dtHotelManyReview.Rows)
             {
-                dgvHotel.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                dgvHotel.Rows.Add(hotelIcon, row[0], row[1], row[2], row[3], row[4]);
             }
 
             foreach (DataGridViewRow row in dgvHotel.Rows)
@@ -41,5 +42,14 @@ namespace Hotel_Management.All_Control
             }
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadHotelManyReview();
+            foreach (DataGridViewRow row in dgvHotel.Rows)
+            {
+                if (!row.Cells[2].Value.ToString()!.ToLower().Contains(txtHotelName.Text.ToString().ToLower()))
+                    row.Visible = false;
+            }
+        }
     }
 }

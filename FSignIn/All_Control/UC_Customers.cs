@@ -69,7 +69,7 @@ namespace Hotel_Management.All_Control
             LoadCustomer();
             foreach (DataGridViewRow row in dgvInfoCustomer.Rows)
             {
-                if (Convert.ToDateTime(row.Cells[6].Value) >= dtpCheckIn.Value && Convert.ToDateTime(row.Cells[7].Value) <= dtpCheckOut.Value)
+                if (Convert.ToDateTime(row.Cells[6].Value) >= Convert.ToDateTime(dtpCheckIn.Value) && Convert.ToDateTime(row.Cells[7].Value) <= Convert.ToDateTime(dtpCheckOut.Value))
                     row.Visible = true;
                 else
                     row.Visible = false;
@@ -77,6 +77,15 @@ namespace Hotel_Management.All_Control
         }
 
         private void dtpCheckOut_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpCheckOut.Value < dtpCheckIn.Value)
+            {
+                dtpCheckOut.Value = dtpCheckIn.Value;
+                MessageBox.Show(this, "Ngày trả phòng phải lớn hơn hoặc bằng ngày nhận phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dtpCheckIn_ValueChanged(object sender, EventArgs e)
         {
             if (dtpCheckOut.Value < dtpCheckIn.Value)
             {

@@ -13,6 +13,7 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_VIPCustomer : UserControl
     {
+        private Image vipIcon = Properties.Resources.vip;
         private AdminDAO adminDAO = new AdminDAO();
 
         public UC_VIPCustomer()
@@ -24,20 +25,31 @@ namespace Hotel_Management.All_Control
         {
             dgvVIPCustomer.DataSource = null;
             dgvVIPCustomer.Rows.Clear();
-            DataTable dtService = adminDAO.VIPCustomer();
-            FillServiceData(dtService);
+            DataTable dtVIPCustomer = adminDAO.VIPCustomer();
+            FillVIPCustomer(dtVIPCustomer);
         }
 
-        public void FillServiceData(DataTable dtService)
+        public void FillVIPCustomer(DataTable dtVIPCustomer)
         {
-            foreach (DataRow row in dtService.Rows)
+            foreach (DataRow row in dtVIPCustomer.Rows)
             {
-                dgvVIPCustomer.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5]);
+                string name = row[2].ToString() + " " + row[1].ToString();
+                dgvVIPCustomer.Rows.Add(vipIcon, row[0], name, row[3], row[4], row[5]);
             }
 
             foreach (DataGridViewRow row in dgvVIPCustomer.Rows)
             {
                 row.Height = 50;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadVIPCustomer();
+            foreach (DataGridViewRow row in dgvVIPCustomer.Rows)
+            {
+                if (row.Cells[1].Value.ToString() != txtUserName.Text.ToString())
+                    row.Visible = false;
             }
         }
     }

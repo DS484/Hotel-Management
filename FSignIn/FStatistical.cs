@@ -12,6 +12,10 @@ using System.Windows.Forms;
 using DataTable = System.Data.DataTable;
 using Point = System.Drawing.Point;
 
+using System;
+using System.Linq;
+using System.Windows;
+
 namespace Hotel_Management
 {
     public partial class FStatistical : Form
@@ -23,46 +27,20 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.dgv = dgv;
-            //DoughnutChart();
         }
 
-        public void DoughnutChart()
-        {
-            //string[] months = { "January", "February", "March", "April" };
-
-            //chartInfo.Title.Text = "Doughnut Chart";
-            //chartInfo.Legend.Position = Guna.Charts.WinForms.LegendPosition.Right;
-            //chartInfo.XAxes.Display = false;
-            //chartInfo.YAxes.Display = false;
-
-            //var dataset = new Guna.Charts.WinForms.GunaDoughnutDataset();
-            //var r = new Random();
-            //for (int i = 0; i < months.Length; i++)
-            //{
-            //    int num = r.Next(10, 100);
-
-            //    dataset.DataPoints.Add(months[i], num);
-            //}
-
-            //chartInfo.Datasets.Add(dataset);
-
-            //chartInfo.Update();
-
-            
-        }
-
-        private void LoadChartData()
+        private void DoughnutChart()
         {
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("HotelName", typeof(string));
+            dataTable.Columns.Add("Name", typeof(string));
             dataTable.Columns.Add("Value", typeof(int));
 
             foreach (DataGridViewRow row in dgv.Rows)
             {
                 if (!row.IsNewRow)
                 {
-                    dataTable.Rows.Add(row.Cells["Tên khách sạn"].Value.ToString(),
-                                       Convert.ToInt32(row.Cells["Tổng doanh thu"].Value));
+                    dataTable.Rows.Add(row.Cells[0].Value.ToString(),
+                                       Convert.ToInt32(row.Cells[1].Value));
                 }
             }
 
@@ -74,18 +52,15 @@ namespace Hotel_Management
                 total += Convert.ToInt32(row["Value"]);
             }
 
-            // Add data to the dataset with percentage and sign
             foreach (DataRow row in dataTable.Rows)
             {
                 int value = Convert.ToInt32(row["Value"]);
                 double percentage = ((double)value / total) * 100;
-                string label = $"{row["HotelName"].ToString()} ({percentage.ToString("0.00")}%)";
+                string label = $"{row["Name"].ToString()} ({percentage.ToString("0.00")}%)";
                 dataset.DataPoints.Add(label, value);
             }
 
             chartInfo.Datasets.Add(dataset);
-
-
 
             chartInfo.Update();
         }
@@ -101,8 +76,8 @@ namespace Hotel_Management
             {
                 if (!row.IsNewRow)
                 {
-                    hotelName.Add(row.Cells[1].Value.ToString()!);
-                    totalRevenue.Add(Convert.ToInt32(row.Cells[4].Value!));
+                    hotelName.Add(row.Cells[0].Value.ToString()!);
+                    totalRevenue.Add(Convert.ToInt32(row.Cells[1].Value!));
                 }
             }
 
@@ -163,7 +138,7 @@ namespace Hotel_Management
             }
             else if (name == "Tròn")
             {
-                LoadChartData();
+                DoughnutChart();
             }
         }
     }

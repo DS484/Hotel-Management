@@ -15,7 +15,7 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_Service : UserControl
     {
-        private string ?username;
+        private string? username;
         private Image serviceIcon = Properties.Resources.customer_service;
         private Image editIcon = Properties.Resources.edit;
         private Image deleteIcon = Properties.Resources.remove;

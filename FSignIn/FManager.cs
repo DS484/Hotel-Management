@@ -37,7 +37,6 @@ namespace Hotel_Management
             lblShowPersonLogin.Text = manager.LastName + " " + manager.FirstName;
             LoadHotelImageHome();
             uC_Room1.btnAddRoom.Click += AddRoom!;
-            uC_Feedback1.btnAddEmployee.Click += AddEmployee!;
             uC_Service1.btnAddService.Click += AddService!;
             LoadData();
         }

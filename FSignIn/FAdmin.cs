@@ -24,7 +24,6 @@ namespace Hotel_Management
 
         private void LoadData()
         {
-            uC_HotelRevenue1.btnChart.Click += DrawChart!;
             LoadFamousLocation();
             LoadTopCustomer();
             LoadVIPCustomer();
@@ -34,16 +33,7 @@ namespace Hotel_Management
 
         private void LoadFamousLocation()
         {
-            DataTable dt = uC_FamousLocation1.LoadFamousLocation();
-            uC_FamousLocation1.dgvRoom.DataSource = dt;
-        }
-
-        private void DrawChart(object sender, EventArgs e)
-        {
-            this.Hide();
-            FStatistical fStatistical = new FStatistical(uC_HotelRevenue1.dgvRoom);
-            fStatistical.ShowDialog();
-            this.Visible = true;
+            uC_FamousLocation1.LoadFamousLocation();
         }
 
         private void LoadTopCustomer()
@@ -63,8 +53,10 @@ namespace Hotel_Management
 
         private void LoadHotelRevenue()
         {
-            DataTable hotelRevenue = uC_HotelRevenue1.LoadHotelRevenue();
-            uC_HotelRevenue1.dgvRoom.DataSource = hotelRevenue;
+            //DataTable hotelRevenue = uC_HotelRevenue1.LoadHotelRevenue();
+            //uC_HotelRevenue1.dgvRoom.DataSource = hotelRevenue;
+
+            uC_HotelRevenue1.LoadHotelRevenue();
         }
 
 

@@ -32,10 +32,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Service));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -43,7 +41,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnAddService = new Guna.UI2.WinForms.Guna2Button();
-            btnExportFile = new Guna.UI2.WinForms.Guna2Button();
             txtSearchService = new Guna.UI2.WinForms.Guna2TextBox();
             panel1 = new Panel();
             dgvService = new DataGridView();
@@ -77,39 +74,19 @@
             btnAddService.FillColor = Color.DarkOliveGreen;
             btnAddService.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddService.ForeColor = Color.White;
-            btnAddService.Location = new Point(1211, 35);
-            btnAddService.Margin = new Padding(4);
+            btnAddService.Location = new Point(848, 21);
+            btnAddService.Margin = new Padding(3, 2, 3, 2);
             btnAddService.Name = "btnAddService";
             btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAddService.Size = new Size(234, 54);
+            btnAddService.Size = new Size(164, 32);
             btnAddService.TabIndex = 10;
             btnAddService.Text = "Thêm dịch vụ";
-            // 
-            // btnExportFile
-            // 
-            btnExportFile.BackColor = Color.FromArgb(207, 236, 236);
-            btnExportFile.BorderRadius = 18;
-            btnExportFile.CustomizableEdges = customizableEdges5;
-            btnExportFile.DisabledState.BorderColor = Color.DarkGray;
-            btnExportFile.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExportFile.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExportFile.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExportFile.FillColor = Color.Goldenrod;
-            btnExportFile.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportFile.ForeColor = Color.White;
-            btnExportFile.Location = new Point(935, 35);
-            btnExportFile.Margin = new Padding(4);
-            btnExportFile.Name = "btnExportFile";
-            btnExportFile.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnExportFile.Size = new Size(234, 54);
-            btnExportFile.TabIndex = 9;
-            btnExportFile.Text = "Xuất file Excel";
             // 
             // txtSearchService
             // 
             txtSearchService.BorderColor = Color.Gray;
             txtSearchService.BorderRadius = 18;
-            txtSearchService.CustomizableEdges = customizableEdges7;
+            txtSearchService.CustomizableEdges = customizableEdges5;
             txtSearchService.DefaultText = "";
             txtSearchService.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchService.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -122,24 +99,24 @@
             txtSearchService.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchService.IconLeft = (Image)resources.GetObject("txtSearchService.IconLeft");
             txtSearchService.IconLeftSize = new Size(40, 40);
-            txtSearchService.Location = new Point(20, 35);
-            txtSearchService.Margin = new Padding(9, 12, 9, 12);
+            txtSearchService.Location = new Point(14, 21);
+            txtSearchService.Margin = new Padding(6, 7, 6, 7);
             txtSearchService.Name = "txtSearchService";
             txtSearchService.PasswordChar = '\0';
             txtSearchService.PlaceholderForeColor = Color.DimGray;
             txtSearchService.PlaceholderText = "|Nhập mã phòng cần tìm...";
             txtSearchService.SelectedText = "";
-            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtSearchService.Size = new Size(370, 54);
+            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtSearchService.Size = new Size(259, 32);
             txtSearchService.TabIndex = 8;
             // 
             // panel1
             // 
             panel1.Controls.Add(dgvService);
-            panel1.Location = new Point(20, 96);
-            panel1.Margin = new Padding(4);
+            panel1.Location = new Point(14, 58);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1628, 941);
+            panel1.Size = new Size(1140, 565);
             panel1.TabIndex = 11;
             // 
             // dgvService
@@ -175,7 +152,8 @@
             dgvService.DefaultCellStyle = dataGridViewCellStyle2;
             dgvService.EnableHeadersVisualStyles = false;
             dgvService.GridColor = SystemColors.ControlDark;
-            dgvService.Location = new Point(0, 3);
+            dgvService.Location = new Point(0, 2);
+            dgvService.Margin = new Padding(2, 2, 2, 2);
             dgvService.MultiSelect = false;
             dgvService.Name = "dgvService";
             dgvService.ReadOnly = true;
@@ -193,7 +171,7 @@
             dgvService.RowTemplate.Height = 33;
             dgvService.RowTemplate.ReadOnly = true;
             dgvService.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvService.Size = new Size(1516, 932);
+            dgvService.Size = new Size(1061, 559);
             dgvService.TabIndex = 36;
             dgvService.CellClick += dgvService_CellClick;
             // 
@@ -267,28 +245,28 @@
             btnSearch.FillColor = Color.SeaGreen;
             btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(402, 39);
+            btnSearch.Location = new Point(281, 23);
+            btnSearch.Margin = new Padding(2, 2, 2, 2);
             btnSearch.Name = "btnSearch";
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(136, 50);
+            btnSearch.Size = new Size(95, 30);
             btnSearch.TabIndex = 23;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.Click += btnSearch_Click;
             // 
             // UC_Service
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnSearch);
             Controls.Add(btnAddService);
-            Controls.Add(btnExportFile);
             Controls.Add(txtSearchService);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
-            Margin = new Padding(4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Service";
-            Size = new Size(1542, 1059);
+            Size = new Size(1079, 635);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvService).EndInit();
             ResumeLayout(false);
@@ -299,7 +277,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         public Guna.UI2.WinForms.Guna2Button btnAddService;
-        public Guna.UI2.WinForms.Guna2Button btnExportFile;
         public Guna.UI2.WinForms.Guna2TextBox txtSearchService;
         public Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnSearch;

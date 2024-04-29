@@ -33,6 +33,7 @@ namespace Hotel_Management.Properties
             this.hotelId = hotelId;
             txtRoomNumber.Texts = roomNumber;
             TickSerivce(service);
+            txtRoomNumber.ReadOnly = true;
         }
 
         private void TickSerivce(string service)
@@ -95,36 +96,50 @@ namespace Hotel_Management.Properties
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            GetInfoService();
-            DataTable dtRoom = roomDAO.CheckRoomExist(txtRoomNumber.Texts, hotelId);
-            if (dtRoom != null && dtRoom.Rows.Count > 0)
+            try
             {
-                MessageBox.Show($"Dịch vụ của phòng '{txtRoomNumber.Texts}' đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                GetInfoService();
+                DataTable dtRoom = roomDAO.CheckRoomExist(txtRoomNumber.Texts, hotelId);
+                if (dtRoom != null && dtRoom.Rows.Count > 0)
+                {
+                    MessageBox.Show($"Dịch vụ của phòng '{txtRoomNumber.Texts}' đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                bool inserted = managerDAO.AddService(roomId, serviceId);
+                if (inserted)
+                {
+                    MessageBox.Show("Thêm tiện ích thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            bool inserted = managerDAO.AddService(roomId, serviceId);
-            if (inserted)
+            catch (Exception ex)
             {
-                MessageBox.Show("Thêm tiện ích thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xảy ra!" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnEditService_Click(object sender, EventArgs e)
         {
-            GetInfoService();
-            bool edited = serviceDAO.EditService(roomId, serviceId);
-            if (edited)
+            try
             {
-                MessageBox.Show("Sửa tiện ích thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GetInfoService();
+                bool edited = serviceDAO.EditService(roomId, serviceId);
+                if (edited)
+                {
+                    MessageBox.Show("Sửa tiện ích thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xảy ra", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xảy ra!" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -13,19 +13,42 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_FamousLocation : UserControl
     {
+        private Image icon = Properties.Resources.map;
         private AdminDAO adminDAO = new AdminDAO();
         public UC_FamousLocation()
         {
             InitializeComponent();
         }
 
-        public DataTable LoadFamousLocation()
+        public void LoadFamousLocation()
         {
-            return adminDAO.GetFamousLocation();
+            dgvHotel.DataSource = null;
+            dgvHotel.Rows.Clear();
+            DataTable dtLocation = adminDAO.GetFamousLocation();
+            FillFamousLocation(dtLocation);
         }
 
-        private void dgvRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void FillFamousLocation(DataTable dtLocation)
         {
+            foreach (DataRow row in dtLocation.Rows)
+            {
+                dgvHotel.Rows.Add(icon, row[0], row[1], row[2]);
+            }
+
+            foreach (DataGridViewRow row in dgvHotel.Rows)
+            {
+                row.Height = 50;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadFamousLocation();
+            foreach (DataGridViewRow row in dgvHotel.Rows)
+            {
+                if (row.Cells[2].Value.ToString() != cbbCity.SelectedItem.ToString())
+                    row.Visible = false;
+            }
 
         }
     }

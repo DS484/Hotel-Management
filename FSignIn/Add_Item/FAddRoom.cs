@@ -77,17 +77,17 @@ namespace Hotel_Management.Add_Item
 
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
-            Room room = new Room(txtRoomNumber.Texts, txtImg2.PlaceholderText,
-            Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts),
-            txtDescription.Texts, hotelId);
-
-            RoomDetail roomDetail = new RoomDetail(txtImg1.PlaceholderText,
-            txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText,
-            txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem),
-            Convert.ToDateTime(dtpStart_Date.Value), Convert.ToDateTime(dtpEnd_Date.Value));
-
             try
             {
+                Room room = new Room(txtRoomNumber.Texts, txtImg2.PlaceholderText,
+                Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts),
+                txtDescription.Texts, hotelId);
+
+                RoomDetail roomDetail = new RoomDetail(txtImg1.PlaceholderText,
+                txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText,
+                txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem),
+                Convert.ToDateTime(dtpStart_Date.Value), Convert.ToDateTime(dtpEnd_Date.Value));
+
                 DataTable dtRoom = roomDAO.CheckRoomExist(txtRoomNumber.Texts, hotelId);
                 if (dtRoom != null && dtRoom.Rows.Count > 0)
                 {
@@ -162,18 +162,25 @@ namespace Hotel_Management.Add_Item
 
         private void btnEditRoom_Click(object sender, EventArgs e)
         {
-            Room room = new Room(roomId, txtRoomNumber.Texts, img1!, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
-            RoomDetail roomDetail = new RoomDetail(roomId, txtImg1.PlaceholderText, txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText, txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem), dtpStart_Date.Value, dtpEnd_Date.Value);
-            bool editedRoom = roomDAO.EditRoom(room);
-            bool editedRoomDetail = roomDetailDAO.EditRoomDetail(roomDetail);
-            if (editedRoom && editedRoomDetail)
+            try
             {
-                MessageBox.Show("Sửa thông tin hoàn tất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                Room room = new Room(roomId, txtRoomNumber.Texts, img1!, Convert.ToInt32(txtOldPrice.Texts), Convert.ToInt32(txtNewPrice.Texts), txtDescription.Texts);
+                RoomDetail roomDetail = new RoomDetail(roomId, txtImg1.PlaceholderText, txtImg2.PlaceholderText, txtImg3.PlaceholderText, txtImg4.PlaceholderText, txtImg5.PlaceholderText, Convert.ToInt32(cbbAdult.SelectedItem), Convert.ToInt32(cbbChild.SelectedItem), dtpStart_Date.Value, dtpEnd_Date.Value);
+                bool editedRoom = roomDAO.EditRoom(room);
+                bool editedRoomDetail = roomDetailDAO.EditRoomDetail(roomDetail);
+                if (editedRoom && editedRoomDetail)
+                {
+                    MessageBox.Show("Sửa thông tin hoàn tất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xảy ra!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sửa phòng thất bại!" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -14,6 +14,8 @@ namespace Hotel_Management.All_Control
 {
     public partial class UC_TopCustomer : UserControl
     {
+        private Image userIcon = Properties.Resources.user;
+
         AdminDAO adminDAO = new AdminDAO();
 
         public UC_TopCustomer()
@@ -33,12 +35,22 @@ namespace Hotel_Management.All_Control
         {
             foreach (DataRow row in dtService.Rows)
             {
-                dgvCustomer.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+                dgvCustomer.Rows.Add(userIcon, row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
             }
 
             foreach (DataGridViewRow row in dgvCustomer.Rows)
             {
                 row.Height = 50;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            LoadTopCustomer();
+            foreach (DataGridViewRow row in dgvCustomer.Rows)
+            {
+                if (row.Cells[7].Value.ToString() != cbbTimes.SelectedItem.ToString())
+                    row.Visible = false;
             }
         }
     }
