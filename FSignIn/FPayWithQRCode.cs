@@ -18,9 +18,18 @@ namespace Hotel_Management
 {
     public partial class FPayWithQRCode : Form
     {
-        public FPayWithQRCode()
+        public FPayWithQRCode(long? totalBill, string roomNumber)
         {
             InitializeComponent();
+            txtInvoice.Text = totalBill.ToString();
+            txtSTK.Text = "9946353126";
+            txtAccountName.Text = "NGUYEN DUC SANG";
+            txtExtraInfo.Text = "Thanh toán tiền phòng " + roomNumber;
+
+            txtSTK.ReadOnly = true;
+            txtInvoice.ReadOnly = true;
+            txtExtraInfo.ReadOnly = true;   
+            txtAccountName.ReadOnly = true;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -18,9 +18,9 @@ namespace Hotel_Management
         private DateTime checkOutDate;
         private int voucher;
         private string? username;
-        private string? room_number;
+        private string? roomNumber;
         private int? hotelId;
-        private int? totalBill;
+        private long? totalBill;
 
         private AdminDAO adminDAO = new AdminDAO();
         CustomerDAO customerDAO = new CustomerDAO();
@@ -66,7 +66,7 @@ namespace Hotel_Management
             if (dtRoom != null)
             {
                 DataRow row = dtRoom.Rows[0];
-                room_number = row[1].ToString();
+                roomNumber = row[1].ToString();
                 int ta = int.Parse(row[4].ToString()!);
                 lblRoomDescription.Text = row[5].ToString();
                 if (voucher == 1)
@@ -99,7 +99,7 @@ namespace Hotel_Management
         private void btnAddRoom_Click_1(object sender, EventArgs e)
         {
             object[] objects = { username!, txtFullName.PlaceholderText, txtIdentifyCard.PlaceholderText, txtPhoneNumber.PlaceholderText, cbbGender.Texts,
-            room_number!, checkInDate, checkOutDate, hotelId!, totalBill!, voucher};
+            roomNumber!, checkInDate, checkOutDate, hotelId!, totalBill!, voucher};
             bookingDAO.CreateBooking(checkInDate, checkOutDate, roomId, userId, voucher);
             adminDAO.Insert(objects);
 
@@ -108,6 +108,14 @@ namespace Hotel_Management
             this.Hide();
             FHome fHome = new FHome(username!);
             fHome.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btnPayWithQR_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FPayWithQRCode fPayWithQRCode = new FPayWithQRCode(totalBill, roomNumber!);
+            fPayWithQRCode.ShowDialog();
             this.Visible = true;
         }
     }
