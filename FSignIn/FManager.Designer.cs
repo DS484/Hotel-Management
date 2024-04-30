@@ -243,14 +243,14 @@
             // lblShowPersonLogin
             // 
             lblShowPersonLogin.BackColor = Color.LightGray;
-            lblShowPersonLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblShowPersonLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblShowPersonLogin.ForeColor = Color.Black;
             lblShowPersonLogin.Location = new Point(26, 176);
             lblShowPersonLogin.Name = "lblShowPersonLogin";
             lblShowPersonLogin.Size = new Size(221, 43);
             lblShowPersonLogin.TabIndex = 26;
-            lblShowPersonLogin.Text = "Tuấn Trần";
-            lblShowPersonLogin.TextAlign = ContentAlignment.MiddleCenter;
+            lblShowPersonLogin.Text = "Nguyễn Thanh Tùng";
+            lblShowPersonLogin.TextAlign = ContentAlignment.TopCenter;
             // 
             // panelMoving
             // 
@@ -437,7 +437,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(993, 10);
+            label1.Location = new Point(1132, 12);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(76, 23);
@@ -447,10 +447,11 @@
             // lblReset
             // 
             lblReset.AutoSize = true;
-            lblReset.BackColor = Color.SeaGreen;
+            lblReset.BackColor = Color.FromArgb(207, 236, 236);
+            lblReset.Cursor = Cursors.Hand;
             lblReset.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblReset.ForeColor = Color.White;
-            lblReset.Location = new Point(950, 2);
+            lblReset.ForeColor = Color.Black;
+            lblReset.Location = new Point(1102, 1);
             lblReset.Margin = new Padding(2, 0, 2, 0);
             lblReset.Name = "lblReset";
             lblReset.Size = new Size(41, 38);
@@ -472,7 +473,7 @@
             // 
             uC_Customers1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Customers1.Location = new Point(7, 42);
-            uC_Customers1.Margin = new Padding(4, 4, 4, 4);
+            uC_Customers1.Margin = new Padding(4);
             uC_Customers1.Name = "uC_Customers1";
             uC_Customers1.Size = new Size(1217, 894);
             uC_Customers1.TabIndex = 34;
@@ -481,7 +482,7 @@
             // 
             uC_Bill1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Bill1.Location = new Point(1, 42);
-            uC_Bill1.Margin = new Padding(4, 4, 4, 4);
+            uC_Bill1.Margin = new Padding(4);
             uC_Bill1.Name = "uC_Bill1";
             uC_Bill1.Size = new Size(1224, 857);
             uC_Bill1.TabIndex = 33;
@@ -490,7 +491,7 @@
             // 
             uC_Service1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Service1.Location = new Point(1, 42);
-            uC_Service1.Margin = new Padding(4, 4, 4, 4);
+            uC_Service1.Margin = new Padding(4);
             uC_Service1.Name = "uC_Service1";
             uC_Service1.Size = new Size(1224, 857);
             uC_Service1.TabIndex = 32;
@@ -499,7 +500,7 @@
             // 
             uC_Feedback1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Feedback1.Location = new Point(1, 42);
-            uC_Feedback1.Margin = new Padding(4, 4, 4, 4);
+            uC_Feedback1.Margin = new Padding(4);
             uC_Feedback1.Name = "uC_Feedback1";
             uC_Feedback1.Size = new Size(1224, 857);
             uC_Feedback1.TabIndex = 31;
@@ -508,7 +509,7 @@
             // 
             uC_Room1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Room1.Location = new Point(1, 42);
-            uC_Room1.Margin = new Padding(4, 4, 4, 4);
+            uC_Room1.Margin = new Padding(4);
             uC_Room1.Name = "uC_Room1";
             uC_Room1.Size = new Size(1224, 857);
             uC_Room1.TabIndex = 30;

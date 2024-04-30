@@ -33,9 +33,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             panel1 = new Panel();
+            label24 = new Label();
+            btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             panel2 = new Panel();
             btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -68,6 +71,8 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(label24);
+            panel1.Controls.Add(btnBack);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(uC_SignUp1);
             panel1.Controls.Add(uC_Login1);
@@ -78,6 +83,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1112, 657);
             panel1.TabIndex = 0;
+            // 
+            // label24
+            // 
+            label24.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            label24.Location = new Point(41, 5);
+            label24.Name = "label24";
+            label24.Size = new Size(72, 29);
+            label24.TabIndex = 52;
+            label24.Text = "Trở lại";
+            label24.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // btnBack
+            // 
+            btnBack.Cursor = Cursors.Hand;
+            btnBack.DisabledState.BorderColor = Color.DarkGray;
+            btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBack.FillColor = Color.WhiteSmoke;
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.ForeColor = Color.White;
+            btnBack.Image = (Image)resources.GetObject("btnBack.Image");
+            btnBack.ImageSize = new Size(30, 30);
+            btnBack.Location = new Point(14, 3);
+            btnBack.Name = "btnBack";
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnBack.Size = new Size(30, 30);
+            btnBack.TabIndex = 51;
+            btnBack.Click += btnBack_Click;
             // 
             // panel2
             // 
@@ -102,7 +137,7 @@
             btnHide.ImageSize = new Size(22, 22);
             btnHide.Location = new Point(6, 2);
             btnHide.Name = "btnHide";
-            btnHide.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnHide.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnHide.Size = new Size(25, 25);
             btnHide.TabIndex = 39;
@@ -120,7 +155,7 @@
             guna2CircleButton3.ImageSize = new Size(25, 25);
             guna2CircleButton3.Location = new Point(37, 2);
             guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CircleButton3.Size = new Size(25, 25);
             guna2CircleButton3.TabIndex = 39;
@@ -138,7 +173,7 @@
             btnExit.ImageSize = new Size(22, 22);
             btnExit.Location = new Point(68, 2);
             btnExit.Name = "btnExit";
-            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnExit.Size = new Size(25, 25);
             btnExit.TabIndex = 38;
@@ -148,7 +183,7 @@
             // 
             uC_SignUp1.BackColor = Color.White;
             uC_SignUp1.Location = new Point(643, 30);
-            uC_SignUp1.Margin = new Padding(4, 4, 4, 4);
+            uC_SignUp1.Margin = new Padding(4);
             uC_SignUp1.Name = "uC_SignUp1";
             uC_SignUp1.Size = new Size(458, 618);
             uC_SignUp1.TabIndex = 27;
@@ -157,7 +192,7 @@
             // 
             uC_Login1.BackColor = Color.White;
             uC_Login1.Location = new Point(643, 230);
-            uC_Login1.Margin = new Padding(4, 4, 4, 4);
+            uC_Login1.Margin = new Padding(4);
             uC_Login1.Name = "uC_Login1";
             uC_Login1.Size = new Size(426, 427);
             uC_Login1.TabIndex = 25;
@@ -166,7 +201,7 @@
             // 
             uC_FogetPasswork1.BackColor = Color.White;
             uC_FogetPasswork1.Location = new Point(643, 230);
-            uC_FogetPasswork1.Margin = new Padding(4, 4, 4, 4);
+            uC_FogetPasswork1.Margin = new Padding(4);
             uC_FogetPasswork1.Name = "uC_FogetPasswork1";
             uC_FogetPasswork1.Size = new Size(426, 424);
             uC_FogetPasswork1.TabIndex = 26;
@@ -188,7 +223,7 @@
             // 
             uC_Shape1.BackColor = Color.White;
             uC_Shape1.Location = new Point(643, 30);
-            uC_Shape1.Margin = new Padding(4, 4, 4, 4);
+            uC_Shape1.Margin = new Padding(4);
             uC_Shape1.Name = "uC_Shape1";
             uC_Shape1.Size = new Size(426, 196);
             uC_Shape1.TabIndex = 28;
@@ -209,8 +244,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Silver;
-            ClientSize = new Size(1136, 707);
+            BackColor = Color.DimGray;
+            ClientSize = new Size(1136, 682);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Location = new Point(216, 148);
@@ -243,5 +278,7 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnExit;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private Label label24;
+        private Guna.UI2.WinForms.Guna2CircleButton btnBack;
     }
 }

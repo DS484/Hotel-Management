@@ -86,7 +86,7 @@
             dgvCustomer.EnableHeadersVisualStyles = false;
             dgvCustomer.GridColor = SystemColors.ControlDark;
             dgvCustomer.Location = new Point(2, 0);
-            dgvCustomer.Margin = new Padding(2);
+            dgvCustomer.Margin = new Padding(2, 3, 2, 3);
             dgvCustomer.MultiSelect = false;
             dgvCustomer.Name = "dgvCustomer";
             dgvCustomer.ReadOnly = true;
@@ -104,12 +104,13 @@
             dgvCustomer.RowTemplate.Height = 33;
             dgvCustomer.RowTemplate.ReadOnly = true;
             dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCustomer.Size = new Size(1049, 559);
+            dgvCustomer.Size = new Size(1199, 745);
             dgvCustomer.TabIndex = 35;
             // 
             // Column1
             // 
             Column1.HeaderText = "";
+            Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
             // 
@@ -173,13 +174,12 @@
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.Controls.Add(dgvCustomer);
             guna2ShadowPanel1.FillColor = Color.WhiteSmoke;
-            guna2ShadowPanel1.Location = new Point(13, 57);
-            guna2ShadowPanel1.Margin = new Padding(3, 2, 3, 2);
+            guna2ShadowPanel1.Location = new Point(15, 76);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 10;
             guna2ShadowPanel1.ShadowColor = Color.DimGray;
             guna2ShadowPanel1.ShadowShift = 10;
-            guna2ShadowPanel1.Size = new Size(1053, 563);
+            guna2ShadowPanel1.Size = new Size(1203, 751);
             guna2ShadowPanel1.TabIndex = 47;
             // 
             // btnSearch
@@ -194,11 +194,11 @@
             btnSearch.FillColor = Color.SeaGreen;
             btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(281, 17);
+            btnSearch.Location = new Point(321, 23);
             btnSearch.Margin = new Padding(1);
             btnSearch.Name = "btnSearch";
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(95, 30);
+            btnSearch.Size = new Size(109, 40);
             btnSearch.TabIndex = 46;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.Click += btnSearch_Click;
@@ -223,24 +223,25 @@
             cbbTimes.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
             cbbTimes.ListBackColor = Color.FromArgb(207, 236, 236);
             cbbTimes.ListTextColor = Color.DimGray;
-            cbbTimes.Location = new Point(15, 17);
+            cbbTimes.Location = new Point(17, 23);
+            cbbTimes.Margin = new Padding(3, 4, 3, 4);
             cbbTimes.Name = "cbbTimes";
             cbbTimes.Padding = new Padding(1);
-            cbbTimes.Size = new Size(259, 32);
+            cbbTimes.Size = new Size(296, 43);
             cbbTimes.TabIndex = 39;
             cbbTimes.Texts = "Chọn số lần đặt cần tìm...";
             // 
             // UC_TopCustomer
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(cbbTimes);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnSearch);
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "UC_TopCustomer";
-            Size = new Size(1079, 635);
+            Size = new Size(1233, 847);
             ((System.ComponentModel.ISupportInitialize)dgvCustomer).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);
             ResumeLayout(false);

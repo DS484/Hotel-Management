@@ -119,11 +119,10 @@
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(30, 30);
             btnHome.ImeMode = ImeMode.NoControl;
-            btnHome.Location = new Point(3, 228);
-            btnHome.Margin = new Padding(3, 2, 3, 2);
+            btnHome.Location = new Point(3, 304);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnHome.Size = new Size(230, 44);
+            btnHome.Size = new Size(263, 59);
             btnHome.TabIndex = 27;
             btnHome.Text = "Trang chủ";
             btnHome.TextAlign = HorizontalAlignment.Left;
@@ -136,10 +135,9 @@
             // panelMoving
             // 
             panelMoving.BackColor = Color.FromArgb(64, 64, 64);
-            panelMoving.Location = new Point(218, 228);
-            panelMoving.Margin = new Padding(3, 2, 3, 2);
+            panelMoving.Location = new Point(249, 304);
             panelMoving.Name = "panelMoving";
-            panelMoving.Size = new Size(15, 44);
+            panelMoving.Size = new Size(17, 59);
             panelMoving.TabIndex = 22;
             // 
             // guna2Elipse8
@@ -155,7 +153,6 @@
             // 
             splitContainer1.Dock = DockStyle.Fill;
             splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Margin = new Padding(3, 2, 3, 2);
             splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -182,8 +179,9 @@
             splitContainer1.Panel2.Controls.Add(panel2);
             splitContainer1.Panel2.Controls.Add(guna2Separator2);
             splitContainer1.Panel2.Controls.Add(uC_FamousLocation1);
-            splitContainer1.Size = new Size(1312, 660);
-            splitContainer1.SplitterDistance = 234;
+            splitContainer1.Size = new Size(1499, 880);
+            splitContainer1.SplitterDistance = 267;
+            splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 1;
             // 
             // btnHotelRevenue
@@ -203,11 +201,10 @@
             btnHotelRevenue.Image = (Image)resources.GetObject("btnHotelRevenue.Image");
             btnHotelRevenue.ImageAlign = HorizontalAlignment.Left;
             btnHotelRevenue.ImageSize = new Size(40, 40);
-            btnHotelRevenue.Location = new Point(3, 511);
-            btnHotelRevenue.Margin = new Padding(3, 2, 3, 2);
+            btnHotelRevenue.Location = new Point(3, 681);
             btnHotelRevenue.Name = "btnHotelRevenue";
             btnHotelRevenue.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnHotelRevenue.Size = new Size(230, 44);
+            btnHotelRevenue.Size = new Size(263, 59);
             btnHotelRevenue.TabIndex = 40;
             btnHotelRevenue.Text = "Doanh thu KS cao nhất";
             btnHotelRevenue.TextAlign = HorizontalAlignment.Left;
@@ -231,11 +228,10 @@
             btnLogOut.Image = (Image)resources.GetObject("btnLogOut.Image");
             btnLogOut.ImageAlign = HorizontalAlignment.Left;
             btnLogOut.ImageSize = new Size(30, 30);
-            btnLogOut.Location = new Point(3, 567);
-            btnLogOut.Margin = new Padding(3, 2, 3, 2);
+            btnLogOut.Location = new Point(3, 756);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogOut.Size = new Size(230, 44);
+            btnLogOut.Size = new Size(263, 59);
             btnLogOut.TabIndex = 39;
             btnLogOut.Text = "Đăng xuất";
             btnLogOut.TextAlign = HorizontalAlignment.Left;
@@ -248,13 +244,12 @@
             guna2ShadowPanel1.Controls.Add(pictureBox1);
             guna2ShadowPanel1.Controls.Add(lblShowPersonLogin);
             guna2ShadowPanel1.FillColor = Color.LightGray;
-            guna2ShadowPanel1.Location = new Point(3, 9);
-            guna2ShadowPanel1.Margin = new Padding(3, 2, 3, 2);
+            guna2ShadowPanel1.Location = new Point(3, 12);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 7;
             guna2ShadowPanel1.ShadowColor = Color.DimGray;
             guna2ShadowPanel1.ShadowShift = 18;
-            guna2ShadowPanel1.Size = new Size(235, 201);
+            guna2ShadowPanel1.Size = new Size(269, 268);
             guna2ShadowPanel1.TabIndex = 33;
             // 
             // lblEditInfo
@@ -262,10 +257,10 @@
             lblEditInfo.BackColor = Color.Transparent;
             lblEditInfo.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             lblEditInfo.ForeColor = Color.Black;
-            lblEditInfo.Location = new Point(64, 166);
+            lblEditInfo.Location = new Point(73, 221);
             lblEditInfo.Margin = new Padding(1);
             lblEditInfo.Name = "lblEditInfo";
-            lblEditInfo.Size = new Size(101, 19);
+            lblEditInfo.Size = new Size(127, 25);
             lblEditInfo.TabIndex = 37;
             lblEditInfo.Text = "Chỉnh sửa hồ sơ";
             // 
@@ -273,10 +268,9 @@
             // 
             pictureBox1.BackColor = Color.LightGray;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(43, 18);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(49, 24);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(148, 110);
+            pictureBox1.Size = new Size(169, 147);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 25;
             pictureBox1.TabStop = false;
@@ -284,14 +278,14 @@
             // lblShowPersonLogin
             // 
             lblShowPersonLogin.BackColor = Color.LightGray;
-            lblShowPersonLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblShowPersonLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblShowPersonLogin.ForeColor = Color.Black;
-            lblShowPersonLogin.Location = new Point(22, 132);
+            lblShowPersonLogin.Location = new Point(25, 176);
             lblShowPersonLogin.Name = "lblShowPersonLogin";
-            lblShowPersonLogin.Size = new Size(193, 32);
+            lblShowPersonLogin.Size = new Size(221, 43);
             lblShowPersonLogin.TabIndex = 26;
             lblShowPersonLogin.Text = "Tuấn Trần";
-            lblShowPersonLogin.TextAlign = ContentAlignment.MiddleCenter;
+            lblShowPersonLogin.TextAlign = ContentAlignment.TopCenter;
             // 
             // btnHotelManyReview
             // 
@@ -310,11 +304,10 @@
             btnHotelManyReview.Image = (Image)resources.GetObject("btnHotelManyReview.Image");
             btnHotelManyReview.ImageAlign = HorizontalAlignment.Left;
             btnHotelManyReview.ImageSize = new Size(40, 40);
-            btnHotelManyReview.Location = new Point(3, 452);
-            btnHotelManyReview.Margin = new Padding(3, 2, 3, 2);
+            btnHotelManyReview.Location = new Point(3, 603);
             btnHotelManyReview.Name = "btnHotelManyReview";
             btnHotelManyReview.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnHotelManyReview.Size = new Size(230, 44);
+            btnHotelManyReview.Size = new Size(263, 59);
             btnHotelManyReview.TabIndex = 30;
             btnHotelManyReview.Text = "KS được đánh giá nhiều";
             btnHotelManyReview.TextAlign = HorizontalAlignment.Left;
@@ -337,11 +330,10 @@
             btnVIPCustomer.Image = (Image)resources.GetObject("btnVIPCustomer.Image");
             btnVIPCustomer.ImageAlign = HorizontalAlignment.Left;
             btnVIPCustomer.ImageSize = new Size(30, 30);
-            btnVIPCustomer.Location = new Point(3, 395);
-            btnVIPCustomer.Margin = new Padding(3, 2, 3, 2);
+            btnVIPCustomer.Location = new Point(3, 527);
             btnVIPCustomer.Name = "btnVIPCustomer";
             btnVIPCustomer.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnVIPCustomer.Size = new Size(230, 44);
+            btnVIPCustomer.Size = new Size(263, 59);
             btnVIPCustomer.TabIndex = 29;
             btnVIPCustomer.Text = "Khách VIP";
             btnVIPCustomer.TextAlign = HorizontalAlignment.Left;
@@ -364,11 +356,10 @@
             btnTopCustomer.Image = (Image)resources.GetObject("btnTopCustomer.Image");
             btnTopCustomer.ImageAlign = HorizontalAlignment.Left;
             btnTopCustomer.ImageSize = new Size(30, 30);
-            btnTopCustomer.Location = new Point(3, 337);
-            btnTopCustomer.Margin = new Padding(3, 2, 3, 2);
+            btnTopCustomer.Location = new Point(3, 449);
             btnTopCustomer.Name = "btnTopCustomer";
             btnTopCustomer.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnTopCustomer.Size = new Size(230, 44);
+            btnTopCustomer.Size = new Size(263, 59);
             btnTopCustomer.TabIndex = 28;
             btnTopCustomer.Text = "Khách đặt nhiều";
             btnTopCustomer.TextAlign = HorizontalAlignment.Left;
@@ -379,10 +370,9 @@
             guna2Separator1.BackColor = Color.White;
             guna2Separator1.FillColor = Color.Black;
             guna2Separator1.FillThickness = 3;
-            guna2Separator1.Location = new Point(6, 215);
-            guna2Separator1.Margin = new Padding(3, 2, 3, 2);
+            guna2Separator1.Location = new Point(7, 287);
             guna2Separator1.Name = "guna2Separator1";
-            guna2Separator1.Size = new Size(221, 9);
+            guna2Separator1.Size = new Size(253, 12);
             guna2Separator1.TabIndex = 31;
             // 
             // btnFamouslocation
@@ -404,12 +394,11 @@
             btnFamouslocation.Image = (Image)resources.GetObject("btnFamouslocation.Image");
             btnFamouslocation.ImageAlign = HorizontalAlignment.Left;
             btnFamouslocation.ImageSize = new Size(30, 30);
-            btnFamouslocation.Location = new Point(3, 280);
-            btnFamouslocation.Margin = new Padding(3, 2, 3, 2);
+            btnFamouslocation.Location = new Point(3, 373);
             btnFamouslocation.Name = "btnFamouslocation";
             btnFamouslocation.PressedColor = Color.FromArgb(72, 145, 153);
             btnFamouslocation.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnFamouslocation.Size = new Size(230, 44);
+            btnFamouslocation.Size = new Size(263, 59);
             btnFamouslocation.TabIndex = 0;
             btnFamouslocation.Text = "Địa điểm ưa chuộng";
             btnFamouslocation.TextAlign = HorizontalAlignment.Left;
@@ -418,37 +407,37 @@
             // uC_HotelRevenue1
             // 
             uC_HotelRevenue1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_HotelRevenue1.Location = new Point(5, 38);
+            uC_HotelRevenue1.Location = new Point(6, 51);
             uC_HotelRevenue1.Margin = new Padding(1);
             uC_HotelRevenue1.Name = "uC_HotelRevenue1";
-            uC_HotelRevenue1.Size = new Size(1619, 953);
+            uC_HotelRevenue1.Size = new Size(1850, 1271);
             uC_HotelRevenue1.TabIndex = 45;
             // 
             // uC_HotelManyReview1
             // 
             uC_HotelManyReview1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_HotelManyReview1.Location = new Point(5, 38);
+            uC_HotelManyReview1.Location = new Point(6, 51);
             uC_HotelManyReview1.Margin = new Padding(1);
             uC_HotelManyReview1.Name = "uC_HotelManyReview1";
-            uC_HotelManyReview1.Size = new Size(1619, 1099);
+            uC_HotelManyReview1.Size = new Size(1850, 1465);
             uC_HotelManyReview1.TabIndex = 44;
             // 
             // uC_vipCustomer1
             // 
             uC_vipCustomer1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_vipCustomer1.Location = new Point(5, 38);
+            uC_vipCustomer1.Location = new Point(6, 51);
             uC_vipCustomer1.Margin = new Padding(1);
             uC_vipCustomer1.Name = "uC_vipCustomer1";
-            uC_vipCustomer1.Size = new Size(1619, 953);
+            uC_vipCustomer1.Size = new Size(1850, 1271);
             uC_vipCustomer1.TabIndex = 43;
             // 
             // uC_TopCustomer1
             // 
             uC_TopCustomer1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_TopCustomer1.Location = new Point(5, 38);
+            uC_TopCustomer1.Location = new Point(6, 51);
             uC_TopCustomer1.Margin = new Padding(1);
             uC_TopCustomer1.Name = "uC_TopCustomer1";
-            uC_TopCustomer1.Size = new Size(1619, 953);
+            uC_TopCustomer1.Size = new Size(1850, 1271);
             uC_TopCustomer1.TabIndex = 42;
             // 
             // panel2
@@ -456,10 +445,9 @@
             panel2.Controls.Add(btnHide);
             panel2.Controls.Add(guna2CircleButton3);
             panel2.Controls.Add(btnExit);
-            panel2.Location = new Point(979, 5);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(1119, 7);
             panel2.Name = "panel2";
-            panel2.Size = new Size(85, 23);
+            panel2.Size = new Size(97, 31);
             panel2.TabIndex = 40;
             // 
             // btnHide
@@ -473,12 +461,11 @@
             btnHide.ForeColor = Color.White;
             btnHide.Image = (Image)resources.GetObject("btnHide.Image");
             btnHide.ImageSize = new Size(22, 22);
-            btnHide.Location = new Point(6, 1);
-            btnHide.Margin = new Padding(3, 2, 3, 2);
+            btnHide.Location = new Point(7, 1);
             btnHide.Name = "btnHide";
             btnHide.ShadowDecoration.CustomizableEdges = customizableEdges15;
             btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnHide.Size = new Size(22, 19);
+            btnHide.Size = new Size(25, 25);
             btnHide.TabIndex = 39;
             // 
             // guna2CircleButton3
@@ -492,12 +479,11 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.ImageSize = new Size(25, 25);
-            guna2CircleButton3.Location = new Point(32, 1);
-            guna2CircleButton3.Margin = new Padding(3, 2, 3, 2);
+            guna2CircleButton3.Location = new Point(37, 1);
             guna2CircleButton3.Name = "guna2CircleButton3";
             guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(22, 19);
+            guna2CircleButton3.Size = new Size(25, 25);
             guna2CircleButton3.TabIndex = 39;
             // 
             // btnExit
@@ -511,12 +497,11 @@
             btnExit.ForeColor = Color.White;
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageSize = new Size(22, 22);
-            btnExit.Location = new Point(60, 1);
-            btnExit.Margin = new Padding(3, 2, 3, 2);
+            btnExit.Location = new Point(69, 1);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges17;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnExit.Size = new Size(22, 19);
+            btnExit.Size = new Size(25, 25);
             btnExit.TabIndex = 38;
             btnExit.Click += btnExit_Click;
             // 
@@ -524,19 +509,18 @@
             // 
             guna2Separator2.FillColor = Color.Black;
             guna2Separator2.FillThickness = 2;
-            guna2Separator2.Location = new Point(-11, 27);
-            guna2Separator2.Margin = new Padding(3, 2, 3, 2);
+            guna2Separator2.Location = new Point(-13, 36);
             guna2Separator2.Name = "guna2Separator2";
-            guna2Separator2.Size = new Size(1086, 7);
+            guna2Separator2.Size = new Size(1241, 9);
             guna2Separator2.TabIndex = 39;
             // 
             // uC_FamousLocation1
             // 
             uC_FamousLocation1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_FamousLocation1.Location = new Point(5, 38);
+            uC_FamousLocation1.Location = new Point(6, 51);
             uC_FamousLocation1.Margin = new Padding(1);
             uC_FamousLocation1.Name = "uC_FamousLocation1";
-            uC_FamousLocation1.Size = new Size(1619, 953);
+            uC_FamousLocation1.Size = new Size(1850, 1271);
             uC_FamousLocation1.TabIndex = 0;
             // 
             // guna2Elipse4
@@ -554,13 +538,12 @@
             // 
             // FAdmin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1312, 660);
+            ClientSize = new Size(1499, 880);
             Controls.Add(splitContainer1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "FAdmin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FAdmin";

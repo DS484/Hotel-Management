@@ -62,13 +62,13 @@ namespace Hotel_Management
                     FHome fHome = new FHome(uC_Login1.txtUsername.Text);
                     fHome.ShowDialog();
                 }
-                else if(role == 2)
+                else if (role == 2)
                 {
                     this.Hide();
                     FManager fManager = new FManager(uC_Login1.txtUsername.Text);
                     fManager.ShowDialog();
                 }
-                else if(role == 1)
+                else if (role == 1)
                 {
                     this.Hide();
                     FAdmin fAdmin = new FAdmin(uC_Login1.txtUsername.Text);
@@ -80,8 +80,8 @@ namespace Hotel_Management
             else
             {
                 MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                uC_Login1.txtUsername.Text = "";
-                uC_Login1.txtPassword.Text = "";
+                /*uC_Login1.txtUsername.Text = "";
+                uC_Login1.txtPassword.Text = "";*/
             }
         }
 
@@ -154,6 +154,13 @@ namespace Hotel_Management
         private void btnExit_Click_2(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FHome f = new FHome();
+            f.Show();
         }
     }
 }

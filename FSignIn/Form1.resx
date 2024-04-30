@@ -121,7 +121,7 @@
   <data name="guna2PictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        VQAAAVUB1l9HcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAT6SURBVHhe7Zhv
+        WwAAAVsBctYLjAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAT6SURBVHhe7Zhv
         TBtlHMdL0WRzxuyFiYlvfLG4F8YXxm2GITEkA8MfGW1HXUhpNhySOQ2UiU4FIqCCiVk2/7xiLujwhRCT
         JcZsbmGWMdhY0AyNEba48Ke90ruT8Vd6x0Yff3f0aa7kt17bwXqdz4tPQn587+j3c8fTe85ECHlgMH/D
         fWY+OTab/vWoZD7lO4ZlVoMOUxFTB5eZ3naTqJwYJabOaWL6YWY7ltWCDlORtHbveSrA3O4hpq4ZRcIX
@@ -146,6 +146,9 @@
         zoQQ038JMJpkAsvXgAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -390,16 +393,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaNykSf8f4nkrsgvojRQAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="guna2Elipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="guna2Elipse2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>161, 17</value>
-  </metadata>
-  <metadata name="guna2Elipse3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>305, 17</value>
-  </metadata>
-  <metadata name="guna2Elipse4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>449, 17</value>
   </metadata>
 </root>

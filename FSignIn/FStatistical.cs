@@ -96,7 +96,7 @@ namespace Hotel_Management
         private void FStatistical_Load(object sender, EventArgs e)
         {
             string[] typeChart = { "Cột", "Tròn" };
-            panel1.BackColor = Color.FromArgb(20, 0, 0, 0);
+            panel1.BackColor = Color.FromArgb(0, 0, 0, 0);
 
 
             for (int i = typeChart.Length - 1; i >= 0; i--)
@@ -107,7 +107,7 @@ namespace Hotel_Management
                     Text = typeChart[i],
                     TextAlign = ContentAlignment.MiddleLeft,
                     Dock = DockStyle.Top,
-                    Height = 25,
+                    Height = 50,
                     FlatStyle = FlatStyle.Flat,
                     Padding = new Padding(10, 0, 0, 0),
                     FlatAppearance =
