@@ -177,7 +177,7 @@ namespace Hotel_Management
 
                     menuForm = new FMenu(userId);
                     menuForm.StartPosition = FormStartPosition.Manual;
-                    menuForm.SetLocation(btnMenu.Location.X - 250, btnMenu.Location.Y + 80);
+                    menuForm.SetLocation(btnMenu.Location.X -1, btnMenu.Location.Y + 180);
                     menuForm.Show();
                     isMenuVisible = false;
                 }
@@ -226,6 +226,11 @@ namespace Hotel_Management
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void slidePic_Click(object sender, EventArgs e)
         {
 
         }

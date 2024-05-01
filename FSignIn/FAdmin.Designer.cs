@@ -31,8 +31,8 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAdmin));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -44,9 +44,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse15 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnHome = new Guna.UI2.WinForms.Guna2Button();
@@ -55,6 +52,10 @@
             guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             splitContainer1 = new SplitContainer();
+            panel6 = new Panel();
+            label2 = new Label();
+            PicFlashingLogo = new PictureBox();
+            label3 = new Label();
             btnHotelRevenue = new Guna.UI2.WinForms.Guna2Button();
             btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -66,26 +67,24 @@
             btnTopCustomer = new Guna.UI2.WinForms.Guna2Button();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             btnFamouslocation = new Guna.UI2.WinForms.Guna2Button();
-            uC_HotelRevenue1 = new All_Control.UC_HotelRevenue();
-            uC_HotelManyReview1 = new All_Control.UC_HotelManyReview();
-            uC_vipCustomer1 = new All_Control.UC_VIPCustomer();
-            uC_TopCustomer1 = new All_Control.UC_TopCustomer();
-            panel2 = new Panel();
-            btnHide = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2CircleButton3 = new Guna.UI2.WinForms.Guna2CircleButton();
-            btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
-            guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             uC_FamousLocation1 = new All_Control.UC_FamousLocation();
+            uC_TopCustomer1 = new All_Control.UC_TopCustomer();
+            uC_vipCustomer1 = new All_Control.UC_VIPCustomer();
+            uC_HotelManyReview1 = new All_Control.UC_HotelManyReview();
+            uC_HotelRevenue1 = new All_Control.UC_HotelRevenue();
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            pictureHome = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).BeginInit();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
             SuspendLayout();
             // 
             // guna2Elipse1
@@ -119,13 +118,14 @@
             btnHome.ImageAlign = HorizontalAlignment.Left;
             btnHome.ImageSize = new Size(30, 30);
             btnHome.ImeMode = ImeMode.NoControl;
-            btnHome.Location = new Point(3, 304);
+            btnHome.Location = new Point(7, 304);
             btnHome.Name = "btnHome";
             btnHome.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnHome.Size = new Size(263, 59);
+            btnHome.Size = new Size(253, 59);
             btnHome.TabIndex = 27;
             btnHome.Text = "Trang chủ";
             btnHome.TextAlign = HorizontalAlignment.Left;
+            btnHome.Click += btnHome_Click;
             // 
             // guna2Elipse10
             // 
@@ -135,7 +135,7 @@
             // panelMoving
             // 
             panelMoving.BackColor = Color.FromArgb(64, 64, 64);
-            panelMoving.Location = new Point(249, 304);
+            panelMoving.Location = new Point(243, 304);
             panelMoving.Name = "panelMoving";
             panelMoving.Size = new Size(17, 59);
             panelMoving.TabIndex = 22;
@@ -158,10 +158,11 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.BackColor = Color.White;
+            splitContainer1.Panel1.Controls.Add(panel6);
+            splitContainer1.Panel1.Controls.Add(panelMoving);
             splitContainer1.Panel1.Controls.Add(btnHotelRevenue);
             splitContainer1.Panel1.Controls.Add(btnLogOut);
             splitContainer1.Panel1.Controls.Add(guna2ShadowPanel1);
-            splitContainer1.Panel1.Controls.Add(panelMoving);
             splitContainer1.Panel1.Controls.Add(btnHotelManyReview);
             splitContainer1.Panel1.Controls.Add(btnVIPCustomer);
             splitContainer1.Panel1.Controls.Add(btnTopCustomer);
@@ -172,17 +173,59 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.BackColor = Color.FromArgb(207, 236, 236);
-            splitContainer1.Panel2.Controls.Add(uC_HotelRevenue1);
-            splitContainer1.Panel2.Controls.Add(uC_HotelManyReview1);
-            splitContainer1.Panel2.Controls.Add(uC_vipCustomer1);
-            splitContainer1.Panel2.Controls.Add(uC_TopCustomer1);
-            splitContainer1.Panel2.Controls.Add(panel2);
-            splitContainer1.Panel2.Controls.Add(guna2Separator2);
+            splitContainer1.Panel2.Controls.Add(pictureHome);
             splitContainer1.Panel2.Controls.Add(uC_FamousLocation1);
+            splitContainer1.Panel2.Controls.Add(uC_TopCustomer1);
+            splitContainer1.Panel2.Controls.Add(uC_vipCustomer1);
+            splitContainer1.Panel2.Controls.Add(uC_HotelManyReview1);
+            splitContainer1.Panel2.Controls.Add(uC_HotelRevenue1);
             splitContainer1.Size = new Size(1499, 880);
             splitContainer1.SplitterDistance = 267;
             splitContainer1.SplitterWidth = 5;
             splitContainer1.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(label2);
+            panel6.Controls.Add(PicFlashingLogo);
+            panel6.Controls.Add(label3);
+            panel6.Location = new Point(60, 778);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(161, 63);
+            panel6.TabIndex = 41;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.WhiteSmoke;
+            label2.Image = (Image)resources.GetObject("label2.Image");
+            label2.Location = new Point(57, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 10);
+            label2.TabIndex = 26;
+            // 
+            // PicFlashingLogo
+            // 
+            PicFlashingLogo.BackColor = Color.White;
+            PicFlashingLogo.Image = (Image)resources.GetObject("PicFlashingLogo.Image");
+            PicFlashingLogo.Location = new Point(-1, 0);
+            PicFlashingLogo.Name = "PicFlashingLogo";
+            PicFlashingLogo.Size = new Size(35, 20);
+            PicFlashingLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            PicFlashingLogo.TabIndex = 25;
+            PicFlashingLogo.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.White;
+            label3.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(3, 122, 139);
+            label3.Location = new Point(13, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(150, 64);
+            label3.TabIndex = 24;
+            label3.Text = "travelstrip";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnHotelRevenue
             // 
@@ -201,10 +244,10 @@
             btnHotelRevenue.Image = (Image)resources.GetObject("btnHotelRevenue.Image");
             btnHotelRevenue.ImageAlign = HorizontalAlignment.Left;
             btnHotelRevenue.ImageSize = new Size(40, 40);
-            btnHotelRevenue.Location = new Point(3, 681);
+            btnHotelRevenue.Location = new Point(7, 629);
             btnHotelRevenue.Name = "btnHotelRevenue";
             btnHotelRevenue.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnHotelRevenue.Size = new Size(263, 59);
+            btnHotelRevenue.Size = new Size(253, 59);
             btnHotelRevenue.TabIndex = 40;
             btnHotelRevenue.Text = "Doanh thu KS cao nhất";
             btnHotelRevenue.TextAlign = HorizontalAlignment.Left;
@@ -228,10 +271,10 @@
             btnLogOut.Image = (Image)resources.GetObject("btnLogOut.Image");
             btnLogOut.ImageAlign = HorizontalAlignment.Left;
             btnLogOut.ImageSize = new Size(30, 30);
-            btnLogOut.Location = new Point(3, 756);
+            btnLogOut.Location = new Point(7, 694);
             btnLogOut.Name = "btnLogOut";
             btnLogOut.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnLogOut.Size = new Size(263, 59);
+            btnLogOut.Size = new Size(253, 59);
             btnLogOut.TabIndex = 39;
             btnLogOut.Text = "Đăng xuất";
             btnLogOut.TextAlign = HorizontalAlignment.Left;
@@ -304,10 +347,10 @@
             btnHotelManyReview.Image = (Image)resources.GetObject("btnHotelManyReview.Image");
             btnHotelManyReview.ImageAlign = HorizontalAlignment.Left;
             btnHotelManyReview.ImageSize = new Size(40, 40);
-            btnHotelManyReview.Location = new Point(3, 603);
+            btnHotelManyReview.Location = new Point(7, 564);
             btnHotelManyReview.Name = "btnHotelManyReview";
             btnHotelManyReview.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnHotelManyReview.Size = new Size(263, 59);
+            btnHotelManyReview.Size = new Size(253, 59);
             btnHotelManyReview.TabIndex = 30;
             btnHotelManyReview.Text = "KS được đánh giá nhiều";
             btnHotelManyReview.TextAlign = HorizontalAlignment.Left;
@@ -330,10 +373,10 @@
             btnVIPCustomer.Image = (Image)resources.GetObject("btnVIPCustomer.Image");
             btnVIPCustomer.ImageAlign = HorizontalAlignment.Left;
             btnVIPCustomer.ImageSize = new Size(30, 30);
-            btnVIPCustomer.Location = new Point(3, 527);
+            btnVIPCustomer.Location = new Point(7, 499);
             btnVIPCustomer.Name = "btnVIPCustomer";
             btnVIPCustomer.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnVIPCustomer.Size = new Size(263, 59);
+            btnVIPCustomer.Size = new Size(253, 59);
             btnVIPCustomer.TabIndex = 29;
             btnVIPCustomer.Text = "Khách VIP";
             btnVIPCustomer.TextAlign = HorizontalAlignment.Left;
@@ -356,10 +399,10 @@
             btnTopCustomer.Image = (Image)resources.GetObject("btnTopCustomer.Image");
             btnTopCustomer.ImageAlign = HorizontalAlignment.Left;
             btnTopCustomer.ImageSize = new Size(30, 30);
-            btnTopCustomer.Location = new Point(3, 449);
+            btnTopCustomer.Location = new Point(7, 434);
             btnTopCustomer.Name = "btnTopCustomer";
             btnTopCustomer.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnTopCustomer.Size = new Size(263, 59);
+            btnTopCustomer.Size = new Size(253, 59);
             btnTopCustomer.TabIndex = 28;
             btnTopCustomer.Text = "Khách đặt nhiều";
             btnTopCustomer.TextAlign = HorizontalAlignment.Left;
@@ -394,134 +437,65 @@
             btnFamouslocation.Image = (Image)resources.GetObject("btnFamouslocation.Image");
             btnFamouslocation.ImageAlign = HorizontalAlignment.Left;
             btnFamouslocation.ImageSize = new Size(30, 30);
-            btnFamouslocation.Location = new Point(3, 373);
+            btnFamouslocation.Location = new Point(7, 369);
             btnFamouslocation.Name = "btnFamouslocation";
             btnFamouslocation.PressedColor = Color.FromArgb(72, 145, 153);
             btnFamouslocation.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnFamouslocation.Size = new Size(263, 59);
+            btnFamouslocation.Size = new Size(253, 59);
             btnFamouslocation.TabIndex = 0;
             btnFamouslocation.Text = "Địa điểm ưa chuộng";
             btnFamouslocation.TextAlign = HorizontalAlignment.Left;
             btnFamouslocation.Click += btnFamouslocation_Click;
             // 
-            // uC_HotelRevenue1
+            // uC_FamousLocation1
             // 
-            uC_HotelRevenue1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_HotelRevenue1.Location = new Point(6, 51);
-            uC_HotelRevenue1.Margin = new Padding(1);
-            uC_HotelRevenue1.Name = "uC_HotelRevenue1";
-            uC_HotelRevenue1.Size = new Size(1850, 1271);
-            uC_HotelRevenue1.TabIndex = 45;
+            uC_FamousLocation1.BackColor = Color.WhiteSmoke;
+            uC_FamousLocation1.Dock = DockStyle.Fill;
+            uC_FamousLocation1.Location = new Point(0, 0);
+            uC_FamousLocation1.Margin = new Padding(2, 3, 2, 3);
+            uC_FamousLocation1.Name = "uC_FamousLocation1";
+            uC_FamousLocation1.Size = new Size(1227, 880);
+            uC_FamousLocation1.TabIndex = 4;
+            // 
+            // uC_TopCustomer1
+            // 
+            uC_TopCustomer1.BackColor = Color.WhiteSmoke;
+            uC_TopCustomer1.Dock = DockStyle.Fill;
+            uC_TopCustomer1.Location = new Point(0, 0);
+            uC_TopCustomer1.Margin = new Padding(2, 3, 2, 3);
+            uC_TopCustomer1.Name = "uC_TopCustomer1";
+            uC_TopCustomer1.Size = new Size(1227, 880);
+            uC_TopCustomer1.TabIndex = 3;
+            // 
+            // uC_vipCustomer1
+            // 
+            uC_vipCustomer1.BackColor = Color.WhiteSmoke;
+            uC_vipCustomer1.Dock = DockStyle.Fill;
+            uC_vipCustomer1.Location = new Point(0, 0);
+            uC_vipCustomer1.Margin = new Padding(2, 3, 2, 3);
+            uC_vipCustomer1.Name = "uC_vipCustomer1";
+            uC_vipCustomer1.Size = new Size(1227, 880);
+            uC_vipCustomer1.TabIndex = 2;
             // 
             // uC_HotelManyReview1
             // 
             uC_HotelManyReview1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_HotelManyReview1.Location = new Point(6, 51);
-            uC_HotelManyReview1.Margin = new Padding(1);
+            uC_HotelManyReview1.Dock = DockStyle.Fill;
+            uC_HotelManyReview1.Location = new Point(0, 0);
+            uC_HotelManyReview1.Margin = new Padding(2, 3, 2, 3);
             uC_HotelManyReview1.Name = "uC_HotelManyReview1";
-            uC_HotelManyReview1.Size = new Size(1850, 1465);
-            uC_HotelManyReview1.TabIndex = 44;
+            uC_HotelManyReview1.Size = new Size(1227, 880);
+            uC_HotelManyReview1.TabIndex = 1;
             // 
-            // uC_vipCustomer1
+            // uC_HotelRevenue1
             // 
-            uC_vipCustomer1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_vipCustomer1.Location = new Point(6, 51);
-            uC_vipCustomer1.Margin = new Padding(1);
-            uC_vipCustomer1.Name = "uC_vipCustomer1";
-            uC_vipCustomer1.Size = new Size(1850, 1271);
-            uC_vipCustomer1.TabIndex = 43;
-            // 
-            // uC_TopCustomer1
-            // 
-            uC_TopCustomer1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_TopCustomer1.Location = new Point(6, 51);
-            uC_TopCustomer1.Margin = new Padding(1);
-            uC_TopCustomer1.Name = "uC_TopCustomer1";
-            uC_TopCustomer1.Size = new Size(1850, 1271);
-            uC_TopCustomer1.TabIndex = 42;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(btnHide);
-            panel2.Controls.Add(guna2CircleButton3);
-            panel2.Controls.Add(btnExit);
-            panel2.Location = new Point(1119, 7);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(97, 31);
-            panel2.TabIndex = 40;
-            // 
-            // btnHide
-            // 
-            btnHide.DisabledState.BorderColor = Color.DarkGray;
-            btnHide.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnHide.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnHide.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnHide.FillColor = Color.Transparent;
-            btnHide.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnHide.ForeColor = Color.White;
-            btnHide.Image = (Image)resources.GetObject("btnHide.Image");
-            btnHide.ImageSize = new Size(22, 22);
-            btnHide.Location = new Point(7, 1);
-            btnHide.Name = "btnHide";
-            btnHide.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnHide.Size = new Size(25, 25);
-            btnHide.TabIndex = 39;
-            // 
-            // guna2CircleButton3
-            // 
-            guna2CircleButton3.DisabledState.BorderColor = Color.DarkGray;
-            guna2CircleButton3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2CircleButton3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2CircleButton3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2CircleButton3.FillColor = Color.Transparent;
-            guna2CircleButton3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2CircleButton3.ForeColor = Color.White;
-            guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
-            guna2CircleButton3.ImageSize = new Size(25, 25);
-            guna2CircleButton3.Location = new Point(37, 1);
-            guna2CircleButton3.Name = "guna2CircleButton3";
-            guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(25, 25);
-            guna2CircleButton3.TabIndex = 39;
-            // 
-            // btnExit
-            // 
-            btnExit.DisabledState.BorderColor = Color.DarkGray;
-            btnExit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnExit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnExit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnExit.FillColor = Color.Transparent;
-            btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btnExit.ForeColor = Color.White;
-            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.ImageSize = new Size(22, 22);
-            btnExit.Location = new Point(69, 1);
-            btnExit.Name = "btnExit";
-            btnExit.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnExit.Size = new Size(25, 25);
-            btnExit.TabIndex = 38;
-            btnExit.Click += btnExit_Click;
-            // 
-            // guna2Separator2
-            // 
-            guna2Separator2.FillColor = Color.Black;
-            guna2Separator2.FillThickness = 2;
-            guna2Separator2.Location = new Point(-13, 36);
-            guna2Separator2.Name = "guna2Separator2";
-            guna2Separator2.Size = new Size(1241, 9);
-            guna2Separator2.TabIndex = 39;
-            // 
-            // uC_FamousLocation1
-            // 
-            uC_FamousLocation1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_FamousLocation1.Location = new Point(6, 51);
-            uC_FamousLocation1.Margin = new Padding(1);
-            uC_FamousLocation1.Name = "uC_FamousLocation1";
-            uC_FamousLocation1.Size = new Size(1850, 1271);
-            uC_FamousLocation1.TabIndex = 0;
+            uC_HotelRevenue1.BackColor = Color.WhiteSmoke;
+            uC_HotelRevenue1.Dock = DockStyle.Fill;
+            uC_HotelRevenue1.Location = new Point(0, 0);
+            uC_HotelRevenue1.Margin = new Padding(2, 3, 2, 3);
+            uC_HotelRevenue1.Name = "uC_HotelRevenue1";
+            uC_HotelRevenue1.Size = new Size(1227, 880);
+            uC_HotelRevenue1.TabIndex = 0;
             // 
             // guna2Elipse4
             // 
@@ -535,6 +509,17 @@
             // guna2Elipse6
             // 
             guna2Elipse6.BorderRadius = 18;
+            // 
+            // pictureHome
+            // 
+            pictureHome.Dock = DockStyle.Fill;
+            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
+            pictureHome.Location = new Point(0, 0);
+            pictureHome.Name = "pictureHome";
+            pictureHome.Size = new Size(1227, 880);
+            pictureHome.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureHome.TabIndex = 6;
+            pictureHome.TabStop = false;
             // 
             // FAdmin
             // 
@@ -551,10 +536,12 @@
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).EndInit();
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
             ResumeLayout(false);
         }
 
@@ -582,15 +569,15 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private Guna.UI2.WinForms.Guna2Button btnHotelRevenue;
-        private All_Control.UC_FamousLocation uC_FamousLocation1;
-        private Panel panel2;
-        private Guna.UI2.WinForms.Guna2CircleButton btnHide;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton3;
-        private Guna.UI2.WinForms.Guna2CircleButton btnExit;
-        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
-        private All_Control.UC_TopCustomer uC_TopCustomer1;
-        private All_Control.UC_VIPCustomer uC_vipCustomer1;
-        private All_Control.UC_HotelManyReview uC_HotelManyReview1;
+        private Panel panel6;
+        private Label label2;
+        private PictureBox PicFlashingLogo;
+        private Label label3;
         private All_Control.UC_HotelRevenue uC_HotelRevenue1;
+        private All_Control.UC_HotelManyReview uC_HotelManyReview1;
+        private All_Control.UC_VIPCustomer uC_vipCustomer1;
+        private All_Control.UC_TopCustomer uC_TopCustomer1;
+        private All_Control.UC_FamousLocation uC_FamousLocation1;
+        private PictureBox pictureHome;
     }
 }

@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Service));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Service));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnAddService = new Guna.UI2.WinForms.Guna2Button();
             txtSearchService = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,40 +54,42 @@
             Column1 = new DataGridViewTextBoxColumn();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            btnReload = new Guna.UI2.WinForms.Guna2CircleButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvService).BeginInit();
             SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            guna2Elipse1.BorderRadius = 10;
+            guna2Elipse1.BorderRadius = 18;
             guna2Elipse1.TargetControl = this;
             // 
             // btnAddService
             // 
-            btnAddService.BackColor = Color.FromArgb(207, 236, 236);
-            btnAddService.BorderRadius = 18;
-            btnAddService.CustomizableEdges = customizableEdges3;
+            btnAddService.BackColor = Color.Transparent;
+            btnAddService.BorderRadius = 15;
+            btnAddService.BorderThickness = 2;
+            btnAddService.CustomizableEdges = customizableEdges4;
             btnAddService.DisabledState.BorderColor = Color.DarkGray;
             btnAddService.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddService.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAddService.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAddService.FillColor = Color.DarkOliveGreen;
-            btnAddService.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddService.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddService.ForeColor = Color.White;
-            btnAddService.Location = new Point(848, 21);
-            btnAddService.Margin = new Padding(3, 2, 3, 2);
+            btnAddService.Location = new Point(568, 24);
             btnAddService.Name = "btnAddService";
-            btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAddService.Size = new Size(164, 32);
+            btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnAddService.Size = new Size(163, 47);
             btnAddService.TabIndex = 10;
             btnAddService.Text = "Thêm dịch vụ";
             // 
             // txtSearchService
             // 
-            txtSearchService.BorderColor = Color.Gray;
-            txtSearchService.BorderRadius = 18;
-            txtSearchService.CustomizableEdges = customizableEdges5;
+            txtSearchService.BorderColor = Color.DarkOliveGreen;
+            txtSearchService.BorderRadius = 15;
+            txtSearchService.BorderThickness = 2;
+            txtSearchService.CustomizableEdges = customizableEdges6;
             txtSearchService.DefaultText = "";
             txtSearchService.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchService.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -98,25 +101,25 @@
             txtSearchService.ForeColor = Color.DimGray;
             txtSearchService.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchService.IconLeft = (Image)resources.GetObject("txtSearchService.IconLeft");
-            txtSearchService.IconLeftSize = new Size(40, 40);
-            txtSearchService.Location = new Point(14, 21);
-            txtSearchService.Margin = new Padding(6, 7, 6, 7);
+            txtSearchService.IconLeftSize = new Size(30, 30);
+            txtSearchService.Location = new Point(16, 24);
+            txtSearchService.Margin = new Padding(7, 9, 7, 9);
             txtSearchService.Name = "txtSearchService";
             txtSearchService.PasswordChar = '\0';
             txtSearchService.PlaceholderForeColor = Color.DimGray;
-            txtSearchService.PlaceholderText = "|Nhập mã phòng cần tìm...";
+            txtSearchService.PlaceholderText = "|Nhập mã DV cần tìm...";
             txtSearchService.SelectedText = "";
-            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtSearchService.Size = new Size(259, 32);
+            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            txtSearchService.Size = new Size(327, 47);
             txtSearchService.TabIndex = 8;
             // 
             // panel1
             // 
+            panel1.BackColor = Color.LightGray;
             panel1.Controls.Add(dgvService);
-            panel1.Location = new Point(14, 58);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(19, 79);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1140, 565);
+            panel1.Size = new Size(1194, 749);
             panel1.TabIndex = 11;
             // 
             // dgvService
@@ -127,19 +130,19 @@
             dgvService.AllowUserToResizeRows = false;
             dgvService.Anchor = AnchorStyles.None;
             dgvService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvService.BackgroundColor = Color.FromArgb(222, 241, 241);
+            dgvService.BackgroundColor = Color.White;
             dgvService.BorderStyle = BorderStyle.None;
             dgvService.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvService.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvService.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvService.ColumnHeadersHeight = 50;
+            dgvService.ColumnHeadersHeight = 75;
             dgvService.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvService.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column21, Column22, Column1 });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -151,9 +154,9 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvService.DefaultCellStyle = dataGridViewCellStyle2;
             dgvService.EnableHeadersVisualStyles = false;
-            dgvService.GridColor = SystemColors.ControlDark;
-            dgvService.Location = new Point(0, 2);
-            dgvService.Margin = new Padding(2, 2, 2, 2);
+            dgvService.GridColor = Color.White;
+            dgvService.Location = new Point(10, 20);
+            dgvService.Margin = new Padding(2, 3, 2, 3);
             dgvService.MultiSelect = false;
             dgvService.Name = "dgvService";
             dgvService.ReadOnly = true;
@@ -171,7 +174,7 @@
             dgvService.RowTemplate.Height = 33;
             dgvService.RowTemplate.ReadOnly = true;
             dgvService.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvService.Size = new Size(1061, 559);
+            dgvService.Size = new Size(1173, 725);
             dgvService.TabIndex = 36;
             dgvService.CellClick += dgvService_CellClick;
             // 
@@ -186,7 +189,7 @@
             // Column13
             // 
             Column13.HeaderText = "Phòng";
-            Column13.MinimumWidth = 200;
+            Column13.MinimumWidth = 100;
             Column13.Name = "Column13";
             Column13.ReadOnly = true;
             // 
@@ -194,7 +197,7 @@
             // 
             Column14.FillWeight = 79.85747F;
             Column14.HeaderText = "Mã dịch vụ";
-            Column14.MinimumWidth = 380;
+            Column14.MinimumWidth = 200;
             Column14.Name = "Column14";
             Column14.ReadOnly = true;
             // 
@@ -202,7 +205,7 @@
             // 
             Column15.FillWeight = 79.85747F;
             Column15.HeaderText = "Loại dịch vụ";
-            Column15.MinimumWidth = 600;
+            Column15.MinimumWidth = 400;
             Column15.Name = "Column15";
             Column15.ReadOnly = true;
             // 
@@ -231,42 +234,64 @@
             // 
             // guna2Elipse2
             // 
-            guna2Elipse2.BorderRadius = 30;
+            guna2Elipse2.BorderRadius = 18;
+            guna2Elipse2.TargetControl = panel1;
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.FromArgb(207, 236, 236);
-            btnSearch.BorderRadius = 18;
-            btnSearch.CustomizableEdges = customizableEdges1;
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges2;
             btnSearch.DisabledState.BorderColor = Color.DarkGray;
             btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.SeaGreen;
-            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(281, 23);
-            btnSearch.Margin = new Padding(2, 2, 2, 2);
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(2, 3, 2, 3);
             btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(95, 30);
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnSearch.Size = new Size(163, 47);
             btnSearch.TabIndex = 23;
             btnSearch.Text = "Tìm kiếm";
             btnSearch.Click += btnSearch_Click;
             // 
+            // btnReload
+            // 
+            btnReload.BorderColor = Color.Yellow;
+            btnReload.BorderThickness = 1;
+            btnReload.DisabledState.BorderColor = Color.DarkGray;
+            btnReload.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnReload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnReload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnReload.FillColor = Color.Transparent;
+            btnReload.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnReload.ForeColor = Color.White;
+            btnReload.Image = (Image)resources.GetObject("btnReload.Image");
+            btnReload.ImageSize = new Size(35, 35);
+            btnReload.Location = new Point(1155, 24);
+            btnReload.Name = "btnReload";
+            btnReload.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnReload.Size = new Size(47, 47);
+            btnReload.TabIndex = 40;
+            // 
             // UC_Service
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(207, 236, 236);
+            BackColor = Color.WhiteSmoke;
+            Controls.Add(btnReload);
             Controls.Add(btnSearch);
             Controls.Add(btnAddService);
             Controls.Add(txtSearchService);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "UC_Service";
-            Size = new Size(1079, 635);
+            Size = new Size(1233, 847);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvService).EndInit();
             ResumeLayout(false);
@@ -288,5 +313,6 @@
         private DataGridViewImageColumn Column21;
         private DataGridViewImageColumn Column22;
         private DataGridViewTextBoxColumn Column1;
+        public Guna.UI2.WinForms.Guna2CircleButton btnReload;
     }
 }

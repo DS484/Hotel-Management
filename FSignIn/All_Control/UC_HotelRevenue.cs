@@ -104,5 +104,9 @@ namespace Hotel_Management.All_Control
             }
         }
 
+        private void cbbRevenue_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

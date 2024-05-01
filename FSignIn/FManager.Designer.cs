@@ -62,14 +62,12 @@
             btnServiceManager = new Guna.UI2.WinForms.Guna2Button();
             btnHome = new Guna.UI2.WinForms.Guna2Button();
             btnRoomManager = new Guna.UI2.WinForms.Guna2Button();
-            label1 = new Label();
-            lblReset = new Label();
-            pictureHome = new PictureBox();
-            uC_Customers1 = new All_Control.UC_Customers();
-            uC_Bill1 = new All_Control.UC_Bill();
-            uC_Service1 = new All_Control.UC_Service();
-            uC_Feedback1 = new All_Control.UC_Feedback();
+            pictureHomes = new PictureBox();
             uC_Room1 = new All_Control.UC_Room();
+            uC_Service1 = new All_Control.UC_Service();
+            uC_Bill1 = new All_Control.UC_Bill();
+            uC_Customers2 = new All_Control.UC_Customers();
+            uC_Feedback1 = new All_Control.UC_Feedback();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -92,7 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)PicFlashingLogo).BeginInit();
             guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureHome).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHomes).BeginInit();
             SuspendLayout();
             // 
             // splitContainer1
@@ -118,15 +116,13 @@
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.BackColor = Color.FromArgb(207, 236, 236);
-            splitContainer1.Panel2.Controls.Add(label1);
-            splitContainer1.Panel2.Controls.Add(lblReset);
-            splitContainer1.Panel2.Controls.Add(pictureHome);
-            splitContainer1.Panel2.Controls.Add(uC_Customers1);
-            splitContainer1.Panel2.Controls.Add(uC_Bill1);
-            splitContainer1.Panel2.Controls.Add(uC_Service1);
-            splitContainer1.Panel2.Controls.Add(uC_Feedback1);
+            splitContainer1.Panel2.BackColor = Color.WhiteSmoke;
+            splitContainer1.Panel2.Controls.Add(pictureHomes);
             splitContainer1.Panel2.Controls.Add(uC_Room1);
+            splitContainer1.Panel2.Controls.Add(uC_Service1);
+            splitContainer1.Panel2.Controls.Add(uC_Bill1);
+            splitContainer1.Panel2.Controls.Add(uC_Customers2);
+            splitContainer1.Panel2.Controls.Add(uC_Feedback1);
             splitContainer1.Size = new Size(1500, 882);
             splitContainer1.SplitterDistance = 268;
             splitContainer1.TabIndex = 0;
@@ -433,86 +429,61 @@
             btnRoomManager.TextAlign = HorizontalAlignment.Left;
             btnRoomManager.Click += btnRoomManager_Click;
             // 
-            // label1
+            // pictureHomes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(1132, 12);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 23);
-            label1.TabIndex = 34;
-            label1.Text = "Làm mới";
-            // 
-            // lblReset
-            // 
-            lblReset.AutoSize = true;
-            lblReset.BackColor = Color.FromArgb(207, 236, 236);
-            lblReset.Cursor = Cursors.Hand;
-            lblReset.Font = new Font("Times New Roman", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            lblReset.ForeColor = Color.Black;
-            lblReset.Location = new Point(1102, 1);
-            lblReset.Margin = new Padding(2, 0, 2, 0);
-            lblReset.Name = "lblReset";
-            lblReset.Size = new Size(41, 38);
-            lblReset.TabIndex = 37;
-            lblReset.Text = "⟳";
-            lblReset.Click += lblReset_Click;
-            // 
-            // pictureHome
-            // 
-            pictureHome.Image = (Image)resources.GetObject("pictureHome.Image");
-            pictureHome.Location = new Point(0, 42);
-            pictureHome.Name = "pictureHome";
-            pictureHome.Size = new Size(1224, 830);
-            pictureHome.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureHome.TabIndex = 35;
-            pictureHome.TabStop = false;
-            // 
-            // uC_Customers1
-            // 
-            uC_Customers1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_Customers1.Location = new Point(7, 42);
-            uC_Customers1.Margin = new Padding(4);
-            uC_Customers1.Name = "uC_Customers1";
-            uC_Customers1.Size = new Size(1217, 894);
-            uC_Customers1.TabIndex = 34;
-            // 
-            // uC_Bill1
-            // 
-            uC_Bill1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_Bill1.Location = new Point(1, 42);
-            uC_Bill1.Margin = new Padding(4);
-            uC_Bill1.Name = "uC_Bill1";
-            uC_Bill1.Size = new Size(1224, 857);
-            uC_Bill1.TabIndex = 33;
-            // 
-            // uC_Service1
-            // 
-            uC_Service1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_Service1.Location = new Point(1, 42);
-            uC_Service1.Margin = new Padding(4);
-            uC_Service1.Name = "uC_Service1";
-            uC_Service1.Size = new Size(1224, 857);
-            uC_Service1.TabIndex = 32;
-            // 
-            // uC_Feedback1
-            // 
-            uC_Feedback1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_Feedback1.Location = new Point(1, 42);
-            uC_Feedback1.Margin = new Padding(4);
-            uC_Feedback1.Name = "uC_Feedback1";
-            uC_Feedback1.Size = new Size(1224, 857);
-            uC_Feedback1.TabIndex = 31;
+            pictureHomes.Dock = DockStyle.Fill;
+            pictureHomes.Image = (Image)resources.GetObject("pictureHomes.Image");
+            pictureHomes.Location = new Point(0, 0);
+            pictureHomes.Name = "pictureHomes";
+            pictureHomes.Size = new Size(1228, 882);
+            pictureHomes.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureHomes.TabIndex = 5;
+            pictureHomes.TabStop = false;
             // 
             // uC_Room1
             // 
-            uC_Room1.BackColor = Color.FromArgb(207, 236, 236);
-            uC_Room1.Location = new Point(1, 42);
-            uC_Room1.Margin = new Padding(4);
+            uC_Room1.BackColor = Color.WhiteSmoke;
+            uC_Room1.Dock = DockStyle.Fill;
+            uC_Room1.Location = new Point(0, 0);
             uC_Room1.Name = "uC_Room1";
-            uC_Room1.Size = new Size(1224, 857);
-            uC_Room1.TabIndex = 30;
+            uC_Room1.Size = new Size(1228, 882);
+            uC_Room1.TabIndex = 4;
+            // 
+            // uC_Service1
+            // 
+            uC_Service1.BackColor = Color.WhiteSmoke;
+            uC_Service1.Dock = DockStyle.Fill;
+            uC_Service1.Location = new Point(0, 0);
+            uC_Service1.Name = "uC_Service1";
+            uC_Service1.Size = new Size(1228, 882);
+            uC_Service1.TabIndex = 3;
+            // 
+            // uC_Bill1
+            // 
+            uC_Bill1.BackColor = Color.WhiteSmoke;
+            uC_Bill1.Dock = DockStyle.Fill;
+            uC_Bill1.Location = new Point(0, 0);
+            uC_Bill1.Name = "uC_Bill1";
+            uC_Bill1.Size = new Size(1228, 882);
+            uC_Bill1.TabIndex = 2;
+            // 
+            // uC_Customers2
+            // 
+            uC_Customers2.BackColor = Color.WhiteSmoke;
+            uC_Customers2.Dock = DockStyle.Fill;
+            uC_Customers2.Location = new Point(0, 0);
+            uC_Customers2.Name = "uC_Customers2";
+            uC_Customers2.Size = new Size(1228, 882);
+            uC_Customers2.TabIndex = 1;
+            // 
+            // uC_Feedback1
+            // 
+            uC_Feedback1.BackColor = Color.WhiteSmoke;
+            uC_Feedback1.Dock = DockStyle.Fill;
+            uC_Feedback1.Location = new Point(0, 0);
+            uC_Feedback1.Name = "uC_Feedback1";
+            uC_Feedback1.Size = new Size(1228, 882);
+            uC_Feedback1.TabIndex = 0;
             // 
             // guna2Elipse1
             // 
@@ -545,7 +516,6 @@
             // guna2Elipse8
             // 
             guna2Elipse8.BorderRadius = 10;
-            guna2Elipse8.TargetControl = pictureHome;
             // 
             // guna2Elipse9
             // 
@@ -585,7 +555,6 @@
             Text = "FManager";
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
-            splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -593,7 +562,7 @@
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureHome).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureHomes).EndInit();
             ResumeLayout(false);
         }
 
@@ -625,19 +594,19 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private PictureBox pictureBox1;
         private Label lblShowPersonLogin;
-        private All_Control.UC_Room uC_Room1;
-        private All_Control.UC_Feedback uC_Feedback1;
-        private All_Control.UC_Service uC_Service1;
         private PictureBox pictureHome;
         private All_Control.UC_Customers uC_Customers1;
-        private All_Control.UC_Bill uC_Bill1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblEditInfo;
-        public Label lblReset;
-        private Label label1;
         private Panel panel6;
         private Label label2;
         private PictureBox PicFlashingLogo;
         private Label label3;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
+        private All_Control.UC_Feedback uC_Feedback1;
+        private All_Control.UC_Customers uC_Customers2;
+        private All_Control.UC_Bill uC_Bill1;
+        private All_Control.UC_Service uC_Service1;
+        private All_Control.UC_Room uC_Room1;
+        private PictureBox pictureHomes;
     }
 }

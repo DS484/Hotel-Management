@@ -39,6 +39,11 @@ namespace Hotel_Management
             uC_Room1.btnAddRoom.Click += AddRoom!;
             uC_Service1.btnAddService.Click += AddService!;
             LoadData();
+            uC_Bill1.btnReload.Click += Load;
+            uC_Room1.btnReload.Click += Load;
+            uC_Service1.btnReload.Click += Load;
+            uC_Customers2.btnReload.Click += Load;
+            uC_Feedback1.btnReload.Click += Load;
         }
 
         private void LoadService()
@@ -55,8 +60,8 @@ namespace Hotel_Management
 
         private void LoadCustomer()
         {
-            uC_Customers1.TransmitHotelID(hotelId);
-            uC_Customers1.LoadCustomer();
+            uC_Customers2.TransmitHotelID(hotelId);
+            uC_Customers2.LoadCustomer();
         }
 
         private void LoadBill()
@@ -76,7 +81,7 @@ namespace Hotel_Management
             string picture = managerDAO.GetImageHotelHome(manager.UserName);
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
-            pictureHome.ImageLocation = projectDirectory + @"\" + picture;
+            pictureHomes.ImageLocation = projectDirectory + @"\" + picture;
         }
 
 
@@ -90,6 +95,10 @@ namespace Hotel_Management
             LoadFeedBack();
             GetInfoManager(username);
             GetInfoHotel();
+        }
+        private void Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void GetInfoManager(string username)
@@ -149,15 +158,15 @@ namespace Hotel_Management
             uC_Feedback1.Visible = false;
             uC_Service1.Visible = false;
             uC_Room1.Visible = false;
-            pictureHome.Visible = false;
+            pictureHomes.Visible = false;
             uC_Bill1.Visible = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             panelMoving.Top = btnHome.Top + 1;
-            pictureHome.Visible = true;
-            pictureHome.BringToFront();
+            pictureHomes.Visible = true;
+            pictureHomes.BringToFront();
 
         }
 
@@ -171,8 +180,8 @@ namespace Hotel_Management
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             panelMoving.Top = btnCustomer.Top + 1;
-            uC_Customers1.Visible = true;
-            uC_Customers1.BringToFront();
+            uC_Customers2.Visible = true;
+            uC_Customers2.BringToFront();
         }
 
         private void AddRoom(object sender, EventArgs e)
@@ -194,12 +203,12 @@ namespace Hotel_Management
             FAddService f = new FAddService(hotelId);
             f.Show();
         }
-        
+
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        //lamf mowis
         private void lblReset_Click(object sender, EventArgs e)
         {
             LoadData();
@@ -248,6 +257,21 @@ namespace Hotel_Management
             this.Close();
             FHome f = new FHome();
             f.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uC_Room1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uC_Bill1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
