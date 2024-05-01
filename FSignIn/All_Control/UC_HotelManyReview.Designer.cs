@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_HotelManyReview));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            panel1 = new Panel();
             dgvHotel = new DataGridView();
             Column1 = new DataGridViewImageColumn();
             Column13 = new DataGridViewTextBoxColumn();
@@ -47,40 +47,30 @@
             Column15 = new DataGridViewTextBoxColumn();
             Column16 = new DataGridViewTextBoxColumn();
             Column17 = new DataGridViewTextBoxColumn();
+            btnSearch = new Guna.UI2.WinForms.Guna2Button();
             txtHotelName = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHotel).BeginInit();
-            guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Elipse1
             // 
-            guna2Elipse1.BorderRadius = 10;
+            guna2Elipse1.BorderRadius = 18;
+            guna2Elipse1.TargetControl = this;
             // 
             // guna2Elipse2
             // 
-            guna2Elipse2.BorderRadius = 30;
+            guna2Elipse2.BorderRadius = 18;
+            guna2Elipse2.TargetControl = panel1;
             // 
-            // btnSearch
+            // panel1
             // 
-            btnSearch.BackColor = Color.FromArgb(207, 236, 236);
-            btnSearch.BorderRadius = 18;
-            btnSearch.CustomizableEdges = customizableEdges1;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.SeaGreen;
-            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(281, 17);
-            btnSearch.Margin = new Padding(1);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(95, 30);
-            btnSearch.TabIndex = 51;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
+            panel1.BackColor = Color.LightGray;
+            panel1.Controls.Add(dgvHotel);
+            panel1.Location = new Point(19, 79);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1194, 749);
+            panel1.TabIndex = 58;
             // 
             // dgvHotel
             // 
@@ -95,14 +85,14 @@
             dgvHotel.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvHotel.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvHotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvHotel.ColumnHeadersHeight = 50;
+            dgvHotel.ColumnHeadersHeight = 75;
             dgvHotel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvHotel.Columns.AddRange(new DataGridViewColumn[] { Column1, Column13, Column14, Column15, Column16, Column17 });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -115,8 +105,8 @@
             dgvHotel.DefaultCellStyle = dataGridViewCellStyle2;
             dgvHotel.EnableHeadersVisualStyles = false;
             dgvHotel.GridColor = SystemColors.ControlDark;
-            dgvHotel.Location = new Point(2, 2);
-            dgvHotel.Margin = new Padding(2);
+            dgvHotel.Location = new Point(10, 20);
+            dgvHotel.Margin = new Padding(2, 3, 2, 3);
             dgvHotel.MultiSelect = false;
             dgvHotel.Name = "dgvHotel";
             dgvHotel.ReadOnly = true;
@@ -134,21 +124,26 @@
             dgvHotel.RowTemplate.Height = 33;
             dgvHotel.RowTemplate.ReadOnly = true;
             dgvHotel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvHotel.Size = new Size(1049, 559);
+            dgvHotel.Size = new Size(1173, 725);
             dgvHotel.TabIndex = 35;
             // 
             // Column1
             // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             Column1.HeaderText = "";
+            Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
+            Column1.Width = 75;
             // 
             // Column13
             // 
+            Column13.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             Column13.HeaderText = "ID";
             Column13.MinimumWidth = 100;
             Column13.Name = "Column13";
             Column13.ReadOnly = true;
+            Column13.Width = 125;
             // 
             // Column14
             // 
@@ -182,10 +177,33 @@
             Column17.Name = "Column17";
             Column17.ReadOnly = true;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges1;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(1);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearch.Size = new Size(163, 47);
+            btnSearch.TabIndex = 51;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
+            // 
             // txtHotelName
             // 
-            txtHotelName.BorderColor = Color.Gray;
-            txtHotelName.BorderRadius = 18;
+            txtHotelName.BorderColor = Color.DarkOliveGreen;
+            txtHotelName.BorderRadius = 15;
+            txtHotelName.BorderThickness = 2;
             txtHotelName.Cursor = Cursors.Hand;
             txtHotelName.CustomizableEdges = customizableEdges3;
             txtHotelName.DefaultText = "";
@@ -200,45 +218,31 @@
             txtHotelName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtHotelName.IconLeft = (Image)resources.GetObject("txtHotelName.IconLeft");
             txtHotelName.IconLeftSize = new Size(30, 30);
-            txtHotelName.Location = new Point(13, 15);
-            txtHotelName.Margin = new Padding(6, 7, 6, 7);
+            txtHotelName.Location = new Point(16, 24);
+            txtHotelName.Margin = new Padding(7, 9, 7, 9);
             txtHotelName.Name = "txtHotelName";
-            txtHotelName.Padding = new Padding(8, 0, 0, 0);
+            txtHotelName.Padding = new Padding(9, 0, 0, 0);
             txtHotelName.PasswordChar = '\0';
             txtHotelName.PlaceholderForeColor = Color.DimGray;
             txtHotelName.PlaceholderText = "|Nhập tên khách sạn cần tìm...";
             txtHotelName.SelectedText = "";
             txtHotelName.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtHotelName.Size = new Size(259, 32);
+            txtHotelName.Size = new Size(327, 47);
             txtHotelName.TabIndex = 48;
-            // 
-            // guna2ShadowPanel1
-            // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(dgvHotel);
-            guna2ShadowPanel1.FillColor = Color.WhiteSmoke;
-            guna2ShadowPanel1.Location = new Point(13, 57);
-            guna2ShadowPanel1.Margin = new Padding(3, 2, 3, 2);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.Radius = 10;
-            guna2ShadowPanel1.ShadowColor = Color.DimGray;
-            guna2ShadowPanel1.ShadowShift = 10;
-            guna2ShadowPanel1.Size = new Size(1053, 563);
-            guna2ShadowPanel1.TabIndex = 52;
             // 
             // UC_HotelManyReview
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(207, 236, 236);
+            BackColor = Color.WhiteSmoke;
             Controls.Add(btnSearch);
             Controls.Add(txtHotelName);
-            Controls.Add(guna2ShadowPanel1);
-            Margin = new Padding(2);
+            Controls.Add(panel1);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "UC_HotelManyReview";
-            Size = new Size(1079, 635);
+            Size = new Size(1233, 847);
+            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvHotel).EndInit();
-            guna2ShadowPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -249,7 +253,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         public DataGridView dgvHotel;
         public Guna.UI2.WinForms.Guna2TextBox txtHotelName;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Panel panel1;
         private DataGridViewImageColumn Column1;
         private DataGridViewTextBoxColumn Column13;
         private DataGridViewTextBoxColumn Column14;

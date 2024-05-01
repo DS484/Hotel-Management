@@ -38,7 +38,7 @@ namespace Hotel_Management
 
         private void LoadTopCustomer()
         {
-            uC_TopCustomer1.LoadTopCustomer();
+             uC_TopCustomer1.LoadTopCustomer();
         }
 
         private void LoadVIPCustomer()
@@ -53,7 +53,7 @@ namespace Hotel_Management
 
         private void LoadHotelRevenue()
         {
-            uC_HotelRevenue1.LoadHotelRevenue();
+             uC_HotelRevenue1.LoadHotelRevenue();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -101,6 +101,13 @@ namespace Hotel_Management
             this.Close();
             FHome f = new FHome();
             f.Show();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            panelMoving.Top = btnHotelRevenue.Top + 1;
+            pictureHome.Visible = true;
+            pictureHome.BringToFront();
         }
     }
 }

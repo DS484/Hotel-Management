@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -124,7 +124,7 @@
   <data name="txtOTP.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARhSURBVFhH5Zdt
+        6QAAAOkBVJIUSwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARhSURBVFhH5Zdt
         TFNnFMf/i25qTJZsyxaTTXHMZcaxL7otWabbh2XRvXzBIMl0KlG8jokRMoxoXFKygTO+LOh0M9l0JHab
         BFQUhEmAwToiWSi2oy1KR2k73tZXemmpWnh27u0D1NJCoU34sH9ykttyn9Mf//Oc89yLqNrbuQA5+i+R
         12HGwU6Gz40MBV0MhSaGo90MJywMxVaGMz0M53oZfuhnKBlgUNoYLtkZyp0jqHAbUOXeDcYe4VlnoGz9
@@ -149,7 +149,7 @@
   <data name="txtEmail.IconLeft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ9SURBVFhHYxgF
+        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ9SURBVFhHYxgF
         o2BQgf8MDExLvDIWLXdNubbEM2PB/1AGZqgU2eB/AwPTmtkKC7Yulr22ZpbiIpxmAi1nXG0T8uWoqsZ/
         GF5rG/rjhYOJDlQJyeCFm57isTUiP/7vYvgPw8fXC3/5/5+BEaoEARZ6Zs1FthyG97mH/Xnpatp021OF
         HaqUKADUE3O4Tv07suUwvHa+4hyoMgRY6pZ+HZsD1rvG/n/lYgrCN165mdpBleMEH7xtBIFqV4D07J6u

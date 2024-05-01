@@ -83,5 +83,10 @@ namespace Hotel_Management.All_Control
                 MessageBox.Show(this, "Ngày trả phòng phải lớn hơn hoặc bằng ngày nhận phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void UC_Customers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
