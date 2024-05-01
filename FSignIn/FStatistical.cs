@@ -15,6 +15,8 @@ using Point = System.Drawing.Point;
 using System;
 using System.Linq;
 using System.Windows;
+using Guna.Charts.Interfaces;
+using System.Security.Cryptography;
 
 namespace Hotel_Management
 {
@@ -27,9 +29,10 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.dgv = dgv;
+
         }
 
-        private void DoughnutChart()
+        private DataTable AssignData()
         {
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("Name", typeof(string));
@@ -43,54 +46,83 @@ namespace Hotel_Management
                                        Convert.ToInt32(row.Cells[1].Value));
                 }
             }
+            return dataTable;   
+        }
 
-            var dataset = new GunaDoughnutDataset();
-
+        private void DoughnutChart()
+        {  
+            DataTable dataTable = AssignData();
             int total = 0;
             foreach (DataRow row in dataTable.Rows)
             {
                 total += Convert.ToInt32(row["Value"]);
             }
 
+            var dataset = new GunaDoughnutDataset();
+
             foreach (DataRow row in dataTable.Rows)
             {
+                var datasetColor = new GunaDoughnutDataset();
+                Random random = new Random();
+                Color color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+
                 int value = Convert.ToInt32(row["Value"]);
-                double percentage = ((double)value / total) * 100;
-                string label = $"{row["Name"].ToString()} ({percentage.ToString("0.00")}%)";
-                dataset.DataPoints.Add(label, value);
+                if(value == 0)
+                    continue;
+                double percentage = ((double)value * 100 / total);
+                string format = percentage.ToString("0.00");
+                double percent = double.Parse(format);
+
+                datasetColor.Label = row["Name"].ToString();
+                datasetColor.LegendBoxFillColor = color;
+
+                dataset.Label = "";
+                dataset.LegendBoxFillColor = Color.White;
+
+                dataset.FillColors.Add(color);
+
+                chartInfo.Datasets.Add(datasetColor);
+                chartInfo.Datasets.Add(dataset);
+
+
+
+                dataset.DataPoints.Add(new LPoint()
+                {
+                    Label = "",
+                    Y = Convert.ToInt32(percent),
+                });
+
+                Thread.Sleep(100);
             }
-
-            chartInfo.Datasets.Add(dataset);
-
-            chartInfo.Update();
         }
 
-        public void HorizontalBarChart()
+        public void BarChart()
         {
-            List<string> hotelName = new List<string>();
-            List<int> totalRevenue = new List<int>();
+            DataTable dataTable = AssignData();
 
-            int total = totalRevenue.Sum();
-
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataRow row in dataTable.Rows)
             {
-                if (!row.IsNewRow)
+                Random random = new Random();
+                Color color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+
+                int value = Convert.ToInt32(row["Value"]);
+                if (value == 0)
+                    continue;
+                var dataset = new GunaBarDataset();
+                dataset.Label = row["Name"].ToString();
+                dataset.LegendBoxFillColor = color;
+                dataset.FillColors.Add(color);
+
+                chartInfo.Datasets.Add(dataset);
+
+                dataset.DataPoints.Add(new LPoint()
                 {
-                    hotelName.Add(row.Cells[0].Value.ToString()!);
-                    totalRevenue.Add(Convert.ToInt32(row.Cells[1].Value!));
-                }
+                    Label = "",
+                    Y = Convert.ToInt32(value),
+                });
+
+                Thread.Sleep(100);
             }
-
-            var dataset = new Guna.Charts.WinForms.GunaHorizontalBarDataset();
-            for (int i = 0; i < hotelName.Count; i++)
-            {
-                dataset.DataPoints.Add(hotelName[i], totalRevenue[i]);
-            }
-
-            chartInfo.Datasets.Add(dataset);
-
-            chartInfo.Update();
-
         }
 
         private void FStatistical_Load(object sender, EventArgs e)
@@ -134,7 +166,7 @@ namespace Hotel_Management
 
             if (name == "Cột")
             {
-                HorizontalBarChart();
+                BarChart();
             }
             else if (name == "Tròn")
             {

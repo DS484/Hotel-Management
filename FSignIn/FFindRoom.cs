@@ -38,6 +38,7 @@ namespace Hotel_Management
         public FFindRoom(List<int> hotelList, int userId, string city,
             int adult, int child, int quantityRoom, DateTime checkInDate, DateTime checkOutDate)
         {
+            InitializeComponent();
             this.hotelList = hotelList;
             this.userId = userId;
             this.city = city;
@@ -47,24 +48,19 @@ namespace Hotel_Management
             this.checkInDate = checkInDate;
             this.checkOutDate = checkOutDate;
 
-            InitializeComponent();
-            DataSearch();
-            FillDataHotel(hotelList.Distinct().ToList());
-        }
-
-        public FFindRoom()
-        {
-            InitializeComponent();
-        }
-
-        public void DataSearch()
-        {
             txtCity.Text = city;
             nudAdult.Value = adult;
             nudChild.Value = child;
             nudRoom.Value = quantityRoom;
             dtpCheckInDate.Value = checkInDate;
             dtpCheckOutDate.Value = checkOutDate;
+
+            FillDataHotel(hotelList.Distinct().ToList());
+        }
+
+        public FFindRoom()
+        {
+            InitializeComponent();
         }
 
         public void FillDataHotel(List<int> hotelList)
@@ -112,7 +108,6 @@ namespace Hotel_Management
                 }
                 else
                 {
-                    //1 la checkin, 2 la checkout
                     for (int i = 0; i < dtBooking.Rows.Count; i++)
                     {
                         DataRow rowBehind;
@@ -370,6 +365,8 @@ namespace Hotel_Management
         {
             if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
             {
+                MessageBox.Show(dtpCheckInDate.Value.ToString() + " " + dtpCheckOutDate.Value.ToString());
+                MessageBox.Show(checkInDate.ToString() + " " + checkOutDate.ToString());
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
