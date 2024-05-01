@@ -68,13 +68,11 @@
             // 
             // chartInfo
             // 
-            chartInfo.BackColor = Color.DimGray;
             chartFont1.FontName = "Arial";
             chartInfo.Legend.LabelFont = chartFont1;
-            chartInfo.Location = new Point(125, 95);
-            chartInfo.Margin = new Padding(3, 4, 3, 4);
+            chartInfo.Location = new Point(109, 71);
             chartInfo.Name = "chartInfo";
-            chartInfo.Size = new Size(1031, 824);
+            chartInfo.Size = new Size(902, 618);
             chartInfo.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -105,9 +103,9 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(835, 899);
+            label1.Location = new Point(731, 674);
             label1.Name = "label1";
-            label1.Size = new Size(0, 20);
+            label1.Size = new Size(0, 15);
             label1.TabIndex = 2;
             // 
             // guna2PictureBox1
@@ -116,31 +114,28 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges1;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(1075, 16);
-            guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2PictureBox1.Location = new Point(941, 12);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2PictureBox1.Size = new Size(75, 69);
+            guna2PictureBox1.Size = new Size(66, 52);
             guna2PictureBox1.TabIndex = 3;
             guna2PictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DimGray;
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(panel2);
             panel1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            panel1.Location = new Point(17, 107);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(15, 80);
             panel1.Name = "panel1";
-            panel1.Size = new Size(116, 824);
+            panel1.Size = new Size(102, 618);
             panel1.TabIndex = 4;
             // 
             // panel2
             // 
-            panel2.Location = new Point(3, 216);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(3, 162);
             panel2.Name = "panel2";
-            panel2.Size = new Size(17, 19);
+            panel2.Size = new Size(15, 14);
             panel2.TabIndex = 0;
             // 
             // panel3
@@ -150,18 +145,19 @@
             panel3.Controls.Add(btnBack);
             panel3.Controls.Add(chartInfo);
             panel3.Controls.Add(guna2HtmlLabel1);
-            panel3.Location = new Point(12, 12);
+            panel3.Location = new Point(10, 9);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1159, 923);
+            panel3.Size = new Size(1014, 692);
             panel3.TabIndex = 5;
             // 
             // label24
             // 
             label24.BackColor = Color.White;
             label24.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            label24.Location = new Point(38, 15);
+            label24.Location = new Point(33, 11);
             label24.Name = "label24";
-            label24.Size = new Size(72, 29);
+            label24.Size = new Size(63, 22);
             label24.TabIndex = 57;
             label24.Text = "Trở lại";
             label24.TextAlign = ContentAlignment.MiddleLeft;
@@ -179,11 +175,12 @@
             btnBack.ForeColor = Color.White;
             btnBack.Image = (Image)resources.GetObject("btnBack.Image");
             btnBack.ImageSize = new Size(30, 30);
-            btnBack.Location = new Point(10, 14);
+            btnBack.Location = new Point(9, 10);
+            btnBack.Margin = new Padding(3, 2, 3, 2);
             btnBack.Name = "btnBack";
             btnBack.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnBack.Size = new Size(30, 30);
+            btnBack.Size = new Size(26, 22);
             btnBack.TabIndex = 56;
             // 
             // guna2HtmlLabel1
@@ -194,9 +191,8 @@
             guna2HtmlLabel1.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             guna2HtmlLabel1.ForeColor = Color.Navy;
             guna2HtmlLabel1.Location = new Point(0, 0);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(1159, 85);
+            guna2HtmlLabel1.Size = new Size(1014, 64);
             guna2HtmlLabel1.TabIndex = 55;
             guna2HtmlLabel1.Text = "Biểu đồ thống kê doanh thu khách sạn";
             guna2HtmlLabel1.TextAlignment = ContentAlignment.BottomCenter;
@@ -223,16 +219,16 @@
             // 
             // FStatistical
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
-            ClientSize = new Size(1183, 947);
+            ClientSize = new Size(1035, 710);
             Controls.Add(guna2PictureBox1);
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "FStatistical";
             StartPosition = FormStartPosition.CenterScreen;
             Load += FStatistical_Load;
