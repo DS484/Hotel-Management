@@ -22,7 +22,6 @@ namespace Hotel_Management.DAO
             cnn = new SqlConnection(_connectionString); 
         }
 
-
         public void AddParameter(string query, object[] parameter, SqlCommand command)
         {
             if (parameter != null)
@@ -42,7 +41,6 @@ namespace Hotel_Management.DAO
             }
         }
 
-        // Trả về bảng
         public DataTable ExecuteQuery(string query, object[] parameter)
         {
             DataTable data = new DataTable();
@@ -58,7 +56,6 @@ namespace Hotel_Management.DAO
             return data;
         }
 
-        // Update, Insert, Remove 
         public int ExecuteNoneQuery(string query, object[]? parameter = null)
         {
             int data = 0;
@@ -73,7 +70,6 @@ namespace Hotel_Management.DAO
             return data;
         }
 
-        // Hàng đầu tiên trong bảng 
         public object ExecuteScalar(string query, object[]? parameter = null)
         {
             object data = new object();

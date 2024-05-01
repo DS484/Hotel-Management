@@ -39,9 +39,19 @@ namespace Hotel_Management
             if (userDAO.UpdatePassWord(username!, txtConfirmPass.Text))
             {
                 MessageBox.Show("Thay đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                FHome fHome = new FHome(username!);
-                fHome.Show();
+                int role = userDAO.GetRole(username!);
+                if (role == 0)
+                {
+                    this.Hide();
+                    FHome fHome = new FHome(username!);
+                    fHome.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    FHome fHome = new FHome();
+                    fHome.Show();
+                }
             }
             else
             {

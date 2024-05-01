@@ -12,13 +12,13 @@ namespace Hotel_Management.DTO
     public class Hotel
     {  
         private int id;
-        private string hotelName;
-        private string address;
-        private string city;
+        private string? hotelName;
+        private string? address;
+        private string? city;
         private int starAvg;
-        private string picture;
-        private string review;
-        private string voucher;
+        private string? picture;
+        private string? review;
+        private string? voucher;
 
         public Hotel() { }
 
@@ -64,13 +64,13 @@ namespace Hotel_Management.DTO
         }
 
         public int Id { get => id; set => id = value; }
-        public string HotelName { get => hotelName; set => hotelName = value; }
-        public string Address { get => address; set => address = value; }
-        public string City { get => city; set => city = value; }
+        public string HotelName { get => hotelName!; set => hotelName = value; }
+        public string Address { get => address!; set => address = value; }
+        public string City { get => city!; set => city = value; }
         public int StarAvg { get => starAvg; set => starAvg = value; }
-        public string Picture { get => picture; set => picture = value; }
-        public string Review { get => review; set => review = value; }
-        public string Voucher { get => voucher; set => voucher = value; }
+        public string Picture { get => picture!; set => picture = value; }
+        public string Review { get => review!; set => review = value; }
+        public string Voucher { get => voucher!; set => voucher = value; }
 
     }
 }

@@ -82,7 +82,6 @@ namespace Hotel_Management.All_Control
 
         private void btnExportFile_Click(object sender, EventArgs e)
         {
-            genericCode.ExportExcel(dgvRoom);
             MessageBox.Show("Valid");
         }
 
@@ -91,7 +90,6 @@ namespace Hotel_Management.All_Control
             int x = e.ColumnIndex, y = e.RowIndex;
             if (y >= 0)
             {
-                // If edit button
                 if (x == 9)
                 {
                     DataGridViewRow row = dgvRoom.Rows[y];
@@ -118,7 +116,6 @@ namespace Hotel_Management.All_Control
                     this.Visible = true;
                 }
 
-                // If delete button
                 if (x == 10)
                 {
                     bool deleteRoom = false;

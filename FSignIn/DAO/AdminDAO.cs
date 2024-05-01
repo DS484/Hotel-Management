@@ -68,7 +68,6 @@ namespace Hotel_Management.DAO
                             ORDER BY COUNT(*) DESC;";
             object[] parameter = { };
             return db.ExecuteQuery(query, parameter);
-
         }
 
         public DataTable VIPCustomer()

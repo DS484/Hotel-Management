@@ -21,7 +21,6 @@ namespace Hotel_Management.HandleData
             return Regex.IsMatch(card, @"^\d{12}$");
         }
 
-        // Kiểm tra chuỗi đã tồn tại trong database hay chưa
         public bool checkUserDataExist(string columnName, string searchString)
         {
             string query = $"SELECT COUNT(*) FROM Users WHERE {columnName} = @SearchString";

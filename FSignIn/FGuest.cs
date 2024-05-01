@@ -23,8 +23,9 @@ namespace Hotel_Management
         private long? totalBill;
 
         private AdminDAO adminDAO = new AdminDAO();
-        CustomerDAO customerDAO = new CustomerDAO();
-        BookingDAO bookingDAO = new BookingDAO();
+        private CustomerDAO customerDAO = new CustomerDAO();
+        private BookingDAO bookingDAO = new BookingDAO();
+        private RoomDAO roomDAO = new RoomDAO();
 
         private int roomId;
 
@@ -49,7 +50,7 @@ namespace Hotel_Management
         public void FillUserInfomation(int userId, int roomId)
         {
             DataTable dtUser = customerDAO.UserInfomation(userId);
-            DataTable dtRoom = customerDAO.BookRoom(roomId);
+            DataTable dtRoom = roomDAO.InfoRoom(roomId);
             if (dtUser != null)
             {
                 DataRow row = dtUser.Rows[0];

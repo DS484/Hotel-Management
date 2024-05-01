@@ -14,6 +14,7 @@ namespace Hotel_Management
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new FHome());
+            
         }
     }
 }

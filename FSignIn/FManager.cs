@@ -39,11 +39,11 @@ namespace Hotel_Management
             uC_Room1.btnAddRoom.Click += AddRoom!;
             uC_Service1.btnAddService.Click += AddService!;
             LoadData();
-            uC_Bill1.btnReload.Click += Load;
-            uC_Room1.btnReload.Click += Load;
-            uC_Service1.btnReload.Click += Load;
-            uC_Customers2.btnReload.Click += Load;
-            uC_Feedback1.btnReload.Click += Load;
+            uC_Bill1.btnReload.Click += LoadInfo!;
+            uC_Room1.btnReload.Click += LoadInfo!;
+            uC_Service1.btnReload.Click += LoadInfo!;
+            uC_Customers2.btnReload.Click += LoadInfo!;
+            uC_Feedback1.btnReload.Click += LoadInfo!;
         }
 
         private void LoadService()
@@ -84,7 +84,6 @@ namespace Hotel_Management
             pictureHomes.ImageLocation = projectDirectory + @"\" + picture;
         }
 
-
         private void LoadData()
         {
             LoadHotelImageHome();
@@ -96,7 +95,8 @@ namespace Hotel_Management
             GetInfoManager(username);
             GetInfoHotel();
         }
-        private void Load(object sender, EventArgs e)
+
+        private void LoadInfo(object sender, EventArgs e)
         {
             LoadData();
         }
@@ -190,12 +190,6 @@ namespace Hotel_Management
             FAddRoom fAddRoom = new FAddRoom(hotelId);
             fAddRoom.ShowDialog();
             this.Visible = true;
-        }
-
-        private void AddEmployee(object sender, EventArgs e)
-        {
-            FAddEmployee f = new FAddEmployee();
-            f.Show();
         }
 
         private void AddService(object sender, EventArgs e)

@@ -28,7 +28,6 @@ namespace Hotel_Management.DAO
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;
         }
-
         
         public bool Insert(object obj)
         {
@@ -61,14 +60,6 @@ namespace Hotel_Management.DAO
         {
             string query = "SELECT * FROM Users WHERE id = @userid";
             object[] parameter = { userId };
-            DataTable dt = db.ExecuteQuery(query, parameter);
-            return dt;
-        }
-
-        public DataTable BookRoom(int roomId)
-        {
-            string query = "SELECT * FROM Rooms WHERE id = @roomId";
-            object[] parameter = { roomId };
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;
         }

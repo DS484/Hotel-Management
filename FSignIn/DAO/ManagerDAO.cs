@@ -40,7 +40,7 @@ namespace Hotel_Management.DAO
 
         public DataTable GetInfor(string username)
         {
-            string query = "SELECT * FROM users WHERE username = @username";
+            string query = "SELECT * FROM Users WHERE username = @username";
             object[] parameter = { username };
 
             return db.ExecuteQuery(query, parameter);

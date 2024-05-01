@@ -34,7 +34,6 @@ namespace Hotel_Management.DAO
 
         public bool UpdatePassWord(string username, string password)
         {
-            MessageBox.Show(username);
             string query = $"UPDATE Users SET password = N'{formatData.SetPassword(password)}' WHERE username = '{username}'";
             int edited = db.ExecuteNoneQuery(query);
             if (edited > 0) return true;
