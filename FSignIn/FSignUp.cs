@@ -26,10 +26,10 @@ namespace Hotel_Management
         private int managerId;
         private int hotelId;
 
-        ManagerDAO managerDAO = new ManagerDAO();
-        HotelDAO hotelDAO = new HotelDAO();
+        private ManagerDAO managerDAO = new ManagerDAO();
+        private HotelDAO hotelDAO = new HotelDAO();
 
-        DataInputCheck dic = new DataInputCheck();
+        private DataInputCheck dic = new DataInputCheck();
 
         public FSignUp()
         {

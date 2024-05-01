@@ -17,8 +17,9 @@ namespace Hotel_Management
     {
         private int roomId;
         private int hotelId;
-        RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
-        HotelDAO hotelDAO = new HotelDAO();
+
+        private RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
+        private HotelDAO hotelDAO = new HotelDAO();
 
         public FDetailHotel()
         {

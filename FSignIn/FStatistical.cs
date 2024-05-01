@@ -46,11 +46,11 @@ namespace Hotel_Management
                                        Convert.ToInt32(row.Cells[1].Value));
                 }
             }
-            return dataTable;   
+            return dataTable;
         }
 
         private void DoughnutChart()
-        {  
+        {
             DataTable dataTable = AssignData();
             int total = 0;
             foreach (DataRow row in dataTable.Rows)
@@ -67,7 +67,7 @@ namespace Hotel_Management
                 Color color = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
 
                 int value = Convert.ToInt32(row["Value"]);
-                if(value == 0)
+                if (value == 0)
                     continue;
                 double percentage = ((double)value * 100 / total);
                 string format = percentage.ToString("0.00");
@@ -172,6 +172,16 @@ namespace Hotel_Management
             {
                 DoughnutChart();
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

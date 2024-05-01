@@ -12,7 +12,6 @@ namespace Hotel_Management.DAO
 {
     public class CustomerDAO
     {
-
         private DBConnection db = new DBConnection();
 
         public CustomerDAO()

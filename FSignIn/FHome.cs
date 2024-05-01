@@ -5,11 +5,12 @@ using System.Data;
 namespace Hotel_Management
 {
     public partial class FHome : Form
-    {
-        CustomerDAO customerDAO = new CustomerDAO();
+    { 
         private int userId = 0;
         private bool isMenuVisible = true;
         private FMenu? menuForm;
+
+        private CustomerDAO customerDAO = new CustomerDAO();
 
         public FHome()
         {

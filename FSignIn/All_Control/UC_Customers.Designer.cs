@@ -348,7 +348,6 @@
             Cursor = Cursors.Hand;
             Name = "UC_Customers";
             Size = new Size(1233, 847);
-            Load += UC_Customers_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvInfoCustomer).EndInit();
             ResumeLayout(false);

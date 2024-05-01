@@ -10,6 +10,7 @@ namespace Hotel_Management
     public partial class FSignIn : Form
     {
         private UserDAO userDAO = new UserDAO();
+
         public FSignIn()
         {
             InitializeComponent();

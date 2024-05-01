@@ -35,7 +35,8 @@ namespace Hotel_Management.All_Control
         {
             foreach (DataRow row in dtService.Rows)
             {
-                dgvCustomer.Rows.Add(userIcon, row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
+                string gender = Convert.ToInt32(row[4]) == 0 ? "Nam" : "Nữ";
+                dgvCustomer.Rows.Add(userIcon, row[0], row[1], row[2], row[3], gender, row[5], row[6]);
             }
 
             foreach (DataGridViewRow row in dgvCustomer.Rows)

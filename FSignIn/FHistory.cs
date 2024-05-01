@@ -19,16 +19,16 @@ namespace Hotel_Management
         private int usedId;
         private string ?username;
 
-        CustomerDAO customerDAO = new CustomerDAO();
-        FeedBackDAO feedBackDAO = new FeedBackDAO();
-        BookingDAO bookingDAO = new BookingDAO();
+        private CustomerDAO customerDAO = new CustomerDAO();
+        private BookingDAO bookingDAO = new BookingDAO();
         private UC_History ?uC_History;
-
 
         public FHistory(int userId)
         {
             InitializeComponent();
             this.usedId = userId;
+
+            username = customerDAO.GetUserName(userId);
 
             UserHistory();
         }
@@ -73,7 +73,7 @@ namespace Hotel_Management
             if(dr == DialogResult.Yes)
             {
                 this.Hide();
-                FReason fReason = new FReason(bookingId, username);
+                FReason fReason = new FReason(bookingId, username!);
                 fReason.ShowDialog();
             }
         }

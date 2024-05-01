@@ -54,7 +54,7 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            label24 = new Label();
+            lblBack = new Label();
             btnBack = new Guna.UI2.WinForms.Guna2CircleButton();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -141,7 +141,7 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
-            panel3.Controls.Add(label24);
+            panel3.Controls.Add(lblBack);
             panel3.Controls.Add(btnBack);
             panel3.Controls.Add(chartInfo);
             panel3.Controls.Add(guna2HtmlLabel1);
@@ -151,16 +151,17 @@
             panel3.Size = new Size(1014, 692);
             panel3.TabIndex = 5;
             // 
-            // label24
+            // lblBack
             // 
-            label24.BackColor = Color.White;
-            label24.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            label24.Location = new Point(33, 11);
-            label24.Name = "label24";
-            label24.Size = new Size(63, 22);
-            label24.TabIndex = 57;
-            label24.Text = "Trở lại";
-            label24.TextAlign = ContentAlignment.MiddleLeft;
+            lblBack.BackColor = Color.White;
+            lblBack.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
+            lblBack.Location = new Point(33, 11);
+            lblBack.Name = "lblBack";
+            lblBack.Size = new Size(63, 22);
+            lblBack.TabIndex = 57;
+            lblBack.Text = "Trở lại";
+            lblBack.TextAlign = ContentAlignment.MiddleLeft;
+            lblBack.Click += lblBack_Click;
             // 
             // btnBack
             // 
@@ -182,6 +183,7 @@
             btnBack.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnBack.Size = new Size(26, 22);
             btnBack.TabIndex = 56;
+            btnBack.Click += btnBack_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -228,7 +230,7 @@
             Controls.Add(panel1);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "FStatistical";
             StartPosition = FormStartPosition.CenterScreen;
             Load += FStatistical_Load;
@@ -249,7 +251,7 @@
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Label label24;
+        private Label lblBack;
         private Guna.UI2.WinForms.Guna2CircleButton btnBack;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;

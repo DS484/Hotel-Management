@@ -11,7 +11,7 @@ namespace Hotel_Management.DAO
 {
     public class FeedBackDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public bool InsertFeecBack(int star, string comment, int userId, int hotelId)
         {

@@ -13,7 +13,7 @@ namespace Hotel_Management.DAO
 {
     internal class ManagerDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public ManagerDAO() { }
         public bool Insert(object obj)

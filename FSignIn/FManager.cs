@@ -22,10 +22,10 @@ namespace Hotel_Management
         private int hotelId;
         private string username;
 
-        ManagerDAO managerDAO = new ManagerDAO();
-        HotelDAO hotelDAO = new HotelDAO();
-        Manager manager = new Manager();
-        Hotel hotel = new Hotel();
+        private ManagerDAO managerDAO = new ManagerDAO();
+        private HotelDAO hotelDAO = new HotelDAO();
+        private Manager manager = new Manager();
+        private Hotel hotel = new Hotel();
 
         public FManager(string username)
         {

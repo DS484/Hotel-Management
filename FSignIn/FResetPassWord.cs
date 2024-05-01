@@ -15,7 +15,7 @@ namespace Hotel_Management
     {
         private string? username;
 
-        UserDAO userDAO = new UserDAO();
+        private UserDAO userDAO = new UserDAO();
 
         public FResetPassWord(string username)
         {

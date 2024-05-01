@@ -10,7 +10,7 @@ namespace Hotel_Management.DAO
 {
     public class RoomDetailDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public DataTable RoomInfo(int roomId)
         {

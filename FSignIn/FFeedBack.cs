@@ -5,19 +5,18 @@ namespace Hotel_Management
 {
     public partial class FFeedBack : Form
     {
-        HotelDAO hotelDAO = new HotelDAO();
-        CustomerDAO customerDAO = new CustomerDAO();
-        FeedBackDAO feedBackDAO = new FeedBackDAO();
         private int userId;
         private int hotelId;
-
+        private HotelDAO hotelDAO = new HotelDAO();
+        private CustomerDAO customerDAO = new CustomerDAO();
+        private FeedBackDAO feedBackDAO = new FeedBackDAO();
+        
         public FFeedBack(int userId, int hotelId)
         {
             InitializeComponent();
             this.userId = userId;
             this.hotelId = hotelId;
             FillInfo();
-
         }
 
         public void FillInfo()

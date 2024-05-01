@@ -10,7 +10,7 @@ namespace Hotel_Management.DAO
 {
     public class BookingDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public bool DeleteBooking(int bookingId)
         {

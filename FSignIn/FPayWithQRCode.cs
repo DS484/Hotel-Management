@@ -28,13 +28,8 @@ namespace Hotel_Management
 
             txtSTK.ReadOnly = true;
             txtInvoice.ReadOnly = true;
-            txtExtraInfo.ReadOnly = true;   
+            txtExtraInfo.ReadOnly = true;
             txtAccountName.ReadOnly = true;
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void FPayWithQRCode_Load(object sender, EventArgs e)
@@ -95,6 +90,16 @@ namespace Hotel_Management
             ms.Write(imageBytes, 0, imageBytes.Length);
             System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
             return image;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

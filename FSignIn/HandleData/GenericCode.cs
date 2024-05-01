@@ -12,6 +12,6 @@ namespace Hotel_Management.HandleData
 {
     public class GenericCode
     {
-
+       
     }
 }

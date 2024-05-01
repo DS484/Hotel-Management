@@ -11,7 +11,7 @@ namespace Hotel_Management.DAO
 {
     public class HotelDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public bool Insert(object obj)
         {

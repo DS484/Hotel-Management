@@ -9,7 +9,7 @@ namespace Hotel_Management.DAO
 {
     public class ServiceDAO
     {
-        DBConnection db = new DBConnection();
+        private DBConnection db = new DBConnection();
 
         public int FindService(string service)
         {

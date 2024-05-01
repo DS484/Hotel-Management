@@ -62,7 +62,7 @@ namespace Hotel_Management.All_Control
             LoadService();
             foreach (DataGridViewRow row in dgvService.Rows)
             {
-                if (row.Cells[1].Value.ToString() != txtSearchService.Text)
+                if (row.Cells[2].Value.ToString() != txtSearchService.Text)
                     row.Visible = false;
             }
         }

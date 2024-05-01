@@ -66,27 +66,23 @@ namespace Hotel_Management.All_Control
             }
         }
 
-        private void dtpCheckOut_ValueChanged(object sender, EventArgs e)
+        private void CheckDate()
         {
             if (dtpCheckOut.Value < dtpCheckIn.Value)
             {
                 dtpCheckOut.Value = dtpCheckIn.Value;
                 MessageBox.Show(this, "Ngày trả phòng phải lớn hơn hoặc bằng ngày nhận phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dtpCheckOut_ValueChanged(object sender, EventArgs e)
+        {
+            CheckDate();
         }
 
         private void dtpCheckIn_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpCheckOut.Value < dtpCheckIn.Value)
-            {
-                dtpCheckOut.Value = dtpCheckIn.Value;
-                MessageBox.Show(this, "Ngày trả phòng phải lớn hơn hoặc bằng ngày nhận phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void UC_Customers_Load(object sender, EventArgs e)
-        {
-
+            CheckDate();
         }
     }
 }

@@ -21,9 +21,9 @@ namespace Hotel_Management
         private DateTime checkInDate;
         private DateTime checkOutDate;
 
-        HotelDAO hotelDAO = new HotelDAO();
-        RoomDAO roomDAO = new RoomDAO();
-        RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
+        private HotelDAO hotelDAO = new HotelDAO();
+        private RoomDAO roomDAO = new RoomDAO();
+        private RoomDetailDAO roomDetailDAO = new RoomDetailDAO();
 
         public FSelectRoom()
         {

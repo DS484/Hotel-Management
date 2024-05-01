@@ -20,33 +20,19 @@ namespace Hotel_Management
 {
     public partial class FFindRoom : Form
     {
-        HotelDAO hotelDAO = new HotelDAO();
-        CustomerDAO customerDAO = new CustomerDAO();
-        RoomDAO roomDAO = new RoomDAO();
-        BookingDAO bookingDAO = new BookingDAO();
-
-        private List<int> hotelList = new List<int>();
         private int userId;
-        private string? city;
-        private int adult;
-        private int child;
-        private int quantityRoom;
         private DateTime checkInDate;
         private DateTime checkOutDate;
 
+        private HotelDAO hotelDAO = new HotelDAO();
+        private CustomerDAO customerDAO = new CustomerDAO();
+        private BookingDAO bookingDAO = new BookingDAO();
 
         public FFindRoom(List<int> hotelList, int userId, string city,
             int adult, int child, int quantityRoom, DateTime checkInDate, DateTime checkOutDate)
         {
             InitializeComponent();
-            this.hotelList = hotelList;
             this.userId = userId;
-            this.city = city;
-            this.adult = adult;
-            this.child = child;
-            this.quantityRoom = quantityRoom;
-            this.checkInDate = checkInDate;
-            this.checkOutDate = checkOutDate;
 
             txtCity.Text = city;
             nudAdult.Value = adult;
