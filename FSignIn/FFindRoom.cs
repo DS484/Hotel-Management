@@ -29,7 +29,7 @@ namespace Hotel_Management
         private BookingDAO bookingDAO = new BookingDAO();
 
         public FFindRoom(List<int> hotelList, int userId, string city,
-            int adult, int child, int quantityRoom, DateTime checkInDate, DateTime checkOutDate)
+            int adult, int child, DateTime checkInDate, DateTime checkOutDate)
         {
             InitializeComponent();
             this.userId = userId;
@@ -37,7 +37,6 @@ namespace Hotel_Management
             txtCity.Text = city;
             nudAdult.Value = adult;
             nudChild.Value = child;
-            nudRoom.Value = quantityRoom;
             dtpCheckInDate.Value = checkInDate;
             dtpCheckOutDate.Value = checkOutDate;
 
@@ -55,7 +54,7 @@ namespace Hotel_Management
             for (int i = 0; i < hotelList.Count; i++)
             {
                 DataTable dtDetailHotel = hotelDAO.FindHotel(hotelList[i]);
-                DataTable dtRooms = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value), Convert.ToInt32(nudRoom.Value),
+                DataTable dtRooms = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value),
                     dtpCheckInDate.Value, dtpCheckOutDate.Value);
                 List<int> roomList = new List<int>();
                 if (dtRooms != null && dtRooms.Rows.Count > 0)
@@ -294,18 +293,12 @@ namespace Hotel_Management
             UpdateTextBox();
         }
 
-        private void nudRoom_ValueChanged(object sender, EventArgs e)
-        {
-            UpdateTextBox();
-        }
-
         private void UpdateTextBox()
         {
             int adults = (int)nudAdult.Value;
             int children = (int)nudChild.Value;
-            int rooms = (int)nudRoom.Value;
 
-            txtItem.Text = string.Format("{0} người lớn, {1} trẻ em, {2} phòng", adults, children, rooms);
+            txtItem.Text = string.Format("{0} người lớn, {1} trẻ em", adults, children);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -326,7 +319,7 @@ namespace Hotel_Management
             }
 
             List<int> newListHotel = new List<int>();
-            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value), Convert.ToInt32(nudRoom.Value), dtpCheckInDate.Value, dtpCheckOutDate.Value);
+            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value),dtpCheckInDate.Value, dtpCheckOutDate.Value);
             foreach (DataRow dr in dt.Rows)
             {
                 newListHotel.Add(Convert.ToInt32(dr[0]));
@@ -351,8 +344,6 @@ namespace Hotel_Management
         {
             if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
             {
-                MessageBox.Show(dtpCheckInDate.Value.ToString() + " " + dtpCheckOutDate.Value.ToString());
-                MessageBox.Show(checkInDate.ToString() + " " + checkOutDate.ToString());
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

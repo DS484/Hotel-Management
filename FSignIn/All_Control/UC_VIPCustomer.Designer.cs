@@ -38,17 +38,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_VIPCustomer));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvVIPCustomer = new DataGridView();
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            panel1 = new Panel();
             Column1 = new DataGridViewImageColumn();
             Column13 = new DataGridViewTextBoxColumn();
             Column14 = new DataGridViewTextBoxColumn();
             Column16 = new DataGridViewTextBoxColumn();
             Column17 = new DataGridViewTextBoxColumn();
             Column18 = new DataGridViewTextBoxColumn();
+            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            panel1 = new Panel();
+            txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             ((System.ComponentModel.ISupportInitialize)dgvVIPCustomer).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -66,10 +66,10 @@
             dgvVIPCustomer.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvVIPCustomer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvVIPCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -107,78 +107,6 @@
             dgvVIPCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvVIPCustomer.Size = new Size(1173, 725);
             dgvVIPCustomer.TabIndex = 35;
-            // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.FromArgb(207, 236, 236);
-            btnSearch.BorderRadius = 15;
-            btnSearch.BorderThickness = 2;
-            btnSearch.CustomizableEdges = customizableEdges1;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.DarkOliveGreen;
-            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(400, 24);
-            btnSearch.Margin = new Padding(1);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(163, 47);
-            btnSearch.TabIndex = 46;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // guna2Elipse2
-            // 
-            guna2Elipse2.BorderRadius = 18;
-            guna2Elipse2.TargetControl = panel1;
-            // 
-            // txtUserName
-            // 
-            txtUserName.BorderColor = Color.DarkOliveGreen;
-            txtUserName.BorderRadius = 15;
-            txtUserName.BorderThickness = 2;
-            txtUserName.Cursor = Cursors.Hand;
-            txtUserName.CustomizableEdges = customizableEdges3;
-            txtUserName.DefaultText = "";
-            txtUserName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtUserName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtUserName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtUserName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtUserName.FillColor = Color.FromArgb(207, 236, 236);
-            txtUserName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUserName.ForeColor = Color.DimGray;
-            txtUserName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUserName.IconLeft = (Image)resources.GetObject("txtUserName.IconLeft");
-            txtUserName.IconLeftSize = new Size(30, 30);
-            txtUserName.Location = new Point(16, 24);
-            txtUserName.Margin = new Padding(7, 9, 7, 9);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Padding = new Padding(9, 0, 0, 0);
-            txtUserName.PasswordChar = '\0';
-            txtUserName.PlaceholderForeColor = Color.DimGray;
-            txtUserName.PlaceholderText = "|Nhập tên tài khoản cần tìm...";
-            txtUserName.SelectedText = "";
-            txtUserName.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtUserName.Size = new Size(327, 47);
-            txtUserName.TabIndex = 43;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 18;
-            guna2Elipse1.TargetControl = this;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(dgvVIPCustomer);
-            panel1.Location = new Point(19, 79);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 749);
-            panel1.TabIndex = 57;
             // 
             // Column1
             // 
@@ -228,11 +156,84 @@
             Column18.Name = "Column18";
             Column18.ReadOnly = true;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges1;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(1);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearch.Size = new Size(163, 47);
+            btnSearch.TabIndex = 46;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // guna2Elipse2
+            // 
+            guna2Elipse2.BorderRadius = 18;
+            guna2Elipse2.TargetControl = panel1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
+            panel1.Controls.Add(dgvVIPCustomer);
+            panel1.Location = new Point(19, 79);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1194, 749);
+            panel1.TabIndex = 57;
+            // 
+            // txtUserName
+            // 
+            txtUserName.BackColor = Color.FromArgb(207, 236, 236);
+            txtUserName.BorderColor = Color.DarkOliveGreen;
+            txtUserName.BorderRadius = 15;
+            txtUserName.BorderThickness = 2;
+            txtUserName.Cursor = Cursors.Hand;
+            txtUserName.CustomizableEdges = customizableEdges3;
+            txtUserName.DefaultText = "";
+            txtUserName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtUserName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtUserName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtUserName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtUserName.FillColor = Color.FromArgb(207, 236, 236);
+            txtUserName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUserName.ForeColor = Color.DimGray;
+            txtUserName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtUserName.IconLeft = (Image)resources.GetObject("txtUserName.IconLeft");
+            txtUserName.IconLeftSize = new Size(30, 30);
+            txtUserName.Location = new Point(16, 24);
+            txtUserName.Margin = new Padding(7, 9, 7, 9);
+            txtUserName.Name = "txtUserName";
+            txtUserName.Padding = new Padding(9, 0, 0, 0);
+            txtUserName.PasswordChar = '\0';
+            txtUserName.PlaceholderForeColor = Color.DimGray;
+            txtUserName.PlaceholderText = "|Nhập tên tài khoản cần tìm...";
+            txtUserName.SelectedText = "";
+            txtUserName.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtUserName.Size = new Size(327, 47);
+            txtUserName.TabIndex = 43;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 18;
+            guna2Elipse1.TargetControl = this;
+            // 
             // UC_VIPCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnSearch);
             Controls.Add(txtUserName);
             Controls.Add(panel1);

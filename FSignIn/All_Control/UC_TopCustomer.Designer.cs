@@ -35,11 +35,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvCustomer = new DataGridView();
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            cbbTimes = new CTCombobox();
-            panel1 = new Panel();
             Column1 = new DataGridViewImageColumn();
             Column13 = new DataGridViewTextBoxColumn();
             Column14 = new DataGridViewTextBoxColumn();
@@ -48,6 +43,11 @@
             Column17 = new DataGridViewTextBoxColumn();
             Column18 = new DataGridViewTextBoxColumn();
             Column19 = new DataGridViewTextBoxColumn();
+            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            panel1 = new Panel();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            cbbTimes = new CTCombobox();
             ((System.ComponentModel.ISupportInitialize)dgvCustomer).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -65,10 +65,10 @@
             dgvCustomer.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvCustomer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -106,67 +106,6 @@
             dgvCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCustomer.Size = new Size(1173, 725);
             dgvCustomer.TabIndex = 35;
-            // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.Transparent;
-            btnSearch.BorderRadius = 15;
-            btnSearch.BorderThickness = 2;
-            btnSearch.CustomizableEdges = customizableEdges1;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.DarkOliveGreen;
-            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(400, 24);
-            btnSearch.Margin = new Padding(1);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(163, 47);
-            btnSearch.TabIndex = 46;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // guna2Elipse2
-            // 
-            guna2Elipse2.BorderRadius = 18;
-            guna2Elipse2.TargetControl = panel1;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 18;
-            guna2Elipse1.TargetControl = this;
-            // 
-            // cbbTimes
-            // 
-            cbbTimes.BackColor = Color.White;
-            cbbTimes.BorderColor = Color.DarkOliveGreen;
-            cbbTimes.BorderSize = 2;
-            cbbTimes.DropDownStyle = ComboBoxStyle.DropDown;
-            cbbTimes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbTimes.ForeColor = Color.DimGray;
-            cbbTimes.IconColor = Color.DimGray;
-            cbbTimes.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
-            cbbTimes.ListBackColor = Color.FromArgb(207, 236, 236);
-            cbbTimes.ListTextColor = Color.DimGray;
-            cbbTimes.Location = new Point(16, 24);
-            cbbTimes.Margin = new Padding(3, 4, 3, 4);
-            cbbTimes.Name = "cbbTimes";
-            cbbTimes.Padding = new Padding(2);
-            cbbTimes.Size = new Size(327, 47);
-            cbbTimes.TabIndex = 39;
-            cbbTimes.Texts = "Chọn số lần đặt cần tìm...";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(dgvCustomer);
-            panel1.Location = new Point(19, 79);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 749);
-            panel1.TabIndex = 56;
             // 
             // Column1
             // 
@@ -240,11 +179,72 @@
             Column19.ReadOnly = true;
             Column19.Width = 225;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges1;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(1);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearch.Size = new Size(163, 47);
+            btnSearch.TabIndex = 46;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // guna2Elipse2
+            // 
+            guna2Elipse2.BorderRadius = 18;
+            guna2Elipse2.TargetControl = panel1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
+            panel1.Controls.Add(dgvCustomer);
+            panel1.Location = new Point(19, 79);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1194, 749);
+            panel1.TabIndex = 56;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 18;
+            guna2Elipse1.TargetControl = this;
+            // 
+            // cbbTimes
+            // 
+            cbbTimes.BackColor = Color.FromArgb(207, 236, 236);
+            cbbTimes.BorderColor = Color.DarkOliveGreen;
+            cbbTimes.BorderSize = 2;
+            cbbTimes.DropDownStyle = ComboBoxStyle.DropDown;
+            cbbTimes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbTimes.ForeColor = Color.DimGray;
+            cbbTimes.IconColor = Color.DimGray;
+            cbbTimes.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" });
+            cbbTimes.ListBackColor = Color.FromArgb(207, 236, 236);
+            cbbTimes.ListTextColor = Color.DimGray;
+            cbbTimes.Location = new Point(16, 24);
+            cbbTimes.Margin = new Padding(3, 4, 3, 4);
+            cbbTimes.Name = "cbbTimes";
+            cbbTimes.Padding = new Padding(2);
+            cbbTimes.Size = new Size(327, 47);
+            cbbTimes.TabIndex = 39;
+            cbbTimes.Texts = "Chọn số lần đặt cần tìm...";
+            // 
             // UC_TopCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(cbbTimes);
             Controls.Add(btnSearch);
             Controls.Add(panel1);

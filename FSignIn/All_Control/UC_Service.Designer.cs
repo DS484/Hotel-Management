@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Service));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnAddService = new Guna.UI2.WinForms.Guna2Button();
             txtSearchService = new Guna.UI2.WinForms.Guna2TextBox();
@@ -69,7 +69,7 @@
             btnAddService.BackColor = Color.Transparent;
             btnAddService.BorderRadius = 15;
             btnAddService.BorderThickness = 2;
-            btnAddService.CustomizableEdges = customizableEdges4;
+            btnAddService.CustomizableEdges = customizableEdges11;
             btnAddService.DisabledState.BorderColor = Color.DarkGray;
             btnAddService.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddService.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -79,7 +79,7 @@
             btnAddService.ForeColor = Color.White;
             btnAddService.Location = new Point(568, 24);
             btnAddService.Name = "btnAddService";
-            btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnAddService.Size = new Size(163, 47);
             btnAddService.TabIndex = 10;
             btnAddService.Text = "Thêm dịch vụ";
@@ -89,7 +89,7 @@
             txtSearchService.BorderColor = Color.DarkOliveGreen;
             txtSearchService.BorderRadius = 15;
             txtSearchService.BorderThickness = 2;
-            txtSearchService.CustomizableEdges = customizableEdges6;
+            txtSearchService.CustomizableEdges = customizableEdges13;
             txtSearchService.DefaultText = "";
             txtSearchService.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchService.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -109,13 +109,13 @@
             txtSearchService.PlaceholderForeColor = Color.DimGray;
             txtSearchService.PlaceholderText = "|Nhập mã DV cần tìm...";
             txtSearchService.SelectedText = "";
-            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            txtSearchService.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtSearchService.Size = new Size(327, 47);
             txtSearchService.TabIndex = 8;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
             panel1.Controls.Add(dgvService);
             panel1.Location = new Point(19, 79);
             panel1.Name = "panel1";
@@ -130,29 +130,29 @@
             dgvService.AllowUserToResizeRows = false;
             dgvService.Anchor = AnchorStyles.None;
             dgvService.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvService.BackgroundColor = Color.White;
+            dgvService.BackgroundColor = Color.FromArgb(222, 241, 241);
             dgvService.BorderStyle = BorderStyle.None;
             dgvService.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvService.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvService.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(155, 215, 215);
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvService.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvService.ColumnHeadersHeight = 75;
             dgvService.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvService.Columns.AddRange(new DataGridViewColumn[] { Column12, Column13, Column14, Column15, Column21, Column22, Column1 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(222, 241, 241);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(187, 228, 228);
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvService.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(222, 241, 241);
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(187, 228, 228);
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvService.DefaultCellStyle = dataGridViewCellStyle5;
             dgvService.EnableHeadersVisualStyles = false;
             dgvService.GridColor = Color.White;
             dgvService.Location = new Point(10, 20);
@@ -160,14 +160,14 @@
             dgvService.MultiSelect = false;
             dgvService.Name = "dgvService";
             dgvService.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(154, 215, 215);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(154, 215, 215);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvService.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(154, 215, 215);
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvService.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvService.RowHeadersVisible = false;
             dgvService.RowHeadersWidth = 62;
             dgvService.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -242,7 +242,7 @@
             btnSearch.BackColor = Color.Transparent;
             btnSearch.BorderRadius = 15;
             btnSearch.BorderThickness = 2;
-            btnSearch.CustomizableEdges = customizableEdges2;
+            btnSearch.CustomizableEdges = customizableEdges9;
             btnSearch.DisabledState.BorderColor = Color.DarkGray;
             btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -253,7 +253,7 @@
             btnSearch.Location = new Point(400, 24);
             btnSearch.Margin = new Padding(2, 3, 2, 3);
             btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnSearch.Size = new Size(163, 47);
             btnSearch.TabIndex = 23;
             btnSearch.Text = "Tìm kiếm";
@@ -274,7 +274,7 @@
             btnReload.ImageSize = new Size(35, 35);
             btnReload.Location = new Point(1155, 24);
             btnReload.Name = "btnReload";
-            btnReload.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnReload.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnReload.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             btnReload.Size = new Size(47, 47);
             btnReload.TabIndex = 40;
@@ -283,7 +283,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnReload);
             Controls.Add(btnSearch);
             Controls.Add(btnAddService);

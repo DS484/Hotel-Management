@@ -71,7 +71,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
             panel1.Controls.Add(dgvInfoCustomer);
             panel1.Location = new Point(19, 79);
             panel1.Name = "panel1";
@@ -86,15 +86,15 @@
             dgvInfoCustomer.AllowUserToResizeRows = false;
             dgvInfoCustomer.Anchor = AnchorStyles.None;
             dgvInfoCustomer.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvInfoCustomer.BackgroundColor = Color.White;
+            dgvInfoCustomer.BackgroundColor = Color.FromArgb(222, 241, 241);
             dgvInfoCustomer.BorderStyle = BorderStyle.None;
             dgvInfoCustomer.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvInfoCustomer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvInfoCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -207,14 +207,14 @@
             // 
             // dtpCheckIn
             // 
-            dtpCheckIn.BackColor = Color.FromArgb(222, 241, 241);
+            dtpCheckIn.BackColor = Color.Transparent;
             dtpCheckIn.BorderRadius = 18;
             dtpCheckIn.BorderThickness = 2;
             dtpCheckIn.Checked = true;
             dtpCheckIn.Cursor = Cursors.Hand;
             dtpCheckIn.CustomFormat = "dd/MM/yyyy";
             dtpCheckIn.CustomizableEdges = customizableEdges6;
-            dtpCheckIn.FillColor = Color.FromArgb(155, 215, 215);
+            dtpCheckIn.FillColor = Color.FromArgb(207, 236, 236);
             dtpCheckIn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckIn.Format = DateTimePickerFormat.Custom;
             dtpCheckIn.Location = new Point(16, 24);
@@ -231,14 +231,14 @@
             // 
             // dtpCheckOut
             // 
-            dtpCheckOut.BackColor = Color.FromArgb(222, 241, 241);
+            dtpCheckOut.BackColor = Color.Transparent;
             dtpCheckOut.BorderRadius = 18;
             dtpCheckOut.BorderThickness = 2;
             dtpCheckOut.Checked = true;
             dtpCheckOut.Cursor = Cursors.Hand;
             dtpCheckOut.CustomFormat = "dd/MM/yyyy";
             dtpCheckOut.CustomizableEdges = customizableEdges4;
-            dtpCheckOut.FillColor = Color.FromArgb(155, 215, 215);
+            dtpCheckOut.FillColor = Color.FromArgb(207, 236, 236);
             dtpCheckOut.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpCheckOut.Format = DateTimePickerFormat.Custom;
             dtpCheckOut.Location = new Point(257, 24);
@@ -292,7 +292,7 @@
             // 
             // btnSearchCustomer
             // 
-            btnSearchCustomer.BackColor = Color.FromArgb(222, 241, 241);
+            btnSearchCustomer.BackColor = Color.Transparent;
             btnSearchCustomer.BorderRadius = 18;
             btnSearchCustomer.BorderThickness = 2;
             btnSearchCustomer.CustomizableEdges = customizableEdges2;
@@ -336,7 +336,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnReload);
             Controls.Add(btnSearchCustomer);
             Controls.Add(guna2HtmlLabel1);

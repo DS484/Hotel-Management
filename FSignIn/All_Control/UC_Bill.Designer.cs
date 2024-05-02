@@ -108,7 +108,7 @@
             dtpStartDay.Cursor = Cursors.Hand;
             dtpStartDay.CustomFormat = "dd/MM/yyyy";
             dtpStartDay.CustomizableEdges = customizableEdges8;
-            dtpStartDay.FillColor = Color.FromArgb(155, 215, 215);
+            dtpStartDay.FillColor = Color.FromArgb(207, 236, 236);
             dtpStartDay.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dtpStartDay.Format = DateTimePickerFormat.Custom;
             dtpStartDay.Location = new Point(19, 22);
@@ -165,15 +165,15 @@
             dgvBill.AllowUserToResizeRows = false;
             dgvBill.Anchor = AnchorStyles.None;
             dgvBill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvBill.BackgroundColor = Color.White;
+            dgvBill.BackgroundColor = Color.FromArgb(222, 241, 241);
             dgvBill.BorderStyle = BorderStyle.None;
             dgvBill.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvBill.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -282,7 +282,7 @@
             guna2Panel1.Controls.Add(dgvBill);
             guna2Panel1.Cursor = Cursors.IBeam;
             guna2Panel1.CustomizableEdges = customizableEdges4;
-            guna2Panel1.FillColor = Color.LightGray;
+            guna2Panel1.FillColor = Color.FromArgb(155, 215, 215);
             guna2Panel1.Location = new Point(19, 79);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges5;
@@ -313,7 +313,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnReload);
             Controls.Add(guna2Panel1);
             Controls.Add(btnSearch);

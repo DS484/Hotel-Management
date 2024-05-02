@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
             panel1.Controls.Add(dgvHotel);
             panel1.Location = new Point(19, 79);
             panel1.Name = "panel1";
@@ -85,10 +85,10 @@
             dgvHotel.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvHotel.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvHotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -201,6 +201,7 @@
             // 
             // txtHotelName
             // 
+            txtHotelName.BackColor = Color.FromArgb(207, 236, 236);
             txtHotelName.BorderColor = Color.DarkOliveGreen;
             txtHotelName.BorderRadius = 15;
             txtHotelName.BorderThickness = 2;
@@ -234,7 +235,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnSearch);
             Controls.Add(txtHotelName);
             Controls.Add(panel1);

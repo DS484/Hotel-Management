@@ -442,7 +442,7 @@
             // 
             // uC_Room1
             // 
-            uC_Room1.BackColor = Color.WhiteSmoke;
+            uC_Room1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Room1.Dock = DockStyle.Fill;
             uC_Room1.Location = new Point(0, 0);
             uC_Room1.Name = "uC_Room1";
@@ -451,7 +451,7 @@
             // 
             // uC_Service1
             // 
-            uC_Service1.BackColor = Color.WhiteSmoke;
+            uC_Service1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Service1.Dock = DockStyle.Fill;
             uC_Service1.Location = new Point(0, 0);
             uC_Service1.Name = "uC_Service1";
@@ -460,7 +460,7 @@
             // 
             // uC_Bill1
             // 
-            uC_Bill1.BackColor = Color.WhiteSmoke;
+            uC_Bill1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Bill1.Dock = DockStyle.Fill;
             uC_Bill1.Location = new Point(0, 0);
             uC_Bill1.Name = "uC_Bill1";
@@ -469,7 +469,7 @@
             // 
             // uC_Customers2
             // 
-            uC_Customers2.BackColor = Color.WhiteSmoke;
+            uC_Customers2.BackColor = Color.FromArgb(207, 236, 236);
             uC_Customers2.Dock = DockStyle.Fill;
             uC_Customers2.Location = new Point(0, 0);
             uC_Customers2.Name = "uC_Customers2";
@@ -478,7 +478,7 @@
             // 
             // uC_Feedback1
             // 
-            uC_Feedback1.BackColor = Color.WhiteSmoke;
+            uC_Feedback1.BackColor = Color.FromArgb(207, 236, 236);
             uC_Feedback1.Dock = DockStyle.Fill;
             uC_Feedback1.Location = new Point(0, 0);
             uC_Feedback1.Name = "uC_Feedback1";
