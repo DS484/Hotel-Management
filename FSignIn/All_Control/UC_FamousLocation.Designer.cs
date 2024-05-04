@@ -35,15 +35,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvHotel = new DataGridView();
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            cbbCity = new CTCombobox();
-            panel1 = new Panel();
             Column1 = new DataGridViewImageColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
+            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            panel1 = new Panel();
+            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            cbbCity = new CTCombobox();
             ((System.ComponentModel.ISupportInitialize)dgvHotel).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -61,10 +61,10 @@
             dgvHotel.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvHotel.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvHotel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -103,67 +103,6 @@
             dgvHotel.Size = new Size(1173, 725);
             dgvHotel.TabIndex = 35;
             // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.FromArgb(207, 236, 236);
-            btnSearch.BorderRadius = 15;
-            btnSearch.BorderThickness = 2;
-            btnSearch.CustomizableEdges = customizableEdges1;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.DarkOliveGreen;
-            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(400, 24);
-            btnSearch.Margin = new Padding(1);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearch.Size = new Size(163, 47);
-            btnSearch.TabIndex = 36;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // guna2Elipse2
-            // 
-            guna2Elipse2.BorderRadius = 18;
-            guna2Elipse2.TargetControl = panel1;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.BorderRadius = 18;
-            guna2Elipse1.TargetControl = this;
-            // 
-            // cbbCity
-            // 
-            cbbCity.BackColor = Color.White;
-            cbbCity.BorderColor = Color.DarkOliveGreen;
-            cbbCity.BorderSize = 2;
-            cbbCity.DropDownStyle = ComboBoxStyle.DropDown;
-            cbbCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbCity.ForeColor = Color.DimGray;
-            cbbCity.IconColor = Color.DimGray;
-            cbbCity.Items.AddRange(new object[] { "TP Hồ Chí Minh", "Hà Nội", "Đà Nẵng" });
-            cbbCity.ListBackColor = Color.FromArgb(207, 236, 236);
-            cbbCity.ListTextColor = Color.DimGray;
-            cbbCity.Location = new Point(16, 24);
-            cbbCity.Margin = new Padding(3, 4, 3, 4);
-            cbbCity.Name = "cbbCity";
-            cbbCity.Padding = new Padding(2);
-            cbbCity.Size = new Size(327, 47);
-            cbbCity.TabIndex = 38;
-            cbbCity.Texts = "Chọn thành phố cần tìm...";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(dgvHotel);
-            panel1.Location = new Point(19, 79);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1194, 749);
-            panel1.TabIndex = 55;
-            // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
@@ -194,11 +133,72 @@
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges1;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(1);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearch.Size = new Size(163, 47);
+            btnSearch.TabIndex = 36;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // guna2Elipse2
+            // 
+            guna2Elipse2.BorderRadius = 18;
+            guna2Elipse2.TargetControl = panel1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
+            panel1.Controls.Add(dgvHotel);
+            panel1.Location = new Point(19, 79);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1194, 749);
+            panel1.TabIndex = 55;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.BorderRadius = 18;
+            guna2Elipse1.TargetControl = this;
+            // 
+            // cbbCity
+            // 
+            cbbCity.BackColor = Color.FromArgb(207, 236, 236);
+            cbbCity.BorderColor = Color.DarkOliveGreen;
+            cbbCity.BorderSize = 2;
+            cbbCity.DropDownStyle = ComboBoxStyle.DropDown;
+            cbbCity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbCity.ForeColor = Color.DimGray;
+            cbbCity.IconColor = Color.DimGray;
+            cbbCity.Items.AddRange(new object[] { "TP Hồ Chí Minh", "Hà Nội", "Đà Nẵng" });
+            cbbCity.ListBackColor = Color.FromArgb(207, 236, 236);
+            cbbCity.ListTextColor = Color.DimGray;
+            cbbCity.Location = new Point(16, 24);
+            cbbCity.Margin = new Padding(3, 4, 3, 4);
+            cbbCity.Name = "cbbCity";
+            cbbCity.Padding = new Padding(2);
+            cbbCity.Size = new Size(327, 47);
+            cbbCity.TabIndex = 38;
+            cbbCity.Texts = "Chọn thành phố cần tìm...";
+            // 
             // UC_FamousLocation
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(panel1);
             Controls.Add(cbbCity);
             Controls.Add(btnSearch);

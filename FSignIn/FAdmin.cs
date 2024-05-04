@@ -105,7 +105,7 @@ namespace Hotel_Management
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            panelMoving.Top = btnHotelRevenue.Top + 1;
+            panelMoving.Top = btnHome.Top + 1;
             pictureHome.Visible = true;
             pictureHome.BringToFront();
         }

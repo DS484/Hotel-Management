@@ -31,16 +31,14 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             btnChart = new Guna.UI2.WinForms.Guna2Button();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            cbbRevenue = new CTCombobox();
             panel1 = new Panel();
             dgvHotelRevenue = new DataGridView();
             Column1 = new DataGridViewImageColumn();
@@ -49,6 +47,8 @@
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
+            btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            cbbRevenue = new CTCombobox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvHotelRevenue).BeginInit();
             SuspendLayout();
@@ -85,52 +85,9 @@
             guna2Elipse2.BorderRadius = 18;
             guna2Elipse2.TargetControl = panel1;
             // 
-            // btnSearch
-            // 
-            btnSearch.BackColor = Color.Transparent;
-            btnSearch.BorderRadius = 15;
-            btnSearch.BorderThickness = 2;
-            btnSearch.CustomizableEdges = customizableEdges3;
-            btnSearch.DisabledState.BorderColor = Color.DarkGray;
-            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearch.FillColor = Color.DarkOliveGreen;
-            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.ForeColor = Color.White;
-            btnSearch.Location = new Point(400, 24);
-            btnSearch.Margin = new Padding(1);
-            btnSearch.Name = "btnSearch";
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearch.Size = new Size(163, 47);
-            btnSearch.TabIndex = 51;
-            btnSearch.Text = "Tìm kiếm";
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // cbbRevenue
-            // 
-            cbbRevenue.BackColor = Color.White;
-            cbbRevenue.BorderColor = Color.DimGray;
-            cbbRevenue.BorderSize = 2;
-            cbbRevenue.DropDownStyle = ComboBoxStyle.DropDown;
-            cbbRevenue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cbbRevenue.ForeColor = Color.DimGray;
-            cbbRevenue.IconColor = Color.DimGray;
-            cbbRevenue.Items.AddRange(new object[] { "0 - 5000000", "5000000 - 10000000", "10000000 - 50000000", "50000000 - 100000000", "Trên 100000000" });
-            cbbRevenue.ListBackColor = Color.FromArgb(207, 236, 236);
-            cbbRevenue.ListTextColor = Color.DimGray;
-            cbbRevenue.Location = new Point(16, 24);
-            cbbRevenue.Margin = new Padding(3, 4, 3, 4);
-            cbbRevenue.Name = "cbbRevenue";
-            cbbRevenue.Padding = new Padding(2);
-            cbbRevenue.Size = new Size(327, 47);
-            cbbRevenue.TabIndex = 53;
-            cbbRevenue.Texts = "Chọn mức doanh thu";
-            cbbRevenue.OnSelectedIndexChanged += cbbRevenue_OnSelectedIndexChanged;
-            // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
             panel1.Controls.Add(dgvHotelRevenue);
             panel1.Location = new Point(19, 79);
             panel1.Name = "panel1";
@@ -150,10 +107,10 @@
             dgvHotelRevenue.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvHotelRevenue.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvHotelRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -199,6 +156,7 @@
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
+            Column1.Width = 125;
             // 
             // Column7
             // 
@@ -235,11 +193,54 @@
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
             // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BorderRadius = 15;
+            btnSearch.BorderThickness = 2;
+            btnSearch.CustomizableEdges = customizableEdges3;
+            btnSearch.DisabledState.BorderColor = Color.DarkGray;
+            btnSearch.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearch.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearch.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearch.FillColor = Color.DarkOliveGreen;
+            btnSearch.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(400, 24);
+            btnSearch.Margin = new Padding(1);
+            btnSearch.Name = "btnSearch";
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSearch.Size = new Size(163, 47);
+            btnSearch.TabIndex = 51;
+            btnSearch.Text = "Tìm kiếm";
+            btnSearch.Click += btnSearch_Click;
+            // 
+            // cbbRevenue
+            // 
+            cbbRevenue.BackColor = Color.FromArgb(207, 236, 236);
+            cbbRevenue.BorderColor = Color.DimGray;
+            cbbRevenue.BorderSize = 2;
+            cbbRevenue.DropDownStyle = ComboBoxStyle.DropDown;
+            cbbRevenue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cbbRevenue.ForeColor = Color.DimGray;
+            cbbRevenue.IconColor = Color.DimGray;
+            cbbRevenue.Items.AddRange(new object[] { "0 - 5000000", "5000000 - 10000000", "10000000 - 50000000", "50000000 - 100000000", "Trên 100000000" });
+            cbbRevenue.ListBackColor = Color.FromArgb(207, 236, 236);
+            cbbRevenue.ListTextColor = Color.DimGray;
+            cbbRevenue.Location = new Point(16, 24);
+            cbbRevenue.Margin = new Padding(3, 4, 3, 4);
+            cbbRevenue.Name = "cbbRevenue";
+            cbbRevenue.Padding = new Padding(2);
+            cbbRevenue.Size = new Size(327, 47);
+            cbbRevenue.TabIndex = 53;
+            cbbRevenue.Texts = "Chọn mức doanh thu";
+            cbbRevenue.OnSelectedIndexChanged += cbbRevenue_OnSelectedIndexChanged;
+            // 
             // UC_HotelRevenue
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(panel1);
             Controls.Add(cbbRevenue);
             Controls.Add(btnChart);

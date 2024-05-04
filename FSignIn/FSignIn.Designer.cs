@@ -71,14 +71,14 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(uC_SignUp1);
+            panel1.Controls.Add(uC_Shape1);
             panel1.Controls.Add(label24);
             panel1.Controls.Add(btnBack);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(uC_SignUp1);
             panel1.Controls.Add(uC_Login1);
             panel1.Controls.Add(uC_FogetPasswork1);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(uC_Shape1);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(1112, 657);

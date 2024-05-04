@@ -18,11 +18,11 @@ namespace Hotel_Management.DAO
         {
         }
 
-        public DataTable SearchHotel(string city, int adult, int child, int quantityRoom, DateTime startDate, DateTime endDate)
+        public DataTable SearchHotel(string city, int adult, int child, DateTime startDate, DateTime endDate)
         {
-            string query = "SELECT h.id as 'Hotel Id', r.id as 'Room Id' FROM Hotels h JOIN Rooms r ON h.id = r.hotel_id JOIN Rooms_Detail rd ON r.id = rd.room_id WHERE rd.adult = @adultCount AND rd.children = @childrenCount AND rd.start_day <= @startDate AND rd.end_day >= @endDate AND h.city LIKE @city GROUP BY r.id, h.id HAVING COUNT(r.id) = @quantityRoom";
+            string query = "SELECT h.id as 'Hotel Id', r.id as 'Room Id' FROM Hotels h JOIN Rooms r ON h.id = r.hotel_id JOIN Rooms_Detail rd ON r.id = rd.room_id WHERE rd.adult = @adultCount AND rd.children = @childrenCount AND rd.start_day <= @startDate AND rd.end_day >= @endDate AND h.city LIKE @city GROUP BY r.id, h.id";
 
-            object[] parameter = { adult, child, startDate, endDate, city, quantityRoom };
+            object[] parameter = { adult, child, startDate, endDate, city };
 
             DataTable dt = db.ExecuteQuery(query, parameter);
             return dt;

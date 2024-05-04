@@ -286,7 +286,7 @@
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.Controls.Add(dgvRoom);
-            guna2ShadowPanel1.FillColor = Color.LightGray;
+            guna2ShadowPanel1.FillColor = Color.FromArgb(155, 215, 215);
             guna2ShadowPanel1.Location = new Point(19, 79);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
@@ -303,15 +303,15 @@
             dgvRoom.AllowUserToResizeRows = false;
             dgvRoom.Anchor = AnchorStyles.None;
             dgvRoom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRoom.BackgroundColor = Color.White;
+            dgvRoom.BackgroundColor = Color.FromArgb(222, 241, 241);
             dgvRoom.BorderStyle = BorderStyle.None;
             dgvRoom.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvRoom.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -510,7 +510,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnReload);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnSearch);

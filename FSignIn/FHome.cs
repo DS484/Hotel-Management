@@ -103,7 +103,7 @@ namespace Hotel_Management
         private void btnSearch_Click(object sender, EventArgs e)
         {
             DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value),
-                Convert.ToInt32(nudChildren.Value), Convert.ToInt32(nudRoom.Value),
+                Convert.ToInt32(nudChildren.Value),
                 Convert.ToDateTime(dtpCheckInDate.Value), Convert.ToDateTime(dtpCheckOutDate.Value));
 
             List<int> listHotel = new List<int>();
@@ -115,7 +115,7 @@ namespace Hotel_Management
             {
                 this.Hide();
                 FFindRoom fFindRoom = new FFindRoom(listHotel, userId, txtCity.Text,
-                    Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChildren.Value), Convert.ToInt32(nudRoom.Value), Convert.ToDateTime(dtpCheckInDate.Value),
+                    Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChildren.Value), Convert.ToDateTime(dtpCheckInDate.Value),
                     Convert.ToDateTime(dtpCheckOutDate.Value));
                 fFindRoom.ShowDialog();
                 this.Visible = true;
@@ -135,9 +135,9 @@ namespace Hotel_Management
         {
             int adults = (int)nudAdult.Value;
             int children = (int)nudChildren.Value;
-            int rooms = (int)nudRoom.Value;
+            
 
-            txtItem.Text = string.Format("{0} người lớn, {1} trẻ em, {2} phòng", adults, children, rooms);
+            txtItem.Text = string.Format("{0} người lớn, {1} trẻ em", adults, children);
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
@@ -169,7 +169,7 @@ namespace Hotel_Management
         {
             if (btnLogged.Text == "")
             {
-                MessageBox.Show("Vui lòng đăng nhập để xem lịch sử!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng đăng nhập để xem chi tiết!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -203,7 +203,6 @@ namespace Hotel_Management
         {
             if (dtpCheckOutDate.Value <= dtpCheckInDate.Value)
             {
-                MessageBox.Show(dtpCheckOutDate.Value.ToString());
                 dtpCheckInDate.Value = dtpCheckOutDate.Value.AddDays(-1);
                 MessageBox.Show(this, "Ngày nhận phòng phải nhỏ hơn ngày trả phòng!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

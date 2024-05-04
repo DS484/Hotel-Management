@@ -77,6 +77,7 @@
             txtSearchFeedBack.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txtSearchFeedBack.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txtSearchFeedBack.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchFeedBack.FillColor = Color.FromArgb(207, 236, 236);
             txtSearchFeedBack.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchFeedBack.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txtSearchFeedBack.ForeColor = Color.DimGray;
@@ -96,7 +97,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(155, 215, 215);
             panel1.Controls.Add(dgvFeedBack);
             panel1.Location = new Point(17, 79);
             panel1.Name = "panel1";
@@ -111,12 +112,12 @@
             dgvFeedBack.AllowUserToResizeRows = false;
             dgvFeedBack.Anchor = AnchorStyles.None;
             dgvFeedBack.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvFeedBack.BackgroundColor = Color.White;
+            dgvFeedBack.BackgroundColor = Color.FromArgb(222, 241, 241);
             dgvFeedBack.BorderStyle = BorderStyle.None;
             dgvFeedBack.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvFeedBack.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(155, 215, 215);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(155, 215, 215);
@@ -256,7 +257,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(207, 236, 236);
             Controls.Add(btnReload);
             Controls.Add(btnSearchFeedBack);
             Controls.Add(txtSearchFeedBack);
