@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Hotel_Management.DAO
 {
@@ -92,6 +93,30 @@ namespace Hotel_Management.DAO
             Int64 hotelId = (Int64)hotel_id;
             string sql = $"INSERT INTO hotel_managers (user_id, hotel_id) VALUES ({userId}, {hotelId})";
             db.ExecuteNoneQuery(sql);
+        }
+
+        public double GetLatitude(int hotelId)
+        {
+            string query = "SELECT latitude FROM Hotels WHERE id = @hotelId";
+            object[] parameter = { hotelId };
+            DataTable dt = db.ExecuteQuery(query, parameter);
+            return Convert.ToDouble(dt.Rows[0][0]);
+        }
+
+        public double GetLongitude(int hotelId)
+        {
+            string query = "SELECT longitude FROM Hotels WHERE id = @hotelId";
+            object[] parameter = { hotelId };
+            DataTable dt = db.ExecuteQuery(query, parameter);
+            return Convert.ToDouble(dt.Rows[0][0]);
+        }
+
+        public string GetHotelName(int hotelId)
+        {
+            string query = "SELECT hotel_name FROM Hotels WHERE id = @hotelId";
+            object[] parameter = { hotelId };
+            DataTable dt = db.ExecuteQuery(query, parameter);
+            return (dt.Rows[0][0].ToString()!);
         }
     }
 }

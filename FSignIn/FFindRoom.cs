@@ -1,4 +1,8 @@
-﻿using Guna.UI2.WinForms;
+﻿using GMap.NET;
+using GMap.NET.MapProviders;
+using GMap.NET.WindowsForms;
+using GMap.NET.WindowsForms.Markers;
+using Guna.UI2.WinForms;
 using Hotel_Management.All_Control;
 using Hotel_Management.DAO;
 using Hotel_Management.DTO;
@@ -23,6 +27,10 @@ namespace Hotel_Management
         private int userId;
         private DateTime checkInDate;
         private DateTime checkOutDate;
+        List<string> hotelName = new List<string>();
+        List<double> latitudes = new List<double>();
+        List<double> longitudes = new List<double>();
+        private GMapOverlay markersOverlay = new GMapOverlay();
 
         private HotelDAO hotelDAO = new HotelDAO();
         private CustomerDAO customerDAO = new CustomerDAO();
@@ -33,15 +41,17 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.userId = userId;
-
+      
             txtCity.Text = city;
             nudAdult.Value = adult;
             nudChild.Value = child;
             nudRoom.Value = quantityRoom;
             dtpCheckInDate.Value = checkInDate;
             dtpCheckOutDate.Value = checkOutDate;
-
+            
             FillDataHotel(hotelList.Distinct().ToList());
+
+            LoadMap(hotelList);
         }
 
         public FFindRoom()
@@ -139,7 +149,7 @@ namespace Hotel_Management
             for (int i = 0; i < dtDetailHotel.Rows.Count; i++)
             {
                 DataRow row = dtDetailHotel.Rows[i];
-
+                
                 uC_AvtRoom.lblNameHotel.Text = row[0].ToString();
                 uC_AvtRoom.lblAddrHotel.Text = ("     " + row[1].ToString() + ", " + row[2].ToString()).ToString();
                 string workingDirectory = Environment.CurrentDirectory;
@@ -332,6 +342,7 @@ namespace Hotel_Management
                 newListHotel.Add(Convert.ToInt32(dr[0]));
             }
             FillDataHotel(newListHotel.Distinct().ToList());
+            LoadMap(newListHotel);
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)
@@ -415,6 +426,43 @@ namespace Hotel_Management
         private void trackBarMin_Scroll_1(object sender, ScrollEventArgs e)
         {
             SearchWithPrice(sender, e);
+        }
+
+        private void LoadMap(List<int> hotelList)
+        {
+            if (hotelList.Count > 0)
+            {
+                for (int i = 0; i < hotelList.Distinct().ToList().Count; i++)
+                {
+                    latitudes.Add(hotelDAO.GetLatitude(hotelList[i]));
+                    longitudes.Add(hotelDAO.GetLongitude(hotelList[i]));
+                    hotelName.Add(hotelDAO.GetHotelName(hotelList[i]));
+                }
+            }
+
+            map.DragButton = MouseButtons.Right;
+            map.MapProvider = GMapProviders.GoogleMap;
+
+            double centerLat = (latitudes.Sum()) / (latitudes.Count);
+            double centerLng = (longitudes.Sum()) / (longitudes.Count);
+
+            map.Position = new PointLatLng(centerLat, centerLng);
+
+            map.MinZoom = 1;
+            map.MaxZoom = 100;
+            map.Zoom = 10;
+
+            markersOverlay = new GMapOverlay("markers");
+
+            for (int i = 0; i < latitudes.Count; i++)
+            {
+                GMapMarker marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red);
+                marker.ToolTipText = hotelName[i]; 
+                marker.ToolTipMode = MarkerTooltipMode.Always; 
+
+                markersOverlay.Markers.Add(marker);
+            }
+            map.Overlays.Add(markersOverlay);
         }
     }
 }

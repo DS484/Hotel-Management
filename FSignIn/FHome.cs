@@ -5,7 +5,7 @@ using System.Data;
 namespace Hotel_Management
 {
     public partial class FHome : Form
-    { 
+    {
         private int userId = 0;
         private bool isMenuVisible = true;
         private FMenu? menuForm;
