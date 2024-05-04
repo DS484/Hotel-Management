@@ -87,7 +87,8 @@ namespace Hotel_Management
 
         private bool CheckNullOrEmpty()
         {
-            string[] input = { txtFullName.Texts, txtUserName.Texts, txtPhoneNumber.Texts, txtIdentifyCard.Texts };
+            string[] input = { txtFullName.Texts, txtUserName.Texts, txtPhoneNumber.Texts, txtIdentifyCard.Texts, txtPassword.Texts, txtConfirmPassword.Texts, 
+                txtVoucher.Texts, txtHotel.Texts, txtAddress.Texts, txtReview.Texts, txtLatitude.Texts, txtLongitude.Texts};
             foreach (string s in input)
             {
                 if (string.IsNullOrEmpty(s))
@@ -173,44 +174,50 @@ namespace Hotel_Management
 
         private void btnCpmplete_Click(object sender, EventArgs e)
         {
-            if (!CheckNullOrEmpty())
-                return;
-            Manager c = new Manager(firstName!, lastName!,
-            gender, txtUserName.Texts, txtIdentifyCard.Texts,
-            txtPhoneNumber.Texts, (int)Role.MANAGER, txtPassword.Texts);
-
-            bool checkExist = CheckExist();
-
-            bool inserted = false;
-            if (!checkExist)
-                inserted = managerDAO.Insert(c);
-            if (inserted)
+            try
             {
-                string workingDirectory = Environment.CurrentDirectory;
-                string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
-                string[] lstDir = picboxHotel.ImageLocation.ToString().Split(@"\");
-                string fileName = @"Image\" + lstDir[lstDir.Length - 1];
-                //
+                if (!CheckNullOrEmpty())
+                    return;
+                Manager c = new Manager(firstName!, lastName!,
+                gender, txtUserName.Texts, txtIdentifyCard.Texts,
+                txtPhoneNumber.Texts, (int)Role.MANAGER, txtPassword.Texts);
 
-                Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts, Convert.ToInt32(cbbStar.Texts));
-                bool addHotel = hotelDAO.Insert(hotel);
-                if (addHotel)
+                bool checkExist = CheckExist();
+
+                bool inserted = false;
+                if (!checkExist)
+                    inserted = managerDAO.Insert(c);
+                if (inserted)
                 {
-                    //File.Copy(picboxHotel.ImageLocation.ToString(), projectDirectory + @"\" + fileName);
-                    hotelDAO.InsertHotelManager();
-                    MessageBox.Show("Đăng kí thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    FSignIn fSignIn = new FSignIn();
-                    fSignIn.ShowDialog();
+                    string workingDirectory = Environment.CurrentDirectory;
+                    string projectDirectory = Directory.GetParent(workingDirectory)!.Parent!.Parent!.FullName;
+                    string[] lstDir = picboxHotel.ImageLocation.ToString().Split(@"\");
+                    string fileName = @"Image\" + lstDir[lstDir.Length - 1];
+                    //
+
+                    Hotel hotel = new Hotel(txtHotel.Texts, txtAddress.Texts, cbbCity.Texts, fileName, txtVoucher.Texts, txtReview.Texts, Convert.ToInt32(cbbStar.Texts), float.Parse(txtLatitude.Texts), float.Parse(txtLongitude.Texts));
+                    bool addHotel = hotelDAO.Insert(hotel);
+                    if (addHotel)
+                    {
+                        hotelDAO.InsertHotelManager();
+                        MessageBox.Show("Đăng kí thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        FSignIn fSignIn = new FSignIn();
+                        fSignIn.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Đã có lỗi xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Đã có lỗi xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Đã có lỗi xảy ra!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             txtFullName.Texts = "";

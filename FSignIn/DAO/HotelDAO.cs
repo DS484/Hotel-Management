@@ -17,7 +17,7 @@ namespace Hotel_Management.DAO
         public bool Insert(object obj)
         {
             Hotel hotel = (Hotel)obj;
-            string sql = $"INSERT INTO hotels(hotel_name, address, city, picture, voucher, star_avg, Review) VALUES (N'{hotel.HotelName}', N'{hotel.Address}', N'{hotel.City}', N'{hotel.Picture}', N'{hotel.Voucher}', '{hotel.StarAvg}', N'{hotel.Review}')";
+            string sql = $"INSERT INTO hotels(hotel_name, address, city, picture, voucher, star_avg, Review, latitude, longitude) VALUES (N'{hotel.HotelName}', N'{hotel.Address}', N'{hotel.City}', N'{hotel.Picture}', N'{hotel.Voucher}', '{hotel.StarAvg}', N'{hotel.Review}', '{hotel.Latitude}', '{hotel.Longitude}')";
             int inserted = db.ExecuteNoneQuery(sql);
             if (inserted > 0) return true;
             return false;

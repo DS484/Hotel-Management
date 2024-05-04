@@ -41,16 +41,16 @@ namespace Hotel_Management
         {
             InitializeComponent();
             this.userId = userId;
-      
+
             txtCity.Text = city;
             nudAdult.Value = adult;
             nudChild.Value = child;
             dtpCheckInDate.Value = checkInDate;
             dtpCheckOutDate.Value = checkOutDate;
-            
+
             FillDataHotel(hotelList.Distinct().ToList());
 
-            LoadMap(hotelList);
+            LoadMap(hotelList.Distinct().ToList());
         }
 
         public FFindRoom()
@@ -148,7 +148,7 @@ namespace Hotel_Management
             for (int i = 0; i < dtDetailHotel.Rows.Count; i++)
             {
                 DataRow row = dtDetailHotel.Rows[i];
-                
+
                 uC_AvtRoom.lblNameHotel.Text = row[0].ToString();
                 uC_AvtRoom.lblAddrHotel.Text = ("     " + row[1].ToString() + ", " + row[2].ToString()).ToString();
                 string workingDirectory = Environment.CurrentDirectory;
@@ -329,13 +329,13 @@ namespace Hotel_Management
             }
 
             List<int> newListHotel = new List<int>();
-            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value),dtpCheckInDate.Value, dtpCheckOutDate.Value);
+            DataTable dt = customerDAO.SearchHotel(txtCity.Text, Convert.ToInt32(nudAdult.Value), Convert.ToInt32(nudChild.Value), dtpCheckInDate.Value, dtpCheckOutDate.Value);
             foreach (DataRow dr in dt.Rows)
             {
                 newListHotel.Add(Convert.ToInt32(dr[0]));
             }
             FillDataHotel(newListHotel.Distinct().ToList());
-            LoadMap(newListHotel);
+            LoadMap(newListHotel.Distinct().ToList());
         }
 
         private void btnExit_Click_1(object sender, EventArgs e)
@@ -449,12 +449,11 @@ namespace Hotel_Management
             map.Zoom = 10;
 
             markersOverlay = new GMapOverlay("markers");
-
             for (int i = 0; i < latitudes.Count; i++)
             {
                 GMapMarker marker = new GMarkerGoogle(new PointLatLng(latitudes[i], longitudes[i]), GMarkerGoogleType.red);
-                marker.ToolTipText = hotelName[i]; 
-                marker.ToolTipMode = MarkerTooltipMode.Always; 
+                marker.ToolTipText = hotelName[i];
+                marker.ToolTipMode = MarkerTooltipMode.Always;
 
                 markersOverlay.Markers.Add(marker);
             }

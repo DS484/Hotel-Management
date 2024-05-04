@@ -19,6 +19,8 @@ namespace Hotel_Management.DTO
         private string? picture;
         private string? review;
         private string? voucher;
+        private float laitude;
+        private float longitude;
 
         public Hotel() { }
 
@@ -42,7 +44,7 @@ namespace Hotel_Management.DTO
             this.StarAvg = starAvg;
         }
 
-        public Hotel(string hotelName, string address, string city, string picture, string voucher, string review, int starAvg)
+        public Hotel(string hotelName, string address, string city, string picture, string voucher, string review, int starAvg, float latitude, float longitude)
         {
             this.HotelName = hotelName;
             this.Address = address;
@@ -51,6 +53,8 @@ namespace Hotel_Management.DTO
             this.Voucher = voucher;
             this.Review = review;
             this.StarAvg = starAvg;
+            this.laitude = latitude;
+            this.longitude = longitude;
         }
 
         public Hotel(int id, string hotelName, string address, string city, int starAvg, string picture)
@@ -71,6 +75,7 @@ namespace Hotel_Management.DTO
         public string Picture { get => picture!; set => picture = value; }
         public string Review { get => review!; set => review = value; }
         public string Voucher { get => voucher!; set => voucher = value; }
-
+        public float Latitude { get => laitude; set => laitude = value; }
+        public float Longitude { get => longitude; set => longitude = value; }
     }
 }

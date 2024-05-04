@@ -135,7 +135,7 @@ namespace Hotel_Management
         {
             int adults = (int)nudAdult.Value;
             int children = (int)nudChildren.Value;
-            
+
 
             txtItem.Text = string.Format("{0} người lớn, {1} trẻ em", adults, children);
         }
@@ -223,6 +223,22 @@ namespace Hotel_Management
         private void nudChildren_ValueChanged(object sender, EventArgs e)
         {
             UpdateTextBox();
+        }
+
+        private void btnSupport_Click(object sender, EventArgs e)
+        {
+            string filePathClient = @"E:\LapTrinhWin\Final_ProJ\Client\bin\Debug\Client.exe";
+
+            string filePathServer = @"E:\LapTrinhWin\Final_ProJ\Server\bin\Debug\Server.exe";
+
+            this.Hide();
+            System.Diagnostics.Process clientProcess = System.Diagnostics.Process.Start(filePathClient);
+            System.Diagnostics.Process serverProcess = System.Diagnostics.Process.Start(filePathServer);
+
+            clientProcess.WaitForExit();
+            serverProcess.WaitForExit();
+
+            this.Show();
         }
     }
 }
