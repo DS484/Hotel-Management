@@ -430,6 +430,11 @@ namespace Hotel_Management
 
         private void LoadMap(List<int> hotelList)
         {
+            markersOverlay.Clear();
+            latitudes.Clear();
+            longitudes.Clear();
+            hotelName.Clear();
+
             if (hotelList.Count > 0)
             {
                 for (int i = 0; i < hotelList.Distinct().ToList().Count; i++)
