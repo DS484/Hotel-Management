@@ -227,10 +227,12 @@ namespace Hotel_Management
 
         private void btnSupport_Click(object sender, EventArgs e)
         {
-            string filePathClient = @"E:\LapTrinhWin\Final_ProJ\Client\bin\Debug\Client.exe";
+           /* string filePathClient = @"E:\LapTrinhWin\Final_ProJ\Client\bin\Debug\Client.exe";
 
-            string filePathServer = @"E:\LapTrinhWin\Final_ProJ\Server\bin\Debug\Server.exe";
+            string filePathServer = @"E:\LapTrinhWin\Final_ProJ\Server\bin\Debug\Server.exe";*/
 
+            string filePathClient = @"D:\23-24\Lập trình Win\Final_ProJ\Client\bin\Debug\Client.exe";
+            string filePathServer = @"D:\23-24\Lập trình Win\Final_ProJ\Server\bin\Debug\Server.exe";
             this.Hide();
             System.Diagnostics.Process clientProcess = System.Diagnostics.Process.Start(filePathClient);
             System.Diagnostics.Process serverProcess = System.Diagnostics.Process.Start(filePathServer);

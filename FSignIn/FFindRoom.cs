@@ -459,5 +459,10 @@ namespace Hotel_Management
             }
             map.Overlays.Add(markersOverlay);
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

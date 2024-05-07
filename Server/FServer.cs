@@ -26,16 +26,14 @@ namespace Server
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
             ConnectClient();
-        }
+            // Thiết lập StartPosition là Manual để có thể tự đặt vị trí form
+            this.StartPosition = FormStartPosition.Manual;
 
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            foreach(Socket item in clientList)
-            {
-                SendMessage(item);
-            }
-            AddMessage(txtMessage.Text);
-            txtMessage.Clear();
+            // Lấy kích thước của màn hình chính
+            Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
+
+            // Đặt tọa độ của form ở bên phải màn hình với một khoảng cách nào đó (ví dụ: 50 pixel)
+            this.Location = new Point(workingArea.Width - this.Width - 300, workingArea.Height / 2 - this.Height / 2);
         }
 
         private void FServer_FormClosed(object sender, FormClosedEventArgs e)
@@ -131,6 +129,27 @@ namespace Server
             BinaryFormatter formatter = new BinaryFormatter();
 
             return formatter.Deserialize(stream);
+        }
+
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnsend_Click_2(object sender, EventArgs e)
+        {
+            foreach (Socket item in clientList)
+            {
+                SendMessage(item);
+            }
+            AddMessage(txtMessage.Text);
+            txtMessage.Clear();
+        }
+
+        private void FServer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

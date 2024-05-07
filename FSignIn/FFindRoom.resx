@@ -18,7 +18,7 @@
     <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
     <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
     <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing"">Blue</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
     <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
         <value>[base64 mime encoded serialized .NET Framework object]</value>
     </data>
@@ -1167,26 +1167,6 @@
         CzYUah7XwrXudt9R9itWPXzDUMiuYT7ORTYUSj9t/PLRU/EbjMS5SL00UxcyfTktxrnIhkLpK3Uyyy5i
         OmaReprJskn881Ue2VCoZuS/zmMo+6ZSTzPhWi+bzmiOc5ENC5T+8NTj+HkcwSccxxOcRmeitTL1NKNZ
         7dHeAXd2wYYR1YeXeI/LKeuFXmtdiNa9qXcZmtWevnjWcqWav6bd/1JaYTjoAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="label8.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAMySURBVFhH1dfZ
-        rxRFGMbhUUDZFAJcgDeGBCTKKgIBoh4WWQwurAJGQfY1oHBBCHDDFiT80bxPT9dQZzJHZs4ZL86b/NI9
-        3VVvffXV0jWd6HX4JRwOP7YcCt9UXAgnwrBS9q9Qe/As/vg5/Bs6i8PVlustf4cfKvaHBWFYKVvXB8/i
-        fy1cCdputDfsCftaFNZrmdGTiTCq+KnLgxfP4l/a66k/gG/DlrA0eD7dAMCDF8+hAxCtNB0Nt8J0A1CX
-        B6/Zl4FzwUz9IwwKYFHY3eK+X/zU5cFrpAwo/Hs4Es6E/gA2hF/D8rCivd8UavFTlwevsQ3BssB0TlgS
-        BDA/WNvui9TD2CdhXfHroOzc5len8317JeX+l0no92fd2876FvKsNnWPaWfgcjC2rnUAn4fvureTZDKu
-        7t424ld7jJQBhU8G48qgfxLqza5gK/0k7Ax1+omfujx4jW0Iir4I5d06D/rkHcY+CYcVv9m7E14KZ9tn
-        M/0auvLiOXQAT8KplmPBxjOqfgrqFh+eUwYgOkvFIcG9HW4YWQEYRjxLG67oyWYiqqlmdJH93nI7GPTw
-        bjC5HDoOBO+M91TirQ1tlQ2skbV6MZwOXhatDZ+GD4PnUurs6GptLwyOX2a6gBy9vHP1rVCXR5G0a0Nb
-        fBox8NUSBPRGg/PCn+F+uB2M41fhffoyCO5muBd4fBQ+CD7NpR1t6kBne5BSqdscHEBtMqTRbUFPRpXl
-        5zRsBdCawFsb2jJkO0KTWoh8VbDPl2EwpsZMENIntWUMpbLot+CZ8sq46pirWU/q89aGTPrdtLM1GLc7
-        wTld+srhwuahkEibdFWql1F9T8r6PnguCNoYtGNonoXzQYZ60rOH4ePmV1cqC8DsXelBpf8KQNnSy/53
-        2vEfpHzSe/LCHlAOFyR9MnIjWHIvwtPwKjwK5Uz4OLwJz4MylqbvwPFgSGppx/CZI5PkRX+0hsXcsCJG
-        lTqy8E/z650GtdOoflHOeNa3HswE486LJw0VgHG3F4xLvCxBGhiAWWsns1HYmBQigQzq1Sg0S6298i7t
-        9FaVxkyqBy0vgx1MZbtgv+Go1F4maWknS74z8RbgHa987qWF1AAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="lblMax.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
