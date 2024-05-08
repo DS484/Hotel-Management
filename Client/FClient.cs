@@ -25,13 +25,10 @@ namespace Client
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
             ConnectServer();
-            // Thiết lập StartPosition là Manual để có thể tự đặt vị trí form
             this.StartPosition = FormStartPosition.Manual;
 
-            // Lấy kích thước của màn hình chính
             Rectangle workingArea = Screen.PrimaryScreen.WorkingArea;
 
-            // Đặt tọa độ của form ở bên trái màn hình với một khoảng cách nào đó (ví dụ: 50 pixel)
             this.Location = new Point(300, workingArea.Height / 2 - this.Height / 2);
         }
 
