@@ -37,11 +37,13 @@ namespace Hotel_Management
                 btnSend.Text = "Waiting...";
 
                 txtBody.SelectionAlignment = HorizontalAlignment.Left;
-                txtBody.SelectionColor = Color.Blue;
+                txtBody.SelectionColor = Color.Brown;
+                txtBody.Font = new Font("Segoe UI", 12);
                 txtBody.AppendText($"Me: {message}\n");
 
                 txtBody.SelectionAlignment = HorizontalAlignment.Right;
-                txtBody.SelectionColor = Color.Red;
+                txtBody.SelectionColor = Color.SeaGreen;
+                txtBody.Font = new Font("Segoe UI", 12);
                 var result = await chatSession!.SendMessageAsync(message);
                 txtBody.AppendText($"Gemini AI: {result}\n");
 

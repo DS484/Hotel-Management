@@ -40,6 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtMessage = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnsend = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -51,10 +52,10 @@
             // 
             this.lvMessage.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
             this.lvMessage.HideSelection = false;
-            this.lvMessage.Location = new System.Drawing.Point(6, 59);
+            this.lvMessage.Location = new System.Drawing.Point(6, 108);
             this.lvMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvMessage.Name = "lvMessage";
-            this.lvMessage.Size = new System.Drawing.Size(523, 587);
+            this.lvMessage.Size = new System.Drawing.Size(523, 537);
             this.lvMessage.TabIndex = 3;
             this.lvMessage.UseCompatibleStateImageBehavior = false;
             this.lvMessage.View = System.Windows.Forms.View.List;
@@ -169,12 +170,25 @@
             this.btnsend.TabIndex = 12;
             this.btnsend.Click += new System.EventHandler(this.btnsend_Click_2);
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(122)))), ((int)(((byte)(139)))));
+            this.label2.Location = new System.Drawing.Point(179, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 42);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Assistant";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(541, 741);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnsend);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.panel1);
@@ -207,6 +221,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2CircleButton btnsend;
         private Guna.UI2.WinForms.Guna2TextBox txtMessage;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -58,7 +58,7 @@ namespace Hotel_Management.Add_Item
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -67,6 +67,138 @@ namespace Hotel_Management.Add_Item
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public string getLinkImage()
+        {
+            string imageLocation = "";
+            string linkImage = "";
+            try
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "Image Files(*.jpg; *.png)|*.jpg; *.png";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    imageLocation = openFileDialog.FileName;
+                    string imageName = Path.GetFileName(imageLocation);
+                    linkImage = Path.Combine("Image", imageName);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return linkImage;
+        }
+
+        private void btnPic1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditRoom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnPic1_Click_1(object sender, EventArgs e)
+        {
+            txtImg1.PlaceholderText = getLinkImage();
+        }
+
+        private void btnPic2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPic5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddRoom_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditRoom_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPic2_Click_2(object sender, EventArgs e)
+        {
+            txtImg2.PlaceholderText = getLinkImage();
+        }
+
+        private void btnPic3_Click_2(object sender, EventArgs e)
+        {
+            txtImg3.PlaceholderText = getLinkImage();
+        }
+
+        private void btnPic4_Click_2(object sender, EventArgs e)
+        {
+            txtImg4.PlaceholderText = getLinkImage();
+        }
+
+        private void btnPic5_Click_2(object sender, EventArgs e)
+        {
+            txtImg5.PlaceholderText = getLinkImage();
+        }
+
+        private void btnAddRoom_Click_2(object sender, EventArgs e)
         {
             try
             {
@@ -99,59 +231,7 @@ namespace Hotel_Management.Add_Item
             }
         }
 
-        public string getLinkImage()
-        {
-            string imageLocation = "";
-            string linkImage = "";
-            try
-            {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "Image Files(*.jpg; *.png)|*.jpg; *.png";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    imageLocation = openFileDialog.FileName;
-                    string imageName = Path.GetFileName(imageLocation);
-                    linkImage = Path.Combine("Image", imageName);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            return linkImage;
-        }
-
-        private void btnPic1_Click(object sender, EventArgs e)
-        {
-            txtImg1.PlaceholderText = getLinkImage();
-        }
-
-        private void btnPic2_Click(object sender, EventArgs e)
-        {
-            txtImg2.PlaceholderText = getLinkImage();
-        }
-
-        private void btnPic3_Click(object sender, EventArgs e)
-        {
-            txtImg3.PlaceholderText = getLinkImage();
-        }
-
-        private void btnPic4_Click(object sender, EventArgs e)
-        {
-            txtImg4.PlaceholderText = getLinkImage();
-        }
-
-        private void btnPic5_Click(object sender, EventArgs e)
-        {
-            txtImg5.PlaceholderText = getLinkImage();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEditRoom_Click(object sender, EventArgs e)
+        private void btnEditRoom_Click_2(object sender, EventArgs e)
         {
             try
             {

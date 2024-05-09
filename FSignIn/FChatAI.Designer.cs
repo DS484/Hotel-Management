@@ -55,18 +55,20 @@
             // 
             // txtBody
             // 
-            txtBody.Location = new Point(12, 99);
+            txtBody.Location = new Point(14, 132);
+            txtBody.Margin = new Padding(3, 4, 3, 4);
             txtBody.Name = "txtBody";
             txtBody.ReadOnly = true;
-            txtBody.Size = new Size(776, 316);
+            txtBody.Size = new Size(886, 420);
             txtBody.TabIndex = 0;
             txtBody.Text = "";
             // 
             // txtMessage
             // 
-            txtMessage.Location = new Point(12, 421);
+            txtMessage.Location = new Point(14, 561);
+            txtMessage.Margin = new Padding(3, 4, 3, 4);
             txtMessage.Name = "txtMessage";
-            txtMessage.Size = new Size(700, 52);
+            txtMessage.Size = new Size(799, 68);
             txtMessage.TabIndex = 1;
             txtMessage.Text = "";
             txtMessage.KeyDown += txtMessage_KeyDown;
@@ -82,10 +84,11 @@
             btnSend.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSend.ForeColor = Color.White;
             btnSend.Image = (Image)resources.GetObject("btnSend.Image");
-            btnSend.Location = new Point(718, 421);
+            btnSend.Location = new Point(821, 561);
+            btnSend.Margin = new Padding(3, 4, 3, 4);
             btnSend.Name = "btnSend";
             btnSend.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSend.Size = new Size(70, 52);
+            btnSend.Size = new Size(80, 69);
             btnSend.TabIndex = 2;
             btnSend.Click += btnSend_Click;
             // 
@@ -94,10 +97,11 @@
             guna2PictureBox1.CustomizableEdges = customizableEdges3;
             guna2PictureBox1.Image = (Image)resources.GetObject("guna2PictureBox1.Image");
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(24, 33);
+            guna2PictureBox1.Location = new Point(27, 44);
+            guna2PictureBox1.Margin = new Padding(3, 4, 3, 4);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2PictureBox1.Size = new Size(39, 40);
+            guna2PictureBox1.Size = new Size(45, 53);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox1.TabIndex = 3;
             guna2PictureBox1.TabStop = false;
@@ -107,41 +111,40 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(57, 145, 217);
-            label1.Location = new Point(69, 40);
+            label1.Location = new Point(79, 53);
             label1.Name = "label1";
-            label1.Size = new Size(168, 25);
+            label1.Size = new Size(215, 32);
             label1.TabIndex = 4;
             label1.Text = "API From Gemini ";
             // 
             // label2
             // 
-            label2.BackColor = Color.White;
+            label2.BackColor = Color.WhiteSmoke;
             label2.Image = (Image)resources.GetObject("label2.Image");
-            label2.Location = new Point(699, 75);
+            label2.Location = new Point(799, 100);
             label2.Name = "label2";
-            label2.Size = new Size(55, 10);
+            label2.Size = new Size(63, 13);
             label2.TabIndex = 29;
             // 
             // PicFlashingLogo
             // 
-            PicFlashingLogo.BackColor = Color.White;
+            PicFlashingLogo.BackColor = Color.WhiteSmoke;
             PicFlashingLogo.Image = (Image)resources.GetObject("PicFlashingLogo.Image");
-            PicFlashingLogo.Location = new Point(648, 40);
-            PicFlashingLogo.Margin = new Padding(3, 2, 3, 2);
+            PicFlashingLogo.Location = new Point(741, 53);
             PicFlashingLogo.Name = "PicFlashingLogo";
-            PicFlashingLogo.Size = new Size(31, 15);
+            PicFlashingLogo.Size = new Size(35, 20);
             PicFlashingLogo.SizeMode = PictureBoxSizeMode.Zoom;
             PicFlashingLogo.TabIndex = 28;
             PicFlashingLogo.TabStop = false;
             // 
             // label3
             // 
-            label3.BackColor = Color.White;
+            label3.BackColor = Color.WhiteSmoke;
             label3.Font = new Font("Trebuchet MS", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(3, 122, 139);
-            label3.Location = new Point(660, 40);
+            label3.Location = new Point(754, 53);
             label3.Name = "label3";
-            label3.Size = new Size(132, 42);
+            label3.Size = new Size(151, 56);
             label3.TabIndex = 27;
             label3.Text = "travelstrip";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -151,10 +154,9 @@
             panel2.Controls.Add(btnHide);
             panel2.Controls.Add(guna2CircleButton3);
             panel2.Controls.Add(btnExit);
-            panel2.Location = new Point(709, 11);
-            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Location = new Point(810, 15);
             panel2.Name = "panel2";
-            panel2.Size = new Size(85, 23);
+            panel2.Size = new Size(97, 31);
             panel2.TabIndex = 39;
             // 
             // btnHide
@@ -168,12 +170,11 @@
             btnHide.ForeColor = Color.White;
             btnHide.Image = (Image)resources.GetObject("btnHide.Image");
             btnHide.ImageSize = new Size(22, 22);
-            btnHide.Location = new Point(6, 1);
-            btnHide.Margin = new Padding(3, 2, 3, 2);
+            btnHide.Location = new Point(7, 1);
             btnHide.Name = "btnHide";
             btnHide.ShadowDecoration.CustomizableEdges = customizableEdges5;
             btnHide.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnHide.Size = new Size(22, 19);
+            btnHide.Size = new Size(25, 25);
             btnHide.TabIndex = 39;
             // 
             // guna2CircleButton3
@@ -187,12 +188,11 @@
             guna2CircleButton3.ForeColor = Color.White;
             guna2CircleButton3.Image = (Image)resources.GetObject("guna2CircleButton3.Image");
             guna2CircleButton3.ImageSize = new Size(25, 25);
-            guna2CircleButton3.Location = new Point(32, 1);
-            guna2CircleButton3.Margin = new Padding(3, 2, 3, 2);
+            guna2CircleButton3.Location = new Point(37, 1);
             guna2CircleButton3.Name = "guna2CircleButton3";
             guna2CircleButton3.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2CircleButton3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CircleButton3.Size = new Size(22, 19);
+            guna2CircleButton3.Size = new Size(25, 25);
             guna2CircleButton3.TabIndex = 39;
             // 
             // btnExit
@@ -206,21 +206,20 @@
             btnExit.ForeColor = Color.White;
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageSize = new Size(22, 22);
-            btnExit.Location = new Point(60, 1);
-            btnExit.Margin = new Padding(3, 2, 3, 2);
+            btnExit.Location = new Point(69, 1);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnExit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            btnExit.Size = new Size(22, 19);
+            btnExit.Size = new Size(25, 25);
             btnExit.TabIndex = 38;
             btnExit.Click += btnExit_Click;
             // 
             // FChatAI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(800, 485);
+            ClientSize = new Size(914, 647);
             Controls.Add(panel2);
             Controls.Add(label2);
             Controls.Add(PicFlashingLogo);
@@ -230,6 +229,8 @@
             Controls.Add(btnSend);
             Controls.Add(txtMessage);
             Controls.Add(txtBody);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FChatAI";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FChatAI";

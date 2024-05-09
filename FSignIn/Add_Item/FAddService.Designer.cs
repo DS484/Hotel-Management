@@ -73,11 +73,10 @@
             btnExit.FillColor = Color.Red;
             btnExit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(429, 637);
-            btnExit.Margin = new Padding(4);
+            btnExit.Location = new Point(329, 449);
             btnExit.Name = "btnExit";
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnExit.Size = new Size(132, 56);
+            btnExit.Size = new Size(106, 45);
             btnExit.TabIndex = 7;
             btnExit.Text = "Thoát";
             btnExit.Click += btnExit_Click;
@@ -93,11 +92,10 @@
             btnAddService.FillColor = Color.FromArgb(0, 192, 0);
             btnAddService.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddService.ForeColor = Color.White;
-            btnAddService.Location = new Point(99, 637);
-            btnAddService.Margin = new Padding(4);
+            btnAddService.Location = new Point(65, 449);
             btnAddService.Name = "btnAddService";
             btnAddService.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnAddService.Size = new Size(132, 56);
+            btnAddService.Size = new Size(106, 45);
             btnAddService.TabIndex = 6;
             btnAddService.Text = "Thêm";
             btnAddService.Click += btnAddRoom_Click;
@@ -108,17 +106,20 @@
             label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(0, 0);
-            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(669, 75);
+            label1.Size = new Size(511, 60);
             label1.TabIndex = 5;
-            label1.Text = "Thêm dịch vụ";
+            label1.Text = "Thông tin dịch vụ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(217, 217, 217);
+            panel2.BackColor = Color.WhiteSmoke;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(btnEditService);
             panel2.Controls.Add(txtRoomNumber);
+            panel2.Controls.Add(btnExit);
+            panel2.Controls.Add(btnAddService);
             panel2.Controls.Add(cbMeal);
             panel2.Controls.Add(cbHealthy);
             panel2.Controls.Add(cbAnother);
@@ -129,15 +130,14 @@
             panel2.Controls.Add(pictureBox13);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(pictureBox2);
-            panel2.Location = new Point(72, 79);
-            panel2.Margin = new Padding(4);
+            panel2.Location = new Point(12, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(525, 550);
+            panel2.Size = new Size(511, 548);
             panel2.TabIndex = 4;
             // 
             // txtRoomNumber
             // 
-            txtRoomNumber.BackColor = Color.FromArgb(217, 217, 217);
+            txtRoomNumber.BackColor = Color.WhiteSmoke;
             txtRoomNumber.BorderColor = Color.FromArgb(82, 145, 175);
             txtRoomNumber.BorderFocusColor = Color.Black;
             txtRoomNumber.BorderRadius = 20;
@@ -145,15 +145,16 @@
             txtRoomNumber.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtRoomNumber.ForeColor = Color.DimGray;
             txtRoomNumber.IsFocused = false;
-            txtRoomNumber.Location = new Point(142, 50);
+            txtRoomNumber.Location = new Point(151, 75);
+            txtRoomNumber.Margin = new Padding(2, 2, 2, 2);
             txtRoomNumber.Multiline = false;
             txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.Padding = new Padding(7);
+            txtRoomNumber.Padding = new Padding(6, 6, 6, 6);
             txtRoomNumber.PasswordChar = false;
             txtRoomNumber.PlaceholderColor = Color.DarkGray;
             txtRoomNumber.PlaceholderText = "";
             txtRoomNumber.ReadOnly = false;
-            txtRoomNumber.Size = new Size(302, 47);
+            txtRoomNumber.Size = new Size(242, 41);
             txtRoomNumber.TabIndex = 29;
             txtRoomNumber.Texts = "Mã phòng";
             txtRoomNumber.UnderlineedStyle = true;
@@ -166,9 +167,10 @@
             cbMeal.CheckedState.BorderThickness = 0;
             cbMeal.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             cbMeal.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbMeal.Location = new Point(142, 429);
+            cbMeal.Location = new Point(151, 378);
+            cbMeal.Margin = new Padding(2, 2, 2, 2);
             cbMeal.Name = "cbMeal";
-            cbMeal.Size = new Size(133, 36);
+            cbMeal.Size = new Size(113, 32);
             cbMeal.TabIndex = 28;
             cbMeal.Text = "Ăn uống";
             cbMeal.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -184,9 +186,10 @@
             cbHealthy.CheckedState.BorderThickness = 0;
             cbHealthy.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             cbHealthy.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbHealthy.Location = new Point(142, 349);
+            cbHealthy.Location = new Point(151, 314);
+            cbHealthy.Margin = new Padding(2, 2, 2, 2);
             cbHealthy.Name = "cbHealthy";
-            cbHealthy.Size = new Size(140, 36);
+            cbHealthy.Size = new Size(118, 32);
             cbHealthy.TabIndex = 28;
             cbHealthy.Text = "Sức khỏe";
             cbHealthy.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -202,9 +205,10 @@
             cbAnother.CheckedState.BorderThickness = 0;
             cbAnother.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             cbAnother.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbAnother.Location = new Point(142, 268);
+            cbAnother.Location = new Point(151, 249);
+            cbAnother.Margin = new Padding(2, 2, 2, 2);
             cbAnother.Name = "cbAnother";
-            cbAnother.Size = new Size(93, 36);
+            cbAnother.Size = new Size(77, 32);
             cbAnother.TabIndex = 28;
             cbAnother.Text = "Khác";
             cbAnother.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -220,9 +224,10 @@
             cbActivity.CheckedState.BorderThickness = 0;
             cbActivity.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             cbActivity.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            cbActivity.Location = new Point(142, 185);
+            cbActivity.Location = new Point(151, 183);
+            cbActivity.Margin = new Padding(2, 2, 2, 2);
             cbActivity.Name = "cbActivity";
-            cbActivity.Size = new Size(158, 36);
+            cbActivity.Size = new Size(132, 32);
             cbActivity.TabIndex = 28;
             cbActivity.Text = "Hoạt động";
             cbActivity.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -233,10 +238,9 @@
             // pictureBox11
             // 
             pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(61, 429);
-            pictureBox11.Margin = new Padding(4);
+            pictureBox11.Location = new Point(86, 378);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(62, 62);
+            pictureBox11.Size = new Size(50, 50);
             pictureBox11.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox11.TabIndex = 23;
             pictureBox11.TabStop = false;
@@ -244,10 +248,9 @@
             // pictureBox12
             // 
             pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(61, 349);
-            pictureBox12.Margin = new Padding(4);
+            pictureBox12.Location = new Point(86, 314);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(62, 62);
+            pictureBox12.Size = new Size(50, 50);
             pictureBox12.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox12.TabIndex = 22;
             pictureBox12.TabStop = false;
@@ -255,10 +258,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(61, 268);
-            pictureBox1.Margin = new Padding(4);
+            pictureBox1.Location = new Point(86, 249);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(62, 62);
+            pictureBox1.Size = new Size(50, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 21;
             pictureBox1.TabStop = false;
@@ -266,10 +268,9 @@
             // pictureBox13
             // 
             pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(61, 185);
-            pictureBox13.Margin = new Padding(4);
+            pictureBox13.Location = new Point(86, 183);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(62, 62);
+            pictureBox13.Size = new Size(50, 50);
             pictureBox13.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox13.TabIndex = 20;
             pictureBox13.TabStop = false;
@@ -278,20 +279,20 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(13, 128);
+            label2.Location = new Point(47, 137);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(98, 32);
+            label2.Size = new Size(83, 28);
             label2.TabIndex = 19;
             label2.Text = "Tiện ích";
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.FromArgb(217, 217, 217);
+            pictureBox2.BackColor = Color.WhiteSmoke;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(61, 47);
-            pictureBox2.Margin = new Padding(4);
+            pictureBox2.Location = new Point(86, 73);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(50, 50);
+            pictureBox2.Size = new Size(40, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
@@ -316,27 +317,23 @@
             btnEditService.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnEditService.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEditService.ForeColor = Color.White;
-            btnEditService.Location = new Point(264, 636);
+            btnEditService.Location = new Point(197, 448);
+            btnEditService.Margin = new Padding(2, 2, 2, 2);
             btnEditService.Name = "btnEditService";
             btnEditService.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnEditService.Size = new Size(132, 56);
+            btnEditService.Size = new Size(106, 45);
             btnEditService.TabIndex = 8;
             btnEditService.Text = "Sửa";
             btnEditService.Click += btnEditService_Click;
             // 
             // FAddService
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(0, 192, 192);
-            ClientSize = new Size(669, 715);
-            Controls.Add(btnEditService);
-            Controls.Add(btnExit);
-            Controls.Add(btnAddService);
-            Controls.Add(label1);
+            BackColor = Color.DimGray;
+            ClientSize = new Size(535, 572);
             Controls.Add(panel2);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4);
             Name = "FAddService";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FAddService";
